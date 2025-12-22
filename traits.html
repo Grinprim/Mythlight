@@ -71,7 +71,7 @@
     <nav class="fixed w-full z-50 nav-glass">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <img src="Mythlight Logo.png" alt="Mythlight" class="h-10 w-auto object-contain">
+                <img src="Mythlight Logo.png" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
                 <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
             </div>
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
@@ -111,20 +111,31 @@
                     </div>
                     
                     <div class="space-y-5">
+                        <!-- Passive: Always Active -->
                         <div class="flex items-center">
-                            <div class="legend-symbol text-amber-400">⧖</div>
+                            <div class="legend-symbol text-blue-400">⧖</div>
                             <div>
                                 <div class="text-white font-bold text-sm">Passive</div>
-                                <div class="text-slate-500 text-[10px] italic">Always active or rest-based.</div>
+                                <div class="text-slate-500 text-[10px] italic">Always active.</div>
                             </div>
                         </div>
+                        <!-- Rest Based -->
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-amber-400">☀</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Rest-Based</div>
+                                <div class="text-slate-500 text-[10px] italic">Triggers or resets on rest.</div>
+                            </div>
+                        </div>
+                        <!-- Active -->
                         <div class="flex items-center">
                             <div class="legend-symbol text-indigo-400">🗲</div>
                             <div>
                                 <div class="text-white font-bold text-sm">Active</div>
-                                <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
+                                <div class="text-slate-500 text-[10px] italic">Has limited uses per encounter.</div>
                             </div>
                         </div>
+                        <!-- Unique -->
                         <div class="flex items-center">
                             <div class="legend-symbol text-rose-400">★</div>
                             <div>
@@ -132,6 +143,7 @@
                                 <div class="text-slate-500 text-[10px] italic">Cannot be taken multiple times.</div>
                             </div>
                         </div>
+                        <!-- Linked -->
                         <div class="flex items-center">
                             <div class="legend-symbol text-emerald-400">⫘</div>
                             <div>
@@ -139,6 +151,7 @@
                                 <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
                             </div>
                         </div>
+                        <!-- Lock -->
                         <div class="flex items-center">
                             <div class="legend-symbol text-slate-400">⚿</div>
                             <div>
@@ -202,7 +215,12 @@
     </main>
 
     <script>
-        let rawTraits = [];
+        // Placeholder data if traits.json is not found
+        let rawTraits = [
+            { "Name": "Toughness", "Cost": "1", "Symbols": "⧖", "Parameters": "HP +5", "Description": "A baseline increase to your physical resilience." },
+            { "Name": "Meditative Mind", "Cost": "1", "Symbols": "☀", "Parameters": "Rest", "Description": "Recover additional mana when performing a short rest." },
+            { "Name": "Adrenaline Rush", "Cost": "2", "Symbols": "🗲", "Parameters": "1/Encounter", "Description": "Take an additional action during your turn." }
+        ];
 
         function renderTraits() {
             const sortBy = document.getElementById('sort-selector').value;
@@ -235,10 +253,13 @@
         async function loadTraits() {
             try {
                 const response = await fetch('traits.json');
-                rawTraits = await response.json();
+                if (response.ok) {
+                    rawTraits = await response.json();
+                }
                 renderTraits();
             } catch (error) {
-                console.error('Error loading traits:', error);
+                console.error('Error loading traits, using defaults:', error);
+                renderTraits();
             }
         }
 
