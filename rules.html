@@ -88,6 +88,7 @@
                 <nav class="space-y-1">
                     <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 px-4">Core Manual</p>
                     <a href="#intro" class="sidebar-link block px-4 py-2 text-slate-400 hover:text-white rounded">Introduction</a>
+                    <a href="#definitions" class="sidebar-link block px-4 py-2 text-slate-400 hover:text-white rounded">Definitions</a>
                     <a href="#core-mechanics" class="sidebar-link block px-4 py-2 text-slate-400 hover:text-white rounded">Core Mechanics</a>
                     <a href="#combat" class="sidebar-link block px-4 py-2 text-slate-400 hover:text-white rounded">Combat & Conflict</a>
                     <a href="#magic" class="sidebar-link block px-4 py-2 text-slate-400 hover:text-white rounded">Magic & Mana</a>
@@ -104,58 +105,87 @@
                     <div class="max-w-3xl">
                         <h1 class="text-5xl font-bold text-white mb-6">Introduction</h1>
                         <p class="text-lg text-slate-400 leading-relaxed mb-6">
-                            Mythlight is a narrative-focused roleplaying game designed to be simple to pick up while allowing for deep, open-ended storytelling. Whether you are traversing high-fantasy kingdoms or gritty, low-magic landscapes, the rules remain consistent.
+                            Mythlight is designed to be a simple narrative focused roleplaying game, with simple to pick up rules that promote roleplay. Combat is also quite simple to pick up using as little rolls as possible. The system has no core stories, having a very open ruleset allowing both high fantasy and low fantasy campaigns.
                         </p>
-                        <div class="flex flex-wrap gap-4 text-sm">
-                            <div class="bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">Requires 2d6 Dice</div>
-                            <div class="bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700">1 Narrator & Players</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                            <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                                <strong class="text-white block mb-1">What you need:</strong>
+                                2 six-sided dice (2d6) per player. This system doesn’t use polyhedral dice, and instead uses simple playing dice.
+                            </div>
+                            <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                                <strong class="text-white block mb-1">The Narrator:</strong>
+                                Guides the story, describes the world, plays non-player characters (NPCs), and presents challenges.
+                            </div>
                         </div>
+                    </div>
+                </section>
+
+                <!-- Definitions -->
+                <section id="definitions" class="scroll-mt-32">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">01</span>
+                        Term Definitions
+                    </h2>
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
+                        <table class="table-custom">
+                            <thead>
+                                <tr><th>Term</th><th>Definition</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Check</strong></td><td>A die roll to determine the success or failure of an action.</td></tr>
+                                <tr><td><strong>CS</strong></td><td>Challenge score: The number you must reach to succeed in a check.</td></tr>
+                                <tr><td><strong>Action</strong></td><td>Something that a player does, typically involving a check.</td></tr>
+                                <tr><td><strong>Round</strong></td><td>A full rotation of turns, where every participant has performed their actions.</td></tr>
+                                <tr><td><strong>Turn</strong></td><td>The portion of a round where a single character performs their actions.</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
 
                 <!-- Core Mechanics -->
                 <section id="core-mechanics" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">01</span>
-                        Core Mechanics
+                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">02</span>
+                        Game Mechanics
                     </h2>
                     
                     <div class="grid md:grid-cols-2 gap-8 mb-12">
                         <div class="stat-card">
                             <h3 class="text-indigo-400 font-bold mb-2">The Action Check</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">
-                                Whenever you attempt a risky action, roll <strong>2d6 + Attribute Modifiers</strong>. To succeed, your total must meet or exceed the <strong>Challenge Score (CS)</strong> set by the Narrator.
+                                Whenever you attempt a risky action, roll <strong>2d6 + Stat</strong>. To succeed, your total must meet or exceed the <strong>Challenge Score (CS)</strong>. If you are trained in a specific skill relevant to the check, you may add your <strong>Training Bonus</strong> (standard +2) to the roll.
                             </p>
                         </div>
                         <div class="stat-card">
-                            <h3 class="text-indigo-400 font-bold mb-2">Attributes</h3>
+                            <h3 class="text-indigo-400 font-bold mb-2">The Four Stats</h3>
                             <ul class="text-sm text-slate-400 space-y-2">
-                                <li><strong>Strength:</strong> Physical power, health, and melee.</li>
-                                <li><strong>Dexterity:</strong> Speed, stealth, and ranged attacks.</li>
-                                <li><strong>Scholarship:</strong> Knowledge, magic, and medicine.</li>
-                                <li><strong>Charisma:</strong> Social influence and leadership.</li>
+                                <li><strong>Strength:</strong> Used for checks involving physical power, health, and melee.</li>
+                                <li><strong>Dexterity:</strong> Used for speed, stealth, and ranged attacks.</li>
+                                <li><strong>Scholarship:</strong> Used for knowledge, magic, and medicine.</li>
+                                <li><strong>Charisma:</strong> Used for social influence and leadership.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="bg-indigo-900/20 border border-indigo-500/20 rounded-xl p-8">
                         <h3 class="text-white font-bold mb-4">Standard Challenge Scores (CS)</h3>
+                        <p class="text-sm text-slate-400 mb-6 italic">The CS represents the difficulty of an action. Typical values include:</p>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                             <div class="text-center p-4 bg-slate-900/50 rounded-lg">
                                 <span class="block text-2xl font-bold text-indigo-400">5</span>
-                                <span class="text-xs text-slate-500 uppercase">Easy</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider">Easy</span>
                             </div>
                             <div class="text-center p-4 bg-slate-900/50 rounded-lg">
                                 <span class="block text-2xl font-bold text-indigo-400">8</span>
-                                <span class="text-xs text-slate-500 uppercase">Moderate</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider">Moderate</span>
                             </div>
                             <div class="text-center p-4 bg-slate-900/50 rounded-lg">
                                 <span class="block text-2xl font-bold text-indigo-400">11</span>
-                                <span class="text-xs text-slate-500 uppercase">Difficult</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider">Difficult</span>
                             </div>
                             <div class="text-center p-4 bg-slate-900/50 rounded-lg">
                                 <span class="block text-2xl font-bold text-indigo-400">14+</span>
-                                <span class="text-xs text-slate-500 uppercase">Epic</span>
+                                <span class="text-xs text-slate-500 uppercase tracking-wider">Epic</span>
                             </div>
                         </div>
                     </div>
@@ -164,27 +194,29 @@
                 <!-- Combat -->
                 <section id="combat" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">02</span>
+                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">03</span>
                         Combat & Conflict
                     </h2>
                     <div class="space-y-6 text-slate-400 leading-relaxed">
                         <div class="stat-card">
                             <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest">The Combat Sequence</h4>
+                            <p class="text-sm mb-4">Characters stats are determined by their component traits. Combat is streamlined to use as few rolls as possible.</p>
                             <ol class="list-decimal list-inside space-y-3 text-sm">
-                                <li><strong>Initiative:</strong> Roll 2d6 + Dexterity. Highest goes first.</li>
-                                <li><strong>The Attack:</strong> Roll 2d6 + Stat (Melee: Strength | Ranged: Dexterity). Success occurs if the roll exceeds the target's <strong>Defense Score</strong>.</li>
-                                <li><strong>Dealing Damage:</strong> Subtract the target's <strong>Toughness</strong> (from Armor) from your weapon's <strong>Damage Score</strong>. The remainder is dealt to the target's HP.</li>
+                                <li><strong>Initiative:</strong> Determined by rolling 2d6 + Dexterity. Characters act in order from highest result to lowest.</li>
+                                <li><strong>Movement & Action:</strong> On your turn, you may move and perform one major action (such as an attack or casting a spell).</li>
+                                <li><strong>The Attack Check:</strong> Roll 2d6 + Stat (Strength for Melee, Dexterity for Ranged). If the total meets or exceeds the target's <strong>Defense Score</strong>, the attack hits.</li>
+                                <li><strong>Damage Calculation:</strong> Damage is calculated as <strong>Weapon Damage Score - Target's Toughness</strong>. The remaining value is subtracted from the target's Health.</li>
                             </ol>
                         </div>
                         
                         <div class="grid md:grid-cols-2 gap-8">
-                            <div>
+                            <div class="stat-card">
                                 <h3 class="text-white font-bold mb-2">Advantage & Disadvantage</h3>
-                                <p class="text-sm">When you have Advantage, roll 3d6 and drop the lowest. When you have Disadvantage, roll 3d6 and drop the highest result.</p>
+                                <p class="text-sm"><strong>Advantage:</strong> Roll 3d6 and drop the lowest result. <br><strong>Disadvantage:</strong> Roll 3d6 and drop the highest result.</p>
                             </div>
-                            <div>
-                                <h3 class="text-white font-bold mb-2">Dying Status</h3>
-                                <p class="text-sm">When reduced to 0 HP, you become <strong>Unconscious</strong>. If not stabilized within 3 rounds, the character dies.</p>
+                            <div class="stat-card">
+                                <h3 class="text-white font-bold mb-2">Health & Death</h3>
+                                <p class="text-sm">When you reach 0 HP, you become <strong>unconscious</strong>. You must be stabilized within 3 rounds by an ally, or you will perish.</p>
                             </div>
                         </div>
                     </div>
@@ -193,41 +225,38 @@
                 <!-- Magic -->
                 <section id="magic" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">03</span>
+                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">04</span>
                         Magic & Mana
                     </h2>
                     <div class="grid md:grid-cols-2 gap-12">
-                        <div>
-                            <p class="text-sm text-slate-400 mb-6 leading-relaxed">
-                                Magic in Mythlight is fueled by Mana. Your Mana pool grows as you level up, allowing you to cast more powerful spells or "upcast" lower-level spells for +1 Mana per level to enhance their effects.
+                        <div class="space-y-4">
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Magic is granted through specific traits, which are mutually exclusive. You have one central pool of mana. The amount spent corresponds to the spell's power or the upcast cost.
                             </p>
-                            <h4 class="text-white font-bold text-xs uppercase mb-4 tracking-widest">Spell Level Thresholds</h4>
-                            <ul class="text-sm space-y-2 mb-8">
-                                <li class="flex justify-between border-b border-slate-800 pb-2"><span>Level 1 Spells</span> <span class="text-indigo-400">Available at Level 1</span></li>
-                                <li class="flex justify-between border-b border-slate-800 pb-2"><span>Level 2 Spells</span> <span class="text-indigo-400">Unlocked at Level 3</span></li>
-                                <li class="flex justify-between border-b border-slate-800 pb-2"><span>Level 3 Spells</span> <span class="text-indigo-400">Unlocked at Level 6</span></li>
-                                <li class="flex justify-between border-b border-slate-800 pb-2"><span>Level 4 Spells</span> <span class="text-indigo-400">Unlocked at Level 9</span></li>
+                            <ul class="text-sm space-y-2">
+                                <li><strong>Learning Spells:</strong> You gain spells equal to 1 per level + your Scholarship modifier.</li>
+                                <li><strong>Upcasting:</strong> Cast a spell with a level higher than its base to enhance effects. Cost: +1 mana per level above base.</li>
+                                <li><strong>Cantrips:</strong> Special spells that cost no mana and can be cast freely.</li>
                             </ul>
-                            <div class="p-4 bg-indigo-900/30 rounded-lg text-sm italic">
-                                Note: You gain 1 spell per level + your Scholarship modifier. Cantrips cost 0 mana.
+                            <h4 class="text-white font-bold text-xs uppercase mt-6 mb-4 tracking-widest">Level Thresholds</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between border-b border-slate-800 pb-1"><span>Level 1 Spells</span> <span class="text-indigo-400">At Creation</span></div>
+                                <div class="flex justify-between border-b border-slate-800 pb-1"><span>Level 2 Spells</span> <span class="text-indigo-400">Level 3</span></div>
+                                <div class="flex justify-between border-b border-slate-800 pb-1"><span>Level 3 Spells</span> <span class="text-indigo-400">Level 6</span></div>
+                                <div class="flex justify-between border-b border-slate-800 pb-1"><span>Level 4 Spells</span> <span class="text-indigo-400">Level 9</span></div>
                             </div>
                         </div>
                         <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
                             <table class="table-custom">
                                 <thead>
-                                    <tr><th>Character Level</th><th>Mana Pool</th></tr>
+                                    <tr><th>Level</th><th>Mana</th><th>Level</th><th>Mana</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>Level 1</td><td>1 Mana</td></tr>
-                                    <tr><td>Level 2</td><td>2 Mana</td></tr>
-                                    <tr><td>Level 3</td><td>4 Mana</td></tr>
-                                    <tr><td>Level 4</td><td>5 Mana</td></tr>
-                                    <tr><td>Level 5</td><td>6 Mana</td></tr>
-                                    <tr><td>Level 6</td><td>8 Mana</td></tr>
-                                    <tr><td>Level 7</td><td>9 Mana</td></tr>
-                                    <tr><td>Level 8</td><td>10 Mana</td></tr>
-                                    <tr><td>Level 9</td><td>12 Mana</td></tr>
-                                    <tr><td>Level 10</td><td>14 Mana</td></tr>
+                                    <tr><td>1</td><td>1</td><td>6</td><td>8</td></tr>
+                                    <tr><td>2</td><td>2</td><td>7</td><td>9</td></tr>
+                                    <tr><td>3</td><td>4</td><td>8</td><td>10</td></tr>
+                                    <tr><td>4</td><td>5</td><td>9</td><td>12</td></tr>
+                                    <tr><td>5</td><td>6</td><td>10</td><td>14</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -237,33 +266,34 @@
                 <!-- Equipment -->
                 <section id="equipment" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">04</span>
+                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">05</span>
                         Equipment & Arms
                     </h2>
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="grid md:grid-cols-2 gap-8">
                         <div class="stat-card">
-                            <h3 class="text-white font-bold mb-4">Weapon Properties</h3>
+                            <h3 class="text-white font-bold mb-4">Weapon Tags</h3>
                             <ul class="text-sm text-slate-400 space-y-4">
                                 <li>
-                                    <strong class="text-indigo-400">Light:</strong> +2 to hit, but deals 1 less damage.
+                                    <strong class="text-indigo-400">Light:</strong> Weapons that are easier to handle. These gain a +2 to hit, but deal 1 less damage.
                                 </li>
                                 <li>
-                                    <strong class="text-indigo-400">Heavy:</strong> -2 to hit, but deals 1 extra damage.
+                                    <strong class="text-indigo-400">Heavy:</strong> Large, cumbersome weapons. These have -2 to hit, but deal 1 extra damage.
                                 </li>
                                 <li>
-                                    <strong class="text-indigo-400">Magic:</strong> Uses Scholarship instead of Strength/Dex for attack rolls.
+                                    <strong class="text-indigo-400">Magic:</strong> Infused with arcane power. These use Scholarship instead of Strength or Dexterity for attack rolls.
                                 </li>
                             </ul>
                         </div>
                         <div class="stat-card">
-                            <h3 class="text-white font-bold mb-4">Armor & Toughness</h3>
+                            <h3 class="text-white font-bold mb-4">Armor & Defense</h3>
                             <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                                Armor provides <strong>Toughness</strong>, which is a flat reduction to incoming damage.
+                                Armor provides <strong>Toughness</strong>, which acts as a flat reduction to incoming damage scores.
                             </p>
                             <div class="space-y-2 text-xs">
                                 <div class="flex justify-between py-1 border-b border-slate-800"><span>No Armor</span> <span>0 Toughness</span></div>
                                 <div class="flex justify-between py-1 border-b border-slate-800"><span>Light Armor</span> <span>1 Toughness</span></div>
                                 <div class="flex justify-between py-1 border-b border-slate-800"><span>Heavy Armor</span> <span>2 Toughness</span></div>
+                                <div class="flex justify-between py-1 border-b border-slate-800"><span>Shields</span> <span>+1 Defense Score</span></div>
                             </div>
                         </div>
                     </div>
@@ -272,20 +302,20 @@
                 <!-- Recovery -->
                 <section id="recovery" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">05</span>
+                        <span class="w-10 h-10 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">06</span>
                         Recovery & Rests
                     </h2>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="stat-card border-l-4 border-indigo-500">
                             <h3 class="text-white font-bold mb-3">Short Rest</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">
-                                A 1-hour pause to bind wounds and catch breath. You do not recover mana unless a specific trait (like <em>Arcane Recovery</em>) allows it. Some traits allow for minor health recovery during this time.
+                                A brief pause in the action to catch your breath. Some traits may allow for partial mana recovery or minor healing during these periods.
                             </p>
                         </div>
                         <div class="stat-card border-l-4 border-emerald-500">
-                            <h3 class="text-white font-bold mb-3">Long Rest (Sleep)</h3>
+                            <h3 class="text-white font-bold mb-3">Sleeping (Long Rest)</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">
-                                A minimum of 6 hours of sleep. Provides <strong>full recovery</strong> of HP and Mana. After a long rest, you may swap your <strong>Prepared Spells</strong> for any others available to your spellcasting type.
+                                Mana is fully restored when you sleep. After sleeping, you may swap out prepared spells for others available to your spellcasting type, provided they are within your level limit. This also restores full Health.
                             </p>
                         </div>
                     </div>
