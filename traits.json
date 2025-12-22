@@ -1,142 +1,143 @@
 [
   {
     "Name": "Medium Melee Weapon Proficiency",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Medium melee weapons."
   },
   {
     "Name": "Heavy Melee Weapon Proficiency",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Heavy melee weapons."
   },
   {
     "Name": "Light Bow Proficiency",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Light Bows, Slingshots and Crossbows."
   },
   {
     "Name": "Heavy Bow Proficiency",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Heavy Bows and Crossbows."
   },
   {
     "Name": "Light Firearm Proficiency",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Light Firearms."
   },
   {
     "Name": "Heavy Firearm Proficiency",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Heavy Firearms."
   },
   {
     "Name": "Medium Armor Training",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can equip Medium armor. While wearing it, gain +1 Athletics."
   },
   {
     "Name": "Heavy Armor Training",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can equip Heavy armor. While wearing it, gain -1 Reflex."
   },
   {
     "Name": "Shield Training",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ★",
     "Parameters": "Off-hand",
     "Description": "While you have a shield equipped at the start of combat, gain Guard equal to your level."
   },
   {
     "Name": "Heavy Guard",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ⫘",
     "Parameters": "Heavy Armor Training",
     "Description": "When wearing Heavy armor and using a shield, gain +2 Armor."
   },
   {
     "Name": "Traveler’s Endurance",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "+1 Speed; ignore the first level of Fatigue."
   },
   {
     "Name": "Arcane Student",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ★",
     "Parameters": "Spellcasting (Arcane)",
     "Description": "Gain access to Arcane Spellcasting. You learn 1 spell per level from the Arcane list and learn 2 Arcane cantrips."
   },
   {
     "Name": "Divine Initiate",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ★",
     "Parameters": "Spellcasting (Divine)",
     "Description": "Gain access to Divine Spellcasting. You learn 1 spell per level from the Divine list and learn 2 Divine cantrips."
   },
   {
     "Name": "Cosmic Novice",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ★",
     "Parameters": "Spellcasting (Cosmic)",
     "Description": "Gain access to Cosmic Spellcasting. You cannot learn spells above level 1. Higher-level mana can cast multiple level 1 spells at once."
   },
   {
     "Name": "Occult Apprentice",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ★",
     "Parameters": "Spellcasting (Occult)",
     "Description": "Gain access to Occult Spellcasting. You cannot learn spells above level 2. Higher-level mana only upcasts. You learn 2 Occult cantrips."
   },
   {
     "Name": "Elementalist’s Spark",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ★",
     "Parameters": "Spellcasting (Elemental)",
     "Description": "Gain access to Elemental Spellcasting. Choose one element; spells of that element deal +1 damage (+1 more at levels 3, 6, 9, 12). You learn 2 Elemental cantrips."
   },
   {
     "Name": "Cantrip Adept",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖ ⫘ ★",
     "Parameters": "Spellcasting",
     "Description": "You learn 2 additional cantrips from your chosen spellcasting type."
   },
   {
     "Name": "Quick Reflexes",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "◇ 🗲",
     "Parameters": "Uses scale by level",
     "Description": "Reduce incoming damage by half your level (minimum 1)."
   },
   {
     "Name": "Cantrip Knowledge",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "Spellcasting",
     "Description": "Convert one level 1 spell from your spellcasting type into a cantrip."
   },
   {
     "Name": "Minor Channeling",
-    "Cost": "—",
+    "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
     "Description": "Cast one level 1 spell without spending Mana."
   }
 ]
+
