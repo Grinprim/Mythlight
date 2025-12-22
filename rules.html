@@ -57,219 +57,206 @@
 </head>
 <body class="bg-custom-dark text-slate-300">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 nav-glass">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <img src="Mythlight Logo White.svg" alt="Mythlight Logo" class="h-10 w-auto">
-                <span class="text-xl font-bold tracking-widest text-white fantasy-font">MYTHLIGHT</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
-                <a href="index.html" class="hover:text-white transition-colors">Home</a>
-                <a href="rules.html" class="text-indigo-400">Rules</a>
-                <a href="spells.html" class="hover:text-white transition-colors">Spells</a>
-                <a href="traits.html" class="hover:text-white transition-colors">Traits</a>
-            </div>
+<nav class="fixed w-full z-50 nav-glass">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <img src="Mythlight Logo White.svg" alt="Mythlight Logo" class="h-10 w-auto">
+            <span class="text-xl font-bold tracking-widest text-white fantasy-font">MYTHLIGHT</span>
         </div>
-    </nav>
-
-    <main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
-        <div class="rules-grid">
-            
-            <!-- Sidebar Navigation -->
-            <aside class="sidebar sticky top-32 h-fit space-y-2">
-                <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mb-4 px-4">The Manual</p>
-                <a href="#core-engine" class="sidebar-link block px-4 py-2 text-sm">2d6 Core Engine</a>
-                <a href="#attributes" class="sidebar-link block px-4 py-2 text-sm">Attributes & Skills</a>
-                <a href="#combat" class="sidebar-link block px-4 py-2 text-sm">Combat & Actions</a>
-                <a href="#magic" class="sidebar-link block px-4 py-2 text-sm">Magic & Mana</a>
-                <a href="#progression" class="sidebar-link block px-4 py-2 text-sm">Leveling Up</a>
-            </aside>
-
-            <!-- Rules Content -->
-            <div class="space-y-20">
-                
-                <!-- Intro Section -->
-                <section id="intro">
-                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">Core Rules</h1>
-                    <p class="text-lg text-slate-400 leading-relaxed max-w-3xl">
-                        Mythlight is a narrative-first RPG. While these rules provide a framework for conflict, the ultimate goal is to tell a compelling story. If a rule gets in the way of a great moment, let the story win.
-                    </p>
-                </section>
-
-                <!-- 2d6 Core Engine -->
-                <section id="core-engine" class="scroll-mt-32">
-                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">01</span>
-                        The 2d6 Core Engine
-                    </h2>
-                    <div class="mechanic-card p-8 rounded-3xl">
-                        <div class="flex flex-col md:flex-row gap-8 items-center">
-                            <div class="text-center p-6 bg-slate-900 rounded-2xl border border-slate-800 shrink-0">
-                                <div class="text-4xl font-bold text-white mb-2">2d6 + Stat</div>
-                                <div class="text-xs uppercase tracking-widest text-indigo-400">The Universal Roll</div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-4">How to Perform a Check</h3>
-                                <p class="text-slate-400 mb-4">When you attempt an action with an uncertain outcome, roll 2 six-sided dice and add your relevant Attribute or Skill bonus.</p>
-                                <ul class="space-y-3 text-sm">
-                                    <li class="flex items-start">
-                                        <span class="text-indigo-400 mr-2">●</span>
-                                        <span><strong>Success:</strong> If your total equals or exceeds the <strong>Challenge Score (CS)</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-indigo-400 mr-2">●</span>
-                                        <span><strong>Critical Success:</strong> Rolling a Natural 12 usually results in an extraordinary outcome.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-indigo-400 mr-2">●</span>
-                                        <span><strong>Failure:</strong> If your total is lower than the CS, the Narrator describes the complication.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Attributes -->
-                <section id="attributes" class="scroll-mt-32">
-                    <div class="flex items-center justify-between mb-8">
-                        <h2 class="text-2xl font-bold text-white flex items-center">
-                            <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">02</span>
-                            Core Attributes
-                        </h2>
-                    </div>
-                    <p class="text-slate-400 mb-8">Every hero is defined by four central stats. These determine your raw capability before traits and skills are applied.</p>
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <!-- Physique -->
-                        <div class="stat-badge p-5 rounded-2xl flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-white font-bold mb-1 text-lg">Physique</h4>
-                                <p class="text-[11px] text-indigo-200 opacity-70 leading-relaxed">Raw strength, physical endurance, and martial power. Used for Brawn and Fortitude.</p>
-                            </div>
-                        </div>
-                        <!-- Technique -->
-                        <div class="stat-badge p-5 rounded-2xl flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-white font-bold mb-1 text-lg">Technique</h4>
-                                <p class="text-[11px] text-indigo-200 opacity-70 leading-relaxed">Finesse, coordination, and precision. Governs Agility, Stealth, and fine motor skills.</p>
-                            </div>
-                        </div>
-                        <!-- Mystique -->
-                        <div class="stat-badge p-5 rounded-2xl flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-white font-bold mb-1 text-lg">Mystique</h4>
-                                <p class="text-[11px] text-indigo-200 opacity-70 leading-relaxed">Connection to the arcane and mental willpower. Essential for Spellcasting and Arcana.</p>
-                            </div>
-                        </div>
-                        <!-- Charm -->
-                        <div class="stat-badge p-5 rounded-2xl flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-white font-bold mb-1 text-lg">Charm</h4>
-                                <p class="text-[11px] text-indigo-200 opacity-70 leading-relaxed">Presence, persuasion, and social intuition. Used to influence others and read intentions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Combat -->
-                <section id="combat" class="scroll-mt-32">
-                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">03</span>
-                        Combat & Actions
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-red-500">
-                            <h4 class="text-white font-bold mb-3">Taking Action</h4>
-                            <p class="text-sm text-slate-400 leading-relaxed">On your turn, you can move up to your Speed and perform <span class="text-white">one Action</span> (Attacking, Casting a Spell, etc.). Some traits allow for <span class="text-white">Reactions</span> during an enemy's turn.</p>
-                        </div>
-                        <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
-                            <h4 class="text-white font-bold mb-3">Health & Dying</h4>
-                            <p class="text-sm text-slate-400 leading-relaxed">When your HP hits 0, you are <span class="text-white">Downed</span>. You cannot act and must be stabilized by an ally or a successful Fortitude check during a rest.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Magic -->
-                <section id="magic" class="scroll-mt-32">
-                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">04</span>
-                        Magic & Mana
-                    </h2>
-                    <div class="bg-indigo-950/20 border border-indigo-500/20 p-8 rounded-3xl">
-                        <p class="text-slate-400 mb-6">Spellcasting is a specialized skill granted through specific traits. All magic users draw from a central pool of <span class="text-indigo-400 font-bold uppercase tracking-widest text-xs">Mana</span>.</p>
-                        
-                        <div class="grid sm:grid-cols-2 gap-8">
-                            <div>
-                                <h4 class="text-white font-bold mb-2 text-sm uppercase tracking-widest">Casting Spells</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed">Spending Mana allows you to manifest powerful effects. Higher-level spells cost more Mana, but you can "Upcast" a lower spell to increase its power at +1 Mana per level.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold mb-2 text-sm uppercase tracking-widest">Cantrips</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed">Minor miracles that cost <span class="text-white">0 Mana</span>. You can cast these as often as you like, assuming you have the proper trait.</p>
-                            </div>
-                        </div>
-
-                        <!-- Mana Table -->
-                        <div class="mt-8 pt-8 border-t border-indigo-500/10">
-                            <h4 class="text-white text-xs font-bold uppercase tracking-[0.2em] mb-4">Mana Progression</h4>
-                            <div class="flex space-x-2">
-                                <div class="flex-1 text-center bg-slate-900/50 p-2 rounded">
-                                    <div class="text-[10px] text-slate-500 uppercase">Lv 1</div>
-                                    <div class="text-indigo-400 font-bold">1</div>
-                                </div>
-                                <div class="flex-1 text-center bg-slate-900/50 p-2 rounded">
-                                    <div class="text-[10px] text-slate-500 uppercase">Lv 2</div>
-                                    <div class="text-indigo-400 font-bold">2</div>
-                                </div>
-                                <div class="flex-1 text-center bg-slate-900/50 p-2 rounded">
-                                    <div class="text-[10px] text-slate-500 uppercase">Lv 3</div>
-                                    <div class="text-indigo-400 font-bold">4</div>
-                                </div>
-                                <div class="flex-1 text-center bg-slate-900/50 p-2 rounded">
-                                    <div class="text-[10px] text-slate-500 uppercase">Lv 4</div>
-                                    <div class="text-indigo-400 font-bold">5</div>
-                                </div>
-                                <div class="flex-1 text-center bg-slate-900/50 p-2 rounded">
-                                    <div class="text-[10px] text-slate-500 uppercase">Lv 5</div>
-                                    <div class="text-indigo-400 font-bold">6</div>
-                                </div>
-                                <div class="flex-1 text-center bg-slate-900/50 p-2 rounded italic text-slate-600">
-                                    <div class="text-[10px] uppercase">...</div>
-                                    <div class="text-xs">Max 14</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Rest -->
-                <section id="progression" class="scroll-mt-32">
-                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
-                        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">05</span>
-                        Recovery & Rests
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-white font-bold mb-3">Short Rest</h3>
-                            <p class="text-sm text-slate-400">Catch your breath. Some traits allow for minor recovery of Mana or health during these brief pauses.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-bold mb-3">Long Rest (Sleep)</h3>
-                            <p class="text-sm text-slate-400">Full recovery of Mana and Health. This is also when you can swap out your <strong>Prepared Spells</strong>.</p>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
+        <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-white transition-colors">Home</a>
+            <a href="rules.html" class="text-indigo-400">Rules</a>
+            <a href="spells.html" class="hover:text-white transition-colors">Spells</a>
+            <a href="traits.html" class="hover:text-white transition-colors">Traits</a>
         </div>
-    </main>
+    </div>
+</nav>
 
-    <footer class="py-12 border-t border-slate-800 text-center">
-        <p class="text-slate-600 text-xs uppercase tracking-widest">&copy; 2025 Mythlight RPG System. Designed for Legends. By Grinprim.</p>
-    </footer>
+<main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
+<div class="rules-grid">
+
+<aside class="sidebar sticky top-32 h-fit space-y-2">
+    <p class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mb-4 px-4">The Manual</p>
+    <a href="#core-engine" class="sidebar-link block px-4 py-2 text-sm">2d6 Core Engine</a>
+    <a href="#attributes" class="sidebar-link block px-4 py-2 text-sm">Attributes & Skills</a>
+    <a href="#combat" class="sidebar-link block px-4 py-2 text-sm">Combat & Actions</a>
+    <a href="#magic" class="sidebar-link block px-4 py-2 text-sm">Magic & Mana</a>
+    <a href="#progression" class="sidebar-link block px-4 py-2 text-sm">Recovery & Progression</a>
+</aside>
+
+<div class="space-y-20">
+
+<section id="intro">
+    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">Core Rules</h1>
+    <p class="text-lg text-slate-400 leading-relaxed max-w-3xl">
+        Mythlight is a narrative-focused roleplaying system designed for fast resolution, minimal dice complexity,
+        and flexible storytelling. The rules exist to provide consistency and fairness, but the Narrator is always
+        encouraged to prioritize pacing, tone, and story impact. Characters are defined by traits, choices, and
+        narrative consequences rather than rigid class structure.
+    </p>
+</section>
+
+<section id="core-engine" class="scroll-mt-32">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">01</span>
+        The 2d6 Core Engine
+    </h2>
+    <div class="mechanic-card p-8 rounded-3xl space-y-6">
+        <p>
+            All uncertain actions in Mythlight are resolved using a <strong>2d6</strong> system. Roll two six-sided
+            dice and apply all relevant modifiers.
+        </p>
+
+        <p class="text-sm text-slate-400">
+            <strong>Roll Formula:</strong> 2d6 + Attribute + Skill Modifiers + Situational Modifiers
+        </p>
+
+        <ul class="space-y-2 text-sm">
+            <li><strong>Success:</strong> Total meets or exceeds the Challenge Score (CS).</li>
+            <li><strong>Failure:</strong> Total is below the CS; the Narrator introduces complications.</li>
+        </ul>
+
+        <p class="text-sm text-slate-400">
+            <strong>Advantage:</strong> Roll an additional d6. There is no maximum.<br>
+            <strong>Disadvantage:</strong> Remove one d6. Dice pools may reach 0d6, but never below.
+        </p>
+
+        <p class="text-sm">
+            <strong>Midnight (Critical Success):</strong> Rolling two natural sixes on an attack automatically hits
+            and deals double damage. Additional sixes increase the multiplier.
+        </p>
+
+        <p class="text-sm">
+            <strong>Snake Eyes (Critical Failure):</strong> Rolling two natural ones on an attack automatically misses
+            and causes a severe complication.
+        </p>
+    </div>
+</section>
+
+<section id="attributes" class="scroll-mt-32">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">02</span>
+        Attributes & Skills
+    </h2>
+
+    <p class="text-slate-400 mb-8">
+        Characters are defined by four core attributes. Attributes influence skill checks, combat rolls,
+        survivability, and social presence.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="stat-badge p-5 rounded-2xl">
+            <h4 class="text-white font-bold mb-1">Physique</h4>
+            <p class="text-xs text-indigo-200 opacity-70">
+                Strength, endurance, and physical resilience. Governs Might, Athletics, Fortitude, and Brawn.
+            </p>
+        </div>
+        <div class="stat-badge p-5 rounded-2xl">
+            <h4 class="text-white font-bold mb-1">Technique</h4>
+            <p class="text-xs text-indigo-200 opacity-70">
+                Precision and coordination. Governs Aim, Finesse, Reflex, and Tinkering.
+            </p>
+        </div>
+        <div class="stat-badge p-5 rounded-2xl">
+            <h4 class="text-white font-bold mb-1">Mystique</h4>
+            <p class="text-xs text-indigo-200 opacity-70">
+                Arcane knowledge and willpower. Governs Arcana, Spellcraft, Insight, and Scholarship.
+            </p>
+        </div>
+        <div class="stat-badge p-5 rounded-2xl">
+            <h4 class="text-white font-bold mb-1">Charm</h4>
+            <p class="text-xs text-indigo-200 opacity-70">
+                Social presence and reputation. Charm starts at 0 and changes dynamically through play.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="combat" class="scroll-mt-32">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">03</span>
+        Combat & Actions
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        <div class="mechanic-card p-6 rounded-2xl">
+            <h4 class="text-white font-bold mb-3">Action Economy</h4>
+            <p class="text-sm text-slate-400">
+                Combat occurs in Scenes lasting six seconds. Each participant takes one Turn per Scene.
+                On your Turn, you may take two Actions. You may also take one Reaction per Scene.
+            </p>
+        </div>
+        <div class="mechanic-card p-6 rounded-2xl">
+            <h4 class="text-white font-bold mb-3">Health & Death</h4>
+            <p class="text-sm text-slate-400">
+                Health is tracked as Hits. At 0 Hits you fall unconscious. Enemies may declare final blows.
+                Massive damage equal to your maximum health below zero results in instant death.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="magic" class="scroll-mt-32">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">04</span>
+        Magic & Mana
+    </h2>
+
+    <div class="bg-indigo-950/20 border border-indigo-500/20 p-8 rounded-3xl space-y-6">
+        <p class="text-slate-400">
+            Spellcasting is granted through specific traits and draws from a single central Mana pool.
+            Spellcasting traits are mutually exclusive unless otherwise stated.
+        </p>
+
+        <p class="text-sm text-slate-400">
+            Mana is restored when you sleep. Some traits allow limited recovery during rests.
+            Cantrips cost no Mana and may be cast freely.
+        </p>
+
+        <p class="text-sm">
+            Spell levels unlock at specific character levels:
+            Level 1 (creation), Level 2 (3), Level 3 (6), Level 4 (9).
+        </p>
+
+        <p class="text-sm text-slate-400">
+            Mana progression increases with level, reaching a maximum of 16 at level 12.
+        </p>
+    </div>
+</section>
+
+<section id="progression" class="scroll-mt-32">
+    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">05</span>
+        Recovery & Progression
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <div>
+            <h3 class="text-white font-bold mb-3">Rests & Sleep</h3>
+            <p class="text-sm text-slate-400">
+                Rests restore limited health based on level. Sleep fully restores Health and Mana
+                and removes Fatigue.
+            </p>
+        </div>
+        <div>
+            <h3 class="text-white font-bold mb-3">Leveling & Traits</h3>
+            <p class="text-sm text-slate-400">
+                Progression is milestone-based. Each level grants Trait Points, which are used
+                to customize your character’s abilities and identity.
+            </p>
+        </div>
+    </div>
+</section>
+
+</div>
+</div>
+</main>
+
+<footer class="py-12 border-t border-slate-800 text-center">
+    <p class="text-slate-600 text-xs uppercase tracking-widest">
+        &copy; 2025 Mythlight RPG System. Designed for Legends. By Grinprim.
+    </p>
+</footer>
 
 </body>
-
 </html>
-
