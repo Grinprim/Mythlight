@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mythlight RPG | Spells</title>
+    <title>Mythlight RPG | Cantrips and Spells</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
@@ -63,15 +63,18 @@
             flex-shrink: 0;
         }
 
+        .filter-select {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #cbd5e1;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            outline: none;
+            font-size: 0.875rem;
+        }
+
         .custom-scroll::-webkit-scrollbar { width: 6px; }
         .custom-scroll::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 10px; }
-
-        .active-legend-section {
-            border-left: 2px solid #6366f1;
-            padding-left: 1rem;
-            margin-left: -1rem;
-            background: rgba(99, 102, 241, 0.05);
-        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -92,9 +95,22 @@
     </nav>
 
     <main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
-        <header class="mb-12">
-            <h1 class="text-5xl font-bold text-white mb-4">Grimoire</h1>
-            <p class="text-slate-400 text-lg max-w-3xl">From minor cantrips to world-bending incantations. Magic in Mythlight is shaped by your Mystique and focus.</p>
+        <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-5xl font-bold text-white mb-4">Grimoire</h1>
+                <p class="text-slate-400 text-lg max-w-2xl">Browse the sacred arts. From free-to-cast cantrips to the high-cost rituals of the master mages.</p>
+            </div>
+            <!-- Sorting Controls -->
+            <div class="flex gap-4">
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Sort By</label>
+                    <select id="sort-selector" class="filter-select" onchange="renderMagic()">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="cost">Mana Cost</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+            </div>
         </header>
 
         <div class="flex flex-col lg:flex-row gap-12 items-start">
@@ -104,7 +120,7 @@
                 <section id="legend-box" class="p-6 rounded-3xl legend-card shadow-2xl">
                     <div id="legend-header" class="mb-6">
                         <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Spellcasting Key</h3>
-                        <p id="legend-context" class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Currently Viewing: Spells</p>
+                        <p id="legend-context" class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Currently Viewing: Cantrips</p>
                     </div>
                     
                     <div id="legend-content" class="space-y-5">
@@ -117,33 +133,10 @@
                 </section>
             </aside>
 
-            <!-- Right Column: Spell Lists -->
+            <!-- Right Column: Lists -->
             <div class="flex-1 w-full space-y-24">
                 
-                <!-- Spells Section -->
-                <section id="section-spells" class="scroll-mt-32">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <h2 class="text-3xl font-bold text-white">Leveled Spells</h2>
-                        <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">1+ Mana</span>
-                    </div>
-                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
-                        <table class="w-full text-left border-collapse min-w-[700px]">
-                            <thead>
-                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                    <th class="px-6 py-5 font-bold">Spell</th>
-                                    <th class="px-6 py-5 font-bold">Category</th>
-                                    <th class="px-6 py-5 font-bold">Type/Range</th>
-                                    <th class="px-6 py-5 font-bold">Effect</th>
-                                </tr>
-                            </thead>
-                            <tbody id="spells-body">
-                                <tr><td colspan="4" class="px-8 py-12 text-center text-slate-500 italic">Reading the scrolls...</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <!-- Cantrips Section -->
+                <!-- Cantrips Section (Moved to First) -->
                 <section id="section-cantrips" class="scroll-mt-32">
                     <div class="flex items-center space-x-4 mb-6">
                         <h2 class="text-3xl font-bold text-white">Cantrips</h2>
@@ -166,11 +159,37 @@
                     </div>
                 </section>
 
+                <!-- Spells Section (Moved to Second) -->
+                <section id="section-spells" class="scroll-mt-32">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">Leveled Spells</h2>
+                        <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">1+ Mana</span>
+                    </div>
+                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[700px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-5 font-bold">Spell</th>
+                                    <th class="px-6 py-5 font-bold">Category</th>
+                                    <th class="px-6 py-5 font-bold">Type/Range</th>
+                                    <th class="px-6 py-5 font-bold">Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody id="spells-body">
+                                <tr><td colspan="4" class="px-8 py-12 text-center text-slate-500 italic">Reading the scrolls...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
             </div>
         </div>
     </main>
 
     <script>
+        let rawSpells = [];
+        let rawCantrips = [];
+
         const legends = {
             spells: [
                 { s: "✦", t: "Mana Cost", d: "Base mana required to cast." },
@@ -205,63 +224,77 @@
             `).join('');
         }
 
+        const createRow = (item) => `
+            <tr class="spell-row text-sm">
+                <td class="px-6 py-6">
+                    <div class="font-bold text-white text-base">${item.Name}</div>
+                    <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">Cost: ${item.Cost} | ID: ${item.ID}</div>
+                </td>
+                <td class="px-6 py-6">
+                    <span class="category-tag">${item.Subcategory}</span>
+                </td>
+                <td class="px-6 py-6">
+                    <div class="text-white font-medium text-xs">${item.Type}</div>
+                    <div class="text-slate-500 text-[10px]">${item.Range || 'Self'}</div>
+                </td>
+                <td class="px-6 py-6">
+                    <div class="text-slate-300 text-sm leading-relaxed mb-2">${item.Description}</div>
+                    <div class="text-slate-500 italic text-[11px] border-l border-slate-700 pl-3">${item.Lore}</div>
+                </td>
+            </tr>
+        `;
+
+        function sortData(arr, sortBy) {
+            return [...arr].sort((a, b) => {
+                if (sortBy === 'name') return a.Name.localeCompare(b.Name);
+                if (sortBy === 'cost') return parseInt(a.Cost) - parseInt(b.Cost);
+                if (sortBy === 'category') return a.Subcategory.localeCompare(b.Subcategory);
+                return 0;
+            });
+        }
+
+        function renderMagic() {
+            const sortBy = document.getElementById('sort-selector').value;
+            const spellTable = document.getElementById('spells-body');
+            const cantripTable = document.getElementById('cantrips-body');
+
+            const sortedSpells = sortData(rawSpells, sortBy);
+            const sortedCantrips = sortData(rawCantrips, sortBy);
+
+            spellTable.innerHTML = sortedSpells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600">No spells found.</td></tr>';
+            cantripTable.innerHTML = sortedCantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600">No cantrips found.</td></tr>';
+        }
+
         async function loadData() {
             try {
-                // Fetch from two separate JSON files
                 const [spellsRes, cantripsRes] = await Promise.all([
                     fetch('spells.json'),
                     fetch('cantrips.json')
                 ]);
 
-                const spells = await spellsRes.json();
-                const cantrips = await cantripsRes.json();
+                rawSpells = await spellsRes.json();
+                rawCantrips = await cantripsRes.json();
                 
-                const spellTable = document.getElementById('spells-body');
-                const cantripTable = document.getElementById('cantrips-body');
-
-                const createRow = (item) => `
-                    <tr class="spell-row text-sm">
-                        <td class="px-6 py-6">
-                            <div class="font-bold text-white text-base">${item.Name}</div>
-                            <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">ID: ${item.ID}</div>
-                        </td>
-                        <td class="px-6 py-6">
-                            <span class="category-tag">${item.Subcategory}</span>
-                        </td>
-                        <td class="px-6 py-6">
-                            <div class="text-white font-medium text-xs">${item.Type}</div>
-                            <div class="text-slate-500 text-[10px]">${item.Range || 'Self'}</div>
-                        </td>
-                        <td class="px-6 py-6">
-                            <div class="text-slate-300 text-sm leading-relaxed mb-2">${item.Description}</div>
-                            <div class="text-slate-500 italic text-[11px] border-l border-slate-700 pl-3">${item.Lore}</div>
-                        </td>
-                    </tr>
-                `;
-
-                spellTable.innerHTML = spells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600">No spells found.</td></tr>';
-                cantripTable.innerHTML = cantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600">No cantrips found.</td></tr>';
-
+                renderMagic();
             } catch (e) {
                 console.error("Failed to load magic data:", e);
             }
         }
 
-        // Detect scroll position to swap legend
         window.addEventListener('scroll', () => {
-            const cantripsSection = document.getElementById('section-cantrips');
-            const rect = cantripsSection.getBoundingClientRect();
+            const spellsSection = document.getElementById('section-spells');
+            const rect = spellsSection.getBoundingClientRect();
             
-            // If the top of the cantrips section is near the middle of the viewport
+            // If the top of the spells section is above the middle of viewport, show spells legend
             if (rect.top < window.innerHeight / 2) {
-                updateLegend('cantrips');
-            } else {
                 updateLegend('spells');
+            } else {
+                updateLegend('cantrips');
             }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-            updateLegend('spells');
+            updateLegend('cantrips'); // Default to cantrips now as they are first
             loadData();
         });
     </script>
