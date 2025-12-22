@@ -24,6 +24,26 @@
             background: rgba(99, 102, 241, 0.05);
         }
 
+        .legend-card {
+            background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .legend-symbol {
+            font-size: 1.1rem;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-right: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+        }
+
         .symbol-tag {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -41,6 +61,9 @@
             outline: none;
             font-size: 0.875rem;
         }
+
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 10px; }
     </style>
 </head>
 <body class="min-h-screen">
@@ -77,48 +100,104 @@
             </div>
         </header>
 
-        <div class="space-y-20">
-            <!-- 1 Point Traits -->
-            <section id="section-1pt" class="scroll-mt-32">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
-                    Basic Traits 
-                    <span class="text-xs uppercase bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">1 Point</span>
-                </h2>
-                <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                <th class="px-6 py-4 font-bold">Trait Name</th>
-                                <th class="px-6 py-4 font-bold">Symbols</th>
-                                <th class="px-6 py-4 font-bold">Parameters</th>
-                                <th class="px-6 py-4 font-bold">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody id="traits-1-point"></tbody>
-                    </table>
-                </div>
-            </section>
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            
+            <!-- Sidebar Legend -->
+            <aside class="w-full lg:w-80 lg:sticky lg:top-28 z-40">
+                <section class="p-6 rounded-3xl legend-card shadow-2xl">
+                    <div class="mb-6">
+                        <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Trait Legend</h3>
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Key mechanics & Symbols</p>
+                    </div>
+                    
+                    <div class="space-y-5">
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-amber-400">⧖</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Passive</div>
+                                <div class="text-slate-500 text-[10px] italic">Always active or rest-based.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-indigo-400">🗲</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Active</div>
+                                <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-rose-400">★</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Unique</div>
+                                <div class="text-slate-500 text-[10px] italic">Cannot be taken multiple times.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-emerald-400">⫘</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Linked</div>
+                                <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-slate-400">⚿</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Lock</div>
+                                <div class="text-slate-500 text-[10px] italic">Level or attribute requirement.</div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- 2 Point Traits -->
-            <section id="section-2pt" class="scroll-mt-32">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
-                    Advanced Traits 
-                    <span class="text-xs uppercase bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30">2 Points</span>
-                </h2>
-                <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                <th class="px-6 py-4 font-bold">Trait Name</th>
-                                <th class="px-6 py-4 font-bold">Symbols</th>
-                                <th class="px-6 py-4 font-bold">Parameters</th>
-                                <th class="px-6 py-4 font-bold">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody id="traits-2-point"></tbody>
-                    </table>
-                </div>
-            </section>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-full mt-8 py-3 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-xl text-indigo-400 text-[10px] font-bold uppercase tracking-widest transition-all">
+                        Back to Top
+                    </button>
+                </section>
+            </aside>
+
+            <!-- Main Content: Trait Tables -->
+            <div class="flex-1 w-full space-y-20">
+                <!-- 1 Point Traits -->
+                <section id="section-1pt" class="scroll-mt-32">
+                    <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
+                        Basic Traits 
+                        <span class="text-xs uppercase bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">1 Point</span>
+                    </h2>
+                    <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-x-auto shadow-2xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[600px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-4 font-bold">Trait Name</th>
+                                    <th class="px-6 py-4 font-bold">Symbols</th>
+                                    <th class="px-6 py-4 font-bold">Parameters</th>
+                                    <th class="px-6 py-4 font-bold">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="traits-1-point"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 2 Point Traits -->
+                <section id="section-2pt" class="scroll-mt-32">
+                    <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
+                        Advanced Traits 
+                        <span class="text-xs uppercase bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30">2 Points</span>
+                    </h2>
+                    <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-x-auto shadow-2xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[600px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-4 font-bold">Trait Name</th>
+                                    <th class="px-6 py-4 font-bold">Symbols</th>
+                                    <th class="px-6 py-4 font-bold">Parameters</th>
+                                    <th class="px-6 py-4 font-bold">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="traits-2-point"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
