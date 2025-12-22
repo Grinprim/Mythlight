@@ -275,22 +275,22 @@
   {
     "Name": "Beast Whisperer",
     "Cost": "1",
-    "Symbols": "⧖",
-    "Parameters": "None",
+    "Symbols": "⧖ ★",
+    "Parameters": "Companion",
     "Description": "You can tame animals or beasts to become companions (Narrator’s discretion)."
   },
   {
     "Name": "Bonded Instinct",
     "Cost": "1",
     "Symbols": "◆ ⧖ ⫘",
-    "Parameters": "Beast Whisperer",
+    "Parameters": "Companion",
     "Description": "Command your companion to attack the target you struck; it gains +2 Accuracy (+1 more at levels 3, 6, 9, 12)."
   },
   {
     "Name": "Spirit Bond",
     "Cost": "1",
     "Symbols": "⧖ ⫘",
-    "Parameters": "Beast Whisperer",
+    "Parameters": "Companion",
     "Description": "When your companion is healed, you recover half the Health restored. You can see through your companion within 12 tiles."
   },
   {
@@ -454,6 +454,98 @@
     "Parameters": "Spellcasting",
     "Description": "Imbue a spell into a machine once per rest; it triggers based on declared conditions."
   }
+{
+    "Name": "Relentless Advance",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Moving into melee range of a new enemy grants +2 Accuracy for your next attack (+1 at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Locksmith",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Open simple locks without tools; gain +1 Finesse (+1 at levels 6 and 12)."
+  },
+  {
+    "Name": "Companion Recall",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Teleport your companion to your side and restore 2 Health to it."
+  },
+  {
+    "Name": "Pathmaker",
+    "Cost": "1",
+    "Symbols": "◆ ⧖",
+    "Parameters": "Once per scene",
+    "Description": "Dash into a target within 3 units, dealing 1 Force damage. Damage applies only to enemies."
+  },
+  {
+    "Name": "Crippling Impact",
+    "Cost": "1",
+    "Symbols": "◆ ⧖ ★",
+    "Parameters": "Impact; Pathmaker",
+    "Description": "The target you dash to is slowed until your next turn and takes +1 Force damage."
+  },
+  {
+    "Name": "Crushing Impact",
+    "Cost": "1",
+    "Symbols": "◆ ⧖ ★",
+    "Parameters": "Impact; Pathmaker",
+    "Description": "The target you dash to takes +1 Force damage. If below half Health, they instead take +2 Force damage."
+  },
+  {
+    "Name": "Displacing Impact",
+    "Cost": "1",
+    "Symbols": "◆ ⧖ ★",
+    "Parameters": "Impact; Pathmaker",
+    "Description": "The target you dash through is pushed 3 units away in the direction of the dash and takes +1 Force damage."
+  },
+  {
+    "Name": "Switching Impact",
+    "Cost": "1",
+    "Symbols": "◆ ⧖ ★",
+    "Parameters": "Impact; Pathmaker",
+    "Description": "The target you dash to is swapped with your original position. If the target is an ally, they gain Guard equal to your level."
+  },
+  {
+    "Name": "Guarding Impact",
+    "Cost": "1",
+    "Symbols": "◆ ⧖ ★",
+    "Parameters": "Impact; Pathmaker",
+    "Description": "If you dash onto an ally, they gain Guard equal to your level; otherwise, you gain the Guard."
+  },
+  {
+    "Name": "Mana Charger",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can charge devices or machines that require electrical power using Mana."
+  },
+  {
+    "Name": "Mechanical Assistant",
+    "Cost": "1",
+    "Symbols": "⧖ ★",
+    "Parameters": "Companion",
+    "Description": "Using metal components, construct a small mechanical assistant that can carry, retrieve, or activate simple objects. It has 6 Durability, replenished each rest."
+  },
+  {
+    "Name": "Spell Drone",
+    "Cost": "1",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Mechanical Assistant",
+    "Description": "Create a flying spell drone that stays within 3 units of you. You may cast spells from its position. It has 3 Durability, replenished each rest."
+  },
+  {
+    "Name": "Combat Rover",
+    "Cost": "1",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Mechanical Assistant",
+    "Description": "Create a small combat rover that can be commanded to attack targets within 5 tiles, dealing 2 Damage. It has 3 Durability, replenished each rest."
+  }
 ]
+
 
 
