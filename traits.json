@@ -1,65 +1,142 @@
 [
   {
     "Name": "Medium Melee Weapon Proficiency",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You can effectively wield Medium melee weapons without penalty."
+    "Description": "You can effectively wield Medium melee weapons."
   },
   {
     "Name": "Heavy Melee Weapon Proficiency",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Heavy melee weapons."
   },
   {
     "Name": "Light Bow Proficiency",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Light Bows, Slingshots and Crossbows."
   },
   {
+    "Name": "Heavy Bow Proficiency",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Heavy Bows and Crossbows."
+  },
+  {
+    "Name": "Light Firearm Proficiency",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Light Firearms."
+  },
+  {
+    "Name": "Heavy Firearm Proficiency",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Heavy Firearms."
+  },
+  {
     "Name": "Medium Armor Training",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can equip Medium armor. While wearing it, gain +1 Athletics."
   },
   {
-    "Name": "Mana Recovery",
-    "Cost": "1",
-    "Symbols": "☀",
-    "Parameters": "Level 1+",
-    "Description": "During a Short Rest, you can recover 1 expended Mana point. This can only be done once per Long Rest."
-  },
-  {
     "Name": "Heavy Armor Training",
-    "Cost": "2",
-    "Symbols": "⧖ ⫘",
-    "Parameters": "Medium Armor Training",
-    "Description": "You can equip Heavy armor. While wearing it, gain +1 Athletics and +1 Brawn."
-  },
-  {
-    "Name": "Arcane Initiate",
-    "Cost": "2",
-    "Symbols": "★ ❖",
-    "Parameters": "Mystique 1+",
-    "Description": "You gain the ability to cast Cantrips. You also gain 1 Mana point and may learn two Level 1 Arcane spells."
-  },
-  {
-    "Name": "Adrenaline Surge",
-    "Cost": "2",
-    "Symbols": "🗲 1/2",
-    "Parameters": "Physique 2+",
-    "Description": "Once per rest (twice at Level 6), you can take an additional Action on your turn. Using this trait causes 1 Exhaustion."
-  },
-  {
-    "Name": "Scholarship",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You gain +1 to Scholarship checks and can learn 1 additional spell per level."
+    "Description": "You can equip Heavy armor. While wearing it, gain -1 Reflex."
+  },
+  {
+    "Name": "Shield Training",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Off-hand",
+    "Description": "While you have a shield equipped at the start of combat, gain Guard equal to your level."
+  },
+  {
+    "Name": "Heavy Guard",
+    "Cost": "—",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Heavy Armor Training",
+    "Description": "When wearing Heavy armor and using a shield, gain +2 Armor."
+  },
+  {
+    "Name": "Traveler’s Endurance",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "+1 Speed; ignore the first level of Fatigue."
+  },
+  {
+    "Name": "Arcane Student",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Arcane)",
+    "Description": "Gain access to Arcane Spellcasting. You learn 1 spell per level from the Arcane list and learn 2 Arcane cantrips."
+  },
+  {
+    "Name": "Divine Initiate",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Divine)",
+    "Description": "Gain access to Divine Spellcasting. You learn 1 spell per level from the Divine list and learn 2 Divine cantrips."
+  },
+  {
+    "Name": "Cosmic Novice",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Cosmic)",
+    "Description": "Gain access to Cosmic Spellcasting. You cannot learn spells above level 1. Higher-level mana can cast multiple level 1 spells at once."
+  },
+  {
+    "Name": "Occult Apprentice",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Occult)",
+    "Description": "Gain access to Occult Spellcasting. You cannot learn spells above level 2. Higher-level mana only upcasts. You learn 2 Occult cantrips."
+  },
+  {
+    "Name": "Elementalist’s Spark",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Elemental)",
+    "Description": "Gain access to Elemental Spellcasting. Choose one element; spells of that element deal +1 damage (+1 more at levels 3, 6, 9, 12). You learn 2 Elemental cantrips."
+  },
+  {
+    "Name": "Cantrip Adept",
+    "Cost": "—",
+    "Symbols": "⧖ ⫘ ★",
+    "Parameters": "Spellcasting",
+    "Description": "You learn 2 additional cantrips from your chosen spellcasting type."
+  },
+  {
+    "Name": "Quick Reflexes",
+    "Cost": "—",
+    "Symbols": "◇ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Reduce incoming damage by half your level (minimum 1)."
+  },
+  {
+    "Name": "Cantrip Knowledge",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "Spellcasting",
+    "Description": "Convert one level 1 spell from your spellcasting type into a cantrip."
+  },
+  {
+    "Name": "Minor Channeling",
+    "Cost": "—",
+    "Symbols": "🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Cast one level 1 spell without spending Mana."
   }
 ]
