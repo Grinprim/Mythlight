@@ -1,65 +1,458 @@
 [
   {
     "Name": "Medium Melee Weapon Proficiency",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You can effectively wield Medium melee weapons without penalty."
+    "Description": "You can effectively wield Medium melee weapons."
   },
   {
     "Name": "Heavy Melee Weapon Proficiency",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Heavy melee weapons."
   },
   {
     "Name": "Light Bow Proficiency",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can effectively wield Light Bows, Slingshots and Crossbows."
   },
   {
+    "Name": "Heavy Bow Proficiency",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Heavy Bows and Crossbows."
+  },
+  {
+    "Name": "Light Firearm Proficiency",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Light Firearms."
+  },
+  {
+    "Name": "Heavy Firearm Proficiency",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Heavy Firearms."
+  },
+  {
     "Name": "Medium Armor Training",
-    "Cost": "1",
+    "Cost": "—",
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You can equip Medium armor. While wearing it, gain +1 Athletics."
   },
   {
-    "Name": "Mana Recovery",
+    "Name": "Heavy Armor Training",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can equip Heavy armor. While wearing it, gain -1 Reflex."
+  },
+  {
+    "Name": "Shield Training",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Off-hand",
+    "Description": "While you have a shield equipped at the start of combat, gain Guard equal to your level."
+  },
+  {
+    "Name": "Heavy Guard",
+    "Cost": "—",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Heavy Armor Training",
+    "Description": "When wearing Heavy armor and using a shield, gain +2 Armor."
+  },
+  {
+    "Name": "Traveler’s Endurance",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "+1 Speed; ignore the first level of Fatigue."
+  },
+  {
+    "Name": "Arcane Student",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Arcane)",
+    "Description": "Gain access to Arcane Spellcasting. You learn 1 spell per level from the Arcane list and learn 2 Arcane cantrips."
+  },
+  {
+    "Name": "Divine Initiate",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Divine)",
+    "Description": "Gain access to Divine Spellcasting. You learn 1 spell per level from the Divine list and learn 2 Divine cantrips."
+  },
+  {
+    "Name": "Cosmic Novice",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Cosmic)",
+    "Description": "Gain access to Cosmic Spellcasting. You cannot learn spells above level 1. Higher-level mana can cast multiple level 1 spells at once."
+  },
+  {
+    "Name": "Occult Apprentice",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Occult)",
+    "Description": "Gain access to Occult Spellcasting. You cannot learn spells above level 2. Higher-level mana only upcasts. You learn 2 Occult cantrips."
+  },
+  {
+    "Name": "Elementalist’s Spark",
+    "Cost": "—",
+    "Symbols": "⧖ ★",
+    "Parameters": "Spellcasting (Elemental)",
+    "Description": "Gain access to Elemental Spellcasting. Choose one element; spells of that element deal +1 damage (+1 more at levels 3, 6, 9, 12). You learn 2 Elemental cantrips."
+  },
+  {
+    "Name": "Cantrip Adept",
+    "Cost": "—",
+    "Symbols": "⧖ ⫘ ★",
+    "Parameters": "Spellcasting",
+    "Description": "You learn 2 additional cantrips from your chosen spellcasting type."
+  },
+  {
+    "Name": "Quick Reflexes",
+    "Cost": "—",
+    "Symbols": "◇ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Reduce incoming damage by half your level (minimum 1)."
+  },
+  {
+    "Name": "Cantrip Knowledge",
+    "Cost": "—",
+    "Symbols": "⧖",
+    "Parameters": "Spellcasting",
+    "Description": "Convert one level 1 spell from your spellcasting type into a cantrip."
+  },
+  {
+    "Name": "Minor Channeling",
+    "Cost": "—",
+    "Symbols": "🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Cast one level 1 spell without spending Mana."
+  },
+  {
+    "Name": "Chef",
     "Cost": "1",
     "Symbols": "☀",
-    "Parameters": "Level 1+",
-    "Description": "During a Short Rest, you can recover 1 expended Mana point. This can only be done once per Long Rest."
+    "Parameters": "None",
+    "Description": "Cook allies a meal during a rest. Eating grants +2 Accuracy or +1 Armor next combat (+1 more at levels 3, 6, 9, 12)."
   },
   {
-    "Name": "Heavy Armor Training",
-    "Cost": "2",
-    "Symbols": "⧖ ⫘",
-    "Parameters": "Medium Armor Training",
-    "Description": "You can equip Heavy armor. While wearing it, gain +1 Athletics and +1 Brawn."
-  },
-  {
-    "Name": "Arcane Initiate",
-    "Cost": "2",
-    "Symbols": "★ ❖",
-    "Parameters": "Mystique 1+",
-    "Description": "You gain the ability to cast Cantrips. You also gain 1 Mana point and may learn two Level 1 Arcane spells."
-  },
-  {
-    "Name": "Adrenaline Surge",
-    "Cost": "2",
-    "Symbols": "🗲 1/2",
-    "Parameters": "Physique 2+",
-    "Description": "Once per rest (twice at Level 6), you can take an additional Action on your turn. Using this trait causes 1 Exhaustion."
-  },
-  {
-    "Name": "Scholarship",
+    "Name": "Tavern Brawler",
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You gain +1 to Scholarship checks and can learn 1 additional spell per level."
+    "Description": "Gain proficiency with improvised weaponry; it deals 1 additional damage."
+  },
+  {
+    "Name": "Miner",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Identify and extract minerals. Deal +1 damage to constructs and stone enemies. Ignore disadvantages from non-magical darkness (+1 more at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Brewer",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "None",
+    "Description": "During a rest, create a potion per ally from your known potion list. Learn 2 potion recipes; each additional pick grants 1 more."
+  },
+  {
+    "Name": "Fisher",
+    "Cost": "1",
+    "Symbols": "☀ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "When resting near water, regain +50% Health. While fishing, guarantee treasure worth at least 2 gold (+1 gold at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Storyteller",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "None",
+    "Description": "Tell a tale; allies gain 1 Grace at the start of next combat and remove a mental condition. Gain +1 Scholarship."
+  },
+  {
+    "Name": "Gravedigger",
+    "Cost": "1",
+    "Symbols": "☀ ★",
+    "Parameters": "Death",
+    "Description": "During a rest, burying a dead ally grants Grace equal to remaining allies next combat; burying an enemy restores Health equal to allies × level."
+  },
+  {
+    "Name": "Bardic Drunk",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While intoxicated, gain +1 Damage and -2 Accuracy (+1 Damage at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Hermit",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Recover +2 Health when resting alone. While no allies are within 2 units, gain +2 Accuracy or +1 Armor (+1 at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Street Performer",
+    "Cost": "1",
+    "Symbols": "◆ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Performing earns rewards worth 2 gold. Performing in combat grants allies within 5 units +2 Accuracy (+1 gold at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Candle Keeper",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Light sources you hold never go out. While lit, gain +1 Insight and +1 Reflex."
+  },
+  {
+    "Name": "Combat Trapper",
+    "Cost": "1",
+    "Symbols": "◆ ⧖",
+    "Parameters": "None",
+    "Description": "Create traps using components: Common creates a damaging snare; Rope creates a Bola ranged trap (+1 damage at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Conductive Wiring",
+    "Cost": "1",
+    "Symbols": "◆ 🗲 ⫘",
+    "Parameters": "Combat Trapper",
+    "Description": "Using metal wire, create lightning fences that deal damage once and stun creatures below half health."
+  },
+  {
+    "Name": "Survivalist",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain +1 Accuracy against beasts and natural creatures (+1 at levels 3, 6, 9, 12). Gain advantage on Insight, Reflex, and Fortitude checks in natural environments."
+  },
+  {
+    "Name": "Tracer Shot",
+    "Cost": "1",
+    "Symbols": "◆ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Fire a glowing projectile; allies gain +1 Accuracy against the marked target (+1 more at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Non-lethal Shot",
+    "Cost": "1",
+    "Symbols": "❖ ⧖",
+    "Parameters": "None",
+    "Description": "You can choose to deal non-lethal damage with ranged attacks."
+  },
+  {
+    "Name": "Arcane Edge",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "If you cast a spell and strike with a melee attack in the same turn, the attack deals +1 damage (+1 more at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Elemental Draw",
+    "Cost": "1",
+    "Symbols": "❖ 🗲 ★",
+    "Parameters": "Infused Strike",
+    "Description": "Your next attack deals +1 elemental damage of a chosen type (+1 at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Mana Slash",
+    "Cost": "1",
+    "Symbols": "❖ 🗲 ★",
+    "Parameters": "Infused Strike",
+    "Description": "Spend Mana to empower an attack, adding damage based on Mana spent. Attack counts as magical."
+  },
+  {
+    "Name": "Beast Whisperer",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can tame animals or beasts to become companions (Narrator’s discretion)."
+  },
+  {
+    "Name": "Bonded Instinct",
+    "Cost": "1",
+    "Symbols": "◆ ⧖ ⫘",
+    "Parameters": "Beast Whisperer",
+    "Description": "Command your companion to attack the target you struck; it gains +2 Accuracy (+1 more at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Spirit Bond",
+    "Cost": "1",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Beast Whisperer",
+    "Description": "When your companion is healed, you recover half the Health restored. You can see through your companion within 12 tiles."
+  },
+  {
+    "Name": "Noble Steed",
+    "Cost": "1",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Beast Whisperer",
+    "Description": "While riding your companion, gain +2 Armor. First damage taken each combat grants Guard equal to companion’s Speed."
+  },
+  {
+    "Name": "Carapace",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While unarmored, gain +1 Armor (+1 more at levels 6 and 12)."
+  },
+  {
+    "Name": "Forgotten History",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain +1 Scholarship when identifying historical objects (+1 more at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Weakpoint",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Landing an attack grants +2 Accuracy against that target until combat ends (+1 more at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Ancient Study",
+    "Cost": "1",
+    "Symbols": "⧖ ★ ⫘",
+    "Parameters": "Occult Apprentice / Cosmic Novice",
+    "Description": "Occult and Cosmic spells gain +1 Range. Learn 1 Occult cantrip and 1 Cosmic spell, bypassing type restrictions."
+  },
+  {
+    "Name": "Coward’s Instinct",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain +2 movement tiles while retreating or while feared."
+  },
+  {
+    "Name": "Master of Disguise",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain +1 Deception and Finesse while disguised or blending into crowds (+1 at levels 6 and 12)."
+  },
+  {
+    "Name": "Leg Day",
+    "Cost": "1",
+    "Symbols": "◆ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Double movement until next turn; movement is halved the following turn."
+  },
+  {
+    "Name": "Focused Strike",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "The first melee hit each scene gains +1 Damage (+1 at levels 6 and 12)."
+  },
+  {
+    "Name": "Hard Swing / Big Bonk",
+    "Cost": "1",
+    "Symbols": "❖ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Add +2 Damage to a melee attack (additional uses at levels 6 and 12)."
+  },
+  {
+    "Name": "Focused Mind",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "+1 to resist Charm, Fear, and Illusion effects."
+  },
+  {
+    "Name": "Spell Scribe",
+    "Cost": "1",
+    "Symbols": "⧖ ★ ⫘",
+    "Parameters": "Spellcasting",
+    "Description": "Identifying a used spell grants +1 Spellcraft against that enemy, stacking up to 3 times."
+  },
+  {
+    "Name": "Ritualist’s Patience",
+    "Cost": "1",
+    "Symbols": "⧖ ★ ⫘",
+    "Parameters": "Spellcasting",
+    "Description": "Ritual spells take half the time and grant +2 Arcana on that spell (+1 at levels 3, 6, 9, 12)."
+  },
+  {
+    "Name": "Pocket Sand",
+    "Cost": "1",
+    "Symbols": "◇ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "As a reaction, blind an enemy entering melee range until their next turn."
+  },
+  {
+    "Name": "Remote Activation",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Activate an allied mechanical device, trap, or gadget within 6 tiles as a free action."
+  },
+  {
+    "Name": "Reinforced Construction",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Crafts and modifications you create gain +2 Durability."
+  },
+  {
+    "Name": "Craftsman",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Learn 2 Trivial recipes. Additional picks unlock higher tiers and grant more recipes."
+  },
+  {
+    "Name": "Gearwright",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "None",
+    "Description": "Repair one trivial or simple craft during a rest without a check."
+  },
+  {
+    "Name": "Field Mechanic",
+    "Cost": "1",
+    "Symbols": "◆ 🗲",
+    "Parameters": "Uses scale by level",
+    "Description": "Once per rest, repair a craft to full operation. Each craft can only benefit once."
+  },
+  {
+    "Name": "Scrap Salvager",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Disassemble objects into components via Tinkering. Crafted items yield extra components."
+  },
+  {
+    "Name": "Arc Current",
+    "Cost": "1",
+    "Symbols": "◆ ⧖",
+    "Parameters": "None",
+    "Description": "Constructs can expend Durability to shock nearby targets, dealing Lightning Damage."
+  },
+  {
+    "Name": "Charged Conduit",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When casting a spell through a spellcasting craft, add +1 Damage (+1 at levels 6 and 12)."
+  },
+  {
+    "Name": "Spell Interface",
+    "Cost": "1",
+    "Symbols": "🗲 ⫘ ★",
+    "Parameters": "Spellcasting",
+    "Description": "Imbue a spell into a machine once per rest; it triggers based on declared conditions."
   }
 ]
+
