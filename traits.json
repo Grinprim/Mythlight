@@ -1,0 +1,65 @@
+[
+  {
+    "Name": "Medium Melee Weapon Proficiency",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Medium melee weapons without penalty."
+  },
+  {
+    "Name": "Heavy Melee Weapon Proficiency",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Heavy melee weapons."
+  },
+  {
+    "Name": "Light Bow Proficiency",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can effectively wield Light Bows, Slingshots and Crossbows."
+  },
+  {
+    "Name": "Medium Armor Training",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can equip Medium armor. While wearing it, gain +1 Athletics."
+  },
+  {
+    "Name": "Mana Recovery",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "Level 1+",
+    "Description": "During a Short Rest, you can recover 1 expended Mana point. This can only be done once per Long Rest."
+  },
+  {
+    "Name": "Heavy Armor Training",
+    "Cost": "2",
+    "Symbols": "⧖ ⫘",
+    "Parameters": "Medium Armor Training",
+    "Description": "You can equip Heavy armor. While wearing it, gain +1 Athletics and +1 Brawn."
+  },
+  {
+    "Name": "Arcane Initiate",
+    "Cost": "2",
+    "Symbols": "★ ❖",
+    "Parameters": "Mystique 1+",
+    "Description": "You gain the ability to cast Cantrips. You also gain 1 Mana point and may learn two Level 1 Arcane spells."
+  },
+  {
+    "Name": "Adrenaline Surge",
+    "Cost": "2",
+    "Symbols": "🗲 1/2",
+    "Parameters": "Physique 2+",
+    "Description": "Once per rest (twice at Level 6), you can take an additional Action on your turn. Using this trait causes 1 Exhaustion."
+  },
+  {
+    "Name": "Scholarship",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You gain +1 to Scholarship checks and can learn 1 additional spell per level."
+  }
+]
