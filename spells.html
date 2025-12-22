@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythlight RPG | Spells</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0f172a; 
+            color: #cbd5e1; 
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, .fantasy-font { font-family: 'Cinzel', serif; }
+        
+        .nav-glass {
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spell-row {
+            transition: all 0.2s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spell-row:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .category-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: #818cf8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Floating Legend Styling */
+        .legend-card {
+            background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .legend-symbol {
+            font-size: 1.1rem;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-right: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
+        }
+
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 10px; }
+
+        .active-legend-section {
+            border-left: 2px solid #6366f1;
+            padding-left: 1rem;
+            margin-left: -1rem;
+            background: rgba(99, 102, 241, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="Mythlight Logo.png" alt="Mythlight" class="h-10 w-auto object-contain">
+                <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
+                <a href="rules.html" class="hover:text-white transition-colors text-slate-400">Rules</a>
+                <a href="spells.html" class="text-indigo-400">Spells</a>
+                <a href="traits.html" class="hover:text-white transition-colors text-slate-400">Traits</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
+        <header class="mb-12">
+            <h1 class="text-5xl font-bold text-white mb-4">Grimoire</h1>
+            <p class="text-slate-400 text-lg max-w-3xl">From minor cantrips to world-bending incantations. Magic in Mythlight is shaped by your Mystique and focus.</p>
+        </header>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            
+            <!-- Left Sidebar: Context-Aware Legend -->
+            <aside class="w-full lg:w-80 lg:sticky lg:top-28 z-40">
+                <section id="legend-box" class="p-6 rounded-3xl legend-card shadow-2xl">
+                    <div id="legend-header" class="mb-6">
+                        <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Spellcasting Key</h3>
+                        <p id="legend-context" class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Currently Viewing: Spells</p>
+                    </div>
+                    
+                    <div id="legend-content" class="space-y-5">
+                        <!-- Content injected by JS -->
+                    </div>
+
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-full mt-8 py-3 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-xl text-indigo-400 text-[10px] font-bold uppercase tracking-widest transition-all">
+                        Back to Top
+                    </button>
+                </section>
+            </aside>
+
+            <!-- Right Column: Spell Lists -->
+            <div class="flex-1 w-full space-y-24">
+                
+                <!-- Spells Section -->
+                <section id="section-spells" class="scroll-mt-32">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">Leveled Spells</h2>
+                        <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">1+ Mana</span>
+                    </div>
+                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[700px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-5 font-bold">Spell</th>
+                                    <th class="px-6 py-5 font-bold">Category</th>
+                                    <th class="px-6 py-5 font-bold">Type/Range</th>
+                                    <th class="px-6 py-5 font-bold">Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody id="spells-body">
+                                <tr><td colspan="4" class="px-8 py-12 text-center text-slate-500 italic">Reading the scrolls...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Cantrips Section -->
+                <section id="section-cantrips" class="scroll-mt-32">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">Cantrips</h2>
+                        <span class="px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase rounded-full">0 Mana</span>
+                    </div>
+                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[700px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-5 font-bold">Cantrip</th>
+                                    <th class="px-6 py-5 font-bold">Category</th>
+                                    <th class="px-6 py-5 font-bold">Type/Range</th>
+                                    <th class="px-6 py-5 font-bold">Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cantrips-body">
+                                <tr><td colspan="4" class="px-8 py-12 text-center text-slate-500 italic">Gathering minor magics...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const legends = {
+            spells: [
+                { s: "✦", t: "Mana Cost", d: "Base mana required to cast." },
+                { s: "⚡", t: "Action", d: "Standard turn action." },
+                { s: "⮌", t: "Reaction", d: "Cast in response to triggers." },
+                { s: "✚", t: "Upcast", d: "Spend more mana for +Power." },
+                { s: "◈", t: "Requirement", d: "Needs specific trait or level." }
+            ],
+            cantrips: [
+                { s: "🔸", t: "Free", d: "Costs 0 Mana to use." },
+                { s: "☄", t: "Scaling", d: "Effect grows with player level." },
+                { s: "👁", t: "Insight", d: "Commonly uses Insight stats." },
+                { s: "⧖", t: "Utility", d: "Non-combat or utility focused." }
+            ]
+        };
+
+        function updateLegend(mode) {
+            const container = document.getElementById('legend-content');
+            const contextText = document.getElementById('legend-context');
+            const currentItems = legends[mode];
+            
+            contextText.innerText = `Currently Viewing: ${mode}`;
+            
+            container.innerHTML = currentItems.map(item => `
+                <div class="flex items-center">
+                    <div class="legend-symbol">${item.s}</div>
+                    <div>
+                        <div class="text-white font-bold text-sm">${item.t}</div>
+                        <div class="text-slate-500 text-[10px] italic">${item.d}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function loadData() {
+            try {
+                // Fetch from two separate JSON files
+                const [spellsRes, cantripsRes] = await Promise.all([
+                    fetch('spells.json'),
+                    fetch('cantrips.json')
+                ]);
+
+                const spells = await spellsRes.json();
+                const cantrips = await cantripsRes.json();
+                
+                const spellTable = document.getElementById('spells-body');
+                const cantripTable = document.getElementById('cantrips-body');
+
+                const createRow = (item) => `
+                    <tr class="spell-row text-sm">
+                        <td class="px-6 py-6">
+                            <div class="font-bold text-white text-base">${item.Name}</div>
+                            <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">ID: ${item.ID}</div>
+                        </td>
+                        <td class="px-6 py-6">
+                            <span class="category-tag">${item.Subcategory}</span>
+                        </td>
+                        <td class="px-6 py-6">
+                            <div class="text-white font-medium text-xs">${item.Type}</div>
+                            <div class="text-slate-500 text-[10px]">${item.Range || 'Self'}</div>
+                        </td>
+                        <td class="px-6 py-6">
+                            <div class="text-slate-300 text-sm leading-relaxed mb-2">${item.Description}</div>
+                            <div class="text-slate-500 italic text-[11px] border-l border-slate-700 pl-3">${item.Lore}</div>
+                        </td>
+                    </tr>
+                `;
+
+                spellTable.innerHTML = spells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600">No spells found.</td></tr>';
+                cantripTable.innerHTML = cantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600">No cantrips found.</td></tr>';
+
+            } catch (e) {
+                console.error("Failed to load magic data:", e);
+            }
+        }
+
+        // Detect scroll position to swap legend
+        window.addEventListener('scroll', () => {
+            const cantripsSection = document.getElementById('section-cantrips');
+            const rect = cantripsSection.getBoundingClientRect();
+            
+            // If the top of the cantrips section is near the middle of the viewport
+            if (rect.top < window.innerHeight / 2) {
+                updateLegend('cantrips');
+            } else {
+                updateLegend('spells');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLegend('spells');
+            loadData();
+        });
+    </script>
+</body>
+</html>
