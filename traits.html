@@ -205,18 +205,18 @@ function renderTraits() {
             (trait.Cost === "1" ? t1 : t2).innerHTML += row;
         });
 }
-async function loadTraits() {
-            try {
-                const response = await fetch('traits.json');
-                if (response.ok) {
-                    rawTraits = await response.json();
-                }
-                renderTraits();
-            } catch (error) {
-                console.error('Error loading traits, using defaults:', error);
-                renderTraits();
-            }
-        }
+window.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const res = await fetch('./traits.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        rawTraits = Array.isArray(data) ? data : [];
+    } catch {
+        rawTraits = [];
+    }
+    renderTraits();
+});
+
 
 
 renderTraits();
@@ -224,3 +224,4 @@ renderTraits();
 
 </body>
 </html>
+
