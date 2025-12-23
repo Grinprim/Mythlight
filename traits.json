@@ -453,8 +453,8 @@
     "Symbols": "🗲 ⫘ ★",
     "Parameters": "Spellcasting",
     "Description": "Imbue a spell into a machine once per rest; it triggers based on declared conditions."
-  }
-{
+  },
+  {
     "Name": "Relentless Advance",
     "Cost": "1",
     "Symbols": "⧖",
@@ -544,8 +544,8 @@
     "Symbols": "⧖ ⫘",
     "Parameters": "Mechanical Assistant",
     "Description": "Create a small combat rover that can be commanded to attack targets within 5 tiles, dealing 2 Damage. It has 3 Durability, replenished each rest."
-  }
-{
+  },
+  {
     "Name": "Dual Wielding",
     "Cost": "2",
     "Symbols": "⧖ ★",
@@ -917,6 +917,7 @@
     "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses."
   }
 ]
+
 
 
 
