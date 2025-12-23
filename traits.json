@@ -555,7 +555,7 @@
     "Name": "Crippling Impact",
     "Action":"⬖",
     "Cost": "1",
-    "Symbols": "◆ ⧖ ",
+    "Symbols": "⧖",
     "Parameters": "★ Impact ⫘ Pathmaker",
     "Description": "The target you dash to is slowed until your next turn and takes +1 Force damage."
   },
@@ -1048,6 +1048,7 @@
     "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   }
 ]
+
 
 
 
