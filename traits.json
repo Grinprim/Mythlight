@@ -148,7 +148,7 @@
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
-    "Parameters": "⫘ Spellcasting",
+    "Parameters": "⫘ ★ Spellcasting",
     "Description": "Convert one level 1 spell from your spellcasting type into a cantrip."
   },
   {
@@ -1048,6 +1048,7 @@
     "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   }
 ]
+
 
 
 
