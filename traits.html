@@ -43,11 +43,14 @@
             margin-right: 0.75rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             flex-shrink: 0;
-            cursor: pointer;
             transition: all 0.2s;
         }
 
-        .legend-symbol:hover {
+        .legend-symbol.clickable {
+            cursor: pointer;
+        }
+
+        .legend-symbol.clickable:hover {
             background: rgba(99, 102, 241, 0.2);
             border-color: rgba(99, 102, 241, 0.5);
             transform: scale(1.05);
@@ -132,7 +135,7 @@
                     <div class="mb-6 flex justify-between items-start">
                         <div>
                             <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Trait Legend</h3>
-                            <p class="text-[10px] text-slate-400 mt-1 italic">Click icons to filter traits.</p>
+                            <p class="text-[10px] text-slate-400 mt-1 italic">Interactive icons can filter traits.</p>
                         </div>
                         <button id="clear-filter" onclick="setSymbolFilter(null)" class="hidden text-[10px] uppercase text-rose-400 font-bold hover:underline">Clear</button>
                     </div>
@@ -140,42 +143,42 @@
                     <div class="space-y-5">
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Types</p>
                         <!-- Passive -->
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-blue-400" onclick="setSymbolFilter('⧖')" data-symbol="⧖">⧖</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⧖')">
+                            <div class="legend-symbol text-blue-400 clickable" data-symbol="⧖">⧖</div>
                             <div>
-                                <div class="text-white font-bold text-sm">Passive</div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Passive</div>
                                 <div class="text-slate-500 text-[10px] italic">Always active.</div>
                             </div>
                         </div>
                         <!-- Rest Based -->
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-amber-400" onclick="setSymbolFilter('☀')" data-symbol="☀">☀</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('☀')">
+                            <div class="legend-symbol text-amber-400 clickable" data-symbol="☀">☀</div>
                             <div>
-                                <div class="text-white font-bold text-sm">Rest-Based</div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Rest-Based</div>
                                 <div class="text-slate-500 text-[10px] italic">Useable during a rest.</div>
                             </div>
                         </div>
                         <!-- Active -->
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-indigo-400" onclick="setSymbolFilter('🗲')" data-symbol="🗲">🗲</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('🗲')">
+                            <div class="legend-symbol text-indigo-400 clickable" data-symbol="🗲">🗲</div>
                             <div>
-                                <div class="text-white font-bold text-sm">Active</div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Active</div>
                                 <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
                             </div>
                         </div>
                         
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Tags</p>
-                        <!-- Unique -->
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-rose-400" onclick="setSymbolFilter('★')" data-symbol="★">★</div>
+                        <!-- Unique (NON-CLICKABLE) -->
+                        <div class="flex items-center opacity-80">
+                            <div class="legend-symbol text-rose-400" data-symbol="★">★</div>
                             <div>
                                 <div class="text-white font-bold text-sm">Unique</div>
                                 <div class="text-slate-500 text-[10px] italic">Cannot be taken multiple times.</div>
                             </div>
                         </div>
-                        <!-- Linked -->
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-emerald-400" onclick="setSymbolFilter('⫘')" data-symbol="⫘">⫘</div>
+                        <!-- Linked (NON-CLICKABLE) -->
+                        <div class="flex items-center opacity-80">
+                            <div class="legend-symbol text-emerald-400" data-symbol="⫘">⫘</div>
                             <div>
                                 <div class="text-white font-bold text-sm">Linked</div>
                                 <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
@@ -183,21 +186,21 @@
                         </div>
 
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Action Types</p>
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-white" onclick="setSymbolFilter('⭘')" data-symbol="⭘">⭘</div>
-                            <div class="text-white font-bold text-sm">Free Action</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⭘')">
+                            <div class="legend-symbol text-white clickable" data-symbol="⭘">⭘</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free Action</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-white" onclick="setSymbolFilter('◇')" data-symbol="◇">◇</div>
-                            <div class="text-white font-bold text-sm">Reaction</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◇')">
+                            <div class="legend-symbol text-white clickable" data-symbol="◇">◇</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-white" onclick="setSymbolFilter('⬖')" data-symbol="⬖">⬖</div>
-                            <div class="text-white font-bold text-sm">Action</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⬖')">
+                            <div class="legend-symbol text-white clickable" data-symbol="⬖">⬖</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="legend-symbol text-white" onclick="setSymbolFilter('◆')" data-symbol="◆">◆</div>
-                            <div class="text-white font-bold text-sm">Attack Action</div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')">
+                            <div class="legend-symbol text-white clickable" data-symbol="◆">◆</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack Action</div>
                         </div>
                     </div>
 
@@ -272,11 +275,14 @@
         }
 
         function setSymbolFilter(symbol) {
+            // Prevent filtering for non-interactive symbols if somehow triggered
+            if (symbol === '★' || symbol === '⫘') return;
+
             activeSymbolFilter = symbol;
             
             // Update UI for active symbols
             document.querySelectorAll('.legend-symbol').forEach(btn => {
-                if (btn.getAttribute('data-symbol') === symbol) {
+                if (btn.getAttribute('data-symbol') === symbol && symbol !== null) {
                     btn.classList.add('active-filter');
                 } else {
                     btn.classList.remove('active-filter');
@@ -298,7 +304,6 @@
             table1.innerHTML = '';
             table2.innerHTML = '';
 
-            // Filter
             let filtered = rawTraits.filter(trait => {
                 const matchesSearch = trait.Name.toLowerCase().includes(searchTerm) || 
                                      trait.Description.toLowerCase().includes(searchTerm) ||
@@ -311,14 +316,12 @@
                 return matchesSearch && matchesSymbol;
             });
 
-            // Sort
             filtered.sort((a, b) => {
                 if (sortBy === 'name') return a.Name.localeCompare(b.Name);
                 if (sortBy === 'symbols') return (a.Symbols || '').localeCompare(b.Symbols || '');
                 return 0;
             });
 
-            // Display
             filtered.forEach(trait => {
                 const row = `
                     <tr class="trait-row text-sm">
@@ -333,7 +336,6 @@
                 else if (trait.Cost === "2") table2.innerHTML += row;
             });
 
-            // If a section is empty, maybe show a message
             if (table1.innerHTML === '') table1.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-slate-600 italic">No matching traits found.</td></tr>';
             if (table2.innerHTML === '') table2.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-slate-600 italic">No matching traits found.</td></tr>';
         }
@@ -345,11 +347,10 @@
                 const data = await res.json();
                 rawTraits = Array.isArray(data) ? data : [];
             } catch (err) {
-                console.warn("Could not load traits.json, using fallback data.");
+                console.warn("Using fallback data.");
                 rawTraits = [
-                    { "Name": "Toughness", "Cost": "1", "Action": "—", "Symbols": "⧖", "Parameters": "HP +5", "Description": "A baseline increase to your physical resilience." },
-                    { "Name": "Meditative Mind", "Cost": "1", "Action": "—", "Symbols": "☀", "Parameters": "Rest", "Description": "Recover additional mana when performing a short rest." },
-                    { "Name": "Adrenaline Rush", "Cost": "2", "Action": "⬖", "Symbols": "🗲", "Parameters": "1/Encounter", "Description": "Take an additional action during your turn." }
+                    { "Name": "Toughness", "Cost": "1", "Action": "—", "Symbols": "⧖", "Parameters": "HP +5", "Description": "A baseline increase to your physical resilience. ★" },
+                    { "Name": "Linked Strike", "Cost": "1", "Action": "◆", "Symbols": "⫘", "Parameters": "Attack", "Description": "Requires Basic Strike. ⫘" }
                 ];
             }
             renderTraits();
