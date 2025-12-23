@@ -633,23 +633,23 @@
   },
   {
     "Name": "Dual Action",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★ ⚿",
-    "Parameters": "Double Strike; Level 6+",
+    "Symbols": "⧖",
+    "Parameters": "★ Double Strike ⫘ Level 6+",
     "Description": "Your companion makes a free attack against a target you hit. "
   },
   {
     "Name": "Second Strike",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★ ⚿",
-    "Parameters": "Double Strike; Level 6+",
+    "Symbols": "⧖",
+    "Parameters": "★ Double Strike ⫘ Level 6+",
     "Description": "After hitting with a melee attack, make another attack without expending an action."
   },
   {
     "Name": "Guardian’s Oath",
-    "Action":"◆◇⬖⭘",
+    "Action":"◇",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -657,15 +657,15 @@
   },
   {
     "Name": "Mana Reservoir",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Reservoir",
+    "Symbols": "⧖",
+    "Parameters": "★ Reservoir",
     "Description": "Gain a reservoir of 3 bonus Mana for level 1 spells. Can be used on level 2 spells starting at level 6."
   },
   {
     "Name": "Unyielding Defense",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -673,7 +673,7 @@
   },
   {
     "Name": "Precision Form",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -681,7 +681,7 @@
   },
   {
     "Name": "Tactical Awareness",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -689,15 +689,15 @@
   },
   {
     "Name": "Enduring Spirit",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "When below half Health, gain Guard equal to half your level + 4 (+1 at levels 3, 6, 9, 12)."
+    "Description": "When below half Health, gain Guard equal to half your level + 4 (+1 at levels 3, 6, 9, 12). Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Steady Aim",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -705,7 +705,7 @@
   },
   {
     "Name": "Channel Focus",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -713,23 +713,23 @@
   },
   {
     "Name": "Duelist Technique",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
-    "Parameters": "One-handed weapon only",
+    "Parameters": "None",
     "Description": "While wielding a single one-handed weapon, gain +1 Armor and +1 Reflex (+1 at levels 6 and 12)."
   },
   {
     "Name": "Crushing Blow",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Your next melee attack deals +2 Damage and you suffer -1 movement this turn (+1 Damage / -1 movement at levels 6 and 12)."
+    "Description": "Your next melee attack deals +2 Damage and you suffer -1 movement this turn (+1 Damage / -1 movement at levels 6 and 12). Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Executioner’s Edge",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -737,7 +737,7 @@
   },
   {
     "Name": "Resolute Will",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -745,15 +745,15 @@
   },
   {
     "Name": "Perfectionist Strike",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
-    "Symbols": "❖ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "On a hit, deal bonus Damage equal to the amount your attack exceeded the target’s Armor. On a miss, take Damage equal to half the amount missed."
+    "Description": "On a hit, deal bonus Damage equal to the amount your attack exceeded the target’s Armor. On a miss, take Damage equal to half the amount missed. Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Focus Breaker",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -761,19 +761,19 @@
   },
   {
     "Name": "Adaptive Guard",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ⫘",
-    "Parameters": "Medium Armor Proficiency / Heavy Armor Proficiency",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Medium Armor Proficiency / Heavy Armor Proficiency",
     "Description": "If an enemy attacks you twice in one combat, gain +2 Armor against that enemy for the rest of combat (+1 at levels 6 and 12)."
   },
   {
     "Name": "Overcharged Weapon",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
-    "Symbols": "❖ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Spend up to your level in Health to deal half that amount (rounded up, minimum 1) as bonus Damage."
+    "Description": "Spend up to your level in Health to deal half that amount (rounded up, minimum 1) as bonus Damage. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Blacksmith",
@@ -1048,6 +1048,7 @@
     "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses."
   }
 ]
+
 
 
 
