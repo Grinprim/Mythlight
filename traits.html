@@ -108,7 +108,7 @@
                 <section class="p-6 rounded-3xl legend-card shadow-2xl">
                     <div class="mb-6">
                         <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Trait Legend</h3>
-                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Key mechanics & Symbols</p>
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Types</p>
                     </div>
                     
                     <div class="space-y-5">
@@ -136,6 +136,7 @@
                                 <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
                             </div>
                         </div>
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Tags</p>
                         <!-- Unique -->
                         <div class="flex items-center">
                             <div class="legend-symbol text-rose-400">★</div>
@@ -152,12 +153,36 @@
                                 <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
                             </div>
                         </div>
-                        <!-- Lock -->
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Action Types</p>
+                        <!-- Free Action -->
                         <div class="flex items-center">
-                            <div class="legend-symbol text-slate-400">⚿</div>
+                            <div class="legend-symbol text-white-400">⭘</div>
                             <div>
-                                <div class="text-white font-bold text-sm">Lock</div>
-                                <div class="text-slate-500 text-[10px] italic">Level or attribute requirement.</div>
+                                <div class="text-white font-bold text-sm">Free Action</div>
+                                <div class="text-slate-500 text-[10px] italic">Has no impact on action economy, can be used whenever.</div>
+                            </div>
+                        </div>
+                        <!-- Reaction -->
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-white-400">◇</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Reaction</div>
+                                <div class="text-slate-500 text-[10px] italic">Has an activation condition, reactions are available once per scene.</div>
+                            </div>
+                        </div>
+                        <!-- Action -->
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-white-400">⬖</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Action</div>
+                                <div class="text-slate-500 text-[10px] italic">Uses one of your actions, you have 2 available per turn.</div>
+                            </div>
+                        </div><!-- Attack -->
+                        <div class="flex items-center">
+                            <div class="legend-symbol text-white-400">◆</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Attack Action</div>
+                                <div class="text-slate-500 text-[10px] italic">Uses one of your actions, you can only make one attack per turn (Offhand strikes count seperately).</div>
                             </div>
                         </div>
                     </div>
@@ -281,6 +306,7 @@
     </script>
 </body>
 </html>
+
 
 
 
