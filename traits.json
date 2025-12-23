@@ -141,7 +141,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Reduce incoming damage by half your level (minimum 1). \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Reduce incoming damage by half your level (minimum 1). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Cantrip Knowledge",
@@ -157,7 +157,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Cast one level 1 spell without spending Mana. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Cast one level 1 spell without spending Mana. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Chef",
@@ -261,7 +261,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "⫘ Combat Trapper",
-    "Description": "Using metal wire, create lightning fences that deal damage once and stun creatures below half health. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Using metal wire, create lightning fences that deal damage once and stun creatures below half health. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Survivalist",
@@ -277,7 +277,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Fire a glowing projectile; allies gain +1 Accuracy against the marked target (+1 more at levels 3, 6, 9, 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Fire a glowing projectile; allies gain +1 Accuracy against the marked target (+1 more at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Non-lethal Shot",
@@ -301,7 +301,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "★ Infused Strike",
-    "Description": "Your next attack deals +1 elemental damage of a chosen type (+1 at levels 3, 6, 9, 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Your next attack deals +1 elemental damage of a chosen type (+1 at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Mana Slash",
@@ -309,7 +309,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "★ Infused Strike",
-    "Description": "Spend Mana to empower an attack, adding damage based on Mana spent. Attack counts as magical. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Spend Mana to empower an attack, adding damage based on Mana spent. Attack counts as magical. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Beast Whisperer",
@@ -397,7 +397,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Double movement until next turn; movement is halved the following turn. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Double movement until next turn; movement is halved the following turn. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Focused Strike",
@@ -413,7 +413,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Add +2 Damage to a melee attack. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Add +2 Damage to a melee attack. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Focused Mind",
@@ -445,7 +445,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "As a reaction, blind an enemy entering melee range until their next turn. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "As a reaction, blind an enemy entering melee range until their next turn. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Remote Activation",
@@ -485,7 +485,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Once per rest, repair a craft to full operation. Each craft can only benefit once. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Once per rest, repair a craft to full operation. Each craft can only benefit once. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Scrap Salvager",
@@ -541,7 +541,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Teleport your companion to your side and restore 2 Health to it. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Teleport your companion to your side and restore 2 Health to it. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Pathmaker",
@@ -693,7 +693,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "When below half Health, gain Guard equal to half your level + 4 (+1 at levels 3, 6, 9, 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "When below half Health, gain Guard equal to half your level + 4 (+1 at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Steady Aim",
@@ -725,7 +725,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Your next melee attack deals +2 Damage and you suffer -1 movement this turn (+1 Damage / -1 movement at levels 6 and 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Your next melee attack deals +2 Damage and you suffer -1 movement this turn (+1 Damage / -1 movement at levels 6 and 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Executioner’s Edge",
@@ -749,7 +749,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "On a hit, deal bonus Damage equal to the amount your attack exceeded the target’s Armor. On a miss, take Damage equal to half the amount missed. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "On a hit, deal bonus Damage equal to the amount your attack exceeded the target’s Armor. On a miss, take Damage equal to half the amount missed. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Focus Breaker",
@@ -773,7 +773,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Spend up to your level in Health to deal half that amount (rounded up, minimum 1) as bonus Damage. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Spend up to your level in Health to deal half that amount (rounded up, minimum 1) as bonus Damage. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Blacksmith",
@@ -845,7 +845,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Gain +2 Accuracy and +1 Damage (+1 Accuracy at levels 6 and 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Gain +2 Accuracy and +1 Damage (+1 Accuracy at levels 6 and 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Quick Reload",
@@ -869,7 +869,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Flashbang",
@@ -877,7 +877,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Create Flashbangs that impose -4 Accuracy in a 3-tile radius until the next turn. \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Create Flashbangs that impose -4 Accuracy in a 3-tile radius until the next turn. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Sudden Camouflage",
@@ -893,7 +893,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Your next ranged attack explodes in a 1-tile radius, dealing 1 Damage (+1 Damage at levels 3, 6, 9, 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Your next ranged attack explodes in a 1-tile radius, dealing 1 Damage (+1 Damage at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Elemental Coating",
@@ -917,7 +917,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Make a ranged attack that reduces target movement by 3 tiles for 1 turn (+1 turn at levels 3, 6, 9, 12). \nUses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
+    "Description": "Make a ranged attack that reduces target movement by 3 tiles for 1 turn (+1 turn at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Runic Impact",
@@ -941,7 +941,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Conduit",
-    "Description": "You may cast cantrips through ranged attacks. On activation, you may instead cast a level 1 spell for free. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "You may cast cantrips through ranged attacks. On activation, you may instead cast a level 1 spell for free. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Spirit Conduit",
@@ -973,7 +973,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "⫘ ★ Ritualist",
-    "Description": "Cast one spell as a Free Action instead of an Action. Does not bypass attack limits. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Cast one spell as a Free Action instead of an Action. Does not bypass attack limits. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Spontaneous Insight",
@@ -989,7 +989,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "While wielding a single one-handed weapon, your critical success range expands. Misses do not consume charges. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "While wielding a single one-handed weapon, your critical success range expands. Misses do not consume charges. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Battlefield Awareness",
@@ -1013,7 +1013,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "When hit by a melee (or ranged at level 6) attack, contest the roll with Athletics. On success, ignore the damage. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "When hit by a melee (or ranged at level 6) attack, contest the roll with Athletics. On success, ignore the damage. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Braced Stance",
@@ -1029,7 +1029,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Inventor’s Focus",
@@ -1037,7 +1037,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Modify a mechanical or electrical item to gain +2 Accuracy or +2 Damage for one scene. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Modify a mechanical or electrical item to gain +2 Accuracy or +2 Damage for one scene. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Combat Engineer",
@@ -1045,9 +1045,10 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses. \nUses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
+    "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   }
 ]
+
 
 
 
