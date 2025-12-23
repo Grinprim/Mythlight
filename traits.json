@@ -777,63 +777,63 @@
   },
   {
     "Name": "Blacksmith",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖",
+    "Symbols": "☀",
     "Parameters": "None",
     "Description": "Repair gear during rest. Restored gear gains +1 Damage or +1 Armor and 3 Durability before expiring. Gain +1 Tinkering (+1 at levels 6 and 12)."
   },
   {
     "Name": "Treasure Hunter",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Explorer",
+    "Symbols": "⧖",
+    "Parameters": "★ Explorer",
     "Description": "Gain +1 Finesse for looting. Exploring new areas grants +2 Speed (+1 Speed at levels 6 and 12)."
   },
   {
     "Name": "Cartographer",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Explorer",
+    "Symbols": "⧖",
+    "Parameters": "★ Explorer",
     "Description": "Gain advantage on Insight checks when recalling known locations. When resting in a previously visited area, you cannot be ambushed."
   },
   {
     "Name": "Restorative Meditation",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "☀ ★",
-    "Parameters": "Arcane Recovery",
+    "Symbols": "☀",
+    "Parameters": "★ Arcane Recovery",
     "Description": "Once per rest, recover 3 Mana (+1 at levels 3, 6, 9, 12)."
   },
   {
     "Name": "Focused Conduit",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Manaflux",
+    "Symbols": "⧖",
+    "Parameters": "★ Manaflux",
     "Description": "Your first spell each combat costs no Mana and gains +2 Range."
   },
   {
     "Name": "Mana Conservation",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Manaflux",
+    "Symbols": "⧖",
+    "Parameters": "★ Manaflux",
     "Description": "When a spell is countered, regain its Mana cost plus 1."
   },
   {
     "Name": "Mana Flow",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ⫘ ★",
-    "Parameters": "Manaflux",
+    "Symbols": "⧖ ",
+    "Parameters": "⫘ ★ Manaflux",
     "Description": "Slaying an enemy with a spell refunds its Mana cost."
   },
   {
     "Name": "Spell Specialization",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -841,15 +841,15 @@
   },
   {
     "Name": "Aimed Shot",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
-    "Symbols": "◆ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Gain +2 Accuracy and +1 Damage (+1 Accuracy at levels 6 and 12)."
+    "Description": "Gain +2 Accuracy and +1 Damage (+1 Accuracy at levels 6 and 12). Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Quick Reload",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "Firearms",
@@ -857,7 +857,7 @@
   },
   {
     "Name": "Tracking Expertise",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -865,23 +865,23 @@
   },
   {
     "Name": "Piercing Arrow",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
-    "Symbols": "❖ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12)."
+    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12). Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Flashbang",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
-    "Symbols": "◆ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Create Flashbangs that impose -4 Accuracy in a 3-tile radius until the next turn."
+    "Description": "Create Flashbangs that impose -4 Accuracy in a 3-tile radius until the next turn. Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Sudden Camouflage",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -889,15 +889,15 @@
   },
   {
     "Name": "Explosive Ammunition",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
-    "Symbols": "❖ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Your next ranged attack explodes in a 1-tile radius, dealing 1 Damage (+1 Damage at levels 3, 6, 9, 12)."
+    "Description": "Your next ranged attack explodes in a 1-tile radius, dealing 1 Damage (+1 Damage at levels 3, 6, 9, 12). Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Elemental Coating",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "☀",
     "Parameters": "None",
@@ -905,7 +905,7 @@
   },
   {
     "Name": "Bounding Retreat",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -913,55 +913,55 @@
   },
   {
     "Name": "Crippling Shot",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
-    "Symbols": "❖ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Make a ranged attack that reduces target movement by 3 tiles for 1 turn (+1 turn at levels 3, 6, 9, 12)."
+    "Description": "Make a ranged attack that reduces target movement by 3 tiles for 1 turn (+1 turn at levels 3, 6, 9, 12). Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]"
   },
   {
     "Name": "Runic Impact",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
-    "Symbols": "◆ ⧖ ★",
-    "Parameters": "Conduit",
+    "Symbols": "⧖",
+    "Parameters": "★ Conduit",
     "Description": "When you hit with a melee attack, expend 1 Mana to trigger a level 1 spell at the hit’s location."
   },
   {
     "Name": "Runic Shot",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
-    "Symbols": "◆ ⧖ ★",
-    "Parameters": "Conduit",
+    "Symbols": "⧖",
+    "Parameters": "★ Conduit",
     "Description": "When you hit with a ranged attack, expend 1 Mana to trigger a level 1 spell at the hit’s location."
   },
   {
     "Name": "Ranged Conduit",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
-    "Symbols": "❖ 🗲 ★",
+    "Symbols": "🗲",
     "Parameters": "Conduit",
-    "Description": "You may cast cantrips through ranged attacks. On activation, you may instead cast a level 1 spell for free."
+    "Description": "You may cast cantrips through ranged attacks. On activation, you may instead cast a level 1 spell for free. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Spirit Conduit",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Conduit",
+    "Symbols": "⧖",
+    "Parameters": "★ Conduit",
     "Description": "You may cast spells from your companion’s position."
   },
   {
     "Name": "Arcane Link",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "⧖ ★",
-    "Parameters": "Reservoir",
+    "Symbols": "⧖",
+    "Parameters": "★ Reservoir",
     "Description": "Your companion gains a Mana pool of 4. You may spend its Mana while it is within 6 units of you."
   },
   {
     "Name": "Unseen Strike",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -969,15 +969,15 @@
   },
   {
     "Name": "Quick Cast",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
-    "Symbols": "🗲 ⫘ ★",
-    "Parameters": "Ritualist",
-    "Description": "Cast one spell as a Free Action instead of an Action. Does not bypass attack limits."
+    "Symbols": "🗲",
+    "Parameters": "⫘ ★ Ritualist",
+    "Description": "Cast one spell as a Free Action instead of an Action. Does not bypass attack limits. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Spontaneous Insight",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -985,39 +985,39 @@
   },
   {
     "Name": "Duelist’s Prowess",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "While wielding a single one-handed weapon, your critical success range expands. Misses do not consume charges."
+    "Description": "While wielding a single one-handed weapon, your critical success range expands. Misses do not consume charges. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Battlefield Awareness",
-    "Action":"◆◇⬖⭘",
+    "Action":"◇",
     "Cost": "2",
-    "Symbols": "◇ ⧖ ★",
-    "Parameters": "Master of Stealth",
+    "Symbols": "⧖",
+    "Parameters": "★ Master of Stealth",
     "Description": "When an enemy moves adjacent, you may react to move 2 tiles without provoking attacks. Enemies within 10 tiles suffer stealth penalties equal to your Insight."
   },
   {
     "Name": "Vanishing Act",
-    "Action":"◆◇⬖⭘",
+    "Action":"◇",
     "Cost": "2",
-    "Symbols": "◇ ⧖ ★",
-    "Parameters": "Master of Stealth",
+    "Symbols": "⧖",
+    "Parameters": "★ Master of Stealth",
     "Description": "When you take damage, you may react to make an attack with halved Damage and move 2 tiles without provoking."
   },
   {
     "Name": "Parry",
-    "Action":"◆◇⬖⭘",
+    "Action":"◇",
     "Cost": "2",
-    "Symbols": "◇ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "When hit by a melee (or ranged at level 6) attack, contest the roll with Athletics. On success, ignore the damage."
+    "Description": "When hit by a melee (or ranged at level 6) attack, contest the roll with Athletics. On success, ignore the damage. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Braced Stance",
-    "Action":"◆◇⬖⭘",
+    "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
@@ -1025,29 +1025,30 @@
   },
   {
     "Name": "Jury-Rig",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage."
+    "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Inventor’s Focus",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Modify a mechanical or electrical item to gain +2 Accuracy or +2 Damage for one scene."
+    "Description": "Modify a mechanical or electrical item to gain +2 Accuracy or +2 Damage for one scene. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   },
   {
     "Name": "Combat Engineer",
-    "Action":"◆◇⬖⭘",
+    "Action":"⬖",
     "Cost": "2",
-    "Symbols": "◆ 🗲",
+    "Symbols": "🗲",
     "Parameters": "Uses scale by level",
-    "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses."
+    "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses. Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]"
   }
 ]
+
 
 
 
