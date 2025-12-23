@@ -55,86 +55,6 @@
             border: 1px solid rgba(129, 140, 248, 0.2);
         }
 
-
-
-
-
-.ml-section {
-    background: #0e1422;
-    color: #d6ddff;
-    padding: 32px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  }
-
-  .ml-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .ml-badge {
-    background: #5865f2;
-    color: #fff;
-    font-weight: 700;
-    padding: 6px 10px;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-
-  .ml-title {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-
-  .ml-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-  }
-
-  .ml-card {
-    background: #121a2e;
-    border-radius: 16px;
-    padding: 24px;
-    line-height: 1.6;
-  }
-
-  .ml-card.leveling {
-    border-left: 4px solid #7c83ff;
-  }
-
-  .ml-card.traits {
-    border-left: 4px solid #ff9f43;
-  }
-
-  .ml-card h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 18px;
-    color: #ffffff;
-  }
-
-  .ml-card p {
-    margin-bottom: 12px;
-    color: #cbd3ff;
-  }
-
-  .ml-card ul {
-    padding-left: 18px;
-    margin: 0;
-  }
-
-  .ml-card li {
-    margin-bottom: 8px;
-  }
-
-
-
-
-
-
         
     </style>
 </head>
@@ -361,61 +281,37 @@
                     </div>
                 </section>
                 
-                
-                
-                
-                
-                <section class="ml-section">
-  <div class="ml-header">
-    <div class="ml-badge">03</div>
-    <div class="ml-title">Character Leveling & Traits</div>
-  </div>
-
-  <div class="ml-grid">
-    <div class="ml-card leveling">
-      <h3>Character Leveling</h3>
-      <p>
-        Mythlight does not use experience points. Instead, character progression
-        is governed by milestones decided by the Narrator.
-      </p>
-      <ul>
-        <li>The maximum character level is <strong>12</strong>.</li>
-        <li>Characters begin play at <strong>Level 1</strong>.</li>
-        <li>Leveling occurs at significant story moments or achievements.</li>
-        <li>The Narrator determines when a level is gained.</li>
-      </ul>
-      <p>
-        Leveling represents growth through experience, discovery, and narrative
+                <!-- Player Progression -->
+                <section id="combat" class="scroll-mt-32">
+                    <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
+                        <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">04</span>
+                        Species & Path
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-purple-500">
+                            <h4 class="text-white font-bold mb-3">Leveling</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">  Mythlight does not use experience points. Instead, character progression is governed by milestones decided by the Narrator. <br><br>
+                                <ul>
+                                    <li>The maximum character level is <strong>12</strong>.</li>
+                                    <li>Characters begin play at <strong>Level 1</strong>.</li>
+                                    <li>Leveling occurs at significant story moments or achievements.</li>
+                                    <li>The Narrator determines when a level is gained.</li>
+                              </ul><br><br>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                            Leveling represents growth through experience, discovery, and narrative
         development rather than numerical grinding.
-      </p>
-    </div>
+                            </p>
+                        </div>
+                        <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-orange-500">
+                            <h4 class="text-white font-bold mb-3">Paths</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Your characters past is primarily governed by their <b>backstory</b>, however, mechanically, you do get to select a <b>path</b> for your character. Paths grant you a couple skill modifiers and 1 trait.<br><br>
 
-    <div class="ml-card traits">
-      <h3>Traits & Trait Points</h3>
-      <p>
-        Traits are the primary method of character customization and growth.
-        They represent abilities, talents, training, and unique advantages.
-      </p>
-      <ul>
-        <li>At <strong>Level 1</strong>, you begin with <strong>3 Trait Points</strong>.</li>
-        <li>Each level gained provides <strong>1 Trait Point</strong>.</li>
-        <li>At Levels <strong>3, 6, 9, and 12</strong>, you gain <strong>2 Trait Points</strong> instead.</li>
-        <li>Trait costs vary and may require saving points.</li>
-        <li>Some traits have level, stat, or mutual exclusivity requirements.</li>
-      </ul>
-      <p>
-        Traits may interact or synergize with one another, forming the core of
-        your character’s identity and playstyle.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
+<i>Paths can be omitted, to instead grant the necessary trait and modifiers based on the characters backstory. This should only be done with supervision of the Narrator.</i>
+</p>
+                        </div>
+                    </div>
+                </section>
+   
                 
                 <!-- Combat -->
                 <section id="combat" class="scroll-mt-32">
@@ -517,6 +413,7 @@
 </body>
 
 </html>
+
 
 
 
