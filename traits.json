@@ -624,11 +624,11 @@
     "Description": "Create a small combat rover that can be commanded to attack targets within 5 tiles, dealing 2 Damage. It has 3 Durability, replenished each rest."
   },
   {
-    "Name": "Dual Wielding", \\ FINISHED HERE
+    "Name": "Dual Wielding",
     "Action":"⭘",
     "Cost": "2",
     "Symbols": "⧖",
-    "Parameters": "★Off-hand",
+    "Parameters": "★ Off-hand",
     "Description": "You can wield two Light weapons. Off-hand attacks use all applicable modifiers."
   },
   {
@@ -637,7 +637,7 @@
     "Cost": "2",
     "Symbols": "⧖ ★ ⚿",
     "Parameters": "Double Strike; Level 6+",
-    "Description": "Your companion makes a free attack against a target you hit."
+    "Description": "Your companion makes a free attack against a target you hit. "
   },
   {
     "Name": "Second Strike",
@@ -1048,6 +1048,7 @@
     "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses."
   }
 ]
+
 
 
 
