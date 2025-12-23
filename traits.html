@@ -173,7 +173,7 @@
                             <div class="legend-symbol text-rose-400" data-symbol="★">★</div>
                             <div>
                                 <div class="text-white font-bold text-sm">Unique</div>
-                                <div class="text-slate-500 text-[10px] italic">Cannot be taken multiple times.</div>
+                                <div class="text-slate-500 text-[10px] italic">Cannot be alongside uniques of the same type.</div>
                             </div>
                         </div>
                         <!-- Linked (NON-CLICKABLE) -->
@@ -189,18 +189,22 @@
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⭘')">
                             <div class="legend-symbol text-white clickable" data-symbol="⭘">⭘</div>
                             <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free Action</div>
+                            <div class="text-slate-500 text-[10px] italic">Does not impact action economy, can be used whenever</div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◇')">
                             <div class="legend-symbol text-white clickable" data-symbol="◇">◇</div>
                             <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div>
+                            <div class="text-slate-500 text-[10px] italic">Used only when the relevant condition is met, you have one reaction per scene</div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⬖')">
                             <div class="legend-symbol text-white clickable" data-symbol="⬖">⬖</div>
                             <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div>
+                            <div class="text-slate-500 text-[10px] italic">Uses one of your actions, you have 2 per scene</div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')">
                             <div class="legend-symbol text-white clickable" data-symbol="◆">◆</div>
                             <div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack Action</div>
+                            <div class="text-slate-500 text-[10px] italic">Uses one of your actions, also counts as an attack, you can only attack once per turn (offhands count differently)</div>
                         </div>
                     </div>
 
@@ -359,4 +363,5 @@
         window.addEventListener('DOMContentLoaded', loadTraits);
     </script>
 </body>
+
 </html>
