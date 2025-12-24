@@ -37,6 +37,6 @@ The core mechanic is simple:
 
 ## License & Credits
 - Mythlight RPG System designed by **TypeGobbo**.
-- Mythlight RPG System Web page designed by **Grinprim**.
+- Mythlight RPG Web Page designed by **Grinprim**.
 
 # Simple to pick up, hard to put down.
