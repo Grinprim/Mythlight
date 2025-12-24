@@ -165,6 +165,9 @@
             border-radius: 4px;
             margin-right: 1rem;
         }
+        strong {
+            color: white;
+        }
 
         .highlight-text { color: #818cf8; font-weight: 600; }
         .keyword { color: #f472b6; font-weight: 600; } /* Pink for keywords */
@@ -336,7 +339,7 @@
                     </div>
                     <div class="rule-card">
                         <h3 class="text-xl text-white font-bold mb-4">Attributes (Point Buy)</h3>
-                        <p class="mb-4">You have <strong>4 points</strong> to distribute. Max <strong>2 points</strong> per stat initially. These are modified by Lineage.</p>
+                        <p class="mb-4">You have <strong>5 points</strong> to distribute. Max <strong>2 points</strong> per stat initially. These are modified by Lineage.</p>
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-indigo-400 block">Physique</strong>
@@ -369,9 +372,9 @@
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Physique Skills</h4>
                             <ul class="text-sm space-y-2">
-                                <li><span class="keyword">Might:</span> Lifting, breaking, grappling.</li>
-                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing.</li>
-                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease.</li>
+                                <li><span class="keyword">Might:</span> Lifting, breaking, melee strikes.</li>
+                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing, grappling, carrying capacity.</li>
+                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, un-armored defence.</li>
                                 <li><span class="keyword">Brawn:</span> Physical resistance (HP).</li>
                             </ul>
                         </div>
@@ -473,7 +476,11 @@
                                     <tr><td>4</td><td>5</td><td>-</td></tr>
                                     <tr><td>5</td><td>6</td><td>-</td></tr>
                                     <tr><td>6</td><td>8</td><td>Level 3 Spells</td></tr>
+                                    <tr><td>7</td><td>9</td><td>-</td></tr>
+                                    <tr><td>8</td><td>10</td><td>-</td></tr>
                                     <tr><td>9</td><td>12</td><td>Level 4 Spells</td></tr>
+                                    <tr><td>10</td><td>13</td><td>-</td></tr>
+                                    <tr><td>11</td><td>14</td><td>-</td></tr>
                                     <tr><td>12</td><td>16</td><td>Max Level</td></tr>
                                 </tbody>
                             </table>
@@ -484,8 +491,26 @@
                 <section id="equipment" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">07</span>
-                        Equipment
+                        Equipment & Encumberance
+                        <p class="text-sm mb-4">Managing your characters inventory is important, so we made it as simple as we could!</p>
                     </div>
+                    <div class="rule-card">
+                        <p class="mb-4"><strong>Armor & Weaponry + Proficiencies</strong></p>
+                        <p class="text-sm mb-4">You are restricted in how much of each type of equipment you can wear, on your character sheet you will see sections for what types, 1 peice of equipment per section (helmet, body, shield etc.)</p>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Armor</span>
+                                <span class="text-slate-400">Worn to gain extra defence, usually overrides <strong>unarmored defence [5 + Fortitude]</strong></span>
+                            </div>
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Weaponry</span>
+                                <span class="text-slate-400">You can weild as many weapons as you have arms, although without traits only <strong>1 weapon</strong> effectively</span>
+                            </div>
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Proficiencies</span>
+                                <span class="text-slate-400">You gain the ability to effectively use certain gear from traits, however <strong>light melee weapons</strong>, <strong>light armor</strong> and <strong>shields</strong> are all available for free.</span>
+                            </div>
                     <div class="rule-card">
                         <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong></p>
                         <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3), Cumbersome (4). 100 coins = 1 weight.</p>
@@ -660,6 +685,7 @@
 </body>
 
 </html>
+
 
 
 
