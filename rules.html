@@ -492,7 +492,6 @@
                     <div class="section-header">
                         <span class="section-number">07</span>
                         Equipment & Encumberance
-                        <p class="text-sm mb-4">Managing your characters inventory is important, so we made it as simple as we could!</p>
                     </div>
                     <div class="rule-card">
                         <p class="mb-4"><strong>Armor & Weaponry + Proficiencies</strong></p>
@@ -509,8 +508,13 @@
                             </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Proficiencies</span>
-                                <span class="text-slate-400">You gain the ability to effectively use certain gear from traits, however <strong>light melee weapons</strong>, <strong>light armor</strong> and <strong>shields</strong> are all available for free.</span>
+                                <span class="text-slate-400">You gain the ability to effectively use certain gear from traits</span>
                             </div>
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Automatic Proficiencies</span>
+                                <span class="text-slate-400"><strong>Light melee weapons</strong>, <strong>light armor</strong> and <strong>shields</strong> are all available for free.</span>
+                            </div>
+                            <br>
                     <div class="rule-card">
                         <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong></p>
                         <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3), Cumbersome (4). 100 coins = 1 weight.</p>
@@ -550,6 +554,7 @@
                         <h3 class="text-white font-bold mb-4">The Turn Structure</h3>
                         <p class="mb-4"><strong>Initiative:</strong> Determined by word of mouth. First to engage acts first. Unconscious = bottom of order.</p>
                         <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span class="text-indigo-400">Turn Delay</span> based on when they joined combat.</p>
+                        <p class="mb-4"><strong>Ambush:</strong> When you initiate combat with an unaware enemy, you act before initiative or turn delay</p>
                         <div class="bg-slate-800 p-4 rounded border border-slate-600 mb-4">
                             <strong class="text-white">Action Economy</strong><br>
                             Each Turn = <strong>2 Actions</strong>.<br>
@@ -592,13 +597,11 @@
                         <span class="section-number">09</span>
                         Health & Death
                     </div>
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-1 gap-6">
                         <div class="rule-card">
-                            <h4 class="text-white font-bold mb-2">Armor & Guard</h4>
-                            <p class="text-sm mb-2"><strong>Unarmored Defense:</strong> 6 + Fortitude Modifier.</p>
-                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot be regained until sleep.</p>
-                        </div>
-                        <div class="rule-card">
+                            <h4 class="text-white font-bold mb-2">Guard</h4>
+                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot be healed in any way once lost. Only gainable through traits or if given by others.</p>
+                            <br>
                             <h4 class="text-white font-bold mb-2">Death</h4>
                             <p class="text-sm mb-2"><strong>0 Hits:</strong> Unconscious.</p>
                             <p class="text-sm mb-2"><strong>Final Blow:</strong> Attacker declares on unconscious target. Instantly kills unless resisted by Fortitude (up to 3 times).</p>
@@ -614,9 +617,9 @@
                     </div>
                     <div class="rule-card">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
-                            <div><span class="text-red-400 font-bold">Bleeding:</span> Lose 1 Health end of turn.</div>
+                            <div><span class="text-red-400 font-bold">Bleeding:</span> Reduce healing by amount of Bleed</div>
                             <div><span class="text-red-400 font-bold">Stunned:</span> Lose 1 action.</div>
-                            <div><span class="text-red-400 font-bold">Prone:</span> Move halved. Melee hits against you have adv.</div>
+                            <div><span class="text-red-400 font-bold">Prone:</span> No move. Melee hits against you have adv.</div>
                             <div><span class="text-red-400 font-bold">Restrained:</span> No move. Attacks against you have adv.</div>
                             <div><span class="text-red-400 font-bold">Exhausted:</span> Disadv physical checks. Move halved.</div>
                             <div><span class="text-red-400 font-bold">Weakened:</span> Attacks deal half damage.</div>
@@ -685,6 +688,7 @@
 </body>
 
 </html>
+
 
 
 
