@@ -106,7 +106,7 @@
                 <section id="core-engine" class="scroll-mt-32">
                     <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
                         <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">01</span>
-                        The 2d6 Core Engine
+                        The Snake Eyes System
                     </h2>
                     <div class="mechanic-card p-8 rounded-3xl">
                         <div class="flex flex-col md:flex-row gap-8 items-center">
@@ -116,11 +116,11 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-white mb-4">How to Perform a Check</h3>
-                                <p class="text-slate-400 mb-4">When you attempt an action with an uncertain outcome, roll 2 six-sided dice and add your relevant Attribute or Skill bonus.</p>
+                                <p class="text-slate-400 mb-4">When you attempt an action with an uncertain outcome, roll 2 six-sided dice and add your relevant Attribute or Skill bonus. As well as any bonuses granted by traits, spells or otherwise. Then the Narrator will tell you if you succeeded or not!</p>
                                 <ul class="space-y-3 text-sm">
                                     <li class="flex items-start">
                                         <span class="text-indigo-400 mr-2">●</span>
-                                        <span><strong>Success:</strong> If your total equals or exceeds the <strong>Challenge Score (CS)</strong>.</span>
+                                        <span><strong>Success:</strong> If your total equals or exceeds the <strong>Challenge Score (CS)</strong>. In combat this is the Armor score of the target.</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-indigo-400 mr-2">●</span>
@@ -288,16 +288,20 @@
                 <section id="combat" class="scroll-mt-32">
                     <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
                         <span class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-sm mr-4">04</span>
-                        Actions & Health
+                        Combat & Vitality
                     </h2>
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-3 gap-6">
                         <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-red-500">
                             <h4 class="text-white font-bold mb-3">Action Economy</h4>
                             <p class="text-sm text-slate-400 leading-relaxed">On your turn you you have <strong>2 Actions</strong> which can be used however you wish, though be careful as you can only make 1 attack per turn!</p>
                         </div>
+                        <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-blue-500">
+                            <h4 class="text-white font-bold mb-3">Armor & Guard</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Your characters defences are shown in their <strong>Armor</strong> which represents how hard it is to be hit by someone else!<br><br>But sometimes getting hit is inevitable, and this is where <strong>Guard</strong> comes in, it will soak up any damage before it gets to your health, however it cannot be healed!</p>
+                        </div>
                         <div class="mechanic-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
                             <h4 class="text-white font-bold mb-3">Health & Dying</h4>
-                            <p class="text-sm text-slate-400 leading-relaxed">When your HP hits 0, you are <strong>Downed</strong>. You cannot act and must be stabilized by an ally.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Your health is your characters vitality, their life force, once it reaches 0, you are <strong>Downed</strong>. You cannot act and must be stabilized by an ally.</p>
                         </div>
                     </div>
                 </section>
@@ -384,6 +388,7 @@
 </body>
 
 </html>
+
 
 
 
