@@ -234,6 +234,7 @@
                                     <th class="px-6 py-4 font-bold">Type</th>
                                     <th class="px-6 py-4 font-bold">Tags</th>
                                     <th class="px-6 py-4 font-bold">Description</th>
+                                    <th class="px-6 py-4 font-bold">Scaling</th>
                                 </tr>
                             </thead>
                             <tbody id="traits-1-point"></tbody>
@@ -259,6 +260,7 @@
                                     <th class="px-6 py-4 font-bold">Type</th>
                                     <th class="px-6 py-4 font-bold">Tags</th>
                                     <th class="px-6 py-4 font-bold">Description</th>
+                                    <th class="px-6 py-4 font-bold">Scaling</th>
                                 </tr>
                             </thead>
                             <tbody id="traits-2-point"></tbody>
@@ -334,6 +336,7 @@
                         <td class="px-6 py-6"><span class="symbol-tag">${trait.Symbols || '—'}</span></td>
                         <td class="px-6 py-6 text-slate-500 italic text-xs">${trait.Parameters || '—'}</td>
                         <td class="px-6 py-6 text-slate-400 leading-relaxed">${trait.Description}</td>
+                        <td class="px-6 py-6 text-slate-400 leading-relaxed">${trait.Scaling}</td>
                     </tr>
                 `;
                 if (trait.Cost === "1") table1.innerHTML += row;
@@ -352,10 +355,6 @@
                 rawTraits = Array.isArray(data) ? data : [];
             } catch (err) {
                 console.warn("Using fallback data.");
-                rawTraits = [
-                    { "Name": "Toughness", "Cost": "1", "Action": "—", "Symbols": "⧖", "Parameters": "HP +5", "Description": "A baseline increase to your physical resilience. ★" },
-                    { "Name": "Linked Strike", "Cost": "1", "Action": "◆", "Symbols": "⫘", "Parameters": "Attack", "Description": "Requires Basic Strike. ⫘" }
-                ];
             }
             renderTraits();
         }
