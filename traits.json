@@ -284,7 +284,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "[1× Common Component]: Create a trap in an unoccupied tile that deals X damage and reduces movement by 3 tiles. [1× Rope Component]: Create a Bola. You are proficient with it; it can be thrown as a ranged trap (Range 6 units).",
+    "Description": "[1× Common Component]: Create a trap in an unoccupied tile that deals X damage and reduces movement by 3 tiles.<br>[1× Rope Component]: Create a Bola. You are proficient with it; it can be thrown as a ranged trap (Range 6 units).",
     "Scaling": "Damage X:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
@@ -1179,6 +1179,7 @@
     "Scaling": "-"
   }
 ]
+
 
 
 
