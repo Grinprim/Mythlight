@@ -215,6 +215,43 @@
     "Description": "During a rest, create a potion per ally from your known potion list. Learn 2 potion recipes; recipes can also be found or granted.",
     "Scaling": "-"
   },
+{
+    "Name": "Apprentice Brewer",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "⫘ Novice Brewer",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
+    "Scaling": "-"
+  },
+{
+    "Name": "Adept Brewer",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "⫘ Apprentice Brewer",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes",
+    "Scaling": "-"
+  },
+{
+    "Name": "Expert Brewer",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "⫘ Adept Brewer",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes",
+    "Scaling": "-"
+  },
+{
+    "Name": "Master Brewer",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "⫘ Expert Brewer",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes",
+    "Scaling": "-"
+  },
+
   {
     "Name": "Fisher",
     "Action":"⭘",
@@ -527,7 +564,43 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You gain the ability to craft; Learn 2 Trivial recipes.",
+    "Description": "You gain the ability to craft Trivial crafts; Learn 2 Trivial recipes.",
+    "Scaling": "-"
+  },
+{
+    "Name": "Apprentice Craftsman",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Novice Craftsman",
+    "Description": "You gain the ability to craft Simple crafts; Learn 2 Simple(or lower) recipes.",
+    "Scaling": "-"
+  },
+{
+    "Name": "Adept Craftsman",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Apprentice Craftsman",
+    "Description": "You gain the ability to craft Standard crafts; Learn 2 Standard(or lower) recipes.",
+    "Scaling": "-"
+  },
+{
+    "Name": "Expert Craftsman",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Adept Craftsman",
+    "Description": "You gain the ability to craft Difficult crafts; Learn 2 Difficult(or lower) recipes.",
+    "Scaling": "-"
+  },
+{
+    "Name": "Master Craftsman",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Expert Craftsman",
+    "Description": "You gain the ability to craft Complex crafts; Learn 2 Complex(or lower) recipes.",
     "Scaling": "-"
   },
   {
@@ -1179,6 +1252,7 @@
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
+
 
 
 
