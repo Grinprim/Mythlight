@@ -1,0 +1,29 @@
+{
+  "species": [
+    {
+      "id": "human",
+      "name": "Human",
+      "summary": "Humans are the most adaptable and widespread of all peoples.",
+      "description": [
+        "Humans are the most adaptable and widespread of all peoples — medium height, broad variety of skin tones, hair, and eye colors. They lack the exotic features of other races, yet their sheer diversity and ingenuity define them.",
+        "Human societies vary from nomadic tribes to skybound empires. What binds them is ambition — an endless drive to build, explore, and outlast. While some races see them as reckless, others admire their resilience; humanity’s strength lies in reinvention."
+      ],
+      "attributes": {
+        "Physique": 1,
+        "Mystique": 1,
+        "Technique": 1,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Versatile Spirit",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "Gain one additional 1 Trait Point at character creation. Once per Rest, reroll a failed check involving any skill."
+        }
+      ]
+    }
+  ]
+}
