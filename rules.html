@@ -24,8 +24,8 @@
         /* Glass Navigation */
         .nav-glass {
             background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: var(--glass-blur);
-            border-bottom: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Layout Grid */
@@ -165,6 +165,9 @@
             border-radius: 4px;
             margin-right: 1rem;
         }
+        strong {
+            color: white;
+        }
 
         .highlight-text { color: #818cf8; font-weight: 600; }
         .keyword { color: #f472b6; font-weight: 600; } /* Pink for keywords */
@@ -177,12 +180,12 @@
     <nav class="fixed w-full z-50 nav-glass">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <span class="text-xl font-bold tracking-widest text-white fantasy-font">MYTHLIGHT</span>
-                <span class="text-xs text-indigo-400 uppercase tracking-widest px-2 py-1 bg-indigo-900/30 rounded">Reference System</span>
+                <img src="Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+                <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
             </div>
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
                 <a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
-                <a href="mythlight_complete_rules.html" class="text-indigo-400 border-b border-indigo-400 pb-1">Rules</a>
+                <a href="rules.html" class="text-indigo-400">Rules</a>
                 <a href="spells.html" class="hover:text-white transition-colors text-slate-400">Spells</a>
                 <a href="traits.html" class="hover:text-white transition-colors text-slate-400">Traits</a>
             </div>
@@ -199,19 +202,15 @@
                 <div class="h-1 w-10 bg-indigo-500 rounded"></div>
             </div>
 
-            <div class="nav-group-title">I. Core Rules</div>
+            <div class="nav-group-title">Rules</div>
             <a href="#intro" class="sidebar-link">Introduction</a>
             <a href="#resolution" class="sidebar-link">Resolution System (2d6)</a>
             <a href="#time" class="sidebar-link">Time & Rests</a>
-
-            <div class="nav-group-title">II. Player Rules</div>
             <a href="#creation" class="sidebar-link">Character Creation</a>
             <a href="#progression" class="sidebar-link">Progression & Traits</a>
             <a href="#skills" class="sidebar-link">Actions & Skills</a>
             <a href="#spellcasting" class="sidebar-link">Spellcasting</a>
             <a href="#equipment" class="sidebar-link">Equipment</a>
-
-            <div class="nav-group-title">III. Narrator Rules</div>
             <a href="#combat" class="sidebar-link">Combat Mechanics</a>
             <a href="#damage" class="sidebar-link">Health, Guard & Death</a>
             <a href="#conditions" class="sidebar-link">Conditions</a>
@@ -269,8 +268,8 @@
                         <!-- The "2d6 thing" visual -->
                         <div class="flex flex-col items-center justify-center bg-slate-800/50 p-6 rounded-xl border border-slate-700 w-full md:w-auto">
                             <div class="dice-visual mb-4">
-                                <div class="die">3</div>
-                                <div class="die">4</div>
+                                <div class="die">6</div>
+                                <div class="die">6</div>
                             </div>
                             <span class="text-2xl font-bold text-white mb-1">+ Stat</span>
                             <span class="text-xs uppercase tracking-widest text-slate-500">vs Challenge Score</span>
@@ -331,19 +330,17 @@
                  ======================= -->
             <div id="player-section">
                 <div class="mb-12 pt-12 border-t border-slate-800">
-                    <h1 class="text-5xl font-bold text-white mb-4">Player Rules</h1>
-                    <p class="text-lg text-indigo-300">Building your hero and managing their growth.</p>
                 </div>
 
                 <section id="creation" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">03</span>
-                        Character Creation
+                        Core Attributes + Species & Path
                     </div>
                     <div class="rule-card">
                         <h3 class="text-xl text-white font-bold mb-4">Attributes (Point Buy)</h3>
-                        <p class="mb-4">You have <strong>4 points</strong> to distribute. Max <strong>2 points</strong> per stat initially. These are modified by Lineage.</p>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <p class="mb-4">You have <strong>5 points</strong> to distribute. Max <strong>2 points</strong> per stat initially. These are modified by Lineage.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-indigo-400 block">Physique</strong>
                                 Physical strength, agility, endurance.
@@ -354,10 +351,28 @@
                             </div>
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-indigo-400 block">Technique</strong>
-                                Engineering, tinkering, fine manual skill.
+                                Reflexes, tinkering, fine manual skill.
+                            </div>
+                            <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
+                                <strong class="text-indigo-400 block">Charm</strong>
+                                Conversation skills, persuasion, social understanding.
                             </div>
                         </div>
-                        <p class="mt-4 text-sm text-slate-400"><em>Note: Charm is determined by gameplay, starting at 0.</em></p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h3 class="text-xl text-white font-bold mb-4">Species & Path</h3>
+                        <p class="mb-4">Your character is more than just numbers, its also your past, culture and appearance! Use these to dictate what those are like:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
+                                <strong class="text-orange-400 block">Species</strong>
+                                 Species represent your character’s physical traits and cultural background, making them one of the most recognizable aspects of who they are. Each species grants <strong>minor bonuses</strong> to base attributes—balanced overall, though some favor specific playstyles—and provides <strong>one unique trait</strong> that reflects the species’ most characteristic abilities.
+                            </div>
+                            <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
+                                <strong class="text-orange-400 block">Path</strong>
+                                Your character's past is primarily governed by their backstory, however, mechanically, you do get to select a path for your character. Paths grant you a couple skill modifiers and 1 trait.
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -372,9 +387,9 @@
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Physique Skills</h4>
                             <ul class="text-sm space-y-2">
-                                <li><span class="keyword">Might:</span> Lifting, breaking, grappling.</li>
-                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing.</li>
-                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease.</li>
+                                <li><span class="keyword">Might:</span> Lifting, breaking, melee strikes.</li>
+                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing, grappling, carrying capacity.</li>
+                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, un-armored defence.</li>
                                 <li><span class="keyword">Brawn:</span> Physical resistance (HP).</li>
                             </ul>
                         </div>
@@ -398,7 +413,6 @@
                         </div>
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Charm (Social)</h4>
-                            <p class="text-xs mb-2 text-slate-500">Starts at 0. Range: -4 to 4.</p>
                             <ul class="text-sm space-y-2">
                                 <li><span class="keyword">Persuasion:</span> Negotiating, rallying.</li>
                                 <li><span class="keyword">Deception:</span> Lying, bluffing.</li>
@@ -477,7 +491,11 @@
                                     <tr><td>4</td><td>5</td><td>-</td></tr>
                                     <tr><td>5</td><td>6</td><td>-</td></tr>
                                     <tr><td>6</td><td>8</td><td>Level 3 Spells</td></tr>
+                                    <tr><td>7</td><td>9</td><td>-</td></tr>
+                                    <tr><td>8</td><td>10</td><td>-</td></tr>
                                     <tr><td>9</td><td>12</td><td>Level 4 Spells</td></tr>
+                                    <tr><td>10</td><td>13</td><td>-</td></tr>
+                                    <tr><td>11</td><td>14</td><td>-</td></tr>
                                     <tr><td>12</td><td>16</td><td>Max Level</td></tr>
                                 </tbody>
                             </table>
@@ -488,8 +506,30 @@
                 <section id="equipment" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">07</span>
-                        Equipment
+                        Equipment & Encumberance
                     </div>
+                    <div class="rule-card">
+                        <p class="mb-4"><strong>Armor & Weaponry + Proficiencies</strong></p>
+                        <p class="text-sm mb-4">You are restricted in how much of each type of equipment you can wear, on your character sheet you will see sections for what types, 1 peice of equipment per section (helmet, body, shield etc.)</p>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Armor</span>
+                                <span class="text-slate-400">Worn to gain extra defence, usually overrides <strong>unarmored defence [5 + Fortitude]</strong></span>
+                            </div>
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Weaponry</span>
+                                <span class="text-slate-400">You can weild as many weapons as you have arms, although without traits only <strong>1 weapon</strong> effectively</span>
+                            </div>
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Proficiencies</span>
+                                <span class="text-slate-400">You gain the ability to effectively use certain gear from traits</span>
+                            </div>
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Automatic Proficiencies</span>
+                                <span class="text-slate-400"><strong>Light melee weapons</strong>, <strong>light armor</strong> and <strong>shields</strong> are all available for free.</span>
+                            </div>
+                            <br>
                     <div class="rule-card">
                         <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong></p>
                         <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3), Cumbersome (4). 100 coins = 1 weight.</p>
@@ -515,12 +555,10 @@
             <!-- ======================= 
                  PART 3: NARRATOR RULES 
                  ======================= -->
-            <div id="narrator-section">
-                <div class="mb-12 pt-12 border-t border-slate-800">
-                    <h1 class="text-5xl font-bold text-white mb-4">Narrator Rules</h1>
-                    <p class="text-lg text-indigo-300">Managing conflict, NPCs, and the world.</p>
+ <div id="narrator-section">
+     <div class="mb-12 pt-12 border-t border-slate-800">
                 </div>
-
+    
                 <section id="combat" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">08</span>
@@ -531,6 +569,7 @@
                         <h3 class="text-white font-bold mb-4">The Turn Structure</h3>
                         <p class="mb-4"><strong>Initiative:</strong> Determined by word of mouth. First to engage acts first. Unconscious = bottom of order.</p>
                         <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span class="text-indigo-400">Turn Delay</span> based on when they joined combat.</p>
+                        <p class="mb-4"><strong>Ambush:</strong> When you initiate combat with an unaware enemy, you act before initiative or turn delay</p>
                         <div class="bg-slate-800 p-4 rounded border border-slate-600 mb-4">
                             <strong class="text-white">Action Economy</strong><br>
                             Each Turn = <strong>2 Actions</strong>.<br>
@@ -573,13 +612,14 @@
                         <span class="section-number">09</span>
                         Health & Death
                     </div>
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-1 gap-6">
                         <div class="rule-card">
-                            <h4 class="text-white font-bold mb-2">Armor & Guard</h4>
-                            <p class="text-sm mb-2"><strong>Unarmored Defense:</strong> 6 + Fortitude Modifier.</p>
-                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot be regained until sleep.</p>
-                        </div>
-                        <div class="rule-card">
+                            <h4 class="text-white font-bold mb-2">Guard</h4>
+                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot be healed in any way once lost. Only gainable through traits or if given by others.</p>
+                            <br>
+                            <h4 class="text-white font-bold mb-2">Health</h4>
+                            <p class="text-sm"><strong>Health:</strong> Measured in hits and subtracted by taking damage, can be healed up to your maximum. Overhealing does nothing. Regenerates on rests and Sleep.</p>
+                            <br>
                             <h4 class="text-white font-bold mb-2">Death</h4>
                             <p class="text-sm mb-2"><strong>0 Hits:</strong> Unconscious.</p>
                             <p class="text-sm mb-2"><strong>Final Blow:</strong> Attacker declares on unconscious target. Instantly kills unless resisted by Fortitude (up to 3 times).</p>
@@ -595,9 +635,9 @@
                     </div>
                     <div class="rule-card">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
-                            <div><span class="text-red-400 font-bold">Bleeding:</span> Lose 1 Health end of turn.</div>
+                            <div><span class="text-red-400 font-bold">Bleeding:</span> Reduce healing by amount of Bleed</div>
                             <div><span class="text-red-400 font-bold">Stunned:</span> Lose 1 action.</div>
-                            <div><span class="text-red-400 font-bold">Prone:</span> Move halved. Melee hits against you have adv.</div>
+                            <div><span class="text-red-400 font-bold">Prone:</span> No move. Melee hits against you have adv.</div>
                             <div><span class="text-red-400 font-bold">Restrained:</span> No move. Attacks against you have adv.</div>
                             <div><span class="text-red-400 font-bold">Exhausted:</span> Disadv physical checks. Move halved.</div>
                             <div><span class="text-red-400 font-bold">Weakened:</span> Attacks deal half damage.</div>
@@ -664,4 +704,16 @@
         });
     </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
