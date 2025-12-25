@@ -401,8 +401,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Gain +1 Scholarship when identifying historical objects (+1 more at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "Gain +X Scholarship when identifying or examining historical objects.",
+    "Scaling": "Scholarship X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
   },
   {
     "Name": "Weakpoint",
@@ -410,8 +410,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Landing an attack grants +2 Accuracy against that target until combat ends (+1 more at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "Landing an attack grants +X Accuracy against that target until combat ends.",
+    "Scaling": "Accuracy X:<br>+2 [lvl 1]<br>+3 [lvl 3]<br>+4 [lvl 6]<br>+5 [lvl 9]"
   },
   {
     "Name": "Ancient Study",
@@ -419,7 +419,7 @@
     "Cost": "1",
     "Symbols": "⧖ ",
     "Parameters": "★ Unbound ⫘ Occult Apprentice / Cosmic Novice",
-    "Description": "Occult and Cosmic spells gain +1 Range. Learn 1 Occult cantrip and 1 Cosmic spell, bypassing type restrictions.",
+    "Description": "Occult and Cosmic spells/cantrips gain +1 Range. Learn 1 Occult cantrip and 1 Cosmic spell, bypassing type restrictions.",
     "Scaling": "-"
   },
   {
@@ -428,7 +428,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Gain +2 movement tiles while retreating or while feared.",
+    "Description": "Gain +2 tiles of movement while retreating or feared.",
     "Scaling": "-"
   },
   {
@@ -437,8 +437,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Gain +1 Deception and Finesse while disguised or blending into crowds (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Gain +1 Deception and Finesse while disguised or attempting to blend into a crowd.",
+    "Scaling": "Deception & Finesse X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Leg Day",
@@ -446,8 +446,8 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Double movement until next turn; movement is halved the following turn. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "Double movement until next turn; movement is halved the following turn.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Focused Strike",
@@ -455,17 +455,17 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "The first melee hit each scene gains +1 Damage (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "The first melee hit you make each scene gains +X Damage.",
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
-    "Name": "Hard Swing",
+    "Name": "Hard Swing / Big Bonk",
     "Action":"◆",
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Add +2 Damage to a melee attack. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "Add +2 Damage to a melee attack.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Focused Mind",
@@ -481,7 +481,7 @@
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
-    "Parameters": "⫘ ★ Spellcasting",
+    "Parameters": "★ Ritualist ⫘ ★ Spellcasting",
     "Description": "Identifying a used spell grants +1 Spellcraft against that enemy, stacking up to 3 times.",
     "Scaling": "-"
   },
@@ -490,9 +490,9 @@
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
-    "Parameters": "⫘ ★ Spellcasting",
-    "Description": "Ritual spells take half the time and grant +2 Arcana on that spell (+1 at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Parameters": "★ Ritualist ⫘ ★ Spellcasting",
+    "Description": "Ritual spells take half the time and grant +X Arcana on that spell.",
+    "Scaling": "Arcana X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   },
   {
     "Name": "Pocket Sand",
@@ -500,8 +500,8 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "As a reaction, blind an enemy entering melee range until their next turn. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "As a reaction, blind an enemy entering your melee range until their next turn.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Remote Activation",
@@ -522,12 +522,12 @@
     "Scaling": "-"
   },
   {
-    "Name": "Craftsman",
+    "Name": "Novice Craftsman",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Learn 2 Trivial recipes. Additional picks unlock higher tiers and grant more recipes.",
+    "Description": "You gain the ability to craft; Learn 2 Trivial recipes.",
     "Scaling": "-"
   },
   {
@@ -536,7 +536,7 @@
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "None",
-    "Description": "Repair one trivial or simple craft during a rest without a check.",
+    "Description": "Repair one trivial or simple craft during a rest without a check. <i>(Requires 1 relevant component)</i>",
     "Scaling": "-"
   },
   {
@@ -545,8 +545,8 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Once per rest, repair a craft to full operation. Each craft can only benefit once. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "Repair a craft to full operation. Each craft can only benefit from this once.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Scrap Salvager",
@@ -554,7 +554,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Disassemble objects into components via Tinkering. Crafted items yield extra components.",
+    "Description": "Perform a Tinkering check to disassemble objects into components, crafts that you made grant 2, else grant 1.",
     "Scaling": "-"
   },
   {
@@ -563,7 +563,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Constructs can expend Durability to shock nearby targets, dealing Lightning Damage.",
+    "Description": "Constructs/Machines you have deployed can expend one unit of Durability(Fuel) to shock targets within 2 units, dealing 2 Lightning Damage. This counts as an attack by the machine.",
     "Scaling": "-"
   },
   {
@@ -572,8 +572,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "When casting a spell through a spellcasting craft, add +1 Damage (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "When casting a spell through a spellcasting craft, add +X Damage.",
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Spell Interface",
@@ -581,8 +581,8 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "⫘ ★ Spellcasting",
-    "Description": "Imbue a spell into a machine once per rest; it triggers based on declared conditions.",
-    "Scaling": "-"
+    "Description": "Once per rest, imbue a spell into a machine or construct, the spell lasts for a day, and will trigger based on a declared condition. <i>(Complexity determines spell level, Trivial = Cantrips, Simple = level 1 etc.)</i>",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Relentless Advance",
@@ -590,8 +590,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Moving into melee range of a new enemy grants +2 Accuracy for your next attack (+1 at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "Moving into melee range of a new enemy grants +X Accuracy for your next attack.",
+    "Scaling": "Accuracy X:<br>+2 [lvl 1]<br>+3 [lvl 3]<br>+4 [lvl 6]<br>+5 [lvl 9]"
   },
   {
     "Name": "Locksmith",
@@ -599,8 +599,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Open simple locks without tools; gain +1 Finesse (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Open simple locks without tools; gain +X Finesse.",
+    "Scaling": "Finesse X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Companion Recall",
@@ -608,8 +608,8 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Teleport your companion to your side and restore 2 Health to it. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "Teleport your companion to your side and restore 2 Health to it.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Pathmaker",
@@ -680,7 +680,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "★ Companion",
-    "Description": "Using metal components, construct a small mechanical assistant that can carry, retrieve, or activate simple objects. It has 6 Durability, replenished each rest.",
+    "Description": "Using [1× Metal - Wire, 1× Metal - Plate], construct a small mechanical assistant that can carry, retrieve, or activate simple objects. It has 6 Durability, replenished each rest.",
     "Scaling": "-"
   },
   {
@@ -689,7 +689,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Mechanical Assistant",
-    "Description": "Create a flying spell drone that stays within 3 units of you. You may cast spells from its position. It has 3 Durability, replenished each rest.",
+    "Description": "Using [1× Metal - Wire, 1× Wooden - Core], create a flying spell drone that stays within 3 units of you. You may cast spells from its position. It has 3 Durability, replenished each rest.",
     "Scaling": "-"
   },
   {
@@ -698,8 +698,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Mechanical Assistant",
-    "Description": "Create a small combat rover that can be commanded to attack targets within 5 tiles, dealing 2 Damage. It has 3 Durability, replenished each rest.",
-    "Scaling": "-"
+    "Description": "Using [1× Metal - Wire, 1× Stone - Cut], create a small combat rover that can be commanded to attack [X Damage, Y Accuracy] targets within 5 tiles, dealing 2 Damage. It has 3 Durability, replenished each rest.",
+    "Scaling": "Damage/Accuracy X/Y:<br>1/2 [lvl 1]<br>2/3 [lvl 3]<br>3/4 [lvl 6]<br>4/5 [lvl 9]"
   },
   {
     "Name": "Dual Wielding",
@@ -1179,6 +1179,7 @@
     "Scaling": "-"
   }
 ]
+
 
 
 
