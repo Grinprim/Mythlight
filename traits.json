@@ -734,8 +734,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "When an adjacent ally is attacked, take 2 damage to reduce that attack’s damage by 3 (+1/+2 scaling at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "When an adjacent ally is attacked, take X damage to reduce that attack’s damage by Y.",
+    "Scaling": "Damage/Reduction X/Y:<br>2/3 [lvl 1]<br>3/5 [lvl 3]<br>4/7 [lvl 6]<br>5/9 [lvl 9]"
   },
   {
     "Name": "Mana Reservoir",
@@ -752,8 +752,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "When at or below half Health, gain +2 Armor (+1 Armor at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "When at or below half Health, gain +X Armor.",
+    "Scaling": "Armor X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   },
   {
     "Name": "Precision Form",
@@ -761,8 +761,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "When your attack modifiers exceed half (rounded up) of the enemy’s Armor, gain +2 Damage (+1 Damage at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "When your attack modifiers exceed half (rounded up) of the enemy’s Armor, gain +X Damage.",
+    "Scaling": "Damage X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   },
   {
     "Name": "Tactical Awareness",
@@ -770,17 +770,17 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Gain +2 Accuracy against enemies adjacent to your allies (+1 at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "Gain +X Accuracy against enemies adjacent to your allies.",
+    "Scaling": "Accuracy X:<br>+2 [lvl 1]<br>+3 [lvl 3]<br>+4 [lvl 6]<br>+5 [lvl 9]<br>+6 [lvl 12]"
   },
   {
     "Name": "Enduring Spirit",
     "Action":"⭘",
     "Cost": "2",
-    "Symbols": "🗲",
+    "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "When below half Health, gain Guard equal to half your level + 4 (+1 at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "When below half Health, gain Guard equal to half your level + X.",
+    "Scaling": "Guard X:<br>+5 [lvl 1]<br>+6 [lvl 3]<br>+7 [lvl 6]<br>+8 [lvl 9]<br>+9 [lvl 12]"
   },
   {
     "Name": "Steady Aim",
@@ -788,7 +788,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "For each scene you do not take damage, gain +1 Accuracy, stacking infinitely.",
+    "Description": "For each scene you do not take damage, gain +1 Accuracy, stacking infinitely. Resets when you get hit.",
     "Scaling": "-"
   },
   {
@@ -806,8 +806,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "While wielding a single one-handed weapon, gain +1 Armor and +1 Reflex (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "While wielding a single one-handed weapon, gain +X Armor and +X Reflex.",
+    "Scaling": "Armor & Reflex X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Crushing Blow",
@@ -815,8 +815,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Your next melee attack deals +2 Damage and you suffer -1 movement this turn (+1 Damage / -1 movement at levels 6 and 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "Your next melee attack deals +X Damage and you suffer -Y movement this turn.",
+    "Scaling": "Damage/Movement X/Y:<br>+2/-1 [lvl 1]<br>+3/-2 [lvl 6]<br>+4/-3 [lvl 12]"
   },
   {
     "Name": "Executioner’s Edge",
@@ -833,7 +833,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Ignore the first negative condition each rest and gain +1 Fortitude.",
+    "Description": "Ignore the first negative condition each rest. Gain +1 Fortitude.",
     "Scaling": "-"
   },
   {
@@ -842,8 +842,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "On a hit, deal bonus Damage equal to the amount your attack exceeded the target’s Armor. On a miss, take Damage equal to half the amount missed. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "On a hit, deal bonus Damage equal to the half the amount your attack exceeded the target’s Armor. On a miss, take Damage equal to half the amount missed by.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Focus Breaker",
@@ -860,8 +860,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "⫘ Medium Armor Proficiency / Heavy Armor Proficiency",
-    "Description": "If an enemy attacks you twice in one combat, gain +2 Armor against that enemy for the rest of combat (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "If an enemy attacks you twice in one combat, gain +X Armor against that enemy for the rest of combat.",
+    "Scaling": "Armor X:<br>2 [lvl 1]<br>3 [lvl 6]<br>4 [lvl 12]"
   },
   {
     "Name": "Overcharged Weapon",
@@ -869,8 +869,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Spend up to your level in Health to deal half that amount (rounded up, minimum 1) as bonus Damage. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "Spend up to your level in Health to deal half that amount (rounded up, minimum 1) as bonus Damage.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Blacksmith",
@@ -878,8 +878,8 @@
     "Cost": "2",
     "Symbols": "☀",
     "Parameters": "None",
-    "Description": "Repair gear during rest. Restored gear gains +1 Damage or +1 Armor and 3 Durability before expiring. Gain +1 Tinkering (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Repair gear during rest. Restored gear gains +1 Damage or +1 Armor and 3 Durability before expiring. Gain +X Tinkering",
+    "Scaling": "Tinkering X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Treasure Hunter",
@@ -887,8 +887,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "★ Explorer",
-    "Description": "Gain +1 Finesse for looting. Exploring new areas grants +2 Speed (+1 Speed at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Gain +2 Finesse for looting. Exploring new areas grants +X Speed",
+    "Scaling": "Speed X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   },
   {
     "Name": "Cartographer",
@@ -905,8 +905,8 @@
     "Cost": "2",
     "Symbols": "☀",
     "Parameters": "★ Arcane Recovery",
-    "Description": "Once per rest, recover 3 Mana (+1 at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "During rest recover X Mana.",
+    "Scaling": "Mana X:<br>3 [lvl 1]<br>4 [lvl 3]<br>5 [lvl 6]<br>6 [lvl 9]<br>7 [lvl 12]"
   },
   {
     "Name": "Focused Conduit",
@@ -932,7 +932,7 @@
     "Cost": "2",
     "Symbols": "⧖ ",
     "Parameters": "⫘ ★ Manaflux",
-    "Description": "Slaying an enemy with a spell refunds its Mana cost.",
+    "Description": "Slaying an enemy with a spell refunds its Mana cost.<i>(Triggers once per spell)</i>",
     "Scaling": "-"
   },
   {
@@ -941,7 +941,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Choose one known spell; it gains +2 Damage, Range, and Healing. Reduce known/prepared spells by 1. Effect stacks per pick.",
+    "Description": "Choose one known spell; it gains +2 Damage, Range, and Healing. Reduce known/prepared spells by 1. You may change out the chosen spell when you level up.",
     "Scaling": "-"
   },
   {
@@ -950,8 +950,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Gain +2 Accuracy and +1 Damage (+1 Accuracy at levels 6 and 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "Gain +2 Accuracy and +1 Damage (+1 Accuracy at levels 6 and 12).",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Quick Reload",
@@ -968,8 +968,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Identify tracks and movement signs. Gain +2 Insight against hidden or fleeing enemies (+1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Identify tracks and movement signs. Gain +X Insight against hidden or fleeing enemies.",
+    "Scaling": "Insight X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   },
   {
     "Name": "Piercing Arrow",
@@ -977,8 +977,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12).",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Flashbang",
@@ -986,8 +986,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Create Flashbangs that impose -4 Accuracy in a 3-tile radius until the next turn. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Flashbangs:<br>Thrown projectile (6 unit Range); Everyone in a 3-tile radius suffers –4 Accuracy until next turn.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Sudden Camouflage",
@@ -995,8 +995,8 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Hitting an enemy causes attacks against you to suffer -2 Accuracy (-1 at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Hitting an enemy causes attacks against you to suffer -X Accuracy.",
+    "Scaling": "Accuracy X:<br>-2 [lvl 1]<br>-3 [lvl 6]<br>-4 [lvl 12]"
   },
   {
     "Name": "Explosive Ammunition",
@@ -1004,8 +1004,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Your next ranged attack explodes in a 1-tile radius, dealing 1 Damage (+1 Damage at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "Make a Ranged attack that explodes in a 1-tile radius, dealing 1 Damage.",
+    "Scaling": "Damage/Uses X/🗲:<br>1/1 [lvl 1]<br>2/2 [lvl 3]<br>3/3 [lvl 6]<br>4/4 [lvl 9]<br>5/4 [lvl 12]"
   },
   {
     "Name": "Elemental Coating",
@@ -1013,8 +1013,8 @@
     "Cost": "2",
     "Symbols": "☀",
     "Parameters": "None",
-    "Description": "Modify one reload of ammunition to deal +1 Elemental Damage of a chosen type (+1 Damage at levels 6 and 12).",
-    "Scaling": "-"
+    "Description": "Modify one reload of ammunition to deal +X Elemental Damage of a chosen type.",
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Bounding Retreat",
@@ -1022,7 +1022,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "After a ranged attack, move 3 tiles without provoking reactions.",
+    "Description": "After a ranged attack, move 3 tiles without provoking oppertunity attacks.",
     "Scaling": "-"
   },
   {
@@ -1031,8 +1031,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Make a ranged attack that reduces target movement by 3 tiles for 1 turn (+1 turn at levels 3, 6, 9, 12). <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
-    "Scaling": "-"
+    "Description": "Make a ranged attack that reduces target movement by 3 tiles for X turns.",
+    "Scaling": "Turns/Uses X/🗲:<br>1/1 [lvl 1]<br>2/2 [lvl 3]<br>2/3 [lvl 6]<br>3/4 [lvl 9]"
   },
   {
     "Name": "Runic Impact",
@@ -1058,8 +1058,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "Conduit",
-    "Description": "You may cast cantrips through ranged attacks. On activation, you may instead cast a level 1 spell for free. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "You may cast cantrips through ranged attacks. On activation, you may instead cast a level 1 spell for free.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Spirit Conduit",
@@ -1094,8 +1094,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "⫘ ★ Ritualist",
-    "Description": "Cast one spell as a Free Action instead of an Action. Does not bypass attack limits. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "Cast one spell as a Free Action instead of an Action. <i>(Does not bypass attack limit per turn.)</i>",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Spontaneous Insight",
@@ -1112,8 +1112,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "While wielding a single one-handed weapon, your critical success range expands. Misses do not consume charges. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "While wielding a single one-handed weapon, your critical success range expands [⚄⚄,⚄⚅,⚅⚅]. Misses do not consume charges.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Battlefield Awareness",
@@ -1121,7 +1121,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "★ Master of Stealth",
-    "Description": "When an enemy moves adjacent, you may react to move 2 tiles without provoking attacks. Enemies within 10 tiles suffer stealth penalties equal to your Insight.",
+    "Description": "When an enemy moves adjacent, you may react to move 2 tiles without provoking oppertunity attacks. Enemies within 10 tiles suffer stealth penalties equal to your Insight.",
     "Scaling": "-"
   },
   {
@@ -1130,7 +1130,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "★ Master of Stealth",
-    "Description": "When you take damage, you may react to make an attack with halved Damage and move 2 tiles without provoking.",
+    "Description": "When you take damage you may use your reaction to immediately perform an attack with halved Damage (Rounded up) and you move up to 2 tiles. This does not trigger an opportunity attack.",
     "Scaling": "-"
   },
   {
@@ -1139,8 +1139,8 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "When hit by a melee (or ranged at level 6) attack, contest the roll with Athletics. On success, ignore the damage. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Description": "When hit by a melee (or ranged at level 6) attack, contest the roll with Athletics. On success, ignore the damage.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Braced Stance",
@@ -1156,29 +1156,31 @@
     "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
-    "Parameters": "None",
-    "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Parameters": "⫘ Novice Craftsman",
+    "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage when applicable.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Inventor’s Focus",
     "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
-    "Parameters": "None",
-    "Description": "Modify a mechanical or electrical item to gain +2 Accuracy or +2 Damage for one scene. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Parameters": "⫘ Novice Craftsman",
+    "Description": "Modify a mechanical or electrical item to gain +4 Accuracy or +3 Damage for one scene.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Combat Engineer",
     "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
-    "Parameters": "None",
-    "Description": "Deploy automated turrets that fire at the end of your turn. Turrets deal 1 Damage, have 3 Durability, and scale in uses. <br><br>Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
-    "Scaling": "-"
+    "Parameters": "⫘ Novice Craftsman",
+    "Description": "Using [2× Metal - Wire, 1× Metal - Plate] Deploy an automated turret that fires at the end of your turn. Turret deals 2 Damage and, has 3 Durability.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
+
+
 
 
 
