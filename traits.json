@@ -1238,7 +1238,7 @@
     "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
-    "Parameters": "⫘ Novice Craftsman",
+    "Parameters": "⫘ Adept Craftsman",
     "Description": "Modify a mechanical or electrical item to gain +4 Accuracy or +3 Damage for one scene.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
@@ -1247,11 +1247,12 @@
     "Action":"⬖",
     "Cost": "2",
     "Symbols": "🗲",
-    "Parameters": "⫘ Novice Craftsman",
+    "Parameters": "⫘ Apprentice Craftsman",
     "Description": "Using [2× Metal - Wire, 1× Metal - Plate] Deploy an automated turret that fires at the end of your turn. Turret deals 2 Damage and, has 3 Durability.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
+
 
 
 
