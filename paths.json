@@ -10,10 +10,10 @@
       ],
       "feature": {
         "Name": "Commanding Presence",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
         "Description": "Allies within 2 tiles gain +1 Accuracy and +1 Damage. When you drop an enemy to 0 Health, all nearby allies gain +2 Accuracy for 1 turn."
       }
     },
@@ -27,11 +27,11 @@
       ],
       "feature": {
         "Name": "Perfect Form",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "When wielding a single one-handed weapon, gain +3 Accuracy and +2 Damage. If you hit without being hit that round, regain 1 Health."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
+        "Description": "When wielding a single one-handed weapon, gain +2 Accuracy and +1 Damage. If you hit without being hit that round, regain 1 Health."
       }
     },
     {
@@ -44,11 +44,11 @@
       ],
       "feature": {
         "Name": "Sanguine Casting",
-        "Action": "⭘",
-        "Cost": "Health",
-        "Symbols": "Active",
-        "Parameters": "Once per Rest (Additional uses at Levels 6 and 12)",
-        "Description": "Spend up to 4 Health to add that much Damage or Healing to your next spell. If the spell kills an enemy, regain half the Health spent."
+        "Action": "⬖",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "Spend up to your level Health to add that much Damage or Healing to your next spell. If the spell kills an enemy, regain half the Health spent."
       }
     },
     {
@@ -61,11 +61,11 @@
       ],
       "feature": {
         "Name": "Voice of Thunder",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "Once per Rest, cast a Lightning spell as if it were one level higher. Lightning spells deal +1 splash Damage to nearby enemies."
+        "Action": "⭘",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "Cast a Lightning spell as if it were one level higher. Lightning spells deal 1 Damage targets wthin 2 units of the target."
       }
     },
     {
@@ -78,10 +78,10 @@
       ],
       "feature": {
         "Name": "Alpha Bond",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
         "Description": "You may control two animal companions simultaneously. Their attacks deal +1 Damage, and both gain +2 Accuracy when within 3 tiles of you."
       }
     },
@@ -95,11 +95,11 @@
       ],
       "feature": {
         "Name": "Unbound Traveler",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "You cannot be ambushed. Movement speed +1 tile; after every combat, recover 1 Health and 1 Mana."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
+        "Description": "You cannot be ambushed. Movement speed +1 tile; after every combat, recover 3 Health and 3 Mana."
       }
     },
     {
@@ -112,11 +112,11 @@
       ],
       "feature": {
         "Name": "Silent Execution",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "While hidden, your first attack deals +4 Damage and cannot miss. After striking, you become invisible for 1 turn."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
+        "Description": "While hidden, your first attack deals +2 Damage. After striking, you become invisible for 1 turn."
       }
     },
     {
@@ -129,11 +129,11 @@
       ],
       "feature": {
         "Name": "Master Manipulator",
-        "Action": "⭘",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Once per Rest",
-        "Description": "Charm one intelligent creature for 3 turns. Outside combat, you have advantage on negotiations and deals."
+        "Action": "⬖",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "Attempt to charm one intelligent creature for 3 turns. Outside combat, you have advantage on negotiations and deals."
       }
     },
     {
@@ -145,11 +145,11 @@
       ],
       "feature": {
         "Name": "Unstoppable Mass",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "Gain +3 Armor and +2 Damage when below half Health. You cannot be knocked prone or forcibly moved."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
+        "Description": "Gain +2 Armor and +1 Damage when below half Health. You cannot be knocked prone or forcibly moved."
       }
     },
     {
@@ -162,11 +162,11 @@
       ],
       "feature": {
         "Name": "Living Flame",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "Fire spells deal +2 Damage and ignite enemies for 1 extra Damage for 2 rounds."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "Damage X:+1 [lvl 1] | +2 [lvl 3] | +3 [lvl 6] | +4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "Fire spells deal +X Damage and ignite enemies for 1 extra Damage for 2 rounds."
       }
     },
     {
@@ -179,11 +179,11 @@
       ],
       "feature": {
         "Name": "Glacial Guard",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "Ice abilities reduce enemy Speed by 1 tile and grant you +1 Armor for 1 turn per cast."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "Armor X:+1 [lvl 1] | +2 [lvl 6] | +3 [lvl 12]",
+        "Parameters": "None",
+        "Description": "Ice abilities reduce enemy Speed by 1 tile and grant you +X Armor for 1 turn per cast."
       }
     },
     {
@@ -196,11 +196,11 @@
       ],
       "feature": {
         "Name": "Undying Will",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
-        "Description": "When reduced to 0 Health, regain 4 Health. While below half Health, your attacks deal +2 Damage."
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "Damage X:+1 [lvl 1] | +2 [lvl 3] | +3 [lvl 6] | +4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "When reduced to 0 Health, regain 4 Health. While below half Health, your attacks deal +X Damage."
       }
     },
     {
@@ -213,11 +213,11 @@
       ],
       "feature": {
         "Name": "Guardian’s Call",
-        "Action": "⭘",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Once per Rest",
-        "Description": "Heal all allies within 2 tiles for 2 Health. When defending others, gain +1 Armor and +1 Evasion until your next turn."
+        "Action": "⬖",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "Heal all allies within 2 tiles for 3 Health. Uppon activation, gain +1 Armor and +1 Reflex until your next turn."
       }
     },
     {
@@ -230,11 +230,11 @@
       ],
       "feature": {
         "Name": "Foresight",
-        "Action": "⭘",
-        "Cost": "—",
-        "Symbols": "Active",
-        "Parameters": "Once per Rest (Additional uses at Levels 6 and 12)",
-        "Description": "Predict the next attack or spell within 6 tiles. You or a chosen ally gain +4 Evasion against it."
+        "Action": "⬖",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
+        "Parameters": "None",
+        "Description": "Predict the next attack or spell within 6 tiles. You or a chosen ally gain +4 Reflex/Armor against it."
       }
     },
     {
@@ -248,9 +248,9 @@
       "feature": {
         "Name": "Temporal Surge",
         "Action": "⭘",
-        "Cost": "Fatigue",
-        "Symbols": "Active",
-        "Parameters": "Once per Rest (Additional uses at Levels 6 and 12)",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
+        "Parameters": "None",
         "Description": "Take an additional action this turn. Gain 1 Fatigue at the end of combat."
       }
     },
@@ -264,10 +264,10 @@
       ],
       "feature": {
         "Name": "Inevitable End",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
         "Description": "Deal +2 Damage to targets below half Health. When you kill an enemy, nearby foes suffer –2 Accuracy for 1 turn."
       }
     },
@@ -281,10 +281,10 @@
       ],
       "feature": {
         "Name": "Battle-Hardened",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Once per Combat",
+        "Action": "⭘",
+        "Cost": "🗲",
+        "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 6] | 3 [lvl 12]",
+        "Parameters": "None",
         "Description": "Reroll one failed attack or defense roll. When an ally nearby fails an attack, they gain +2 Accuracy on their next strike."
       }
     },
@@ -298,10 +298,10 @@
       ],
       "feature": {
         "Name": "Master Crafter",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
         "Description": "Repair equipment or create basic tools freely. Once per Rest, imbue an item with +1 Damage or +1 Defense for one combat."
       }
     },
@@ -315,10 +315,10 @@
       ],
       "feature": {
         "Name": "Predator’s Edge",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
         "Description": "Attacks against unaware or distant targets deal +2 Damage. Ignore movement penalties from rough terrain."
       }
     },
@@ -332,12 +332,13 @@
       ],
       "feature": {
         "Name": "Deep Delver",
-        "Action": "—",
-        "Cost": "—",
-        "Symbols": "Passive",
-        "Parameters": "Always",
+        "Action": "⭘",
+        "Cost": "⧖",
+        "Symbols": "",
+        "Parameters": "None",
         "Description": "Gain +2 Armor underground or in darkness. Blunt weapons deal +1 Damage and ignore 1 Armor."
       }
     }
   ]
+
 }
