@@ -1,0 +1,343 @@
+{
+  "paths": [
+    {
+      "id": "warlord",
+      "name": "Path of the Warlord",
+      "summary": "Victory is seized through presence, command, and unshakable fury.",
+      "bonuses": [
+        "Athletics +1",
+        "Intimidation +1"
+      ],
+      "feature": {
+        "Name": "Commanding Presence",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Allies within 2 tiles gain +1 Accuracy and +1 Damage. When you drop an enemy to 0 Health, all nearby allies gain +2 Accuracy for 1 turn."
+      }
+    },
+    {
+      "id": "duelist",
+      "name": "Path of the Duelist",
+      "summary": "A blade perfected through grace, patience, and lethal precision.",
+      "bonuses": [
+        "Reflex +1",
+        "Finesse +1"
+      ],
+      "feature": {
+        "Name": "Perfect Form",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "When wielding a single one-handed weapon, gain +3 Accuracy and +2 Damage. If you hit without being hit that round, regain 1 Health."
+      }
+    },
+    {
+      "id": "bloodmage",
+      "name": "Path of the Bloodmage",
+      "summary": "Power carved from flesh and paid for in blood.",
+      "bonuses": [
+        "Fortitude +1",
+        "Scholarship +1"
+      ],
+      "feature": {
+        "Name": "Sanguine Casting",
+        "Action": "⭘",
+        "Cost": "Health",
+        "Symbols": "Active",
+        "Parameters": "Once per Rest (Additional uses at Levels 6 and 12)",
+        "Description": "Spend up to 4 Health to add that much Damage or Healing to your next spell. If the spell kills an enemy, regain half the Health spent."
+      }
+    },
+    {
+      "id": "stormsinger",
+      "name": "Path of the Stormsinger",
+      "summary": "Lightning answers your song.",
+      "bonuses": [
+        "Performance +1",
+        "Aim +1"
+      ],
+      "feature": {
+        "Name": "Voice of Thunder",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Once per Rest, cast a Lightning spell as if it were one level higher. Lightning spells deal +1 splash Damage to nearby enemies."
+      }
+    },
+    {
+      "id": "beastcaller",
+      "name": "Path of the Beastcaller",
+      "summary": "The wild answers your call.",
+      "bonuses": [
+        "Insight +1",
+        "Athletics +1"
+      ],
+      "feature": {
+        "Name": "Alpha Bond",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "You may control two animal companions simultaneously. Their attacks deal +1 Damage, and both gain +2 Accuracy when within 3 tiles of you."
+      }
+    },
+    {
+      "id": "wanderer",
+      "name": "Path of the Wanderer",
+      "summary": "The road itself is your home.",
+      "bonuses": [
+        "Reflex +1",
+        "Fortitude +1"
+      ],
+      "feature": {
+        "Name": "Unbound Traveler",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "You cannot be ambushed. Movement speed +1 tile; after every combat, recover 1 Health and 1 Mana."
+      }
+    },
+    {
+      "id": "shadowblade",
+      "name": "Path of the Shadowblade",
+      "summary": "The perfect strike leaves no witness.",
+      "bonuses": [
+        "Finesse +1",
+        "Stealth +1"
+      ],
+      "feature": {
+        "Name": "Silent Execution",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "While hidden, your first attack deals +4 Damage and cannot miss. After striking, you become invisible for 1 turn."
+      }
+    },
+    {
+      "id": "silver_tongue",
+      "name": "Path of the Silver Tongue",
+      "summary": "Words carve deeper than steel.",
+      "bonuses": [
+        "Persuasion +1",
+        "Scholarship +1"
+      ],
+      "feature": {
+        "Name": "Master Manipulator",
+        "Action": "⭘",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Once per Rest",
+        "Description": "Charm one intelligent creature for 3 turns. Outside combat, you have advantage on negotiations and deals."
+      }
+    },
+    {
+      "id": "juggernaut",
+      "name": "Path of the Juggernaut",
+      "summary": "An avalanche given form.",
+      "bonuses": [
+        "Fortitude +2"
+      ],
+      "feature": {
+        "Name": "Unstoppable Mass",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Gain +3 Armor and +2 Damage when below half Health. You cannot be knocked prone or forcibly moved."
+      }
+    },
+    {
+      "id": "pyromancer",
+      "name": "Path of the Pyromancer",
+      "summary": "Creation through flame.",
+      "bonuses": [
+        "Scholarship +1",
+        "Reflex +1"
+      ],
+      "feature": {
+        "Name": "Living Flame",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Fire spells deal +2 Damage and ignite enemies for 1 extra Damage for 2 rounds."
+      }
+    },
+    {
+      "id": "frostwarden",
+      "name": "Path of the Frostwarden",
+      "summary": "The stillness of the glacier’s heart.",
+      "bonuses": [
+        "Fortitude +1",
+        "Insight +1"
+      ],
+      "feature": {
+        "Name": "Glacial Guard",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Ice abilities reduce enemy Speed by 1 tile and grant you +1 Armor for 1 turn per cast."
+      }
+    },
+    {
+      "id": "revenant",
+      "name": "Path of the Revenant",
+      "summary": "Death obeys.",
+      "bonuses": [
+        "Fortitude +1",
+        "Intimidation +1"
+      ],
+      "feature": {
+        "Name": "Undying Will",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "When reduced to 0 Health, regain 4 Health. While below half Health, your attacks deal +2 Damage."
+      }
+    },
+    {
+      "id": "shepherd",
+      "name": "Path of the Shepherd",
+      "summary": "Strength measured in protection.",
+      "bonuses": [
+        "Persuasion +1",
+        "Insight +1"
+      ],
+      "feature": {
+        "Name": "Guardian’s Call",
+        "Action": "⭘",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Once per Rest",
+        "Description": "Heal all allies within 2 tiles for 2 Health. When defending others, gain +1 Armor and +1 Evasion until your next turn."
+      }
+    },
+    {
+      "id": "seer",
+      "name": "Path of the Seer",
+      "summary": "You read the future like a flickering map.",
+      "bonuses": [
+        "Insight +1",
+        "Scholarship +1"
+      ],
+      "feature": {
+        "Name": "Foresight",
+        "Action": "⭘",
+        "Cost": "—",
+        "Symbols": "Active",
+        "Parameters": "Once per Rest (Additional uses at Levels 6 and 12)",
+        "Description": "Predict the next attack or spell within 6 tiles. You or a chosen ally gain +4 Evasion against it."
+      }
+    },
+    {
+      "id": "chronomancer",
+      "name": "Path of the Chronomancer",
+      "summary": "You pull at the seams of time.",
+      "bonuses": [
+        "Arcana +1",
+        "Reflex +1"
+      ],
+      "feature": {
+        "Name": "Temporal Surge",
+        "Action": "⭘",
+        "Cost": "Fatigue",
+        "Symbols": "Active",
+        "Parameters": "Once per Rest (Additional uses at Levels 6 and 12)",
+        "Description": "Take an additional action this turn. Gain 1 Fatigue at the end of combat."
+      }
+    },
+    {
+      "id": "harbinger",
+      "name": "Path of the Harbinger",
+      "summary": "You bring inevitable endings.",
+      "bonuses": [
+        "Intimidation +1",
+        "Spellcraft +1"
+      ],
+      "feature": {
+        "Name": "Inevitable End",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Deal +2 Damage to targets below half Health. When you kill an enemy, nearby foes suffer –2 Accuracy for 1 turn."
+      }
+    },
+    {
+      "id": "veteran",
+      "name": "Path of the Veteran",
+      "summary": "Wisdom carved into scar tissue.",
+      "bonuses": [
+        "Fortitude +1",
+        "Insight +1"
+      ],
+      "feature": {
+        "Name": "Battle-Hardened",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Once per Combat",
+        "Description": "Reroll one failed attack or defense roll. When an ally nearby fails an attack, they gain +2 Accuracy on their next strike."
+      }
+    },
+    {
+      "id": "artisan",
+      "name": "Path of the Artisan",
+      "summary": "Creation is your weapon.",
+      "bonuses": [
+        "Tinkering +1",
+        "Scholarship +1"
+      ],
+      "feature": {
+        "Name": "Master Crafter",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Repair equipment or create basic tools freely. Once per Rest, imbue an item with +1 Damage or +1 Defense for one combat."
+      }
+    },
+    {
+      "id": "hunter",
+      "name": "Path of the Hunter",
+      "summary": "You strike before fear sets in.",
+      "bonuses": [
+        "Finesse +1",
+        "Aim +1"
+      ],
+      "feature": {
+        "Name": "Predator’s Edge",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Attacks against unaware or distant targets deal +2 Damage. Ignore movement penalties from rough terrain."
+      }
+    },
+    {
+      "id": "miner",
+      "name": "Path of the Miner",
+      "summary": "Stone knows your name.",
+      "bonuses": [
+        "Athletics +1",
+        "Fortitude +1"
+      ],
+      "feature": {
+        "Name": "Deep Delver",
+        "Action": "—",
+        "Cost": "—",
+        "Symbols": "Passive",
+        "Parameters": "Always",
+        "Description": "Gain +2 Armor underground or in darkness. Blunt weapons deal +1 Damage and ignore 1 Armor."
+      }
+    }
+  ]
+}
