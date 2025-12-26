@@ -106,7 +106,7 @@ fetch('paths.json')
             <strong class="text-lg text-white">${path.feature.Name}</strong>
             <div class="flex gap-2 text-[10px] uppercase tracking-wider font-bold">
               ${path.feature.Action ? `<span class="px-2 py-1 bg-indigo-900/40 border border-indigo-500/20 rounded">Action: ${path.feature.Action}</span>` : ''}
-              ${path.feature.Cost ? `<span class="px-2 py-1 bg-purple-900/40 border border-purple-500/20 rounded">Cost: ${path.feature.Cost}</span>` : ''}
+              ${path.feature.Cost ? `<span class="px-2 py-1 bg-purple-900/40 border border-purple-500/20 rounded">Type: ${path.feature.Cost}</span>` : ''}
               ${path.feature.Parameters ? `<span class="px-2 py-1 bg-slate-700/40 border border-slate-600/20 rounded">${path.feature.Parameters}</span>` : ''}
             </div>
           </div>
@@ -130,6 +130,7 @@ document.addEventListener('input', e => {
 
 </body>
 </html>
+
 
 
 
