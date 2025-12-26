@@ -351,33 +351,33 @@
       ]
     },
     {
-      "id": "eladri",
-      "name": "Eladri",
-      "summary": "Star-born scholars descended from forgotten constellations.",
-      "description": [
-        "Eladri are tall and slender with luminescent, fully colored eyes that glow faintly in dim light. Their tails, long and prehensile, express subtle emotion. Their skin shimmers with faint undertones — often silvers, blues, or violets — and their hair tends toward iridescent hues.",
-        "Born of stars and dreams, the Eladri believe themselves descended from the echoes of forgotten constellations. They dwell in crystalline cities suspended between dimensions, where light refracts into living color. Their scholars study not only arcane forces, but the geometry of existence itself. Outsiders see them as distant, but their curiosity for mortal emotion often draws them into the wider world."
-      ],
-      "attributes": {
-        "Physique": 0,
-        "Mystique": 2,
-        "Technique": 1,
-        "Charm": 0
-      },
-      "traits": [
-        {
-          "Name": "Starlit Anima",
-          "Action": "⭘",
-          "Cost": "1 Mana",
-          "Symbols": "Passive",
-          "Parameters": "Always",
-          "Description": "You may spend 1 Mana to gain +2 Reflex or +2 Accuracy until your next turn. Once per Rest, you can see invisible or hidden entities for 1 minute."
-        }
+  "id": "dinqui",
+  "name": "Dinqui - Zone 3",
+  "summary": "Stone-bound artisans and guardians of ancient ruins.",
+  "description": [
+    "Stocky, sharp-featured, and thick-skinned, the Dinqui resemble gargoyle-like goblinoids with small wings of stone and horn. Their eyes glimmer like polished gems, and their voices carry a gravelly timbre.",
+    "Once guardians of ancient temples, the Dinqui now live among ruins and crag cities, carving art from mountain faces. They value endurance, tradition, and community over conquest, measuring worth by what one can craft or protect."
+  ],
+  "attributes": {
+    "Physique": 2,
+    "Mystique": 1,
+    "Technique": 0,
+    "Charm": -1
+  },
+  "traits": [
+          {
+      "Name": "Stonebound Resilience",
+      "Action": "—",
+      "Cost": "—",
+      "Symbols": "Passive",
+      "Parameters": "Always",
+      "Description": "Gain +2 Armor and resistance to physical damage from falling or impact. Once per Rest, you can harden fully into stone for 1 turn, becoming immune to all damage but unable to act."
+          }
       ]
     },
     {
       "id": "ashten",
-      "name": "Ashten",
+      "name": "Ashten - Zone 3",
       "summary": "Disciplined vessels of fire and aether forged from ancient bargains.",
       "description": [
         "Ashten appear as tall, imposing humanoids with horns of varying shape, glowing eyes, and fissured skin that crackles with contained magical energy. Their tones range from obsidian to copper, often veined with light.",
@@ -402,7 +402,7 @@
     },
     {
       "id": "khraa",
-      "name": "Khraa",
+      "name": "Khraa - Zone 3",
       "summary": "Four-armed nomads driven by motion, freedom, and dual instinct.",
       "description": [
         "The Khraa are tall, agile humanoids with lithe, muscular builds and four arms — two dominant and two lighter, more dexterous limbs. Their faces resemble either feline or canine ancestry, with expressive ears, slit or bright eyes, and soft fur patterns across the shoulders and arms.",
@@ -427,7 +427,7 @@
     },
     {
       "id": "eladri",
-      "name": "Eladri",
+      "name": "Eladri - Zone 3",
       "summary": "Star-born scholars descended from forgotten constellations.",
       "description": [
         "Eladri are tall and slender with luminescent, fully colored eyes that glow faintly in dim light. Their tails, long and prehensile, express subtle emotion. Their skin shimmers with faint undertones — often silvers, blues, or violets — and their hair tends toward iridescent hues.",
@@ -452,3 +452,4 @@
     }
   ]
 }
+
