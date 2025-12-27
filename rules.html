@@ -278,6 +278,7 @@
                             <span class="text-xs uppercase tracking-widest text-slate-500">vs Challenge Score</span>
                         </div>
                     </div>
+                    
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="rule-card border-l-4 border-l-yellow-500">
@@ -298,6 +299,16 @@
                                 <li>Snake Eyes cannot occur when rolling 0d6.</li>
                             </ul>
                         </div>
+                        <div class="rule-card mt-6">
+                        <h4 class="text-white font-bold mb-2">Grace Mechanics</h4>
+                        <p class="text-sm mb-2">You acquire grace as you fail. Use it in dire moments.</p>
+                        <ul class="list-disc ml-4 text-xs text-slate-400 space-y-1">
+                            <li><strong>Gain:</strong> +1 Grace on failure. +1 per subsequent consecutive failure.</li>
+                            <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail twice to grow again).</li>
+                            <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max Grace is 6.</li>
+                            <li><strong>Reset:</strong> Resets when combat starts/ends or on sleep.</li>
+                        </ul>
+                    </div>
                     </div>
                 </section>
 
@@ -384,7 +395,7 @@
                         <span class="section-number">04</span>
                         Skills & Actions
                     </div>
-                    <p class="mb-6">Each attribute governs specific skills. At character creation you are given <strong>4 skill points</strong>, you can asign these however you wish, but only a max of 2 in a single skill. Skill Checks follow: <span class="text-white font-bold">[2d6 + Attribute + Skill Modifier]</span>.</p>
+                    <p class="mb-6">Each attribute governs specific skills, these can be enhanced using <strong>skill points</strong>. At character creation you are given <strong>4 skill points</strong>, you can asign these however you wish, but only a max of 2 in a single skill. Skill Checks follow: <span class="text-white font-bold">[2d6 + Attribute + Skill Modifier]</span>.</p>
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="rule-card">
@@ -424,17 +435,6 @@
                             </ul>
                         </div>
                     </div>
-
-                    <div class="rule-card mt-6">
-                        <h4 class="text-white font-bold mb-2">Grace Mechanics</h4>
-                        <p class="text-sm mb-2">You acquire grace as you fail. Use it in dire moments.</p>
-                        <ul class="list-disc ml-4 text-xs text-slate-400 space-y-1">
-                            <li><strong>Gain:</strong> +1 Grace on failure. +1 per subsequent consecutive failure.</li>
-                            <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail twice to grow again).</li>
-                            <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max Grace is 6.</li>
-                            <li><strong>Reset:</strong> Resets when combat starts/ends or on sleep.</li>
-                        </ul>
-                    </div>
                 </section>
 
                 <section id="progression" class="scroll-mt-32">
@@ -446,7 +446,7 @@
                         <ul class="space-y-4">
                             <li>
                                 <strong class="text-white block">Leveling (Max 12)</strong>
-                                Milestone based. Gain <strong>1 Trait Point</strong> per level (2 points at levels 3, 6, 9, 12).
+                                Milestone based. Gain <strong>1 Trait Point</strong> per level. On levels 3, 6, 9 and 12, you gain 2 trait points instead and 1 Skill point.
                             </li>
                             <li>
                                 <strong class="text-white block">Health Calculation</strong>
@@ -538,6 +538,10 @@
                         <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3), Cumbersome (4). 100 coins = 1 weight.</p>
                         
                         <div class="space-y-3 text-sm">
+                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                <span>Non-encumbered (< Limit) </span>
+                                <span class="text-slate-400">Buisness as usual</span>
+                            </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Encumbered (> Limit)</span>
                                 <span class="text-slate-400">Speed halved. 0 move = disadvantage.</span>
@@ -721,6 +725,7 @@
 </body>
 
 </html>
+
 
 
 
