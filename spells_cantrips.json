@@ -1,7 +1,7 @@
 [
   {
     "ID": "AC0-1",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Spark",
     "Cost": "0",
     "Type": "Action",
@@ -12,7 +12,7 @@
   },
   {
     "ID": "AC0-2",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Minor Kinesis",
     "Cost": "0",
     "Type": "Action",
@@ -23,7 +23,7 @@
   },
   {
     "ID": "AC0-3",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Arcane Gust",
     "Cost": "0",
     "Type": "Reaction",
@@ -34,7 +34,7 @@
   },
   {
     "ID": "AC0-4",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Kinetic Swing",
     "Cost": "0",
     "Type": "Action",
@@ -45,7 +45,7 @@
   },
   {
     "ID": "AC0-5",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Force Nudge",
     "Cost": "0",
     "Type": "Action",
@@ -56,7 +56,7 @@
   },
   {
     "ID": "AC0-6",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Sphere of force",
     "Cost": "0",
     "Type": "Reaction",
@@ -67,7 +67,7 @@
   },
   {
     "ID": "AC0-7",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Mana Sense",
     "Cost": "0",
     "Type": "Passive",
@@ -78,7 +78,7 @@
   },
   {
     "ID": "AC0-8",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Arcane Mark",
     "Cost": "0",
     "Type": "Action",
@@ -89,7 +89,7 @@
   },
   {
     "ID": "AC0-9",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Static Veil",
     "Cost": "0",
     "Type": "Action",
@@ -100,7 +100,7 @@
   },
   {
     "ID": "AC0-10",
-    "Subcategory": "Arcane",
+    "Category": "Arcane",
     "Name": "Focus",
     "Cost": "0",
     "Type": "Action",
@@ -111,7 +111,7 @@
   },
    {
     "ID": "OC0-1",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Whisper Prick",
     "Cost": "0",
     "Type": "Action",
@@ -122,7 +122,7 @@
   },
   {
     "ID": "OC0-2",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Veil Twitch",
     "Cost": "0",
     "Type": "Reaction",
@@ -133,7 +133,7 @@
   },
   {
     "ID": "OC0-3",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Mind Needle",
     "Cost": "0",
     "Type": "Action",
@@ -144,7 +144,7 @@
   },
   {
     "ID": "OC0-4",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Grim Focus",
     "Cost": "0",
     "Type": "Passive",
@@ -155,7 +155,7 @@
   },
   {
     "ID": "OC0-5",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Echo Hex",
     "Cost": "0",
     "Type": "Action",
@@ -166,7 +166,7 @@
   },
   {
     "ID": "OC0-6",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Soul Flinch",
     "Cost": "0",
     "Type": "Reaction",
@@ -177,7 +177,7 @@
   },
   {
     "ID": "OC0-7",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Dread Murmur",
     "Cost": "0",
     "Type": "Action",
@@ -188,7 +188,7 @@
   },
   {
     "ID": "OC0-8",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Mark of Unease",
     "Cost": "0",
     "Type": "Action",
@@ -199,7 +199,7 @@
   },
   {
     "ID": "OC0-9",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Lingering Glance",
     "Cost": "0",
     "Type": "Passive",
@@ -210,7 +210,7 @@
   },
   {
     "ID": "OC0-10",
-    "Subcategory": "Occult",
+    "Category": "Occult",
     "Name": "Fracture Thought",
     "Cost": "0",
     "Type": "Action",
@@ -221,7 +221,7 @@
   },
   {
     "ID": "DC0-1",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Sacred Glimmer",
     "Cost": "0",
     "Type": "Action",
@@ -232,7 +232,7 @@
   },
   {
     "ID": "DC0-2",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Guiding Touch",
     "Cost": "0",
     "Type": "Action",
@@ -243,7 +243,7 @@
   },
   {
     "ID": "DC0-3",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Faith Ward",
     "Cost": "0",
     "Type": "Reaction",
@@ -254,7 +254,7 @@
   },
   {
     "ID": "DC0-4",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Hallowed Mark",
     "Cost": "0",
     "Type": "Action",
@@ -265,7 +265,7 @@
   },
   {
     "ID": "DC0-5",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Mercy Spark",
     "Cost": "0",
     "Type": "Action",
@@ -276,7 +276,7 @@
   },
   {
     "ID": "DC0-6",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Oathbound Focus",
     "Cost": "0",
     "Type": "Passive",
@@ -287,7 +287,7 @@
   },
   {
     "ID": "DC0-7",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Consecrated Step",
     "Cost": "0",
     "Type": "Action",
@@ -298,7 +298,7 @@
   },
   {
     "ID": "DC0-8",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Light of Resolve",
     "Cost": "0",
     "Type": "Reaction",
@@ -309,7 +309,7 @@
   },
   {
     "ID": "DC0-9",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Sanctum Whisper",
     "Cost": "0",
     "Type": "Action",
@@ -320,7 +320,7 @@
   },
   {
     "ID": "DC0-10",
-    "Subcategory": "Divine",
+    "Category": "Divine",
     "Name": "Blessed Vigil",
     "Cost": "0",
     "Type": "Passive",
@@ -331,7 +331,7 @@
   },
   {
     "ID": "EC0-1",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Ember Flick",
     "Cost": "0",
     "Type": "Action",
@@ -342,7 +342,7 @@
   },
   {
     "ID": "EC0-2",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Static Tap",
     "Cost": "0",
     "Type": "Reaction",
@@ -353,7 +353,7 @@
   },
   {
     "ID": "EC0-3",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Frost Pulse",
     "Cost": "0",
     "Type": "Action",
@@ -364,7 +364,7 @@
   },
   {
     "ID": "EC0-4",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Stone Skim",
     "Cost": "0",
     "Type": "Passive",
@@ -375,7 +375,7 @@
   },
   {
     "ID": "EC0-5",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Gale Nudge",
     "Cost": "0",
     "Type": "Action",
@@ -386,7 +386,7 @@
   },
   {
     "ID": "EC0-6",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Ash Veil",
     "Cost": "0",
     "Type": "Reaction",
@@ -397,7 +397,7 @@
   },
   {
     "ID": "EC0-7",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Ripple Spark",
     "Cost": "0",
     "Type": "Action",
@@ -408,7 +408,7 @@
   },
   {
     "ID": "EC0-8",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Thermal Shift",
     "Cost": "0",
     "Type": "Action",
@@ -419,7 +419,7 @@
   },
   {
     "ID": "EC0-9",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Pressure Ping",
     "Cost": "0",
     "Type": "Action",
@@ -430,7 +430,7 @@
   },
   {
     "ID": "EC0-10",
-    "Subcategory": "Elemental",
+    "Category": "Elemental",
     "Name": "Charge Residue",
     "Cost": "0",
     "Type": "Passive",
