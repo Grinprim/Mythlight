@@ -155,10 +155,10 @@
             </div>
         </header>
 
-        <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <div class="flex flex-col lg:flex-row gap-12 items-start relative">
             
             <!-- Sidebar: Legend & Filters -->
-            <aside class="w-full lg:w-72 lg:sticky lg:top-28 z-40">
+            <aside class="w-full lg:w-72 lg:sticky lg:top-28 z-40 self-start">
                 <section id="legend-box" class="p-6 rounded-3xl legend-card shadow-2xl">
                     <div class="mb-6 flex justify-between items-center">
                         <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Filters</h3>
@@ -166,7 +166,6 @@
                     </div>
                     
                     <div id="legend-content" class="space-y-6">
-                        
                         <!-- Sources / Category -->
                         <div>
                             <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Sources</p>
@@ -221,7 +220,7 @@
                             </div>
                         </div>
 
-                        <!-- Symbols Legend (Visual only, good for reference) -->
+                        <!-- Symbols Legend -->
                         <div>
                             <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Key</p>
                             <div class="grid grid-cols-4 gap-2 text-center">
@@ -231,7 +230,6 @@
                                 <div class="bg-slate-800/50 rounded p-1" title="Scaling">☄</div>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </aside>
