@@ -768,5 +768,115 @@
         "Description": "When a creature within range would deal damage, reduce that damage by 3 and deal 2 Dark Damage to the source.",
         "Upcast": "Increase the Dark Damage by +1.",
         "Lore": "The dark protects its own — at a price."
+    },
+    {
+        "ID": "CC1-1",
+        "Category": "Cosmic",
+        "Name": "Starlance",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "8 units",
+        "Description": "Hurl a lance of condensed starlight, dealing 2 Radiant Damage.",
+        "Upcast": "When multicasting this spell, each additional cast may target a different creature.",
+        "Lore": "A falling star, aimed by will alone."
+    },
+    {
+        "ID": "CC1-2",
+        "Category": "Cosmic",
+        "Name": "Void Drift",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "You move up to 4 units, ignoring reactions and difficult terrain.",
+        "Upcast": "No special multicast bonuses.",
+        "Lore": "Space loosens its grip for those who know how to let go."
+    },
+    {
+        "ID": "CC1-3",
+        "Category": "Cosmic",
+        "Name": "Astral Flare",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "A creature you can see takes 2 Radiant Damage and suffers -2 Accuracy on its next attack.",
+        "Upcast": "When multicasting this spell, each additional cast may target a different creature.",
+        "Lore": "Light burns brightest where attention wavers."
+    },
+    {
+        "ID": "CC1-4",
+        "Category": "Cosmic",
+        "Name": "Orbit Shift",
+        "Cost": "1",
+        "Type": "Reaction",
+        "Range": "Self",
+        "Description": "When you are targeted by an attack or spell, you may shift 2 units to an unoccupied space you can see.",
+        "Upcast": "When multicasting this spell, each additional cast reduces the taken damage by 2.",
+        "Lore": "Nothing strikes the same point twice if the stars disagree."
+    },
+    {
+        "ID": "CC1-5",
+        "Category": "Cosmic",
+        "Name": "Gravitic Nudge",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "5 units",
+        "Description": "Push or pull a creature 2 units in a direction of your choice. They must roll [Fortitude] to resist.",
+        "Upcast": "When multicasting this spell, the direction may change between each cast.",
+        "Lore": "Gravity is merely a suggestion."
+    },
+    {
+        "ID": "CC1-6",
+        "Category": "Cosmic",
+        "Name": "Starbound Focus",
+        "Cost": "1",
+        "Type": "Passive",
+        "Range": "Self",
+        "Description": "Once per turn, when you cast a Cosmic spell, gain +1 Accuracy on the next spell you cast this turn.",
+        "Upcast": "When multicasting this spell, the Accuracy bonus applies to each subsequent spell in the sequence.",
+        "Lore": "Alignment breeds clarity."
+    },
+    {
+        "ID": "CC1-7",
+        "Category": "Cosmic",
+        "Name": "Celestial Thread",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Touch",
+        "Description": "Bind yourself to a creature you touch. Until the end of your next turn, whenever either of you moves a unit, the other may move 1 unit as well.",
+        "Upcast": "When multicasting this spell, you may bind to an additional creature.",
+        "Lore": "All things move together, whether they wish to or not."
+    },
+    {
+        "ID": "CC1-8",
+        "Category": "Cosmic",
+        "Name": "Event Horizon Blink",
+        "Cost": "1",
+        "Type": "Reaction",
+        "Range": "Self",
+        "Description": "When you would take damage, reduce that damage by 1 and teleport 3 units to a space you can see.",
+        "Upcast": "When multicasting this spell, you may delay the teleport until after another spell resolves this turn.",
+        "Lore": "There is always a way around the fall."
+    },
+    {
+        "ID": "CC1-9",
+        "Category": "Cosmic",
+        "Name": "Astral Echo",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Sight",
+        "Description": "Choose a creature you can see. The next time you cast a Cosmic spell targeting a different creature this turn, the chosen creature takes 1 Radiant Damage.",
+        "Upcast": "When multicasting this spell, the echo may trigger once per additional cast.",
+        "Lore": "The stars remember what you almost aimed for."
+    },
+    {
+        "ID": "CC1-10",
+        "Category": "Cosmic",
+        "Name": "Stellar Pressure",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Cone 3 units",
+        "Description": "Creatures in the cone take 2 Force Damage and are pushed 1 unit away from you. They must roll [Fortitude] to resist.",
+        "Upcast": "When multicasting this spell, you may rotate the cone between casts.",
+        "Lore": "The weight of the heavens bears down all at once."
     }
 ]
