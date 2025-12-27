@@ -47,33 +47,52 @@
             border: 1px solid rgba(99, 102, 241, 0.2);
         }
         
-        .legend-symbol {
-            font-size: 1.1rem;
-            color: #fff;
-            background: rgba(255, 255, 255, 0.05);
-            width: 34px;
-            height: 34px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin-right: 0.75rem;
+        /* Updated filter button styles */
+        .filter-btn {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            flex-shrink: 0;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
             cursor: pointer;
             transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
         }
 
-        .legend-symbol:hover {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: rgba(99, 102, 241, 0.5);
-            transform: scale(1.05);
+        .filter-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+            color: white;
+            transform: translateX(2px);
         }
 
-        .legend-symbol.active-filter {
-            background: rgba(99, 102, 241, 0.4);
+        .filter-btn.active {
+            background: rgba(99, 102, 241, 0.25);
             border-color: #6366f1;
-            box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+            color: white;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+        }
+
+        .filter-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #475569;
+        }
+        .filter-btn.active .filter-dot {
+            background-color: #6366f1;
+            box-shadow: 0 0 5px #6366f1;
+        }
+
+        .legend-symbol {
+            font-size: 1rem;
+            color: #fff;
+            width: 24px;
+            text-align: center;
         }
 
         .filter-select, .search-input {
@@ -138,77 +157,82 @@
 
         <div class="flex flex-col lg:flex-row gap-12 items-start">
             
-            <!-- Sidebar: Legend -->
-            <aside class="w-full lg:w-80 lg:sticky lg:top-28 z-40">
+            <!-- Sidebar: Legend & Filters -->
+            <aside class="w-full lg:w-72 lg:sticky lg:top-28 z-40">
                 <section id="legend-box" class="p-6 rounded-3xl legend-card shadow-2xl">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Spellcasting Key</h3>
-                            <p id="legend-context" class="text-[10px] text-slate-400 mt-1 italic">Click icons to filter.</p>
-                        </div>
-                        <button id="clear-filter" onclick="setSymbolFilter(null)" class="hidden text-[10px] uppercase text-rose-400 font-bold hover:underline">Clear</button>
+                    <div class="mb-6 flex justify-between items-center">
+                        <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Filters</h3>
+                        <button id="clear-filter" onclick="clearFilters()" class="hidden text-[10px] uppercase text-rose-400 font-bold hover:underline">Clear All</button>
                     </div>
                     
-                    <div id="legend-content" class="space-y-5">
-                        <div class="space-y-5">
-                            <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Base Rules</p>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('✦')">
-                                <div class="legend-symbol" data-symbol="✦">✦</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Mana Cost</div>
-                                    <div class="text-slate-500 text-[10px] italic">Base mana required to cast.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⚡')">
-                                <div class="legend-symbol" data-symbol="⚡">⚡</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div>
-                                    <div class="text-slate-500 text-[10px] italic">Standard turn action.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⮌')">
-                                <div class="legend-symbol" data-symbol="⮌">⮌</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div>
-                                    <div class="text-slate-500 text-[10px] italic">Cast in response to triggers.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('✚')">
-                                <div class="legend-symbol" data-symbol="✚">✚</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Upcast</div>
-                                    <div class="text-slate-500 text-[10px] italic">Spend more mana for +Power.</div>
-                                </div>
-                            </div>
-
-                            <p class="text-[10px] text-slate-500 mt-4 uppercase font-bold">Scaling & Types</p>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('🔸')">
-                                <div class="legend-symbol" data-symbol="🔸">🔸</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free</div>
-                                    <div class="text-slate-500 text-[10px] italic">Costs 0 Mana to use.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('☄')">
-                                <div class="legend-symbol" data-symbol="☄">☄</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Scaling</div>
-                                    <div class="text-slate-500 text-[10px] italic">Effect grows with level.</div>
-                                </div>
-                            </div>
-                            <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('👁')">
-                                <div class="legend-symbol" data-symbol="👁">👁</div>
-                                <div>
-                                    <div class="text-white font-bold text-sm group-hover:text-indigo-300">Insight</div>
-                                    <div class="text-slate-500 text-[10px] italic">Uses Insight stats.</div>
-                                </div>
+                    <div id="legend-content" class="space-y-6">
+                        
+                        <!-- Sources / Category -->
+                        <div>
+                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Sources</p>
+                            <div class="space-y-2">
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Arcane')">
+                                    <span class="font-bold">Arcane</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Divine')">
+                                    <span class="font-bold">Divine</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Occult')">
+                                    <span class="font-bold">Occult</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Cosmic')">
+                                    <span class="font-bold">Cosmic</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Elemental')">
+                                    <span class="font-bold">Elemental</span>
+                                    <div class="filter-dot"></div>
+                                </button>
                             </div>
                         </div>
-                    </div>
 
-                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-full mt-8 py-3 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-xl text-indigo-400 text-[10px] font-bold uppercase tracking-widest transition-all">
-                        Back to Top
-                    </button>
+                        <!-- Mana Cost -->
+                        <div>
+                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Mana Cost</p>
+                            <div class="space-y-2">
+                                <button class="filter-btn" onclick="toggleFilter('cost', '0')">
+                                    <span class="flex items-center gap-2"><span class="text-amber-400">0 ✦</span> <span class="text-xs font-normal text-slate-400">(Cantrip)</span></span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '1')">
+                                    <span class="text-indigo-300">1 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '2')">
+                                    <span class="text-indigo-300">2 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '3')">
+                                    <span class="text-indigo-300">3 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '4')">
+                                    <span class="text-indigo-300">4 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Symbols Legend (Visual only, good for reference) -->
+                        <div>
+                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Key</p>
+                            <div class="grid grid-cols-4 gap-2 text-center">
+                                <div class="bg-slate-800/50 rounded p-1" title="Action">⚡</div>
+                                <div class="bg-slate-800/50 rounded p-1" title="Reaction">⮌</div>
+                                <div class="bg-slate-800/50 rounded p-1" title="Upcast">✚</div>
+                                <div class="bg-slate-800/50 rounded p-1" title="Scaling">☄</div>
+                            </div>
+                        </div>
+
+                    </div>
                 </section>
             </aside>
 
@@ -226,7 +250,7 @@
                                 <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
                                     <th class="px-6 py-5 font-bold">Cantrip</th>
                                     <th class="px-6 py-5 font-bold">Category</th>
-                                    <th class="px-6 py-5 font-bold">Type/Range</th>
+                                    <th class="px-6 py-5 font-bold">Action/Range</th>
                                     <th class="px-6 py-5 font-bold">Effect</th>
                                 </tr>
                             </thead>
@@ -246,7 +270,7 @@
                                 <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
                                     <th class="px-6 py-5 font-bold">Spell</th>
                                     <th class="px-6 py-5 font-bold">Category</th>
-                                    <th class="px-6 py-5 font-bold">Type/Range</th>
+                                    <th class="px-6 py-5 font-bold">Action/Range</th>
                                     <th class="px-6 py-5 font-bold">Effect</th>
                                 </tr>
                             </thead>
@@ -278,61 +302,107 @@
     <script>
         let rawSpells = [];
         let rawCantrips = [];
-        let activeSymbolFilter = null;
+        
+        // Active filters state
+        let activeFilters = {
+            category: null,
+            cost: null
+        };
 
-        function setSymbolFilter(symbol) {
-            activeSymbolFilter = symbol;
+        function toggleFilter(type, value) {
+            // Toggle logic: if clicking active, turn off. If clicking new, switch to new.
+            if (activeFilters[type] === value) {
+                activeFilters[type] = null;
+            } else {
+                activeFilters[type] = value;
+            }
             
-            // UI Update
-            document.querySelectorAll('.legend-symbol').forEach(btn => {
-                if (btn.getAttribute('data-symbol') === symbol) btn.classList.add('active-filter');
-                else btn.classList.remove('active-filter');
-            });
-
-            document.getElementById('clear-filter').classList.toggle('hidden', !symbol);
+            updateFilterUI();
             renderMagic();
         }
 
-        const createRow = (item) => `
+        function clearFilters() {
+            activeFilters.category = null;
+            activeFilters.cost = null;
+            updateFilterUI();
+            renderMagic();
+        }
+
+        function updateFilterUI() {
+            // Update buttons visually
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                const onClickAttr = btn.getAttribute('onclick');
+                // Check if this button matches active state
+                // Extract type and value from onclick string like "toggleFilter('category', 'Arcane')"
+                if (onClickAttr) {
+                    const match = onClickAttr.match(/toggleFilter\('(\w+)',\s*'(.+)'\)/);
+                    if (match) {
+                        const [_, type, val] = match;
+                        if (activeFilters[type] === val) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    }
+                }
+            });
+
+            // Show/Hide Clear button
+            const hasFilter = activeFilters.category || activeFilters.cost;
+            document.getElementById('clear-filter').classList.toggle('hidden', !hasFilter);
+        }
+
+        const createRow = (item) => {
+            // Map the JSON structure to the table
+            // JSON: ID, Category, Name, Cost, Action, Range, Description, Upcast, Lore
+            return `
             <tr class="spell-row text-sm">
                 <td class="px-6 py-6">
                     <div class="font-bold text-white text-base">${item.Name}</div>
-                    <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">Cost: ${item.Cost} | ID: ${item.ID}</div>
+                    <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">
+                        Cost: ${item.Cost} ✦ ${item.ID ? `| ID: ${item.ID}` : ''}
+                    </div>
                 </td>
                 <td class="px-6 py-6">
-                    <span class="category-tag">${item.Subcategory}</span>
+                    <span class="category-tag">${item.Category || 'Universal'}</span>
                 </td>
                 <td class="px-6 py-6">
-                    <div class="text-white font-medium text-xs">${item.Type}</div>
+                    <div class="text-white font-medium text-xs">${item.Action || '-'}</div>
                     <div class="text-slate-500 text-[10px]">${item.Range || 'Self'}</div>
                 </td>
                 <td class="px-6 py-6">
                     <div class="text-slate-300 text-sm leading-relaxed mb-2">${item.Description}</div>
+                    ${item.Upcast ? `<div class="text-indigo-300 text-xs mb-2"><span class="font-bold">✚ Upcast:</span> ${item.Upcast}</div>` : ''}
                     <div class="text-slate-500 italic text-[11px] border-l border-slate-700 pl-3">${item.Lore || ''}</div>
                 </td>
             </tr>
-        `;
+            `;
+        };
 
         function filterAndSort(arr) {
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
             const sortBy = document.getElementById('sort-selector').value;
 
             let filtered = arr.filter(item => {
-                const matchesSearch = item.Name.toLowerCase().includes(searchTerm) || 
-                                     item.Description.toLowerCase().includes(searchTerm) ||
-                                     (item.Lore && item.Lore.toLowerCase().includes(searchTerm));
+                // Search Text
+                const matchesSearch = 
+                    (item.Name && item.Name.toLowerCase().includes(searchTerm)) || 
+                    (item.Description && item.Description.toLowerCase().includes(searchTerm)) ||
+                    (item.Lore && item.Lore.toLowerCase().includes(searchTerm));
                 
-                const matchesSymbol = !activeSymbolFilter || 
-                                     item.Description.includes(activeSymbolFilter) || 
-                                     item.Cost.toString().includes(activeSymbolFilter);
+                // Category Filter
+                const matchesCategory = !activeFilters.category || (item.Category === activeFilters.category);
 
-                return matchesSearch && matchesSymbol;
+                // Cost Filter
+                const matchesCost = !activeFilters.cost || (item.Cost === activeFilters.cost);
+
+                return matchesSearch && matchesCategory && matchesCost;
             });
 
             return filtered.sort((a, b) => {
-                if (sortBy === 'name') return a.Name.localeCompare(b.Name);
-                if (sortBy === 'cost') return parseInt(a.Cost) - parseInt(b.Cost);
-                if (sortBy === 'category') return a.Subcategory.localeCompare(b.Subcategory);
+                if (sortBy === 'name') return (a.Name || '').localeCompare(b.Name || '');
+                if (sortBy === 'cost') return parseInt(a.Cost || 0) - parseInt(b.Cost || 0);
+                if (sortBy === 'category') return (a.Category || '').localeCompare(b.Category || '');
                 return 0;
             });
         }
@@ -340,26 +410,56 @@
         function renderMagic() {
             const spellTable = document.getElementById('spells-body');
             const cantripTable = document.getElementById('cantrips-body');
+            const sectionCantrips = document.getElementById('section-cantrips');
+            const sectionSpells = document.getElementById('section-spells');
 
             const sortedSpells = filterAndSort(rawSpells);
             const sortedCantrips = filterAndSort(rawCantrips);
 
-            spellTable.innerHTML = sortedSpells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching spells found.</td></tr>';
-            cantripTable.innerHTML = sortedCantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching cantrips found.</td></tr>';
+            // Handle Cantrip Table
+            if (sortedCantrips.length === 0 && (activeFilters.cost && activeFilters.cost !== '0')) {
+                // If filtering by cost 1-4, hide cantrips entirely or show empty? 
+                // Let's hide the table if it's irrelevant to the filter, but showing "No matches" is safer for UI clarity.
+                cantripTable.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No cantrips match filters.</td></tr>';
+            } else {
+                cantripTable.innerHTML = sortedCantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching cantrips found.</td></tr>';
+            }
+
+            // Handle Spell Table
+            if (sortedSpells.length === 0 && (activeFilters.cost === '0')) {
+                spellTable.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No spells match filters.</td></tr>';
+            } else {
+                spellTable.innerHTML = sortedSpells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching spells found.</td></tr>';
+            }
         }
 
         async function loadData() {
             try {
-                const [spellsRes, cantripsRes] = await Promise.all([
-                    fetch('spells.json'),
-                    fetch('cantrips.json')
-                ]);
-                rawSpells = await spellsRes.json();
-                rawCantrips = await cantripsRes.json();
+                // Fetch the single source of truth
+                const res = await fetch('spells_cantrips.json');
+                const allMagic = await res.json();
+                
+                // Split logic: Cost == "0" goes to cantrips, rest to spells
+                rawCantrips = [];
+                rawSpells = [];
+
+                allMagic.forEach(item => {
+                    // Ensure robust check for "0"
+                    if (String(item.Cost) === "0") {
+                        rawCantrips.push(item);
+                    } else {
+                        rawSpells.push(item);
+                    }
+                });
+
             } catch (e) {
-                console.warn("Using placeholder data as JSON files were not found.");
-                rawCantrips = [{ Name: "Light", Cost: "0", Subcategory: "Utility", Type: "Utility", Description: "You create a ☄ scaling light source.", Lore: "A basic necessity." }];
-                rawSpells = [{ Name: "Fireball", Cost: "3", Subcategory: "Evocation", Type: "Attack", Description: "Deal ⚡ massive damage in a ✚ upcast radius.", Lore: "Classic." }];
+                console.warn("Using placeholder data. Ensure 'spells_cantrips.json' exists.");
+                // Placeholder fallback for testing
+                                
+                mockData.forEach(item => {
+                    if (item.Cost === "0") rawCantrips.push(item);
+                    else rawSpells.push(item);
+                });
             }
             renderMagic();
         }
