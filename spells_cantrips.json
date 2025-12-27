@@ -1,13 +1,62 @@
 [
-{
-"ID": "",
-"Category": "",
-"Name": "",
-"Cost": "0",
-"Action": "",
-"Range": "",
-"Description": "",
-"Upcast": "",
-"Lore": ""
-}
+  {
+    "ID": "C1",
+    "Subcategory": "Divine",
+    "Name": "Lumen Spark",
+    "Cost": "0",
+    "Type": "Action",
+    "Range": "4 units",
+    "Description": "Ranged spell attack for 1 Radiant damage (Undead +1). You or ally within 2 units gain +1 temp Health.",
+    "Lore": "A mote of consecrated light leaps from your hand."
+  },
+  {
+    "ID": "C2",
+    "Subcategory": "Divine",
+    "Name": "Blessed Strike",
+    "Cost": "0",
+    "Type": "Action",
+    "Range": "Melee",
+    "Description": "Melee spell attack for 1 Radiant damage. Deals 2 vs. Undead/Fiends/Cursed. You or adjacent ally regain 1 Health on hit.",
+    "Lore": "Your hand radiates judgment, striking down corruption."
+  },
+  {
+    "ID": "C3",
+    "Subcategory": "Occult",
+    "Name": "Hex Pin",
+    "Cost": "0",
+    "Type": "Action",
+    "Range": "Sight",
+    "Description": "Target makes Insight Save or takes 1 Psychic damage and \u20131 Accuracy on next attack.",
+    "Lore": "A prick of malice weakens the mind."
+  },
+  {
+    "ID": "S1",
+    "Subcategory": "Arcane",
+    "Name": "Mana Burst",
+    "Cost": "1",
+    "Type": "Action",
+    "Range": "6 tiles",
+    "Description": "Target makes Agility Check [6+Mystique+Modifier]. On failure, takes 1 Force damage and pushed 2 tiles. (+2/Mana Cost).",
+    "Lore": "You release a condensed surge of unstable mana that detonates in a focused blast."
+  },
+  {
+    "ID": "S2",
+    "Subcategory": "Arcane",
+    "Name": "Arcane Bolt",
+    "Cost": "1",
+    "Type": "Action",
+    "Range": "8 units",
+    "Description": "Make a ranged spell attack for 1 Force damage. This attack ignores cover. (+2 per Mana Cost).",
+    "Lore": "A shard of refined mana shoots forth, guided by pure calculation rather than sight."
+  },
+  {
+    "ID": "S3",
+    "Subcategory": "Arcane",
+    "Name": "Displacement",
+    "Cost": "1",
+    "Type": "Reaction",
+    "Range": "Self",
+    "Description": "When targeted by an attack, impose Disadvantage on the roll.",
+    "Lore": "You bend light and position around yourself, appearing slightly out of sync with reality."
+  }
 ]
