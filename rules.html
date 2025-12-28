@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
-        
+
         :root {
             --glass-border: rgba(255, 255, 255, 0.1);
             --glass-bg: rgba(15, 23, 42, 0.6);
@@ -16,11 +17,23 @@
             --accent-glow: rgba(99, 102, 241, 0.3);
         }
 
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3, h4, .fantasy-font { font-family: 'Cinzel', serif; }
-        
-        .bg-custom-dark { background-color: #0f172a; }
-        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .fantasy-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .bg-custom-dark {
+            background-color: #0f172a;
+        }
+
         /* Glass Navigation */
         .nav-glass {
             background: rgba(15, 23, 42, 0.9);
@@ -38,8 +51,15 @@
         }
 
         @media (max-width: 1024px) {
-            .rules-layout { grid-template-columns: 1fr; }
-            .sidebar { display: none; } /* Mobile menu would go here */
+            .rules-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            /* Mobile menu would go here */
         }
 
         /* Floating Legend / Sidebar */
@@ -50,10 +70,19 @@
             overflow-y: auto;
             padding-right: 1rem;
         }
-        
-        .sidebar::-webkit-scrollbar { width: 4px; }
-        .sidebar::-webkit-scrollbar-track { background: transparent; }
-        .sidebar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
 
         .nav-group-title {
             font-size: 0.7rem;
@@ -75,7 +104,8 @@
             border-radius: 0 4px 4px 0;
         }
 
-        .sidebar-link:hover, .sidebar-link.active {
+        .sidebar-link:hover,
+        .sidebar-link.active {
             border-left-color: #6366f1;
             background: rgba(99, 102, 241, 0.1);
             color: white;
@@ -92,6 +122,7 @@
             backdrop-filter: blur(4px);
             transition: border-color 0.3s;
         }
+
         .rule-card:hover {
             border-color: var(--accent-glow);
         }
@@ -105,6 +136,7 @@
             border: 1px solid #475569;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
+
         .die {
             width: 40px;
             height: 40px;
@@ -116,7 +148,7 @@
             color: #0f172a;
             font-weight: bold;
             font-size: 1.25rem;
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.8), 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         /* Tables */
@@ -126,6 +158,7 @@
             border-spacing: 0;
             font-size: 0.9rem;
         }
+
         .data-table th {
             text-align: left;
             padding: 1rem;
@@ -134,12 +167,16 @@
             font-family: 'Cinzel', serif;
             letter-spacing: 0.05em;
         }
+
         .data-table td {
             padding: 1rem;
             border-bottom: 1px solid var(--glass-border);
             color: #cbd5e1;
         }
-        .data-table tr:last-child td { border-bottom: none; }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
 
         /* Typography */
         .section-header {
@@ -152,6 +189,7 @@
             display: flex;
             align-items: center;
         }
+
         .section-number {
             font-family: 'Inter', sans-serif;
             font-size: 0.9rem;
@@ -165,22 +203,33 @@
             border-radius: 4px;
             margin-right: 1rem;
         }
+
         strong {
             color: white;
         }
 
-        .highlight-text { color: #818cf8; font-weight: 600; }
-        .keyword { color: #f472b6; font-weight: 600; } /* Pink for keywords */
+        .highlight-text {
+            color: #818cf8;
+            font-weight: 600;
+        }
 
+        .keyword {
+            color: #f472b6;
+            font-weight: 600;
+        }
+
+        /* Pink for keywords */
     </style>
 </head>
+
 <body class="bg-custom-dark text-slate-300">
 
     <!-- Top Navigation -->
     <nav class="fixed w-full z-50 nav-glass">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <img src="Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+                <img src="Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain"
+                    onerror="this.style.display='none'">
                 <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
             </div>
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
@@ -197,7 +246,7 @@
 
     <!-- Main Layout -->
     <main class="pt-32 pb-20 px-6 rules-layout">
-        
+
         <!-- Floating Legend / Sidebar -->
         <aside class="sidebar hidden lg:block">
             <div class="mb-8">
@@ -237,12 +286,16 @@
                 <section id="intro" class="scroll-mt-32">
                     <div class="rule-card">
                         <h2 class="text-2xl text-white font-bold mb-4">Introduction</h2>
-                        <p class="mb-4">Mythlight is designed to be a simple narrative focused roleplaying game, with simple to pick up rules that promote roleplay. Combat is also quite simple to pick up using as little rolls as possible.</p>
+                        <p class="mb-4">Mythlight is designed to be a simple narrative focused roleplaying game, with
+                            simple to pick up rules that promote roleplay. Combat is also quite simple to pick up using
+                            as little rolls as possible.</p>
                         <p class="mb-4"><strong>What you need to play:</strong></p>
                         <ul class="list-disc ml-6 space-y-2 text-sm">
-                            <li><strong>2 six-sided dice (2d6)</strong> per player. This system doesn’t use polyhedral dice.</li>
+                            <li><strong>2 six-sided dice (2d6)</strong> per player. This system doesn’t use polyhedral
+                                dice.</li>
                             <li><strong>Character Sheet:</strong> Includes stats, traits, equipment, and backstory.</li>
-                            <li><strong>One Narrator:</strong> Guides the story, plays NPCs, and presents challenges.</li>
+                            <li><strong>One Narrator:</strong> Guides the story, plays NPCs, and presents challenges.
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -252,12 +305,14 @@
                         <span class="section-number">01</span>
                         Resolution System
                     </div>
-                    
+
                     <div class="rule-card flex flex-col md:flex-row gap-8 items-start">
                         <div class="flex-1">
                             <h3 class="text-xl text-white font-bold mb-4">The 2d6 Engine</h3>
-                            <p class="mb-4">Most actions use a base roll of <strong>2d6</strong> to determine success or failure. You succeed if your total (Roll + Modifiers) meets or beats the <strong>CS (Challenge Score)</strong>.</p>
-                            
+                            <p class="mb-4">Most actions use a base roll of <strong>2d6</strong> to determine success or
+                                failure. You succeed if your total (Roll + Modifiers) meets or beats the <strong>CS
+                                    (Challenge Score)</strong>.</p>
+
                             <div class="grid grid-cols-2 gap-4 text-sm mt-6">
                                 <div class="bg-indigo-900/20 p-4 rounded border border-indigo-500/30">
                                     <strong class="text-indigo-400 block mb-1">Advantage</strong>
@@ -269,9 +324,10 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- The "2d6 thing" visual -->
-                        <div class="flex flex-col items-center justify-center bg-slate-800/50 p-6 rounded-xl border border-slate-700 w-full md:w-auto">
+                        <div
+                            class="flex flex-col items-center justify-center bg-slate-800/50 p-6 rounded-xl border border-slate-700 w-full md:w-auto">
                             <div class="dice-visual mb-4">
                                 <div class="die">6</div>
                                 <div class="die">6</div>
@@ -280,7 +336,7 @@
                             <span class="text-xs uppercase tracking-widest text-slate-500">vs Challenge Score</span>
                         </div>
                     </div>
-                    
+
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="rule-card border-l-4 border-l-yellow-500">
@@ -307,8 +363,10 @@
                         <p class="text-sm mb-2">You acquire grace as you fail. Use it in dire moments.</p>
                         <ul class="list-disc ml-4 text-xs text-slate-400 space-y-1">
                             <li><strong>Gain:</strong> +1 Grace on failure. +1 per subsequent consecutive failure.</li>
-                            <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail twice to grow again).</li>
-                            <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max Grace is 6.</li>
+                            <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail
+                                twice to grow again).</li>
+                            <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max
+                                Grace is 6.</li>
                             <li><strong>Reset:</strong> Resets when combat starts/ends or on sleep.</li>
                         </ul>
                     </div>
@@ -327,15 +385,18 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-bold mb-2">Rest (>10 mins)</h4>
-                                <p>Regain Hits equal to Level. Longer rests stack (1hr = 2x Level). Max 2 rests per day.</p>
+                                <p>Regain Hits equal to Level. Longer rests stack (1hr = 2x Level). Max 2 rests per day.
+                                </p>
                             </div>
                             <div>
                                 <h4 class="text-white font-bold mb-2">Sleep (8 hrs)</h4>
-                                <p>Full recovery of HP and Mana. Removes Fatigue. Sleeping less avoids exhaustion but may not restore resources.</p>
+                                <p>Full recovery of HP and Mana. Removes Fatigue. Sleeping less avoids exhaustion but
+                                    may not restore resources.</p>
                             </div>
                         </div>
                         <div class="mt-4 pt-4 border-t border-slate-700">
-                            <p class="text-xs text-red-400"><strong>Fatigue:</strong> -2 penalty per level (stacking). Level 6 without sleep is fatal.</p>
+                            <p class="text-xs text-red-400"><strong>Fatigue:</strong> -2 penalty per level (stacking).
+                                Level 6 without sleep is fatal.</p>
                         </div>
                     </div>
                 </section>
@@ -346,7 +407,8 @@
                  ======================= -->
             <div id="player-section">
                 <h1 class="text-5xl font-bold text-white mb-4">Character Rules</h1>
-                    <p class="text-lg text-indigo-300">These rules govern character creation and how each part of your character functions.</p>
+                <p class="text-lg text-indigo-300">These rules govern character creation and how each part of your
+                    character functions.</p>
                 <div class="mb-12 pt-12 border-t border-slate-800">
                 </div>
 
@@ -357,7 +419,8 @@
                     </div>
                     <div class="rule-card">
                         <h3 class="text-xl text-white font-bold mb-4">Attributes (Point Buy)</h3>
-                        <p class="mb-4">You have <strong>5 points</strong> to distribute. Max <strong>2 points</strong> per stat initially. These are modified by Lineage.</p>
+                        <p class="mb-4">You have <strong>5 points</strong> to distribute. Max <strong>2 points</strong>
+                            per stat initially. These are modified by Lineage.</p>
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-indigo-400 block">Physique</strong>
@@ -377,18 +440,25 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="rule-card">
                         <h3 class="text-xl text-white font-bold mb-4">Species & Path</h3>
-                        <p class="mb-4">Your character is more than just numbers, its also your past, culture and appearance! Use these to dictate what those are like:</p>
+                        <p class="mb-4">Your character is more than just numbers, its also your past, culture and
+                            appearance! Use these to dictate what those are like:</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-orange-400 block">Species</strong>
-                                 Species represent your character’s physical traits and cultural background, making them one of the most recognizable aspects of who they are. Each species grants <strong>minor bonuses</strong> to base attributes—balanced overall, though some favor specific playstyles—and provides <strong>one unique trait</strong> that reflects the species’ most characteristic abilities.
+                                Species represent your character’s physical traits and cultural background, making them
+                                one of the most recognizable aspects of who they are. Each species grants <strong>minor
+                                    bonuses</strong> to base attributes—balanced overall, though some favor specific
+                                playstyles—and provides <strong>one unique trait</strong> that reflects the species’
+                                most characteristic abilities.
                             </div>
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-orange-400 block">Path</strong>
-                                Your character's past is primarily governed by their backstory, however, mechanically, you do get to select a path for your character. Paths grant you a couple skill modifiers and 1 trait.
+                                Your character's past is primarily governed by their backstory, however, mechanically,
+                                you do get to select a path for your character. Paths grant you a couple skill modifiers
+                                and 1 trait.
                             </div>
                         </div>
                     </div>
@@ -399,15 +469,20 @@
                         <span class="section-number">04</span>
                         Skills
                     </div>
-                    <p class="mb-6">Each attribute governs specific skills, these can be enhanced using <strong>skill points</strong>. At character creation you are given <strong>4 skill points</strong>, you can asign these however you wish, but only a max of 2 in a single skill. Skill Checks follow: <span class="text-white font-bold">[2d6 + Attribute + Skill Modifier]</span>.</p>
-                    
+                    <p class="mb-6">Each attribute governs specific skills, these can be enhanced using <strong>skill
+                            points</strong>. At character creation you are given <strong>4 skill points</strong>, you
+                        can asign these however you wish, but only a max of 2 in a single skill. Skill Checks follow:
+                        <span class="text-white font-bold">[2d6 + Attribute + Skill Modifier]</span>.</p>
+
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Physique Skills</h4>
                             <ul class="text-sm space-y-2">
                                 <li><span class="keyword">Might:</span> Lifting, breaking, melee strikes.</li>
-                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing, grappling, carrying capacity.</li>
-                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, un-armored defence.</li>
+                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing, grappling,
+                                    carrying capacity.</li>
+                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, un-armored
+                                    defence.</li>
                                 <li><span class="keyword">Brawn:</span> Physical resistance (HP).</li>
                             </ul>
                         </div>
@@ -425,7 +500,8 @@
                             <ul class="text-sm space-y-2">
                                 <li><span class="keyword">Arcana:</span> Spells, rituals, lore.</li>
                                 <li><span class="keyword">Insight:</span> Reading intentions, sensing magic.</li>
-                                <li><span class="keyword">Scholarship:</span> Research, history, number of known spells.</li>
+                                <li><span class="keyword">Scholarship:</span> Research, history, number of known spells.
+                                </li>
                                 <li><span class="keyword">Spellcraft:</span> Casting and shaping magic.</li>
                             </ul>
                         </div>
@@ -456,30 +532,81 @@
                                 <strong class="text-white block">Traits</strong>
                                 Purchased with points. Can be mutually exclusive. Level 1 starts with 3 Trait Points.
                             </li>
+                            <li>
+                                <strong class="text-white block">Leveling table:</strong><br>
+                                <table class="w-full text-center border-collapse rounded-xl overflow-hidden">
+                                    <thead class="bg-slate-800/70">
+                                        <tr class="text-xs uppercase tracking-widest text-slate-400">
+                                            <th class="px-3 py-3">Level</th>
+                                            <th class="px-3 py-3">Trait Points</th>
+                                            <th class="px-3 py-3">Skill Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-slate-900/40 text-sm text-slate-300">
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">1</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">2</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-indigo-300">3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">4</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">5</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-indigo-300">6</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">7</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">8</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-indigo-300">9</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">10</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-white">11</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-800">
+                                            <td class="px-3 py-2 font-bold text-indigo-300">12</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
                         </ul>
-                        <table class="w-full text-center border-collapse rounded-xl overflow-hidden">
-  <thead class="bg-slate-800/70">
-    <tr class="text-xs uppercase tracking-widest text-slate-400">
-      <th class="px-3 py-3">Level</th>
-      <th class="px-3 py-3">Trait Points</th>
-      <th class="px-3 py-3">Skill Points</th>
-    </tr>
-  </thead>
-  <tbody class="bg-slate-900/40 text-sm text-slate-300">
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">1</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">2</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-indigo-300">3</td><td>2</td><td>1</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">4</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">5</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-indigo-300">6</td><td>2</td><td>1</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">7</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">8</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-indigo-300">9</td><td>2</td><td>1</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">10</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-white">11</td><td>1</td><td>0</td></tr>
-    <tr class="border-t border-slate-800"><td class="px-3 py-2 font-bold text-indigo-300">12</td><td>2</td><td>1</td></tr>
-  </tbody>
-</table>
                     </div>
                 </section>
 
@@ -489,58 +616,62 @@
                         Spellcasting
                     </div>
                     <section class="rule-card">
-  <h3 class="section-header">Spellcasting Schools</h3>
+                        <h3 class="section-header">Spellcasting Schools</h3>
 
-  <div class="space-y-4 text-sm leading-relaxed text-slate-300">
+                        <div class="space-y-4 text-sm leading-relaxed text-slate-300">
 
-    <div>
-      <strong>Arcane</strong><br>
-      Utility-focused spellcasting emphasizing protection, control, and flexible magical effects. 
-      Offers the widest range of spells with no inherent restrictions.
-    </div>
+                            <div>
+                                <strong>Arcane</strong><br>
+                                Utility-focused spellcasting emphasizing protection, control, and flexible magical
+                                effects.
+                                Offers the widest range of spells with no inherent restrictions.
+                            </div>
 
-    <div>
-      <strong>Divine</strong><br>
-      Focuses on healing, blessings, and radiant power. 
-      Excels at support, recovery, and sustained protection through sacred magic.
-    </div>
+                            <div>
+                                <strong>Divine</strong><br>
+                                Focuses on healing, blessings, and radiant power.
+                                Excels at support, recovery, and sustained protection through sacred magic.
+                            </div>
 
-    <div>
-      <strong>Occult</strong><br>
-      Cannot learn spells above <strong>Level 2</strong>. 
-      All spells are always cast at the highest spell level currently unlocked.
-      Powerful but tightly constrained.
-    </div>
+                            <div>
+                                <strong>Occult</strong><br>
+                                Cannot learn spells above <strong>Level 2</strong>.
+                                All spells are always cast at the highest spell level currently unlocked.
+                                Powerful but tightly constrained.
+                            </div>
 
-    <div>
-      <strong>Cosmic</strong><br>
-      Cannot learn spells above <strong>Level 1</strong>. 
-      Instead of upcasting, spending N mana casts N Level 1 spells simultaneously (e.g., 3 mana = 3 spells).
-      Manipulates abstract forces such as space, time, and probability.
-    </div>
+                            <div>
+                                <strong>Cosmic</strong><br>
+                                Cannot learn spells above <strong>Level 1</strong>.
+                                Instead of upcasting, spending N mana casts N Level 1 spells simultaneously (e.g., 3
+                                mana = 3 spells).
+                                Manipulates abstract forces such as space, time, and probability.
+                            </div>
 
-    <div>
-      <strong>Elemental</strong><br>
-      Draws from multiple elemental sub-schools (fire, ice, lightning, earth, and more).
-      Each element alters spell behavior and excels in different environments.
-    </div>
+                            <div>
+                                <strong>Elemental</strong><br>
+                                Draws from multiple elemental sub-schools (fire, ice, lightning, earth, and more).
+                                Each element alters spell behavior and excels in different environments.
+                            </div>
 
-  </div>
-</section>
+                        </div>
+                    </section>
                     <div class="rule-card">
                         <h3 class="section-header">Mana Growth</h3>
-                        <p class="mb-4">Magic draws from a central pool of <strong>Mana</strong>. Mana restores on Sleep.</p>
+                        <p class="mb-4">Magic draws from a central pool of <strong>Mana</strong>. Mana restores on
+                            Sleep.</p>
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <strong class="text-white">Upcasting</strong>
-                                <p class="text-sm text-slate-400">Cast a spell at a higher level for enhanced effects. Cost: +1 Mana per level.</p>
+                                <p class="text-sm text-slate-400">Cast a spell at a higher level for enhanced effects.
+                                    Cost: +1 Mana per level.</p>
                             </div>
                             <div>
                                 <strong class="text-white">Cantrips</strong>
                                 <p class="text-sm text-slate-400">Cost 0 Mana. Cast freely.</p>
                             </div>
                         </div>
-                    <div class="overflow-x-auto">
+                        <div class="overflow-x-auto">
                             <table class="data-table text-sm">
                                 <thead>
                                     <tr>
@@ -550,18 +681,66 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>1</td><td>1</td><td>Level 1 Spells</td></tr>
-                                    <tr><td>2</td><td>2</td><td>-</td></tr>
-                                    <tr><td>3</td><td>4</td><td>Level 2 Spells</td></tr>
-                                    <tr><td>4</td><td>5</td><td>-</td></tr>
-                                    <tr><td>5</td><td>6</td><td>-</td></tr>
-                                    <tr><td>6</td><td>8</td><td>Level 3 Spells</td></tr>
-                                    <tr><td>7</td><td>9</td><td>-</td></tr>
-                                    <tr><td>8</td><td>10</td><td>-</td></tr>
-                                    <tr><td>9</td><td>12</td><td>Level 4 Spells</td></tr>
-                                    <tr><td>10</td><td>13</td><td>-</td></tr>
-                                    <tr><td>11</td><td>14</td><td>-</td></tr>
-                                    <tr><td>12</td><td>16</td><td>Max Level</td></tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>Level 1 Spells</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>Level 2 Spells</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>8</td>
+                                        <td>Level 3 Spells</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>9</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>10</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>12</td>
+                                        <td>Level 4 Spells</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>13</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>14</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>16</td>
+                                        <td>Max Level</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -575,76 +754,88 @@
                     </div>
                     <div class="rule-card">
                         <p class="mb-4"><strong>Armor & Weaponry + Proficiencies</strong></p>
-                        <p class="text-sm mb-4">You are restricted in how much of each type of equipment you can wear, on your character sheet you will see sections for what types, 1 peice of equipment per section (helmet, body, shield etc.)</p>
-                        
+                        <p class="text-sm mb-4">You are restricted in how much of each type of equipment you can wear,
+                            on your character sheet you will see sections for what types, 1 peice of equipment per
+                            section (helmet, body, shield etc.)</p>
+
                         <div class="space-y-3 text-sm">
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Armor</span>
-                                <span class="text-slate-400">Worn to gain extra defence, usually overrides <strong>unarmored defence [5 + Fortitude]</strong></span>
+                                <span class="text-slate-400">Worn to gain extra defence, usually overrides
+                                    <strong>unarmored defence [5 + Fortitude]</strong></span>
                             </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Weaponry</span>
-                                <span class="text-slate-400">You can weild as many weapons as you have arms, although without traits only <strong>1 weapon</strong> effectively</span>
+                                <span class="text-slate-400">You can weild as many weapons as you have arms, although
+                                    without traits only <strong>1 weapon</strong> effectively</span>
                             </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Proficiencies</span>
-                                <span class="text-slate-400">You gain the ability to effectively use certain gear from traits</span>
+                                <span class="text-slate-400">You gain the ability to effectively use certain gear from
+                                    traits</span>
                             </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Automatic Proficiencies</span>
-                                <span class="text-slate-400"><strong>Light melee weapons</strong>, <strong>light armor</strong> and <strong>shields</strong> are all available for free.</span>
+                                <span class="text-slate-400"><strong>Light melee weapons</strong>, <strong>light
+                                        armor</strong> and <strong>shields</strong> are all available for free.</span>
                             </div>
                             <br>
-                    <div class="rule-card">
-                        <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong></p>
-                        <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3), Cumbersome (4). 100 coins = 1 weight.</p>
-                        
-                        <div class="space-y-3 text-sm">
-                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
-                                <span>Non-encumbered (< Limit) </span>
-                                <span class="text-slate-400">Buisness as usual</span>
+                            <div class="rule-card">
+                                <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong>
+                                </p>
+                                <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3),
+                                    Cumbersome (4). 100 coins = 1 weight.</p>
+
+                                <div class="space-y-3 text-sm">
+                                    <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                        <span>Non-encumbered (< Limit) </span>
+                                                <span class="text-slate-400">Buisness as usual</span>
+                                    </div>
+                                    <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                        <span>Encumbered (> Limit)</span>
+                                        <span class="text-slate-400">Speed halved. 0 move = disadvantage.</span>
+                                    </div>
+                                    <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                        <span>Overencumbered (> 2x Limit)</span>
+                                        <span class="text-slate-400">Speed halved. Disadv on Physique/Technique.</span>
+                                    </div>
+                                    <div class="bg-slate-900/30 p-2 rounded flex justify-between">
+                                        <span>Crushed (> 3x Limit)</span>
+                                        <span class="text-slate-400">Speed 0. Disadv all. 1 dmg/10min.</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
-                                <span>Encumbered (> Limit)</span>
-                                <span class="text-slate-400">Speed halved. 0 move = disadvantage.</span>
-                            </div>
-                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
-                                <span>Overencumbered (> 2x Limit)</span>
-                                <span class="text-slate-400">Speed halved. Disadv on Physique/Technique.</span>
-                            </div>
-                            <div class="bg-slate-900/30 p-2 rounded flex justify-between">
-                                <span>Crushed (> 3x Limit)</span>
-                                <span class="text-slate-400">Speed 0. Disadv all. 1 dmg/10min.</span>
-                            </div>
-                        </div>
-                    </div>
                 </section>
             </div>
 
             <!-- ======================= 
                  PART 3: NARRATOR RULES 
                  ======================= -->
- <div id="narrator-section">
-     <h1 class="text-5xl font-bold text-white mb-4">Combat Rules</h1>
-                    <p class="text-lg text-indigo-300">These rules govern combat and all of its sub-systems.</p>
-     <div class="mb-12 pt-12 border-t border-slate-800">
+            <div id="narrator-section">
+                <h1 class="text-5xl font-bold text-white mb-4">Combat Rules</h1>
+                <p class="text-lg text-indigo-300">These rules govern combat and all of its sub-systems.</p>
+                <div class="mb-12 pt-12 border-t border-slate-800">
                 </div>
-    
+
                 <section id="combat" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">08</span>
                         Combat Mechanics
                     </div>
-                    
+
                     <div class="rule-card mb-6">
                         <h3 class="text-white font-bold mb-4">The Turn Structure</h3>
-                        <p class="mb-4"><strong>Initiative:</strong> Determined by word of mouth. First to engage acts first. Unconscious = bottom of order.</p>
-                        <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span class="text-indigo-400">Turn Delay</span> based on when they joined combat.</p>
-                        <p class="mb-4"><strong>Ambush:</strong> When you initiate combat with an unaware enemy, you act before initiative or turn delay</p>
+                        <p class="mb-4"><strong>Initiative:</strong> Determined by word of mouth. First to engage acts
+                            first. Unconscious = bottom of order.</p>
+                        <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span class="text-indigo-400">Turn
+                                Delay</span> based on when they joined combat.</p>
+                        <p class="mb-4"><strong>Ambush:</strong> When you initiate combat with an unaware enemy, you act
+                            before initiative or turn delay</p>
                         <div class="bg-slate-800 p-4 rounded border border-slate-600 mb-4">
                             <strong class="text-white">Action Economy</strong><br>
                             Each Turn = <strong>2 Actions</strong>.<br>
-                            Each Scene = <strong>1 Reaction</strong> (Only valid reaction by default is Opportunity Attack leaving melee).
+                            Each Scene = <strong>1 Reaction</strong> (Only valid reaction by default is Opportunity
+                            Attack leaving melee).
                         </div>
                     </div>
 
@@ -686,15 +877,20 @@
                     <div class="grid md:grid-cols-1 gap-6">
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-2">Guard</h4>
-                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot be healed in any way once lost. Only gainable through traits or if given by others.</p>
+                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot
+                                be healed in any way once lost. Only gainable through traits or if given by others.</p>
                             <br>
                             <h4 class="text-white font-bold mb-2">Health</h4>
-                            <p class="text-sm"><strong>Health:</strong> Measured in hits and subtracted by taking damage, can be healed up to your maximum. Overhealing does nothing. Regenerates on rests and Sleep.</p>
+                            <p class="text-sm"><strong>Health:</strong> Measured in hits and subtracted by taking
+                                damage, can be healed up to your maximum. Overhealing does nothing. Regenerates on rests
+                                and Sleep.</p>
                             <br>
                             <h4 class="text-white font-bold mb-2">Death</h4>
                             <p class="text-sm mb-2"><strong>0 Hits:</strong> Unconscious.</p>
-                            <p class="text-sm mb-2"><strong>Final Blow:</strong> Attacker declares on unconscious target. Instantly kills unless resisted by Fortitude (up to 3 times).</p>
-                            <p class="text-sm"><strong>Certain Death:</strong> Negative HP equal to Max HP kills instantly.</p>
+                            <p class="text-sm mb-2"><strong>Final Blow:</strong> Attacker declares on unconscious
+                                target. Instantly kills unless resisted by Fortitude (up to 3 times).</p>
+                            <p class="text-sm"><strong>Certain Death:</strong> Negative HP equal to Max HP kills
+                                instantly.</p>
                         </div>
                     </div>
                 </section>
@@ -706,11 +902,15 @@
                     </div>
                     <div class="rule-card">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
-                            <div><span class="text-red-400 font-bold">Bleeding:</span> Reduce healing by amount of Bleed</div>
+                            <div><span class="text-red-400 font-bold">Bleeding:</span> Reduce healing by amount of Bleed
+                            </div>
                             <div><span class="text-red-400 font-bold">Stunned:</span> Lose 1 action.</div>
-                            <div><span class="text-red-400 font-bold">Prone:</span> No move. Melee hits against you have adv.</div>
-                            <div><span class="text-red-400 font-bold">Restrained:</span> No move. Attacks against you have adv.</div>
-                            <div><span class="text-red-400 font-bold">Exhausted:</span> Disadv physical checks. Move halved.</div>
+                            <div><span class="text-red-400 font-bold">Prone:</span> No move. Melee hits against you have
+                                adv.</div>
+                            <div><span class="text-red-400 font-bold">Restrained:</span> No move. Attacks against you
+                                have adv.</div>
+                            <div><span class="text-red-400 font-bold">Exhausted:</span> Disadv physical checks. Move
+                                halved.</div>
                             <div><span class="text-red-400 font-bold">Weakened:</span> Attacks deal half damage.</div>
                             <div><span class="text-red-400 font-bold">Blinded:</span> Auto-fail sight checks.</div>
                             <div><span class="text-red-400 font-bold">Slowed:</span> Move halved. No reactions.</div>
@@ -737,12 +937,14 @@
                                 <h4 class="text-white font-bold mb-2">Terrain</h4>
                                 <ul class="text-sm space-y-1">
                                     <li><strong>Rough:</strong> Movement halved.</li>
-                                    <li><strong>Slippery:</strong> Cardinal movement only. Turns trigger Reflex check or Prone.</li>
+                                    <li><strong>Slippery:</strong> Cardinal movement only. Turns trigger Reflex check or
+                                        Prone.</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="mt-4 text-sm bg-slate-900/50 p-2 rounded">
-                            <strong>Ranged Logic:</strong> Impossible to shoot beyond max range. Disadvantage if enemy is within melee range.
+                            <strong>Ranged Logic:</strong> Impossible to shoot beyond max range. Disadvantage if enemy
+                            is within melee range.
                         </div>
                     </div>
                 </section>
@@ -753,7 +955,8 @@
 
     <footer class="py-16 text-center">
         <div class="max-w-7xl mx-auto px-6">
-            <img src="Mythlight Logo White.svg" alt="Mythlight Logo" class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
+            <img src="Mythlight Logo White.svg" alt="Mythlight Logo"
+                class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
             <div class="flex justify-center space-x-6 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
                 <a href="index.html" class="hover:text-indigo-400">Home</a>
                 <a href="rules.html" class="hover:text-indigo-400">Rules</a>
@@ -763,7 +966,8 @@
                 <a href="spells.html" class="hover:text-indigo-400">Spells</a>
                 <a href="equipment.html" class="hover:text-indigo-400">Equipment</a>
             </div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">&copy; 2025 Mythlight RPG System. Designed for Legends. By Grinprim.</p>
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">&copy; 2025 Mythlight RPG System. Designed
+                for Legends. By Grinprim.</p>
         </div>
     </footer>
 
@@ -789,26 +993,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
