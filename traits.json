@@ -1250,8 +1250,171 @@
     "Parameters": "⫘ Apprentice Craftsman",
     "Description": "Using [2× Metal - Wire, 1× Metal - Plate] Deploy an automated turret that fires at the end of your turn. Turret deals 2 Damage and, has 3 Durability.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+
+
+
+
+
+
+
+
+  
+  {
+    "Name": "Lucky Fella",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You gain +2 On all Gambling / Luck related checks.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Carrying Mule",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You gain +5 Maximum Encumberance",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Pocket Aces",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Lucky Fella",
+    "Description": "You gain advantage on all Gambling / Luck related checks.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Compelling Invite",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "All enemies within 1 unit will target you with their next attack, Counts as a Taunt Effect.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Field Medic",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "☀",
+    "Parameters": "None",
+    "Description": "Allies resting with you gain double healing, you can remove 1 Condition per ally once per combat.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Constructive Trapper",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Combat Trapper",
+    "Description": "[2× Common Component]: Create a trapped 2x2 area, it can trap multiple creatures, it will only trigger when a declared condition is met. Trapped creatures take X damage and have their movement reduced by 3.",
+    "Scaling": "Damage X:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
+  },
+  {
+    "Name": "Deployment Trapper",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Combat Trapper",
+    "Description": "Traps you can deploy now can be deployed within a range of 5 units.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Guerila Trapper",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "☀",
+    "Parameters": "⫘ Combat Trapper",
+    "Description": "You can deploy 2 normal traps, or 1 Large trap during a rest.<br>Normal traps: Combat Trapper traps.<br>Large traps: Constructive Trapper traps",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Explosive Trapper",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Combat Trapper",
+    "Description": "Traps you deploy, when triggered, deal +1 Damage  in a 1 unit radius.<br><br><i>Large traps explosions count as a 4x4 square.</i>",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Binding Trapper",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Combat Trapper",
+    "Description": "Traps you deploy now knock enemies Prone, they must roll [Reflex] to resist.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Combat guard",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Compelling invite",
+    "Description": "Taunting enemies grants 1 Guard per enemy taunted.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Recovery",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Each scene you have guard recover X Health",
+    "Scaling": "Health X:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Back to back we stand",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Choose an Ally or Companion, this choice can only be changed uppon leveling up.<br><br>While they are within 1 unit of you, gain +1 Accuracy and +1 Armor. Each  1 point of damage they take can be reduced if you take 2 points of damage instead. You gain +2 movement speed towards them.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Suppresive fire",
+    "Action":"◆",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Unleash a 4 Unit cone of projectiles. Creatures within it must use seek the nearest cover as a reaction, if they do not find any, or do not have a reaction, they take 2 Damage.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Breserk",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You gain the ability to enter a Rage state. In this state you loose 6 Armor, and gain +X Damage and +Y Accuracy. This state lasts until dismissed, unconcious or end of combat.",
+    "Scaling": "Damage/Accuracy X/Y:<br>+2/+3 [lvl 1]<br>+3/+4 [lvl 6]<br>+4/+5 [lvl 12]"
+  },
+  {
+    "Name": "Natural Defences",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Breserk",
+    "Description": "While in Rage, you gain Resistances to Blunt, Slash, Pierce and Cleave damage.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Bodyslam",
+    "Action":"◆",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You slam your body against a target within melee range. You loose all of your guard, and deal that much damage to the target.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
+
 
 
 
