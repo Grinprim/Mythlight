@@ -937,7 +937,7 @@
     "Scaling": "Armor X:<br>2 [lvl 1]<br>3 [lvl 6]<br>4 [lvl 12]"
   },
   {
-    "Name": "Overcharged Weapon",
+    "Name": "Blood pact",
     "Action":"◆",
     "Cost": "2",
     "Symbols": "🗲",
@@ -1414,6 +1414,7 @@
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
+
 
 
 
