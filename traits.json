@@ -113,7 +113,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "★ Spellcasting",
-    "Description": "Gain access to Arcane Spellcasting. You learn a number of Divine spells equal to your Scholarship, and learn 2 Divine cantrips.",
+    "Description": "Gain access to Divine Spellcasting. You learn a number of Divine spells equal to your Scholarship, and learn 2 Divine cantrips.",
     "Scaling": "-"
   },
   {
@@ -130,7 +130,7 @@
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
-    "Parameters": "★ Spellcasting (Occult)",
+    "Parameters": "★ Spellcasting",
     "Description": "Gain access to Occult Spellcasting. You learn a number of Occult spells equal to your Scholarship, you cannot learn spells above level 2. Spells are always upcast. You learn 2 Occult cantrips.",
     "Scaling": "-"
   },
@@ -924,7 +924,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Damaging a spellcaster causes them to lose 1 Mana (doubled on Midnights).",
+    "Description": "Damaging a Spellcaster causes them to lose 1 Mana (doubled on Midnights).",
     "Scaling": "-"
   },
   {
@@ -1412,8 +1412,279 @@
     "Parameters": "None",
     "Description": "You slam your body against a target within melee range. You loose all of your guard, and deal that much damage to the target.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Great Weapon Mastery",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Any Heavy Weapon Training",
+    "Description": "Heavy Weapons deal +X Damage, but suffer -3 Accuracy",
+    "Scaling": "Damage X:<br>2 [lvl 1]<br>3 [lvl 6]<br>4 [lvl 12]"
+  },
+  {
+    "Name": "Blood Vigor",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When you defeat an enemy, recover X Health",
+    "Scaling": "Health X:<br>2 [lvl 1]<br>3 [lvl 3]<br>4 [lvl 6]<br>5 [lvl 9]<br>6 [lvl 12]"
+  },
+  {
+    "Name": "Momentum Drive",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Consecutive hits against the same target grant you +1 Damage, stacking up to +4, Missing or Switching targets resets the Stack.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Counter Stance",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Compelling invite",
+    "Description": "When Taunted targets strike you, they take X Damage. The Damage type matches your weapons type.",
+    "Scaling": "Damage X:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]<br>5 [lvl 12]"
+  },
+  {
+    "Name": "Spellbreaker",
+    "Action":"◇",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "⫘ Focus Breaker",
+    "Description": "When a spell is cast within 3 units, you may dispell it. You can only do this before rolls are made.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Ethereal Step",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Move up to 5 units, you ignore terrain penalties, you may pass through 1 obstacle in your way. During movement you may refresh this ability to pass through multiple obstacles, however your movement does not refresh.<br><br><i>Obstacles must not be larger than 1 unit, relative to the direction you are moving through them.</i>",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Healing Pulse",
+    "Action":"⬖",
+    "Cost": "",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Heal all allies within 3 units for X Health.",
+    "Scaling": "Uses/Health 🗲/X:<br>1/2 [lvl 1]<br>2/3 [lvl 3]<br>3/4 [lvl 6]<br>4/5 [lvl 9]<br>5/6 [lvl 12]"
+  },
+  {
+    "Name": "Mystical Overload",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "⫘ ★ Spellcasting & ★ Ritualist",
+    "Description": "Double the damage of your next spell, take damage equal to the Mana cost of the spell.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
+  },
+  {
+    "Name": "Spell Echo",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "⫘ ★ Spellcasting",
+    "Description": "Repeat the last spell cast for free. If no spell was cast, cast a spell for free.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
+  },
+  {
+    "Name": "Minor Syphoned Healing",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When you cast a healing or support spell, you or one ally regain X Health",
+    "Scaling": "Health X:<br>2 [lvl 1]<br>3 [lvl 3]<br>4 [lvl 6]<br>5 [lvl 9]"
+  },
+  {
+    "Name": "Cursed Cycle",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When one of your controlled or cursed targets is defeated, move the curse to a new target and refresh its duration.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Camper’s Discipline",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "If you did not move this turn, your next ranged attack gains +X Damage and +Y Accuracy.",
+    "Scaling": "Damage/Accuracy X/Y:<br>+1/+2 [lvl 1]<br>+2/+3 [lvl 6]<br>+3/+4 [lvl 12]"
+  },
+  {
+    "Name": "Arc Shot",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When targeting creatures behind partial cover, gain +2 Accuracy",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Tough",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain +2 Max Health per level.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Skilled",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain 2 Skill points.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Smokebomb",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Smokebombs:<br>Thrown projectile (6 unit Range); Everyone in a 3-tile radius suffers –2 Accuracy, lasts 4 scenes.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
+  },
+  {
+    "Name": "Mana Sap",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Focus Breaker",
+    "Description": "Mana you drain from Spellcasters replenishes your Mana.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Symbotic Flow",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ ★ Companion",
+    "Description": "When you cast a spell, your companion’s next attack deals +X Damage; when it attacks, your next spell deals +Y Damage",
+    "Scaling": "Damage X/Y:<br>+2/+1 [lvl 1]<br>+3/+2 [lvl 6]<br>+4/+3 [lvl 12]"
+  },
+  {
+    "Name": "Pheonix Recovery",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "★ Self-Revive ⫘ Blood Vigor",
+    "Description": "Upon reaching 0 Health, recover 6 Health and immediately take another turn.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Arcane Detonation",
+    "Action":"◆◇⬖⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "⫘ ★ Spellcasting",
+    "Description": "Release All Mana; deal 2 Force damage per Mana spent to enemies within 2 tiles; you gain 2 Fatigue.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Last stand",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While at or below half Health, gain +2 Damage and +1 Armor.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Cantrip Overflow",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While at full Mana, your cantrips deal +X Damage.",
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
+  },
+  {
+    "Name": "Elemental Reflection",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Elementalist’s Spark",
+    "Description": "Spells against you matching your chosen element, suffer a -X Accuracy penalty.",
+    "Scaling": "Accuracy X:<br>-2 [lvl 1]<br>-3 [lvl 3]<br>-4 [lvl 6]<br>-5 [lvl 9]"
+  },
+  {
+    "Name": "Eternal Discipline",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "2 Active trait uses restore automatically after each combat.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Eternal Guardian",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "⫘ Back to Back we stand",
+    "Description": "When your chosen Ally/Companion falls to 0 Health, they remain at 1 Health and gain +2 Armor until the end of their next turn.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Arcane Sniper",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Arcane Student",
+    "Description": "Arcane spells gain +4 Range.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Major Syphoned Healing",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Minor Syphoned Healing",
+    "Description": "When you cast a healing spell, extend its effect to one ally or you at full strength.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Cosmic Protection",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Cosmic Novice",
+    "Description": "Each cast of a Cosmic spell grants +1 Guard.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Occult Dominion",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Occult Apprentice",
+    "Description": "Occult Curses/Brands/Marks gain +1 Target.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Master Channeler",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "☀",
+    "Parameters": "⫘ Restorative Meditation",
+    "Description": "Spell Mana restores fully on a rest; you also recover 2 Mana after each combat.",
+    "Scaling": "-"
   }
 ]
+
 
 
 
