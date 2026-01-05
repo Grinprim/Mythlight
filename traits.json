@@ -1586,7 +1586,7 @@
   },
   {
     "Name": "Arcane Detonation",
-    "Action":"◆◇⬖⭘",
+    "Action":"◆",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "⫘ ★ Spellcasting",
@@ -1729,6 +1729,7 @@
     "Scaling": "-"
   }
 ]
+
 
 
 
