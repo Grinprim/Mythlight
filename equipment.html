@@ -257,6 +257,17 @@
                     <li>Finalize Item</li>
                 </ol>
             </section>
+            <div class="filter-bar">
+                <label>Filter by Tier:</label>
+                <select id="tierFilter" onchange="filterCrafting()">
+                    <option value="all">All</option>
+                    <option value="Trivial">Trivial</option>
+                    <option value="Simple">Simple</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Difficult">Difficult</option>
+                    <option value="Complex">Complex</option>
+                </select>
+            </div>
 
             <!-- RECIPES -->
             <section>
@@ -299,6 +310,25 @@
                     <li>Determine tier by majority ingredient tier</li>
                     <li>DC = 6 + Bits + Disparity + (Tier − 1)</li>
                 </ul>
+            </section>
+            <section class="card space-y-6">
+                <h2 class="text-2xl text-white">Brewing Calculator</h2>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label>Ingredients (select multiple)</label>
+                        <select id="ingredientSelect" multiple size="6"></select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div><strong>Tier:</strong> <span id="calcTier">–</span></div>
+                        <div><strong>Aspect Totals:</strong> <span id="calcAspects">–</span></div>
+                        <div><strong>Disparity:</strong> <span id="calcDisparity">–</span></div>
+                        <div><strong>Bits:</strong> <span id="calcBits">–</span></div>
+                        <div><strong>DC:</strong> <span id="calcDC">–</span></div>
+                        <div><strong>Result:</strong> <span id="calcResult">–</span></div>
+                    </div>
+                </div>
             </section>
 
             <!-- POTIONS -->
@@ -381,7 +411,7 @@
             const body = document.getElementById("crafting-recipes");
 
             body.innerHTML = data.recipes.map(r => `
-<tr class="border-b border-slate-800">
+<tr class="border-b border-slate-800" data-tier="${r.tier}">
 <td class="px-4 py-4 font-bold text-white">${r.name}</td>
 <td class="px-4 py-4">${r.tier}</td>
 <td class="px-4 py-4">${r.category}</td>
@@ -420,8 +450,101 @@ ${b.effects.map(e => `<td class="px-4 py-4 text-slate-400">${e}</td>`).join("")}
         }
 
         document.addEventListener("DOMContentLoaded", loadBrewing);
+
+
+        <script>
+            function filterCrafting() {
+  const filter = document.getElementById("tierFilter").value;
+  document.querySelectorAll("tr[data-tier]").forEach(row => {
+                row.style.display =
+                filter === "all" || row.dataset.tier === filter
+                    ? ""
+                    : "none";
+  });
+}
+
+            <script>
+                let brewingData = { };
+
+                async function loadBrewingCalc() {
+  const res = await fetch("brewing.json");
+                brewingData = await res.json();
+
+                const select = document.getElementById("ingredientSelect");
+                [...brewingData.ingredients, ...brewingData.compoundIngredients]
+    .forEach(i => {
+      const opt = document.createElement("option");
+                opt.value = i.name;
+                opt.textContent = i.name;
+                select.appendChild(opt);
+    });
+
+                select.addEventListener("change", calculateBrew);
+}
+
+                function calculateBrew() {
+  const selected = [...document.getElementById("ingredientSelect").selectedOptions]
+    .map(o => o.value);
+
+                if (!selected.length) return;
+
+                const totals = { };
+                let tiers = [];
+
+  brewingData.aspects.forEach(a => totals[a] = 0);
+
+  selected.forEach(name => {
+    const item =
+      brewingData.ingredients.find(i => i.name === name) ||
+      brewingData.compoundIngredients.find(i => i.name === name);
+
+                tiers.push(item.tier);
+
+                if (item.aspect) {
+                    totals[item.aspect] += item.value;
+    } else {
+                    item.aspects.forEach((a, idx) => {
+                        totals[a] += item.values[idx];
+                    });
+    }
+  });
+
+  const values = Object.values(totals).filter(v => v > 0);
+                const max = Math.max(...values);
+  const disparity = values.reduce((s, v) => s + Math.abs(max - v), 0);
+
+  const bits = Object.values(totals).filter(v => v > 0).length;
+
+                const tier =
+    Object.entries(tiers.reduce((a,t)=>(a[t]=(a[t]||0)+1,a),{ }))
+      .sort((a,b)=>b[1]-a[1] || b[0]-a[0])[0][0];
+
+                const dc = 6 + bits + disparity + (tier - 1);
+
+                const bitcode =
+    brewingData.aspects.map(a => totals[a] > 0 ? "1" : "0").join("");
+
+                const outcome =
+    brewingData.bitcodes.find(b => b.code === bitcode);
+
+                document.getElementById("calcTier").textContent = tier;
+                document.getElementById("calcAspects").textContent =
+    Object.entries(totals).filter(([_,v])=>v>0).map(([a,v])=>`${a}:${v}`).join(", ");
+  document.getElementById("calcDisparity").textContent = disparity;
+  document.getElementById("calcBits").textContent = bits;
+  document.getElementById("calcDC").textContent = dc;
+  document.getElementById("calcResult").textContent =
+    outcome ? outcome.name : "Unknown Reaction";
+}
+
+document.addEventListener("DOMContentLoaded", loadBrewingCalc);
+    </script>
+
+    </script>
+
     </script>
 
 </body>
+
 
 </html>
