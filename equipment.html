@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythlight RPG | Equipment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #cbd5e1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cinzel', serif;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        th {
+            font-size: .7rem;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .card {
+            background: rgba(30, 41, 59, .5);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+
+<body class="pb-32">
+
+    <main class="max-w-7xl mx-auto px-6 pt-28 space-y-24">
+
+        <!-- OVERVIEW -->
+        <section>
+            <h1 class="text-5xl text-white mb-6">Equipment</h1>
+            <p class="max-w-3xl text-slate-400">
+                Weapons, armor, and gear define how you survive Mythlight’s world.
+                Equipment provides damage, protection, tags, and tactical options that
+                shape both combat and exploration.
+            </p>
+        </section>
+
+        <!-- DAMAGE TYPES -->
+        <section>
+            <h2 class="text-3xl text-white mb-6">Damage Types</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card p-5"><b>Puncture</b><br>Precise strikes; effective against light armor.</div>
+                <div class="card p-5"><b>Slash</b><br>Cutting attacks that cause bleeding effects.</div>
+                <div class="card p-5"><b>Blunt</b><br>Heavy impact; effective against armored targets.</div>
+                <div class="card p-5"><b>Cleave</b><br>Wide, forceful swings that threaten multiple foes.</div>
+                <div class="card p-5"><b>Blast</b><br>Area damage affecting multiple targets.</div>
+            </div>
+        </section>
+
+        <!-- TAGS -->
+        <section>
+            <h2 class="text-3xl text-white mb-6">Equipment Tags</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+                <div class="card p-5"><b>Concealable</b><br>Hidden beneath normal clothing.</div>
+                <div class="card p-5"><b>Flexible</b><br>No stealth penalty.</div>
+                <div class="card p-5"><b>Fireproof</b><br>Reduce fire damage by 1.</div>
+                <div class="card p-5"><b>Ballistic</b><br>Reduce firearm damage by 1.</div>
+                <div class="card p-5"><b>Restrictive</b><br>–1 Reflex; no Evasion bonuses.</div>
+                <div class="card p-5"><b>Two-Handed</b><br>Occupies both hands.</div>
+                <div class="card p-5"><b>Compact</b><br>Usable off-hand.</div>
+                <div class="card p-5"><b>Improvised</b><br>Breaks after 3 hits.</div>
+                <div class="card p-5"><b>Powered</b><br>Negates 1 Restrictive penalty.</div>
+            </div>
+        </section>
+
+        <!-- GENERIC TABLE TEMPLATE -->
+        <section id="tables" class="space-y-24">
+
+            <!-- LIGHT MELEE -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Light Melee Weapons</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead class="border-b border-slate-700">
+                            <tr>
+                                <th class="px-4 py-4">Weapon</th>
+                                <th class="px-4 py-4">Damage</th>
+                                <th class="px-4 py-4">Reach</th>
+                                <th class="px-4 py-4">Tags</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="m1"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- MEDIUM MELEE -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Medium Melee Weapons</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Weapon</th>
+                                <th class="px-4 py-4">Damage</th>
+                                <th class="px-4 py-4">Reach</th>
+                                <th class="px-4 py-4">Tags</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="m2"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- HEAVY MELEE -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Heavy Melee Weapons</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Weapon</th>
+                                <th class="px-4 py-4">Damage</th>
+                                <th class="px-4 py-4">Reach</th>
+                                <th class="px-4 py-4">Tags</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="m3"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- LIGHT RANGED -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Light Ranged Weapons</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Weapon</th>
+                                <th class="px-4 py-4">Damage</th>
+                                <th class="px-4 py-4">Range</th>
+                                <th class="px-4 py-4">Ammo</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="r1"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- HEAVY RANGED -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Heavy Ranged Weapons</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Weapon</th>
+                                <th class="px-4 py-4">Damage</th>
+                                <th class="px-4 py-4">Range</th>
+                                <th class="px-4 py-4">Ammo</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="r2"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ARMOR -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Armor</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Armor</th>
+                                <th class="px-4 py-4">Rating</th>
+                                <th class="px-4 py-4">Penalty</th>
+                                <th class="px-4 py-4">Tags</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="armor"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SHIELDS -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Shields</h2>
+                <div class="table-wrap card">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Shield</th>
+                                <th class="px-4 py-4">Bonus</th>
+                                <th class="px-4 py-4">Penalty</th>
+                                <th class="px-4 py-4">Tags</th>
+                                <th class="px-4 py-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shields"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+        <section id="crafting" class="space-y-24">
+
+            <!-- HEADER -->
+            <section>
+                <h1 class="text-5xl text-white mb-6">Crafting & Tinkering</h1>
+                <p class="max-w-4xl text-slate-400">
+                    Crafting allows characters to create equipment, machines, and constructs using components,
+                    tools, and skill. Recipes scale in complexity and risk.
+                </p>
+            </section>
+
+            <!-- TIERS -->
+            <section>
+                <h2 class="text-3xl text-white mb-6">Craft Tiers</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card p-5"><b>Trivial</b><br>No check. Basic tools.</div>
+                    <div class="card p-5"><b>Simple</b><br>Tinkering 8</div>
+                    <div class="card p-5"><b>Standard</b><br>Tinkering 12</div>
+                    <div class="card p-5"><b>Difficult</b><br>Tinkering 16</div>
+                    <div class="card p-5"><b>Complex</b><br>Tinkering 20</div>
+                </div>
+            </section>
+
+            <!-- PROCEDURE -->
+            <section>
+                <h2 class="text-3xl text-white mb-6">Crafting Procedure</h2>
+                <ol class="space-y-3 list-decimal list-inside text-slate-300 max-w-4xl">
+                    <li>Select Recipe Tier</li>
+                    <li>Gather Components</li>
+                    <li>Assembly (Craft Check)</li>
+                    <li>Infusion (if applicable)</li>
+                    <li>Finalize Item</li>
+                </ol>
+            </section>
+
+            <!-- RECIPES -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Recipes</h2>
+
+                <div class="card table-wrap">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Name</th>
+                                <th class="px-4 py-4">Tier</th>
+                                <th class="px-4 py-4">Category</th>
+                                <th class="px-4 py-4">Components</th>
+                                <th class="px-4 py-4">Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crafting-recipes"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+        <section id="brewing" class="space-y-24">
+
+            <!-- HEADER -->
+            <section>
+                <h1 class="text-5xl text-white mb-6">Brewing & Alchemy</h1>
+                <p class="max-w-4xl text-slate-400">
+                    Brewing combines ingredient aspects into deterministic outcomes based on balance,
+                    tier, and precision.
+                </p>
+            </section>
+
+            <!-- FORMULA -->
+            <section>
+                <h2 class="text-3xl text-white mb-6">Brewing Formula</h2>
+                <ul class="list-disc list-inside text-slate-300 space-y-2 max-w-4xl">
+                    <li>Sum aspect values across ingredients</li>
+                    <li>Calculate disparity between highest and others</li>
+                    <li>Determine tier by majority ingredient tier</li>
+                    <li>DC = 6 + Bits + Disparity + (Tier − 1)</li>
+                </ul>
+            </section>
+
+            <!-- POTIONS -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Potion Outcomes</h2>
+
+                <div class="card table-wrap">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Bitcode</th>
+                                <th class="px-4 py-4">Name</th>
+                                <th class="px-4 py-4">Tier I</th>
+                                <th class="px-4 py-4">Tier II</th>
+                                <th class="px-4 py-4">Tier III</th>
+                                <th class="px-4 py-4">Tier IV</th>
+                            </tr>
+                        </thead>
+                        <tbody id="brew-outcomes"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- INGREDIENTS -->
+            <section>
+                <h2 class="text-3xl text-white mb-4">Ingredients</h2>
+
+                <div class="card table-wrap">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-4">Name</th>
+                                <th class="px-4 py-4">Aspect</th>
+                                <th class="px-4 py-4">Value</th>
+                                <th class="px-4 py-4">Tier</th>
+                            </tr>
+                        </thead>
+                        <tbody id="brew-ingredients"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <script>
+        async function loadEquipment() {
+            const res = await fetch("equipment.json");
+            const data = await res.json();
+
+            const fill = (id, rows, type) => {
+                const body = document.getElementById(id);
+                if (!body) return;
+                body.innerHTML = rows.map(r => `
+<tr class="border-b border-slate-800">
+<td class="px-4 py-4 font-bold text-white">${r.Name}</td>
+<td class="px-4 py-4">${r.Damage ?? r.Armor ?? r.Bonus ?? "-"}</td>
+<td class="px-4 py-4">${r.Reach ?? r.Range ?? "-"}</td>
+<td class="px-4 py-4">${r.Ammo ?? "-"}</td>
+<td class="px-4 py-4 text-slate-400">${r.Description || ""}</td>
+</tr>`).join("");
+            };
+
+            fill("m1", data.weapons.m1);
+            fill("m2", data.weapons.m2);
+            fill("m3", data.weapons.m3);
+            fill("r1", data.weapons.r1);
+            fill("r2", data.weapons.r2);
+            fill("armor", [...data.armor.a1, ...data.armor.a2, ...data.armor.a3]);
+            fill("shields", data.shields.ss);
+        }
+
+        document.addEventListener("DOMContentLoaded", loadEquipment);
+
+
+        async function loadCrafting() {
+            const res = await fetch("crafting.json");
+            const data = await res.json();
+            const body = document.getElementById("crafting-recipes");
+
+            body.innerHTML = data.recipes.map(r => `
+<tr class="border-b border-slate-800">
+<td class="px-4 py-4 font-bold text-white">${r.name}</td>
+<td class="px-4 py-4">${r.tier}</td>
+<td class="px-4 py-4">${r.category}</td>
+<td class="px-4 py-4">${r.components.join("<br>")}</td>
+<td class="px-4 py-4 text-slate-400">${r.effect}</td>
+</tr>
+`).join("");
+        }
+
+        document.addEventListener("DOMContentLoaded", loadCrafting);
+
+        async function loadBrewing() {
+            const res = await fetch("brewing.json");
+            const data = await res.json();
+
+            // Outcomes
+            document.getElementById("brew-outcomes").innerHTML =
+                data.bitcodes.map(b => `
+<tr class="border-b border-slate-800">
+<td class="px-4 py-4 font-mono">${b.code}</td>
+<td class="px-4 py-4 font-bold text-white">${b.name}</td>
+${b.effects.map(e => `<td class="px-4 py-4 text-slate-400">${e}</td>`).join("")}
+</tr>
+`).join("");
+
+            // Ingredients
+            document.getElementById("brew-ingredients").innerHTML =
+                data.ingredients.map(i => `
+<tr class="border-b border-slate-800">
+<td class="px-4 py-4 font-bold text-white">${i.name}</td>
+<td class="px-4 py-4">${i.aspect}</td>
+<td class="px-4 py-4">${i.value}</td>
+<td class="px-4 py-4">${i.tier}</td>
+</tr>
+`).join("");
+        }
+
+        document.addEventListener("DOMContentLoaded", loadBrewing);
+    </script>
+
+</body>
+
+</html>
