@@ -789,7 +789,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "★ Double Strike ⫘ Level 6+",
-    "Description": "Your companion makes a free attack against a target you hit. ",
+    "Description": "Your companion makes a free attack against a target you attacked. ",
     "Scaling": "-"
   },
   {
@@ -798,7 +798,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "★ Double Strike ⫘ Level 6+",
-    "Description": "After hitting with a melee attack, make another attack without expending an action.",
+    "Description": "After attacking with a melee weapon, make another attack without expending an action.",
     "Scaling": "-"
   },
   {
@@ -1045,13 +1045,13 @@
     "Scaling": "Insight X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   },
   {
-    "Name": "Piercing Arrow",
+    "Name": "Piercing Shot",
     "Action":"◆",
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Fire through up to two targets. The first target takes +2 Damage (+1 Damage at levels 6 and 12).",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+    "Description": "Fire through up to two targets in a line. The first target takes +2 Damage. You only need to hit the first target.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Flashbang",
@@ -1347,7 +1347,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "⫘ Combat Trapper",
-    "Description": "Traps you deploy now knock enemies Prone, they must roll [Reflex] to resist.",
+    "Description": "Traps you deploy now knock enemies Prone, they must roll [Reflex] to resist, contesting [6 + Tinkering].",
     "Scaling": "-"
   },
   {
@@ -1682,8 +1682,54 @@
     "Parameters": "⫘ Restorative Meditation",
     "Description": "Spell Mana restores fully on a rest; you also recover 2 Mana after each combat.",
     "Scaling": "-"
+  },
+  {
+    "Name": "Darkness Rise",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "After landing 3 Attacks you begin to emit a 1 unit radius Zone of Death.<br><br>Zone of Death: Counts as Rough terrain. Each scene, or when entering the zone, Enemies take X Dark Damage. If the zone has not damaged a target for 2 Scenes, it dissapates.",
+    "Scaling": "Damage X:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]<br>5 [lvl 12]"
+  },
+  {
+    "Name": "Second Shot",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "★ Double Strike ⫘ Level 6+",
+    "Description": "After attacking with a ranged weapon, make another attack without expending an action.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Dead Horizon",
+    "Action":"◆",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "⫘ Piercing Shot",
+    "Description": "Make one ranged attack with +X Damage, piercing all enemies in a 6 tile line. If any enemy dies to this, regain the traits use. Targets must roll [Reflex] contesting the attack roll.",
+    "Scaling": "Uses/Damage 🗲/X:<br>1/+3 [lvl 1]<br>2/+4 [lvl 6]<br>3/+5 [lvl 12]"
+  },
+  {
+    "Name": "Eldritch Convergence",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When you attack a target affected by yours or an allies spell/curse, that attack gains +X Dark Damage.",
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
+  },
+  {
+    "Name": "Enduring rage",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Breserk",
+    "Description": "When you enter Rage, gain Guard equal to your level + 2.",
+    "Scaling": "-"
   }
 ]
+
 
 
 
