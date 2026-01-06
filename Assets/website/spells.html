@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythlight RPG | Cantrips and Spells</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0f172a; 
+            color: #cbd5e1; 
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, .fantasy-font { font-family: 'Cinzel', serif; }
+        
+        .nav-glass {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spell-row {
+            transition: all 0.2s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .spell-row:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .category-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: #818cf8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .legend-card {
+            background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .filter-btn {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .filter-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+            color: white;
+            transform: translateX(2px);
+        }
+
+        .filter-btn.active {
+            background: rgba(99, 102, 241, 0.25);
+            border-color: #6366f1;
+            color: white;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+        }
+
+        .filter-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #475569;
+        }
+        .filter-btn.active .filter-dot {
+            background-color: #6366f1;
+            box-shadow: 0 0 5px #6366f1;
+        }
+
+        .legend-symbol {
+            font-size: 1rem;
+            color: #fff;
+            width: 24px;
+            text-align: center;
+        }
+
+        .filter-select, .search-input {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #cbd5e1;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            outline: none;
+            font-size: 0.875rem;
+        }
+
+        .filter-select:focus, .search-input:focus {
+            border-color: #6366f1;
+        }
+
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="../img/Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+                <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
+                <a href="rules.html" class="hover:text-white transition-colors text-slate-400">Rules</a>
+                <a href="species.html" class="hover:text-white transition-colors text-slate-400">Species</a>
+                <a href="paths.html" class="hover:text-white transition-colors text-slate-400">Paths</a>
+                <a href="traits.html" class="hover:text-white transition-colors text-slate-400">Traits</a>
+                <a href="spells.html" class="text-indigo-400">Spells</a>
+                <a href="equipment.html" class="hover:text-white transition-colors text-slate-400">Equipment</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
+        <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-5xl font-bold text-white mb-4">Grimoire</h1>
+                <p class="text-slate-400 text-lg max-w-2xl">Browse the sacred arts. From free-to-cast cantrips to the high-cost rituals of the master mages.</p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex flex-col gap-2 min-w-[200px]">
+                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Search Grimoire</label>
+                    <input type="text" id="search-input" placeholder="Search name, effect, or lore..." class="search-input" oninput="renderMagic()">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Sort By</label>
+                    <select id="sort-selector" class="filter-select" onchange="renderMagic()">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="cost">Mana Cost</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-start relative">
+            
+            
+            <aside class="w-full lg:w-72 lg:sticky lg:top-28 z-40 self-start">
+                <section id="legend-box" class="p-6 rounded-3xl legend-card shadow-2xl">
+                    <div class="mb-6 flex justify-between items-center">
+                        <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Filters</h3>
+                        <button id="clear-filter" onclick="clearFilters()" class="hidden text-[10px] uppercase text-rose-400 font-bold hover:underline">Clear All</button>
+                    </div>
+                    
+                    <div id="legend-content" class="space-y-6">
+                        
+                        <div>
+                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Sources</p>
+                            <div class="space-y-2">
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Arcane')">
+                                    <span class="font-bold">Arcane</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Divine')">
+                                    <span class="font-bold">Divine</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Occult')">
+                                    <span class="font-bold">Occult</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Cosmic')">
+                                    <span class="font-bold">Cosmic</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('category', 'Elemental')">
+                                    <span class="font-bold">Elemental</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Mana Cost</p>
+                            <div class="space-y-2">
+                                <button class="filter-btn" onclick="toggleFilter('cost', '0')">
+                                    <span class="flex items-center gap-2"><span class="text-amber-400">0 ✦</span> <span class="text-xs font-normal text-slate-400">(Cantrip)</span></span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '1')">
+                                    <span class="text-indigo-300">1 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '2')">
+                                    <span class="text-indigo-300">2 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '3')">
+                                    <span class="text-indigo-300">3 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                                <button class="filter-btn" onclick="toggleFilter('cost', '4')">
+                                    <span class="text-indigo-300">4 ✦</span>
+                                    <div class="filter-dot"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Key</p>
+                            <div class="grid grid-cols-4 gap-2 text-center">
+                                <div class="bg-slate-800/50 rounded p-1" title="Action">⚡</div>
+                                <div class="bg-slate-800/50 rounded p-1" title="Reaction">⮌</div>
+                                <div class="bg-slate-800/50 rounded p-1" title="Upcast">✚</div>
+                                <div class="bg-slate-800/50 rounded p-1" title="Scaling">☄</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            
+            <div class="flex-1 w-full space-y-24">
+                
+                <section id="section-cantrips" class="scroll-mt-32">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">Cantrips</h2>
+                        <span class="px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase rounded-full">0 Mana</span>
+                    </div>
+                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[700px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-5 font-bold">Cantrip</th>
+                                    <th class="px-6 py-5 font-bold">Category</th>
+                                    <th class="px-6 py-5 font-bold">Action/Range</th>
+                                    <th class="px-6 py-5 font-bold">Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cantrips-body"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="section-spells" class="scroll-mt-32">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">Leveled Spells</h2>
+                        <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">1+ Mana</span>
+                    </div>
+                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
+                        <table class="w-full text-left border-collapse min-w-[700px]">
+                            <thead>
+                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                    <th class="px-6 py-5 font-bold">Spell</th>
+                                    <th class="px-6 py-5 font-bold">Category</th>
+                                    <th class="px-6 py-5 font-bold">Action/Range</th>
+                                    <th class="px-6 py-5 font-bold">Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody id="spells-body"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-16 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <img src="../img/Mythlight Logo White.svg" alt="Mythlight Logo" class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
+            <div class="flex justify-center space-x-6 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
+                <a href="index.html" class="hover:text-indigo-400">Home</a>
+                <a href="rules.html" class="hover:text-indigo-400">Rules</a>
+                <a href="species.html" class="hover:text-indigo-400">Species</a>
+                <a href="paths.html" class="hover:text-indigo-400">Paths</a>
+                <a href="traits.html" class="hover:text-indigo-400">Traits</a>
+                <a href="spells.html" class="hover:text-indigo-400">Spells</a>
+                <a href="equipment.html" class="hover:text-indigo-400">Equipment</a>
+            </div>
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">&copy; 2025 Mythlight RPG System. Designed for Legends. By Grinprim.</p>
+        </div>
+    </footer>
+
+    <script>
+        let rawSpells = [];
+        let rawCantrips = [];
+        
+        let activeFilters = {
+            category: null,
+            cost: null
+        };
+
+        function toggleFilter(type, value) {
+            
+            if (activeFilters[type] === value) {
+                activeFilters[type] = null;
+            } else {
+                activeFilters[type] = value;
+            }
+            
+            updateFilterUI();
+            renderMagic();
+        }
+
+        function clearFilters() {
+            activeFilters.category = null;
+            activeFilters.cost = null;
+            updateFilterUI();
+            renderMagic();
+        }
+
+        function updateFilterUI() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                const onClickAttr = btn.getAttribute('onclick');
+                
+                if (onClickAttr) {
+                    const match = onClickAttr.match(/toggleFilter\('(\w+)',\s*'(.+)'\)/);
+                    if (match) {
+                        const [_, type, val] = match;
+                        if (activeFilters[type] === val) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    }
+                }
+            });
+
+            
+            const hasFilter = activeFilters.category || activeFilters.cost;
+            document.getElementById('clear-filter').classList.toggle('hidden', !hasFilter);
+        }
+
+        const createRow = (item) => {
+            
+            return `
+            <tr class="spell-row text-sm">
+                <td class="px-6 py-6">
+                    <div class="font-bold text-white text-base">${item.Name}</div>
+                    <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">
+                        Cost: ${item.Cost} ✦ ${item.ID ? `| ID: ${item.ID}` : ''}
+                    </div>
+                </td>
+                <td class="px-6 py-6">
+                    <span class="category-tag">${item.Category || 'Universal'}</span>
+                </td>
+                <td class="px-6 py-6">
+                    <div class="text-white font-medium text-xs">${item.Type || '-'}</div>
+                    <div class="text-slate-500 text-[10px]">${item.Range || 'Self'}</div>
+                </td>
+                <td class="px-6 py-6">
+                    <div class="text-slate-300 text-sm leading-relaxed mb-2">${item.Description}</div>
+                    ${item.Upcast ? `<div class="text-indigo-300 text-xs mb-2"><span class="font-bold">✚ Upcast:</span> ${item.Upcast}</div>` : ''}
+                    <div class="text-slate-500 italic text-[11px] border-l border-slate-700 pl-3">${item.Lore || ''}</div>
+                </td>
+            </tr>
+            `;
+        };
+
+        function filterAndSort(arr) {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const sortBy = document.getElementById('sort-selector').value;
+
+            let filtered = arr.filter(item => {
+                
+                const matchesSearch = 
+                    (item.Name && item.Name.toLowerCase().includes(searchTerm)) || 
+                    (item.Description && item.Description.toLowerCase().includes(searchTerm)) ||
+                    (item.Lore && item.Lore.toLowerCase().includes(searchTerm));
+                
+                
+                const matchesCategory = !activeFilters.category || (item.Category === activeFilters.category);
+
+                
+                const matchesCost = !activeFilters.cost || (item.Cost === activeFilters.cost);
+
+                return matchesSearch && matchesCategory && matchesCost;
+            });
+
+            return filtered.sort((a, b) => {
+                if (sortBy === 'name') return (a.Name || '').localeCompare(b.Name || '');
+                if (sortBy === 'cost') return parseInt(a.Cost || 0) - parseInt(b.Cost || 0);
+                if (sortBy === 'category') return (a.Category || '').localeCompare(b.Category || '');
+                return 0;
+            });
+        }
+
+        function renderMagic() {
+            const spellTable = document.getElementById('spells-body');
+            const cantripTable = document.getElementById('cantrips-body');
+            const sectionCantrips = document.getElementById('section-cantrips');
+            const sectionSpells = document.getElementById('section-spells');
+
+            const sortedSpells = filterAndSort(rawSpells);
+            const sortedCantrips = filterAndSort(rawCantrips);
+
+            if (sortedCantrips.length === 0 && (activeFilters.cost && activeFilters.cost !== '0')) {
+                cantripTable.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No cantrips match filters.</td></tr>';
+            } else {
+                cantripTable.innerHTML = sortedCantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching cantrips found.</td></tr>';
+            }
+
+            
+            if (sortedSpells.length === 0 && (activeFilters.cost === '0')) {
+                spellTable.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No spells match filters.</td></tr>';
+            } else {
+                spellTable.innerHTML = sortedSpells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching spells found.</td></tr>';
+            }
+        }
+
+        async function loadData() {
+            try {
+                const res = await fetch('../json/spells_cantrips.json');
+                const allMagic = await res.json();
+                
+                
+                
+                
+                rawCantrips = [];
+                rawSpells = [];
+
+                allMagic.forEach(item => {
+                    
+                    if (String(item.Cost) === "0") {
+                        rawCantrips.push(item);
+                    } else {
+                        rawSpells.push(item);
+                    }
+                });
+
+            } catch (e) {
+                console.warn("Using placeholder data. Ensure '../json/spells_cantrips.json' exists.");
+                                
+                mockData.forEach(item => {
+                    if (item.Cost === "0") rawCantrips.push(item);
+                    else rawSpells.push(item);
+                });
+            }
+            renderMagic();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,455 @@
+{
+  "species": [
+    {
+      "id": "human",
+      "name": "Human",
+      "summary": "Humans are the most adaptable and widespread of all peoples.",
+      "description": [
+        "Humans are the most adaptable and widespread of all peoples — medium height, broad variety of skin tones, hair, and eye colors. They lack the exotic features of other races, yet their sheer diversity and ingenuity define them.",
+        "Human societies vary from nomadic tribes to skybound empires. What binds them is ambition — an endless drive to build, explore, and outlast. While some races see them as reckless, others admire their resilience; humanity’s strength lies in reinvention."
+      ],
+      "attributes": {
+        "Physique": 1,
+        "Mystique": 1,
+        "Technique": 1,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Versatile Spirit",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "Gain one additional 1 Trait Point at character creation. Once per Rest, reroll a failed check involving any skill."
+        }
+      ]
+    },
+    {
+      "id": "elf",
+      "name": "Elf",
+      "summary": "Graceful, long-lived beings attuned to subtle magic and perception.",
+      "description": [
+        "Elves are tall and slender, with sharp features and eyes that seem to reflect distant starlight. Their lifespans stretch far beyond those of most peoples, granting them patience and long memory.",
+        "Elven cultures prize artistry, precision, and restraint. Though often seen as aloof, elves feel deeply — they simply express emotion with careful control."
+      ],
+      "attributes": {
+        "Physique": 0,
+        "Mystique": 2,
+        "Technique": 1,
+        "Charm": 1
+      },
+      "traits": [
+        {
+          "Name": "Keen Senses",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You have advantage on checks involving perception, awareness, or detecting hidden details."
+        }
+      ]
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "summary": "Stout, resilient folk shaped by stone, craft, and endurance.",
+      "description": [
+        "Dwarves are short and broad, with dense musculature and features hardened by generations spent underground. Their voices carry weight, and their presence feels immovable.",
+        "Dwarven societies value tradition, craftsmanship, and honor. To a dwarf, a well-made thing is a form of truth."
+      ],
+      "attributes": {
+        "Physique": 2,
+        "Mystique": 0,
+        "Technique": 1,
+        "Charm": -1
+      },
+      "traits": [
+        {
+          "Name": "Stone-Enduring",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You gain +1 Guard. You have advantage on checks to resist fatigue, poison, or environmental hardship."
+        }
+      ]
+    },
+    {
+      "id": "halfling",
+      "name": "Halfling",
+      "summary": "Small, quick, and improbably lucky wanderers.",
+      "description": [
+        "Halflings are short and light-footed, with quick hands and quicker smiles. Though physically unimposing, they possess a quiet resilience.",
+        "Many underestimate halflings — a mistake they often survive through cleverness, luck, or both."
+      ],
+      "attributes": {
+        "Physique": -1,
+        "Mystique": 0,
+        "Technique": 2,
+        "Charm": 1
+      },
+      "traits": [
+        {
+          "Name": "Fortunate",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "⧖",
+          "Parameters": "Once per Scene",
+          "Description": "After rolling, you may reroll one die and take the new result."
+        }
+      ]
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "summary": "Powerful and intense warriors forged by struggle.",
+      "description": [
+        "Orcs are tall, broad-shouldered, and physically imposing, with tusks or pronounced canines and skin tones ranging from gray to deep green.",
+        "Orc cultures are diverse but often emphasize strength, survival, and emotional honesty. Their passions burn hot and fast."
+      ],
+      "attributes": {
+        "Physique": 2,
+        "Mystique": 0,
+        "Technique": 0,
+        "Charm": -1
+      },
+      "traits": [
+        {
+          "Name": "Relentless",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "⧖",
+          "Parameters": "Once per Rest",
+          "Description": "When reduced to 0 Health, you may immediately take one action before falling unconscious."
+        }
+      ]
+    },
+    {
+      "id": "tiefling",
+      "name": "Tiefling",
+      "summary": "Mortals marked by infernal influence and unshakable presence.",
+      "description": [
+        "Tieflings bear visible signs of otherworldly heritage — horns, tails, unusual eyes, or faint embers beneath the skin.",
+        "Feared or mistrusted by many, tieflings learn early to command attention or bend perceptions."
+      ],
+      "attributes": {
+        "Physique": 0,
+        "Mystique": 2,
+        "Technique": 0,
+        "Charm": 1
+      },
+      "traits": [
+        {
+          "Name": "Infernal Presence",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You gain advantage on intimidation and influence checks against creatures that can see you."
+        }
+      ]
+    },
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "summary": "Inventive, curious folk driven by knowledge and clever solutions.",
+      "description": [
+        "Gnomes are small, sharp-featured people with bright eyes and restless hands. Their minds move quickly, often faster than their speech.",
+        "They are natural tinkerers, illusionists, and scholars, finding joy in discovery for its own sake."
+      ],
+      "attributes": {
+        "Physique": -1,
+        "Mystique": 2,
+        "Technique": 1,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Quick Thinker",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "⧖",
+          "Parameters": "Once per Scene",
+          "Description": "After seeing the result of a roll, you may add +1 to the total."
+        }
+      ]
+    },
+    {
+      "id": "dragonborn",
+      "name": "Dragonborn",
+      "summary": "Proud descendants of draconic power and ancient bloodlines.",
+      "description": [
+        "Dragonborn are tall and imposing, bearing scales, tails, or crests reminiscent of true dragons.",
+        "Their cultures emphasize honor, lineage, and controlled strength."
+      ],
+      "attributes": {
+        "Physique": 2,
+        "Mystique": 1,
+        "Technique": 0,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Draconic Presence",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You gain advantage on checks to resist fear. Once per Rest, gain advantage on an intimidation roll."
+        }
+      ]
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "summary": "Cunning, fast, and relentlessly opportunistic survivors.",
+      "description": [
+        "Goblins are small, sharp-eared, and wiry, with quick reflexes and quicker instincts.",
+        "Though often underestimated, goblins excel at survival through cleverness and adaptability."
+      ],
+      "attributes": {
+        "Physique": -1,
+        "Mystique": 0,
+        "Technique": 2,
+        "Charm": -1
+      },
+      "traits": [
+        {
+          "Name": "Scurry",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "⧖",
+          "Parameters": "Once per Turn",
+          "Description": "After taking an action, you may move 1 space without spending an action."
+        }
+      ]
+    },
+    {
+      "id": "fae",
+      "name": "Fae",
+      "summary": "Otherworldly beings shaped by magic, emotion, and story.",
+      "description": [
+        "Fae appear humanoid but carry subtle wrongness — glowing eyes, shifting shadows, or unnatural beauty.",
+        "Their minds and bodies are bound to magic, contracts, and strange rules of conduct."
+      ],
+      "attributes": {
+        "Physique": 0,
+        "Mystique": 2,
+        "Technique": 0,
+        "Charm": 1
+      },
+      "traits": [
+        {
+          "Name": "Glamour",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "⧖",
+          "Parameters": "Once per Scene",
+          "Description": "You may impose disadvantage on a social roll made against you."
+        }
+      ]
+    },
+    {
+      "id": "lizardfolk",
+      "name": "Lizardfolk",
+      "summary": "Cold-blooded survivors guided by instinct and practicality.",
+      "description": [
+        "Lizardfolk are reptilian humanoids with scaled skin and slit pupils, adapted to harsh environments.",
+        "They approach life pragmatically, valuing survival and utility over abstract ideals."
+      ],
+      "attributes": {
+        "Physique": 1,
+        "Mystique": 0,
+        "Technique": 1,
+        "Charm": -1
+      },
+      "traits": [
+        {
+          "Name": "Natural Armor",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "Your unarmored Armor is increased by +1."
+        }
+      ]
+    },
+    {
+      "id": "aasimar",
+      "name": "Aasimar",
+      "summary": "Mortals touched by celestial forces and quiet radiance.",
+      "description": [
+        "Aasimar often appear human but carry signs of divine heritage — glowing eyes, radiant marks, or an unshakable calm.",
+        "They are frequently burdened by expectations placed upon them by others."
+      ],
+      "attributes": {
+        "Physique": 0,
+        "Mystique": 2,
+        "Technique": 0,
+        "Charm": 1
+      },
+      "traits": [
+        {
+          "Name": "Radiant Soul",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "⧖",
+          "Parameters": "Once per Rest",
+          "Description": "You may automatically succeed on a single Charm-based roll."
+        }
+      ]
+    },
+    {
+      "id": "construct",
+      "name": "Construct",
+      "summary": "Artificial beings animated by magic, artifice, or forgotten science.",
+      "description": [
+        "Constructs are built, not born — formed of metal, stone, wood, or other materials, animated by arcane or mechanical means.",
+        "Their struggle often lies in defining identity beyond their original purpose."
+      ],
+      "attributes": {
+        "Physique": 2,
+        "Mystique": 0,
+        "Technique": 1,
+        "Charm": -2
+      },
+      "traits": [
+        {
+          "Name": "Artificial Body",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You have advantage on rolls to resist poison, disease, and exhaustion."
+        }
+      ]
+    },
+    {
+      "id": "beastfolk",
+      "name": "Beastfolk",
+      "summary": "Humanoid beings bearing the traits of animals.",
+      "description": [
+        "Beastfolk resemble humanoids with animal features such as fur, tails, ears, or claws.",
+        "Their cultures vary widely, often influenced by the instincts of their animal heritage."
+      ],
+      "attributes": {
+        "Physique": 1,
+        "Mystique": 0,
+        "Technique": 1,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Bestial Instinct",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "Choose one: advantage on tracking, climbing, swimming, or hearing-based checks."
+        }
+      ]
+    },
+    {
+  "id": "dinqui",
+  "name": "Dinqui - Zone 3",
+  "summary": "Stone-bound artisans and guardians of ancient ruins.",
+  "description": [
+    "Stocky, sharp-featured, and thick-skinned, the Dinqui resemble gargoyle-like goblinoids with small wings of stone and horn. Their eyes glimmer like polished gems, and their voices carry a gravelly timbre.",
+    "Once guardians of ancient temples, the Dinqui now live among ruins and crag cities, carving art from mountain faces. They value endurance, tradition, and community over conquest, measuring worth by what one can craft or protect."
+  ],
+  "attributes": {
+    "Physique": 2,
+    "Mystique": 1,
+    "Technique": 0,
+    "Charm": -1
+  },
+  "traits": [
+          {
+      "Name": "Stonebound Resilience",
+      "Action": "—",
+      "Cost": "—",
+      "Symbols": "Passive",
+      "Parameters": "Always",
+      "Description": "Gain +2 Armor and resistance to physical damage from falling or impact. Once per Rest, you can harden fully into stone for 1 turn, becoming immune to all damage but unable to act."
+          }
+      ]
+    },
+    {
+      "id": "ashten",
+      "name": "Ashten - Zone 3",
+      "summary": "Disciplined vessels of fire and aether forged from ancient bargains.",
+      "description": [
+        "Ashten appear as tall, imposing humanoids with horns of varying shape, glowing eyes, and fissured skin that crackles with contained magical energy. Their tones range from obsidian to copper, often veined with light.",
+        "Legends claim the Ashten were born when ancient mortals struck bargains with primal forces of fire and aether. Rather than succumbing, they became vessels of both creation and destruction. Today they form disciplined orders and city-fortresses, guided by philosophy rather than faith."
+      ],
+      "attributes": {
+        "Physique": 1,
+        "Mystique": 2,
+        "Technique": 0,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Aetherblood Surge",
+          "Action": "⭘",
+          "Cost": "—",
+          "Symbols": "Active",
+          "Parameters": "Once per Rest",
+          "Description": "When you take damage, you may release your inner energy. Deal 2 Arcane Damage to all enemies within 1 tile and gain +1 Armor for 2 turns."
+        }
+      ]
+    },
+    {
+      "id": "khraa",
+      "name": "Khraa - Zone 3",
+      "summary": "Four-armed nomads driven by motion, freedom, and dual instinct.",
+      "description": [
+        "The Khraa are tall, agile humanoids with lithe, muscular builds and four arms — two dominant and two lighter, more dexterous limbs. Their faces resemble either feline or canine ancestry, with expressive ears, slit or bright eyes, and soft fur patterns across the shoulders and arms.",
+        "Nomadic hunters and skyborn raiders, the Khraa value motion and freedom above all. Their cities are built high in cliffs or massive canopy networks, and each clan maintains a Path Code — a philosophy blending honor, challenge, and self-expression. They’re fiercely loyal to their kin and quick to laughter or rage."
+      ],
+      "attributes": {
+        "Physique": 2,
+        "Mystique": 0,
+        "Technique": 1,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Fourfold Precision",
+          "Action": "—",
+          "Cost": "—",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You may wield an additional one-handed weapon or perform two off-hand actions per turn. Gain +1 Accuracy on all melee attacks made while dual wielding or climbing."
+        }
+      ]
+    },
+    {
+      "id": "eladri",
+      "name": "Eladri - Zone 3",
+      "summary": "Star-born scholars descended from forgotten constellations.",
+      "description": [
+        "Eladri are tall and slender with luminescent, fully colored eyes that glow faintly in dim light. Their tails, long and prehensile, express subtle emotion. Their skin shimmers with faint undertones — often silvers, blues, or violets — and their hair tends toward iridescent hues.",
+        "Born of stars and dreams, the Eladri believe themselves descended from the echoes of forgotten constellations. They dwell in crystalline cities suspended between dimensions, where light refracts into living color. Their scholars study not only arcane forces, but the geometry of existence itself. Outsiders see them as distant, but their curiosity for mortal emotion often draws them into the wider world."
+      ],
+      "attributes": {
+        "Physique": 0,
+        "Mystique": 2,
+        "Technique": 1,
+        "Charm": 0
+      },
+      "traits": [
+        {
+          "Name": "Starlit Anima",
+          "Action": "⭘",
+          "Cost": "1 Mana",
+          "Symbols": "Passive",
+          "Parameters": "Always",
+          "Description": "You may spend 1 Mana to gain +2 Reflex or +2 Accuracy until your next turn. Once per Rest, you can see invisible or hidden entities for 1 minute."
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythlight RPG | Equipment & Crafting</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(15, 23, 42, 0.6);
+            --glass-blur: blur(12px);
+            --accent-glow: rgba(99, 102, 241, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #cbd5e1;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .fantasy-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .nav-glass {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .rule-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            backdrop-filter: blur(4px);
+            transition: border-color 0.3s;
+        }
+
+        .rule-card:hover {
+            border-color: var(--accent-glow);
+        }
+
+        details {
+            margin-bottom: 1rem;
+        }
+
+        details > summary {
+            list-style: none;
+            outline: none;
+            padding-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] > summary {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+            color: #818cf8;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.9rem;
+            min-width: 600px;
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem;
+            color: #64748b;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .input-dark {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            transition: all 0.2s;
+        }
+
+        .input-dark:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+
+        .select-dark {
+            background-color: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #cbd5e1;
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border-radius: 0.5rem;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23cbd5e1' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+        }
+
+        .table-wrap::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .table-wrap::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 4px;
+        }
+
+        .table-wrap::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        
+        .tag-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            color: #a5b4fc;
+            margin-right: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+
+<body class="bg-custom-dark text-slate-300">
+
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="../img/Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain"
+                    onerror="this.style.display='none'">
+                <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
+                <a href="rules.html" class="hover:text-white transition-colors text-slate-400">Rules</a>
+                <a href="species.html" class="hover:text-white transition-colors text-slate-400">Species</a>
+                <a href="paths.html" class="hover:text-white transition-colors text-slate-400">Paths</a>
+                <a href="traits.html" class="hover:text-white transition-colors text-slate-400">Traits</a>
+                <a href="spells.html" class="hover:text-white transition-colors text-slate-400">Spells</a>
+                <a href="equipment.html" class="text-indigo-400">Equipment</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-24">
+
+        
+        <header>
+            <h1 class="text-5xl font-bold text-white mb-4">Equipment</h1>
+            <p class="text-lg text-indigo-300 max-w-3xl">
+                Weapons, armor, and gear define how you survive Mythlight’s world.
+            </p>
+        </header>
+
+        
+        <section class="space-y-12">
+            
+            
+            <div>
+                <h2 class="text-3xl text-white font-bold mb-6 border-b border-slate-800 pb-4">Damage Types</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div class="rule-card p-5 border-l-4 border-l-red-500 hover:bg-slate-800/50 transition-colors group">
+                        <strong class="text-white block mb-2 text-lg group-hover:text-red-400 transition-colors">Puncture</strong>
+                        <span class="text-xs text-slate-400 leading-relaxed">Precise, piercing strikes that penetrate defenses.</span>
+                    </div>
+                    <div class="rule-card p-5 border-l-4 border-l-rose-500 hover:bg-slate-800/50 transition-colors group">
+                        <strong class="text-white block mb-2 text-lg group-hover:text-rose-400 transition-colors">Slash</strong>
+                        <span class="text-xs text-slate-400 leading-relaxed">Cutting attacks that cause bleeding wounds.</span>
+                    </div>
+                    <div class="rule-card p-5 border-l-4 border-l-slate-400 hover:bg-slate-800/50 transition-colors group">
+                        <strong class="text-white block mb-2 text-lg group-hover:text-slate-300 transition-colors">Blunt</strong>
+                        <span class="text-xs text-slate-400 leading-relaxed">Heavy, armor-crushing force and impact.</span>
+                    </div>
+                    <div class="rule-card p-5 border-l-4 border-l-orange-500 hover:bg-slate-800/50 transition-colors group">
+                        <strong class="text-white block mb-2 text-lg group-hover:text-orange-400 transition-colors">Cleave</strong>
+                        <span class="text-xs text-slate-400 leading-relaxed">Wide sweeping blows that hit multiple targets.</span>
+                    </div>
+                    <div class="rule-card p-5 border-l-4 border-l-yellow-500 hover:bg-slate-800/50 transition-colors group">
+                        <strong class="text-white block mb-2 text-lg group-hover:text-yellow-400 transition-colors">Blast</strong>
+                        <span class="text-xs text-slate-400 leading-relaxed">Explosive area of effect impact.</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div>
+                <h2 class="text-3xl text-white font-bold mb-6 border-b border-slate-800 pb-4">Equipment Tags</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.6)]"></div>
+                        <div>
+                            <strong class="text-indigo-300 block text-sm mb-1 uppercase tracking-wider">Concealable</strong>
+                            <p class="text-slate-400 text-xs">Small enough to be hidden beneath normal clothing without detection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></div>
+                        <div>
+                            <strong class="text-emerald-300 block text-sm mb-1 uppercase tracking-wider">Flexible</strong>
+                            <p class="text-slate-400 text-xs">Does not impose penalties on stealth or acrobatic movements.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.6)]"></div>
+                        <div>
+                            <strong class="text-orange-300 block text-sm mb-1 uppercase tracking-wider">Fireproof</strong>
+                            <p class="text-slate-400 text-xs">Reduces incoming fire damage by 1.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-slate-400 shadow-[0_0_8px_rgba(148,163,184,0.6)]"></div>
+                        <div>
+                            <strong class="text-slate-300 block text-sm mb-1 uppercase tracking-wider">Ballistic</strong>
+                            <p class="text-slate-400 text-xs">Reduces incoming firearm/projectile damage by 1.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]"></div>
+                        <div>
+                            <strong class="text-red-300 block text-sm mb-1 uppercase tracking-wider">Restrictive</strong>
+                            <p class="text-slate-400 text-xs">–1 Reflex. Disables Evasion bonuses.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.6)]"></div>
+                        <div>
+                            <strong class="text-indigo-300 block text-sm mb-1 uppercase tracking-wider">Two-Handed</strong>
+                            <p class="text-slate-400 text-xs">Requires two hands to wield effectively.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]"></div>
+                        <div>
+                            <strong class="text-cyan-300 block text-sm mb-1 uppercase tracking-wider">Compact</strong>
+                            <p class="text-slate-400 text-xs">Can be used in the off-hand.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-yellow-600 shadow-[0_0_8px_rgba(202,138,4,0.6)]"></div>
+                        <div>
+                            <strong class="text-yellow-500 block text-sm mb-1 uppercase tracking-wider">Improvised</strong>
+                            <p class="text-slate-400 text-xs">Breaks permanently after 3 successful hits.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/30 p-4 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all hover:bg-slate-900/50 flex items-start gap-3">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)]"></div>
+                        <div>
+                            <strong class="text-purple-300 block text-sm mb-1 uppercase tracking-wider">Powered</strong>
+                            <p class="text-slate-400 text-xs">Negates 1 point of Restrictive penalty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="space-y-6">
+            <div class="flex items-center gap-4 mb-2">
+                <h2 class="text-3xl text-white font-bold">Armory</h2>
+                <div class="h-px bg-slate-700 flex-1"></div>
+            </div>
+
+            
+            <details open class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Light Melee Weapons</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Reach</th>
+                                <th>Tags</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="m1"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Medium Melee Weapons</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Reach</th>
+                                <th>Tags</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="m2"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Heavy Melee Weapons</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Reach</th>
+                                <th>Tags</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="m3"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Light Ranged Weapons</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Range</th>
+                                <th>Ammo</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="r1"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Heavy Ranged Weapons</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Range</th>
+                                <th>Ammo</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="r2"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Light Firearms</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Range</th>
+                                <th>Ammo</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="f1"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Heavy Firearms</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weapon</th>
+                                <th>Damage</th>
+                                <th>Range</th>
+                                <th>Ammo</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="f2"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Armor</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Armor</th>
+                                <th>Rating</th>
+                                <th>Penalty</th>
+                                <th>Tags</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="armor"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Shields</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Shield</th>
+                                <th>Bonus</th>
+                                <th>Penalty</th>
+                                <th>Tags</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shields"></tbody>
+                    </table>
+                </div>
+            </details>
+
+        </section>
+
+        
+        <section id="crafting" class="space-y-8">
+            <header>
+                <h1 class="text-5xl font-bold text-white mb-4">Crafting</h1>
+                <p class="text-lg text-indigo-300 max-w-3xl">Create items of power using components found in your travels.</p>
+            </header>
+
+            <details open class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Crafting Recipes</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <div class="flex items-center gap-3 my-6 bg-slate-900/40 p-3 rounded-lg border border-slate-700 w-fit">
+                    <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Filter Tier:</label>
+                    <select id="tierFilter" onchange="filterCrafting()" class="select-dark text-sm">
+                        <option value="all">All Tiers</option>
+                        <option>Trivial</option>
+                        <option>Simple</option>
+                        <option>Standard</option>
+                        <option>Difficult</option>
+                        <option>Complex</option>
+                    </select>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Tier</th>
+                                <th>Category</th>
+                                <th>Components</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crafting-recipes"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Crafting Components</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Category</th>
+                                <th>Tier</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="craft-components"></tbody>
+                    </table>
+                </div>
+            </details>
+        </section>
+
+        
+        <section id="brewing" class="space-y-8">
+
+            <header>
+                <h1 class="text-5xl font-bold text-white mb-4">Brewing & Alchemy</h1>
+                <p class="text-lg text-indigo-300 max-w-4xl">
+                    Brewing combines ingredients with defined aspects and tiers to produce potions, poisons, and volatile mixtures. Outcomes depend on balance, precision, and ingredient synergy.
+                </p>
+            </header>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <details open class="rule-card h-fit">
+                    <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300">Brewing Rules</summary>
+                    <ul class="list-disc list-outside ml-5 text-slate-300 space-y-3 mt-4 text-sm leading-relaxed">
+                        <li>Select ingredients totaling at least one full <strong class="text-white">Aspect Bitcode</strong>.</li>
+                        <li>Majority ingredient tier determines <strong class="text-white">Potion Tier</strong>.</li>
+                        <li>Disparity between aspects increases difficulty.</li>
+                        <li>Failure may weaken, alter, or destabilize the brew.</li>
+                    </ul>
+                </details>
+
+                
+                <details open class="rule-card h-fit">
+                    <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300">Brewing Calculator</summary>
+                    <div class="space-y-4 mt-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+                                Bitcode Pattern
+                            </label>
+                            <input id="brewBitcode" type="text" maxlength="5" placeholder="e.g. 10110"
+                                class="input-dark font-mono text-lg tracking-widest placeholder-slate-600">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+                                    Disparity
+                                </label>
+                                <input id="brewDisparityInput" type="number" min="0" value="0"
+                                    class="input-dark">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+                                    Target Tier
+                                </label>
+                                <select id="brewTier" class="select-dark w-full h-[46px]">
+                                    <option value="1">Tier I</option>
+                                    <option value="2">Tier II</option>
+                                    <option value="3">Tier III</option>
+                                    <option value="4">Tier IV</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 mt-4 border-t border-slate-700 flex justify-between items-center">
+                            <span class="text-slate-400 text-sm font-bold uppercase tracking-widest">
+                                Difficulty Class (DC)
+                            </span>
+                            <span id="brewDCResult" class="text-4xl text-indigo-400 font-bold fantasy-font">
+                                —
+                            </span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Potion Outcomes</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Bitcode</th>
+                                <th>Name</th>
+                                <th>Tier I</th>
+                                <th>Tier II</th>
+                                <th>Tier III</th>
+                                <th>Tier IV</th>
+                            </tr>
+                        </thead>
+                        <tbody id="brew-outcomes"></tbody>
+                    </table>
+                </div>
+            </details>
+
+            
+            <details class="rule-card">
+                <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
+                    <span>Ingredients</span>
+                    <span class="p-2 hover:bg-slate-800/50 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <div class="table-wrap mt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ingredient</th>
+                                <th>Aspect</th>
+                                <th>Value</th>
+                                <th>Tier</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="brew-ingredients"></tbody>
+                    </table>
+                </div>
+            </details>
+
+        </section>
+
+    </main>
+
+    
+    <footer class="py-16 text-center border-t border-slate-800/50 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <img src="../img/Mythlight Logo White.svg" alt="Mythlight Logo"
+                class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
+            <div class="flex justify-center space-x-6 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
+                <a href="index.html" class="hover:text-indigo-400">Home</a>
+                <a href="rules.html" class="hover:text-indigo-400">Rules</a>
+                <a href="species.html" class="hover:text-indigo-400">Species</a>
+                <a href="paths.html" class="hover:text-indigo-400">Paths</a>
+                <a href="traits.html" class="hover:text-indigo-400">Traits</a>
+                <a href="spells.html" class="hover:text-indigo-400">Spells</a>
+                <a href="equipment.html" class="hover:text-indigo-400">Equipment</a>
+            </div>
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">&copy; 2025 Mythlight RPG System. Designed
+                for Legends. By Grinprim.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        
+        async function loadEquipment() {
+            try {
+                const res = await fetch('../json/equipment.json');
+                const data = await res.json();
+
+                const fill = (id, rows) => {
+                    const body = document.getElementById(id);
+                    if (!body || !rows) return;
+                    body.innerHTML = rows.map(r => `
+                        <tr>
+                            <td class="font-bold text-white">${r.Name}</td>
+                            <td><span class="text-emerald-300 font-mono">${r.Damage ?? r.Rating ?? r.Bonus ?? "-"}</span></td>
+                            <td>${r.Reach ?? r.Range ?? "-"}</td>
+                            <td>${formatTags(r.Ammo ?? r.Tags ?? "-")}</td>
+                            <td class="text-slate-400 text-xs leading-relaxed italic">${r.Description ?? ""}</td>
+                        </tr>
+                    `).join("");
+                };
+
+                const formatTags = (tags) => {
+                    if (!tags || tags === "-") return "-";
+                    
+                    const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
+                    return list.map(t => `<span class="tag-badge">${t}</span>`).join('');
+                };
+
+                fill("m1", data.weapons.m1);
+                fill("m2", data.weapons.m2);
+                fill("m3", data.weapons.m3);
+                fill("r1", data.weapons.r1);
+                fill("r2", data.weapons.r2);
+                fill("f1", data.weapons.f1);
+                fill("f2", data.weapons.f2);
+                fill("armor", [...data.armor.a1, ...data.armor.a2, ...data.armor.a3]);
+                fill("shields", data.shields.ss);
+            } catch (e) {
+                console.error("Could not load equipment.json", e);
+            }
+        }
+
+        
+        async function loadCrafting() {
+            try {
+                const res = await fetch('../json/crafting.json');
+                const data = await res.json();
+
+                document.getElementById("crafting-recipes").innerHTML =
+                    data.recipes.map(r => `
+                        <tr data-tier="${r.tier}">
+                            <td class="font-bold text-white">${r.name}</td>
+                            <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">${r.tier}</span></td>
+                            <td>${r.category}</td>
+                            <td class="text-xs">${r.components.join(", ")}</td>
+                            <td class="text-slate-400 italic">${r.effect}</td>
+                        </tr>
+                    `).join("");
+
+                document.getElementById("craft-components").innerHTML =
+                    data.components.map(c => `
+                        <tr>
+                            <td class="font-bold text-white">${c.name}</td>
+                            <td>${c.category}</td>
+                            <td>${c.tier}</td>
+                            <td class="text-slate-400 italic">${c.notes ?? ""}</td>
+                        </tr>
+                    `).join("");
+            } catch (e) {
+                console.error("Could not load crafting.json", e);
+            }
+        }
+
+        function filterCrafting() {
+            const filter = document.getElementById("tierFilter").value;
+            document.querySelectorAll("#crafting-recipes tr").forEach(row => {
+                row.style.display =
+                    filter === "all" || row.dataset.tier === filter
+                        ? ""
+                        : "none";
+            });
+        }
+
+        
+        async function loadBrewing() {
+            try {
+                const res = await fetch('../json/brewing.json');
+                const data = await res.json();
+
+                
+                document.getElementById("brew-outcomes").innerHTML =
+                    data.bitcodes.map(b => `
+                        <tr>
+                            <td class="font-mono text-indigo-400 font-bold tracking-wider">${b.code}</td>
+                            <td class="font-bold text-white">${b.name}</td>
+                            ${b.effects.map(e =>
+                                `<td class="text-slate-400 text-xs">${e}</td>`
+                            ).join("")}
+                        </tr>
+                    `).join("");
+
+                
+                document.getElementById("brew-ingredients").innerHTML =
+                    data.ingredients.map(i => `
+                        <tr>
+                            <td class="font-bold text-white">${i.name}</td>
+                            <td>${i.aspect}</td>
+                            <td>${i.value}</td>
+                            <td>${i.tier}</td>
+                            <td class="text-slate-400 italic text-xs">${i.notes || ""}</td>
+                        </tr>
+                    `).join("");
+            } catch (e) {
+                console.error("Could not load brewing.json", e);
+            }
+        }
+
+        
+
+        function calculateBrewingDC() {
+            const bitcodeEl = document.getElementById("brewBitcode");
+            const disparityEl = document.getElementById("brewDisparityInput");
+            const tierEl = document.getElementById("brewTier");
+            const output = document.getElementById("brewDCResult");
+
+            if (!bitcodeEl || !disparityEl || !tierEl || !output) return;
+
+            const bitcode = bitcodeEl.value.trim();
+            const disparity = parseInt(disparityEl.value || 0);
+            const tier = parseInt(tierEl.value);
+
+            if (!/^[01]{1,5}$/.test(bitcode)) {
+                output.textContent = "—";
+                return;
+            }
+
+            const bits = (bitcode.match(/1/g) || []).length;
+            const dc = 6 + bits + disparity + (tier - 1);
+
+            output.textContent = dc;
+        }
+
+        document.addEventListener("input", (e) => {
+            if (
+                e.target.id === "brewBitcode" ||
+                e.target.id === "brewDisparityInput" ||
+                e.target.id === "brewTier"
+            ) {
+                calculateBrewingDC();
+            }
+        });
+
+        
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadEquipment();
+            loadCrafting();
+            loadBrewing();
+        });
+    </script>
+</body>
+
+</html>
