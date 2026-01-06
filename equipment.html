@@ -16,6 +16,15 @@
             color: #cbd5e1;
         }
 
+        details > summary {
+    padding-bottom: .5rem;
+}
+
+details[open] > summary {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    margin-bottom: 1rem;
+}
+
         h1,
         h2,
         h3 {
@@ -326,9 +335,6 @@
             <!-- BREWING CALCULATOR -->
             <details class="card p-5">
                 <summary class="text-3xl text-white cursor-pointer">Brewing Calculator</summary>
-
-                <h2 class="text-3xl text-white mb-4">Brewing Calculator</h2>
-
     <div class="card p-6 max-w-xl space-y-4">
 
         <div>
@@ -520,31 +526,36 @@
 
             /* ================= CALCULATOR ================= */
             function calculateBrewingDC() {
-    const bitcode = document.getElementById("brewBitcode").value;
-    const disparity = parseInt(
-        document.getElementById("brewDisparityInput").value || 0
-    );
-    const tier = parseInt(
-        document.getElementById("brewTier").value
-    );
+    const bitcodeEl = document.getElementById("brewBitcode");
+    const disparityEl = document.getElementById("brewDisparityInput");
+    const tierEl = document.getElementById("brewTier");
+    const output = document.getElementById("brewDCResult");
 
-    // Count number of 1s in bitcode
-    const bits = (bitcode.match(/1/g) || []).length;
+    if (!bitcodeEl || !disparityEl || !tierEl || !output) return;
 
-    if (bitcode.length === 0 || isNaN(disparity) || isNaN(tier)) {
-        document.getElementById("brewDCResult").textContent = "—";
+    const bitcode = bitcodeEl.value.trim();
+    const disparity = parseInt(disparityEl.value || 0);
+    const tier = parseInt(tierEl.value);
+
+    if (!/^[01]{1,5}$/.test(bitcode)) {
+        output.textContent = "—";
         return;
     }
 
+    const bits = (bitcode.match(/1/g) || []).length;
     const dc = 6 + bits + disparity + (tier - 1);
-    document.getElementById("brewDCResult").textContent = dc;
+
+    output.textContent = dc;
 }
 
-// Auto-update
-["brewBitcode", "brewDisparityInput", "brewTier"].forEach(id => {
-    document.addEventListener("input", e => {
-        if (e.target.id === id) calculateBrewingDC();
-    });
+document.addEventListener("input", (e) => {
+    if (
+        e.target.id === "brewBitcode" ||
+        e.target.id === "brewDisparityInput" ||
+        e.target.id === "brewTier"
+    ) {
+        calculateBrewingDC();
+    }
 });
 
         document.addEventListener("DOMContentLoaded", loadBrewing);
@@ -553,4 +564,5 @@
 </body>
 
 </html>
+
 
