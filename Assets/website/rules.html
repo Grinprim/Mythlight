@@ -150,7 +150,6 @@
             background: transparent;
         }
 
-        /* Pip layouts for die faces using multiple radial-gradients */
         .face-1 { background:
             radial-gradient(circle at 50% 50%, #0f172a 0.0rem, #0f172a 0.35rem, transparent 0.36rem),
             linear-gradient(145deg, #f8fafc, #e2e8f0);
@@ -1023,6 +1022,18 @@
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
+
+        function randomizeDiceFaces() {
+            const dice = document.querySelectorAll('.dice-visual .die');
+            if (!dice || dice.length === 0) return;
+            dice.forEach(d => {
+                d.classList.remove('face-1','face-2','face-3','face-4','face-5','face-6');
+                const n = Math.floor(Math.random() * 6) + 1;
+                d.classList.add('face-' + n);
+            });
+        }
+
+        randomizeDiceFaces();
     </script>
 </body>
 
