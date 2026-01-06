@@ -327,31 +327,54 @@
             <details class="card p-5">
                 <summary class="text-3xl text-white cursor-pointer">Brewing Calculator</summary>
 
-                <div class="grid md:grid-cols-3 gap-6 mt-6 text-sm">
+                <h2 class="text-3xl text-white mb-4">Brewing Calculator</h2>
 
-                    <div class="card p-4">
-                        <b>Ingredients Used</b>
-                        <p class="text-slate-400 mt-1">Count total ingredients added.</p>
-                        <div class="mt-2 font-mono text-lg">Bits: <span id="brewBits">—</span></div>
-                    </div>
+    <div class="card p-6 max-w-xl space-y-4">
 
-                    <div class="card p-4">
-                        <b>Aspect Disparity</b>
-                        <p class="text-slate-400 mt-1">Difference between highest & lowest aspect.</p>
-                        <div class="mt-2 font-mono text-lg">Δ: <span id="brewDisparity">—</span></div>
-                    </div>
+        <div>
+            <label class="block text-sm uppercase tracking-widest text-slate-400 mb-1">
+                Bitcode
+            </label>
+            <input id="brewBitcode"
+                   type="text"
+                   maxlength="5"
+                   placeholder="e.g. 10110"
+                   class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white font-mono">
+        </div>
 
-                    <div class="card p-4">
-                        <b>Brew DC</b>
-                        <p class="text-slate-400 mt-1">6 + Bits + Disparity + Tier</p>
-                        <div class="mt-2 font-mono text-lg">DC: <span id="brewDC">—</span></div>
-                    </div>
+        <div>
+            <label class="block text-sm uppercase tracking-widest text-slate-400 mb-1">
+                Disparity
+            </label>
+            <input id="brewDisparityInput"
+                   type="number"
+                   min="0"
+                   value="0"
+                   class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white">
+        </div>
 
-                </div>
+        <div>
+            <label class="block text-sm uppercase tracking-widest text-slate-400 mb-1">
+                Tier
+            </label>
+            <select id="brewTier"
+                    class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white">
+                <option value="1">Tier I</option>
+                <option value="2">Tier II</option>
+                <option value="3">Tier III</option>
+                <option value="4">Tier IV</option>
+            </select>
+        </div>
 
-                <p class="text-slate-500 text-sm mt-4">
-                    Calculator is informational only. GM may override outcomes.
-                </p>
+        <div class="pt-4 border-t border-slate-700">
+            <p class="text-slate-400 text-sm">
+                Difficulty Class
+            </p>
+            <p id="brewDCResult" class="text-3xl text-white font-bold">
+                —
+            </p>
+        </div>
+    </div>
             </details>
 
             <!-- BREW OUTCOMES -->
@@ -496,55 +519,33 @@
     `).join("");
 
             /* ================= CALCULATOR ================= */
-            // Simple calculator – informational only
-            const bitsEl = document.getElementById("brewBits");
-            const disparityEl = document.getElementById("brewDisparity");
-            const dcEl = document.getElementById("brewDC");
+            function calculateBrewingDC() {
+    const bitcode = document.getElementById("brewBitcode").value;
+    const disparity = parseInt(
+        document.getElementById("brewDisparityInput").value || 0
+    );
+    const tier = parseInt(
+        document.getElementById("brewTier").value
+    );
 
-            // Default placeholders
-            bitsEl.textContent = "—";
-            disparityEl.textContent = "—";
-            dcEl.textContent = "—";
+    // Count number of 1s in bitcode
+    const bits = (bitcode.match(/1/g) || []).length;
 
-            // Optional future hook
-            window.calculateBrew = function (selectedIngredients) {
-                /*
-                    selectedIngredients = [
-                      { aspect: "Vital", value: 6, tier: 2 },
-                      { aspect: "Arcane", value: 4, tier: 2 }
-                    ]
-                */
+    if (bitcode.length === 0 || isNaN(disparity) || isNaN(tier)) {
+        document.getElementById("brewDCResult").textContent = "—";
+        return;
+    }
 
-                const aspectTotals = {};
-                selectedIngredients.forEach(i => {
-                    aspectTotals[i.aspect] =
-                        (aspectTotals[i.aspect] || 0) + i.value;
-                });
+    const dc = 6 + bits + disparity + (tier - 1);
+    document.getElementById("brewDCResult").textContent = dc;
+}
 
-                const totals = Object.values(aspectTotals);
-                const max = Math.max(...totals);
-
-                let disparity = 0;
-                totals.forEach(v => disparity += Math.abs(max - v));
-
-                const bits = Object.keys(aspectTotals).length;
-                const tierCounts = {};
-                selectedIngredients.forEach(i => {
-                    tierCounts[i.tier] = (tierCounts[i.tier] || 0) + 1;
-                });
-
-                const tier = Object.entries(tierCounts)
-                    .sort((a, b) => b[1] - a[1] || b[0] - a[0])[0][0];
-
-                const dc = 6 + bits + disparity + (tier - 1);
-
-                bitsEl.textContent = bits;
-                disparityEl.textContent = disparity;
-                dcEl.textContent = dc;
-
-                return { bits, disparity, tier, dc };
-            };
-        }
+// Auto-update
+["brewBitcode", "brewDisparityInput", "brewTier"].forEach(id => {
+    document.addEventListener("input", e => {
+        if (e.target.id === id) calculateBrewingDC();
+    });
+});
 
         document.addEventListener("DOMContentLoaded", loadBrewing);
     </script>
@@ -552,3 +553,4 @@
 </body>
 
 </html>
+
