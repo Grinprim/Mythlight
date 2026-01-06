@@ -230,6 +230,106 @@ Filter Tier:
 </details>
 </section>
 
+<!-- ================= BREWING & ALCHEMY ================= -->
+
+<section id="brewing" class="space-y-16">
+
+    <!-- HEADER -->
+    <section>
+        <h1 class="text-5xl text-white mb-6">Brewing & Alchemy</h1>
+        <p class="max-w-4xl text-slate-400">
+            Brewing combines ingredients with defined aspects and tiers to produce
+            potions, poisons, and volatile mixtures. Outcomes depend on balance,
+            precision, and ingredient synergy.
+        </p>
+    </section>
+
+    <!-- BREWING RULES -->
+    <details open class="card p-5">
+        <summary class="text-3xl text-white cursor-pointer">Brewing Rules</summary>
+        <ul class="list-disc list-inside text-slate-300 space-y-2 max-w-4xl mt-4">
+            <li>Select ingredients totaling at least one full Aspect Bitcode.</li>
+            <li>Majority ingredient tier determines potion tier.</li>
+            <li>Disparity between aspects increases difficulty.</li>
+            <li>Failure may weaken, alter, or destabilize the brew.</li>
+        </ul>
+    </details>
+
+    <!-- BREWING CALCULATOR -->
+    <details class="card p-5">
+        <summary class="text-3xl text-white cursor-pointer">Brewing Calculator</summary>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-6 text-sm">
+
+            <div class="card p-4">
+                <b>Ingredients Used</b>
+                <p class="text-slate-400 mt-1">Count total ingredients added.</p>
+                <div class="mt-2 font-mono text-lg">Bits: <span id="brewBits">—</span></div>
+            </div>
+
+            <div class="card p-4">
+                <b>Aspect Disparity</b>
+                <p class="text-slate-400 mt-1">Difference between highest & lowest aspect.</p>
+                <div class="mt-2 font-mono text-lg">Δ: <span id="brewDisparity">—</span></div>
+            </div>
+
+            <div class="card p-4">
+                <b>Brew DC</b>
+                <p class="text-slate-400 mt-1">6 + Bits + Disparity + Tier</p>
+                <div class="mt-2 font-mono text-lg">DC: <span id="brewDC">—</span></div>
+            </div>
+
+        </div>
+
+        <p class="text-slate-500 text-sm mt-4">
+            Calculator is informational only. GM may override outcomes.
+        </p>
+    </details>
+
+    <!-- BREW OUTCOMES -->
+    <details class="card p-5">
+        <summary class="text-3xl text-white cursor-pointer">Potion Outcomes</summary>
+
+        <div class="table-wrap mt-4">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-4">Bitcode</th>
+                        <th class="px-4 py-4">Name</th>
+                        <th class="px-4 py-4">Tier I</th>
+                        <th class="px-4 py-4">Tier II</th>
+                        <th class="px-4 py-4">Tier III</th>
+                        <th class="px-4 py-4">Tier IV</th>
+                    </tr>
+                </thead>
+                <tbody id="brew-outcomes"></tbody>
+            </table>
+        </div>
+    </details>
+
+    <!-- INGREDIENTS -->
+    <details class="card p-5">
+        <summary class="text-3xl text-white cursor-pointer">Ingredients</summary>
+
+        <div class="table-wrap mt-4">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-4">Ingredient</th>
+                        <th class="px-4 py-4">Aspect</th>
+                        <th class="px-4 py-4">Value</th>
+                        <th class="px-4 py-4">Tier</th>
+                        <th class="px-4 py-4">Notes</th>
+                    </tr>
+                </thead>
+                <tbody id="brew-ingredients"></tbody>
+            </table>
+        </div>
+    </details>
+
+</section>
+
+
 </main>
 
 <!-- ================= JS ================= -->
@@ -302,3 +402,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
