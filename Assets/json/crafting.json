@@ -26,78 +26,892 @@
       "craftCheck": 20
     }
   },
-
   "precisionBonuses": {
     "familyOnly": 0,
     "subComponent": 1,
     "allCorrect": 2
   },
-
   "recipes": [
     {
       "name": "Wooden Starknife",
       "tier": "Trivial",
       "category": "Equipment",
-      "components": ["Wood - Core x1"],
-      "effect": "Thrown Weapon: Range 10. Damage 1. Light, fragile."
+      "components": [
+        "Wood – Core x1"
+      ],
+      "effect": "Thrown Weapon : Range 10. Damage 1. Light, fragile, breaks on critical fail."
     },
     {
       "name": "Glass Cutter",
       "tier": "Trivial",
       "category": "Equipment",
-      "components": ["Glass - Shard x1"],
+      "components": [
+        "Glass – Shard x1"
+      ],
       "effect": "Cuts thin non-metal surfaces; advantage on precision cuts."
     },
-
+    {
+      "name": "Stone Chalk",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Stone – Dust x1"
+      ],
+      "effect": "Creates persistent markings; unaffected by moisture."
+    },
+    {
+      "name": "Metal Pin",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Metal – Wire x1"
+      ],
+      "effect": "Fastener for small crafts; holds up to 5 units tension."
+    },
+    {
+      "name": "Simple Cord Loop",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cord x1"
+      ],
+      "effect": "Secures small tools; load limit 10."
+    },
+    {
+      "name": "Wood Splint",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Wood – Plank x1"
+      ],
+      "effect": "Acts as a small stabilizer; adds +1 to repair checks."
+    },
+    {
+      "name": "Pebble Counterweights",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Stone – Block x1"
+      ],
+      "effect": "Adds 1 weight unit for balancing tools."
+    },
+    {
+      "name": "Rope Strap",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Rope – Line x1"
+      ],
+      "effect": "Grip enhancer; +1 handling to tools."
+    },
+    {
+      "name": "Metal Hook Ring",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Metal – Ingot x1"
+      ],
+      "effect": "Anchor point; holds 20 load units."
+    },
+    {
+      "name": "Glass Signal Chip",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Glass – Pane x1"
+      ],
+      "effect": "Reflective square; visible at long distances."
+    },
+    {
+      "name": "Stone Scribing Point",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Stone – Cut x1"
+      ],
+      "effect": "Carving point; creates shallow etch lines."
+    },
+    {
+      "name": "Rope Binding Mesh",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cable x1"
+      ],
+      "effect": "Structural wrap; reduces item slippage."
+    },
+    {
+      "name": "Wood Needle",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Wood – Rod x1"
+      ],
+      "effect": "Small piercing tool; Damage 1; fragile."
+    },
+    {
+      "name": "Glass Prism Chip",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Glass – Tube x1"
+      ],
+      "effect": "Splits light; minor illumination coding."
+    },
+    {
+      "name": "Stone Balance Chip",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Stone – Block x1"
+      ],
+      "effect": "Adds precision balance to tools; +1 accuracy."
+    },
+    {
+      "name": "Metal Lash Ring",
+      "tier": "Trivial",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1"
+      ],
+      "effect": "Reinforces rope/straps; prevents fray."
+    },
     {
       "name": "Weighted Sling",
       "tier": "Simple",
       "category": "Equipment",
-      "components": ["Rope - Line x1", "Stone - Cut x1"],
-      "effect": "Ranged Weapon: Range 20. Damage 2."
+      "components": [
+        "Rope – Line x1",
+        "Stone – Cut x1"
+      ],
+      "effect": "Ranged Weapon : Range 20. Damage 2. Simple, requires ammunition."
     },
-
+    {
+      "name": "Reinforced Rod",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Wood – Rod x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Strengthened tool base; +1 structural integrity."
+    },
+    {
+      "name": "Field Knife",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Wood – Core x1"
+      ],
+      "effect": "Melee Weapon : Damage 2. Light, small utility blade."
+    },
+    {
+      "name": "Stone Hammerhead",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Stone – Block x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Attach to rods to form hammer; Damage 3 when mounted."
+    },
+    {
+      "name": "Glass Vial",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Glass – Tube x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Holds liquids; volume 1 unit; sealed."
+    },
+    {
+      "name": "Surveyor’s Marker",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Stone – Dust x1",
+        "Wood – Plank x1"
+      ],
+      "effect": "Creates long-lasting bright marks."
+    },
+    {
+      "name": "Reinforced Strap",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cable x1",
+        "Metal – Plate x1"
+      ],
+      "effect": "Bracing strap; increases load capacity by +10."
+    },
+    {
+      "name": "Tension Spring",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Metal – Wire x2"
+      ],
+      "effect": "Provides mechanical tension; used in small triggers."
+    },
+    {
+      "name": "Ember Rod",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Wood – Core x1",
+        "Stone – Dust x1"
+      ],
+      "effect": "Holds embers safely; produces small heat output."
+    },
+    {
+      "name": "Basic Tongs",
+      "tier": "Simple",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Grips heated components; heat resistance high."
+    },
     {
       "name": "Simple Pulley",
       "tier": "Simple",
       "category": "Machine",
-      "components": ["Metal - Plate x1", "Metal - Wire x1", "Rope - Cord x1"],
-      "effect": "Provides 1:1 leverage; lifts 30 load."
+      "components": [
+        "Metal – Plate x1",
+        "Metal – Wire x1",
+        "Rope – Cord x1"
+      ],
+      "effect": "Provides 1:1 mechanical leverage; lifts 30 load."
     },
-
+    {
+      "name": "Water Drip Regulator",
+      "tier": "Simple",
+      "category": "Machine",
+      "components": [
+        "Glass – Tube x1",
+        "Stone – Cut x1"
+      ],
+      "effect": "Controls fluid output; precise drip rate."
+    },
+    {
+      "name": "Wind Indicator",
+      "tier": "Simple",
+      "category": "Machine",
+      "components": [
+        "Wood – Rod x1",
+        "Rope – Cord x1",
+        "Metal – Plate x1"
+      ],
+      "effect": "Detects wind direction; rotates freely."
+    },
+    {
+      "name": "Counterweight Hoist",
+      "tier": "Simple",
+      "category": "Machine",
+      "components": [
+        "Stone – Block x1",
+        "Rope – Cable x1"
+      ],
+      "effect": "Lifts light objects; load limit 40."
+    },
+    {
+      "name": "Heat Funnel",
+      "tier": "Simple",
+      "category": "Machine",
+      "components": [
+        "Glass – Pane x1",
+        "Stone – Dust x1"
+      ],
+      "effect": "Channels heat upward; increases heating speed."
+    },
+    {
+      "name": "Grip-Lock Clamp",
+      "tier": "Simple",
+      "category": "Machine",
+      "components": [
+        "Metal – Ingot x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Holds materials firmly; high stability."
+    },
+    {
+      "name": "Precision Saw",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Wood – Plank x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Cuts clean lines; Damage 2 if used as weapon."
+    },
+    {
+      "name": "Stabilized Pick",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Stone – Cut x1",
+        "Metal – Ingot x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Enhanced extraction; +1 material yield."
+    },
     {
       "name": "Arc-Light Rod",
       "tier": "Standard",
       "category": "Equipment",
-      "components": ["Wood - Core x1", "Glass - Tube x1", "Arcane - Shard x1"],
+      "components": [
+        "Wood – Core x1",
+        "Glass – Tube x1",
+        "Arcane – Shard x1"
+      ],
       "effect": "Emits steady light; illuminates 20 units."
     },
-
+    {
+      "name": "Hardened Brace",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Rope – Cable x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Reinforces structures; +2 stability."
+    },
+    {
+      "name": "Glass Field Lens",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Shard x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Focuses light; used for observation."
+    },
+    {
+      "name": "Powder Extractor",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Stone – Dust x2",
+        "Glass – Tube x1"
+      ],
+      "effect": "Separates materials; increases purity."
+    },
+    {
+      "name": "Reinforced Harness",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cable x1",
+        "Rope – Line x1",
+        "Metal – Wire x1"
+      ],
+      "effect": "Load harness; max load +20."
+    },
+    {
+      "name": "Component Lockbox",
+      "tier": "Standard",
+      "category": "Equipment",
+      "components": [
+        "Wood – Plank x1",
+        "Metal – Plate x1",
+        "Complex – Valve x1"
+      ],
+      "effect": "Secured storage; pressure-sealed."
+    },
+    {
+      "name": "Gear-Driven Lift",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Metal – Plate x1",
+        "Metal – Wire x1",
+        "Rope – Cord x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Lift capacity 60; smooth gear motion."
+    },
+    {
+      "name": "Pressure Vent",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Glass – Tube x1",
+        "Stone – Cut x1",
+        "Complex – Valve x1"
+      ],
+      "effect": "Releases pressure evenly; prevents buildup."
+    },
+    {
+      "name": "Weighted Stabilizer",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Stone – Block x1",
+        "Metal – Ingot x1",
+        "Rope – Cable x1"
+      ],
+      "effect": "Anchors machinery; +3 stability."
+    },
+    {
+      "name": "Arc-Conductive Relay",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Metal – Wire x1",
+        "Metal – Plate x1",
+        "Arcane – Thread x1"
+      ],
+      "effect": "Conducts low arc energy; regulated output."
+    },
+    {
+      "name": "Rotational Pump",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Glass – Tube x1",
+        "Wood – Rod x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Pumps liquids; medium pressure."
+    },
+    {
+      "name": "Two-Stage Clamp Press",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Metal – Ingot x1",
+        "Metal – Plate x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Provides strong mechanical press force."
+    },
+    {
+      "name": "Counter-Torque Rail",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Wood – Plank x1",
+        "Metal – Wire x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Balances rotational forces; reduces torque shift."
+    },
+    {
+      "name": "Light-Diverting Array",
+      "tier": "Standard",
+      "category": "Machine",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Shard x1",
+        "Arcane – Shard x1"
+      ],
+      "effect": "Redirects and focuses beams of light."
+    },
+    {
+      "name": "Arc-Infused Cutter",
+      "tier": "Difficult",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Glass – Shard x1",
+        "Arcane – Thread x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Cuts enhanced materials; Damage 3."
+    },
+    {
+      "name": "Stabilized Grip Harness",
+      "tier": "Difficult",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cable x1",
+        "Metal – Wire x1",
+        "Complex – Gear x1",
+        "Arcane – Core x1"
+      ],
+      "effect": "Eliminates recoil; +2 grip control."
+    },
+    {
+      "name": "Adaptive Light Filter",
+      "tier": "Difficult",
+      "category": "Equipment",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Shard x1",
+        "Arcane – Shard x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Adjustable visibility in extreme lighting."
+    },
+    {
+      "name": "Stonebreaker Pick",
+      "tier": "Difficult",
+      "category": "Equipment",
+      "components": [
+        "Stone – Cut x1",
+        "Metal – Ingot x1",
+        "Metal – Wire x1",
+        "Complex – Valve x1"
+      ],
+      "effect": "Breaks dense stone; +2 extraction yield."
+    },
+    {
+      "name": "Conduction Gauntlet",
+      "tier": "Difficult",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Metal – Wire x1",
+        "Arcane – Thread x1",
+        "Esoteric – Echo x1"
+      ],
+      "effect": "Channels energy safely; protects from shocks."
+    },
+    {
+      "name": "Weighted Support Harness",
+      "tier": "Difficult",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cable x1",
+        "Metal – Plate x1",
+        "Stone – Block x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Supports heavy lifting; +30 load."
+    },
+    {
+      "name": "Arc-Driven Piston",
+      "tier": "Difficult",
+      "category": "Machine",
+      "components": [
+        "Metal – Plate x1",
+        "Metal – Wire x1",
+        "Arcane – Core x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Creates powerful linear force; high output."
+    },
+    {
+      "name": "Multi-Stage Pump",
+      "tier": "Difficult",
+      "category": "Machine",
+      "components": [
+        "Glass – Tube x1",
+        "Metal – Plate x1",
+        "Complex – Valve x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Pumps fluid through resistance; dual-cycle power."
+    },
+    {
+      "name": "Reflective Relay Engine",
+      "tier": "Difficult",
+      "category": "Machine",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Shard x1",
+        "Arcane – Shard x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Enhances light/arc redirection."
+    },
+    {
+      "name": "Stone Compression Mill",
+      "tier": "Difficult",
+      "category": "Machine",
+      "components": [
+        "Stone – Block x2",
+        "Metal – Ingot x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Crushes and grinds materials efficiently."
+    },
+    {
+      "name": "Counterweight Stabilizer Engine",
+      "tier": "Difficult",
+      "category": "Machine",
+      "components": [
+        "Rope – Cable x1",
+        "Stone – Block x1",
+        "Metal – Plate x1",
+        "Complex – Valve x1"
+      ],
+      "effect": "Balances heavy machinery; high precision."
+    },
+    {
+      "name": "Arc Induction Grid",
+      "tier": "Difficult",
+      "category": "Machine",
+      "components": [
+        "Metal – Wire x1",
+        "Glass – Pane x1",
+        "Arcane – Thread x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Generates moderate arc currents."
+    },
     {
       "name": "Minor Stone Golem",
       "tier": "Difficult",
       "category": "Construct",
       "components": [
-        "Stone - Block x2",
-        "Metal - Wire x1",
-        "Arcane - Core x1",
-        "Complex - Valve x1"
+        "Stone – Block x2",
+        "Metal – Wire x1",
+        "Arcane – Core x1",
+        "Complex – Valve x1"
       ],
-      "effect": "Small autonomous guardian; moderate strength."
+      "effect": "Small autonomous guardian; Strength moderate."
     },
-
+    {
+      "name": "Arc-Wood Guardian",
+      "tier": "Difficult",
+      "category": "Construct",
+      "components": [
+        "Wood – Core x2",
+        "Metal – Plate x1",
+        "Arcane – Thread x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Light defender; fast reaction speed."
+    },
+    {
+      "name": "Glass Sentinel Wisp",
+      "tier": "Difficult",
+      "category": "Construct",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Tube x1",
+        "Arcane – Shard x1",
+        "Esoteric – Echo x1"
+      ],
+      "effect": "Floating scout; visual detection enhanced."
+    },
+    {
+      "name": "Binding Rope Homunculus",
+      "tier": "Difficult",
+      "category": "Construct",
+      "components": [
+        "Rope – Cable x2",
+        "Metal – Wire x1",
+        "Arcane – Thread x1",
+        "Esoteric – Echo x1"
+      ],
+      "effect": "Flexible utility construct; grapples effectively."
+    },
     {
       "name": "Etheric Filament Blade",
       "tier": "Complex",
       "category": "Equipment",
       "components": [
-        "Metal - Plate x1",
-        "Arcane - Thread x1",
-        "Esoteric - Echo x1",
-        "Cursed - Hex x1",
-        "Complex - Circuit x1"
+        "Metal – Plate x1",
+        "Arcane – Thread x1",
+        "Esoteric – Echo x1",
+        "Cursed – Hex x1",
+        "Complex – Circuit x1"
       ],
-      "effect": "Melee Weapon: Damage 4; cuts arcane fields."
+      "effect": "Melee Weapon : Damage 4, cuts arcane fields."
+    },
+    {
+      "name": "Arc-Insulated Exosleeve",
+      "tier": "Complex",
+      "category": "Equipment",
+      "components": [
+        "Metal – Wire x1",
+        "Rope – Cable x1",
+        "Arcane – Core x1",
+        "Complex – Valve x1",
+        "Esoteric – Void x1"
+      ],
+      "effect": "Absorbs recoil; protects against burst forces."
+    },
+    {
+      "name": "Astral Projection Lens",
+      "tier": "Complex",
+      "category": "Equipment",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Shard x1",
+        "Esoteric – Astral x1",
+        "Arcane – Shard x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Reveals hidden energies; detects anomalies."
+    },
+    {
+      "name": "Gravimetric Anchor Harness",
+      "tier": "Complex",
+      "category": "Equipment",
+      "components": [
+        "Rope – Cable x1",
+        "Stone – Cut x1",
+        "Esoteric – Void x1",
+        "Complex – Gear x1",
+        "Metal – Plate x1"
+      ],
+      "effect": "Anchor user; negates forced movement."
+    },
+    {
+      "name": "Spirit-Channel Bracer",
+      "tier": "Complex",
+      "category": "Equipment",
+      "components": [
+        "Metal – Plate x1",
+        "Arcane – Thread x1",
+        "Esoteric – Echo x1",
+        "Cursed – Wraith x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Interacts with spirits; limited manipulation."
+    },
+    {
+      "name": "Arc Compression Engine",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Metal – Ingot x1",
+        "Metal – Wire x1",
+        "Arcane – Core x1",
+        "Complex – Gear x1",
+        "Complex – Valve x1",
+        "Esoteric – Void x1"
+      ],
+      "effect": "High-power arc engine; maximum output device."
+    },
+    {
+      "name": "Multi-Spectrum Relay Array",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Shard x1",
+        "Arcane – Shard x1",
+        "Complex – Circuit x1",
+        "Esoteric – Astral x1"
+      ],
+      "effect": "Divides energies across spectrum channels."
+    },
+    {
+      "name": "Stabilized Gravity Pump",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Stone – Block x1",
+        "Metal – Plate x1",
+        "Complex – Valve x1",
+        "Esoteric – Void x1",
+        "Arcane – Core x1"
+      ],
+      "effect": "Pumps fluid against gravity or incline."
+    },
+    {
+      "name": "Resonant Frequency Mill",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Stone – Dust x1",
+        "Metal – Wire x1",
+        "Complex – Gear x1",
+        "Esoteric – Echo x1",
+        "Arcane – Thread x1"
+      ],
+      "effect": "Refines materials using resonance."
+    },
+    {
+      "name": "Cursed Heat Sink",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Metal – Plate x1",
+        "Glass – Tube x1",
+        "Cursed – Blight x1",
+        "Complex – Circuit x1",
+        "Esoteric – Void x1"
+      ],
+      "effect": "Absorbs extreme heat; stores in blight core."
+    },
+    {
+      "name": "Astral Light Engine",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Glass – Pane x1",
+        "Arcane – Shard x1",
+        "Esoteric – Astral x1",
+        "Complex – Gear x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Generates astral light; multi-spectrum output."
+    },
+    {
+      "name": "Esoteric Nullifier Gate",
+      "tier": "Complex",
+      "category": "Machine",
+      "components": [
+        "Metal – Wire x1",
+        "Stone – Cut x1",
+        "Esoteric – Void x1",
+        "Complex – Valve x1",
+        "Cursed – Hex x1"
+      ],
+      "effect": "Cancels minor energy flows and pulses."
+    },
+    {
+      "name": "Arc-Linked Guardian",
+      "tier": "Complex",
+      "category": "Construct",
+      "components": [
+        "Metal – Plate x1",
+        "Metal – Wire x1",
+        "Arcane – Core x1",
+        "Complex – Gear x1",
+        "Esoteric – Echo x1"
+      ],
+      "effect": "Medium construct; controlled precision attacks."
+    },
+    {
+      "name": "Void-Bound Golem",
+      "tier": "Complex",
+      "category": "Construct",
+      "components": [
+        "Stone – Block x2",
+        "Esoteric – Void x1",
+        "Arcane – Thread x1",
+        "Complex – Circuit x1",
+        "Metal – Plate x1"
+      ],
+      "effect": "Heavy construct; extreme stability, resistant."
+    },
+    {
+      "name": "Astral Glass Seraph",
+      "tier": "Complex",
+      "category": "Construct",
+      "components": [
+        "Glass – Pane x1",
+        "Glass – Tube x1",
+        "Esoteric – Astral x1",
+        "Arcane – Shard x1",
+        "Complex – Circuit x1"
+      ],
+      "effect": "Floating construct; high sensory capabilities."
+    },
+    {
+      "name": "Cursed Wraith Automaton",
+      "tier": "Complex",
+      "category": "Construct",
+      "components": [
+        "Rope – Cable x1",
+        "Metal – Wire x1",
+        "Esoteric – Echo x1",
+        "Cursed – Wraith x1",
+        "Complex – Gear x1"
+      ],
+      "effect": "Fast spectral construct; terror effect."
     }
   ]
 }
