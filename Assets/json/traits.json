@@ -1727,6 +1727,15 @@
     "Parameters": "⫘ Breserk",
     "Description": "When you enter Rage, gain Guard equal to your level + 2.",
     "Scaling": "-"
+  },
+  {
+    "Name": "Workers companion",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ ★ Companion",
+    "Description": "Companions each grant +1 Tinkering when brewing, crafting, smithing, medicine, spellcrafting or ritual casting.",
+    "Scaling": "-"
   }
 ]
 
