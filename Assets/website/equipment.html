@@ -790,17 +790,24 @@
                         </tr>
                     `).join("");
 
-                
+
                 document.getElementById("brew-ingredients").innerHTML =
-                    data.ingredients.map(i => `
-                        <tr class="row">
-                            <td class="font-bold text-white">${i.name}</td>
-                            <td>${i.aspect}</td>
-                            <td>${i.value}</td>
-                            <td>${i.tier}</td>
-                            <td class="text-slate-400 italic text-xs">${i.notes || ""}</td>
-                        </tr>
-                    `).join("");
+    data.compoundIngredients.map(i => `
+        <tr class="row">
+            <td class="font-bold text-white">${i.name}</td>
+            <td>
+            <span class="tag-badge">${i.aspect}</span>
+            </td>
+            <td class="font-mono text-emerald-300">
+                ${i.value}
+            </td>
+            <td>
+                <span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">
+                    Tier ${i.tier}
+                </span>
+            </td>
+        </tr>
+    `).join("");
 
                 /* ---- Compound Ingredients ---- */
 document.getElementById("brew-compounds").innerHTML =
