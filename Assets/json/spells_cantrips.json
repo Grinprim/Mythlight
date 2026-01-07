@@ -8239,14 +8239,14 @@
         "Lore": "Advanced magic of the Elemental school, rarely seen by the uninitiated."
     },
     {
-        "ID": "EC4-25",
+        "ID": "EC1-11",
         "Category": "Elemental",
-        "Name": "Shatter Gale",
-        "Cost": "4",
+        "Name": "Infernius",
+        "Cost": "1",
         "Type": "Action",
-        "Range": "8 units",
-        "Description": "Unleash a torrent of elements dealing 5 damage of your chosen type.",
-        "Upcast": "Increase damage or healing by +1.",
-        "Lore": "Advanced magic of the Elemental school, rarely seen by the uninitiated."
+        "Range": "6 units",
+        "Description": "You create a magmatic crack on a tile, any creature standing atop it will take 1 Fire damage each scene. It counts as rough terrain.",
+        "Upcast": "Level 2+: The damage increases by 1. Level 3+: Must roll [Fortitude] to exit.",
+        "Lore": "An ember shared is never diminished—only multiplied."
     }
 ]
