@@ -1131,5 +1131,16 @@
         "Description": "You manefest a crimson maw and attempt to take a bite out of a creature. Make a melee spell attack, it deals 2 Dark damage, and heals you for 4 health on a sucessful hit.",
         "Upcast": "Increases the damage by 1, and the healing by 2.",
         "Lore": "Hunger can only be aided by a good chomp."
+    },
+    {
+        "ID": "EC1-11",
+        "Category": "Elemental",
+        "Name": "Infernius",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "You create a magmatic crack on a tile, any creature standing atop it will take 1 Fire damage each scene. It counts as rough terrain.",
+        "Upcast": "Level 2+: The damage increases by 1. Level 3+: Must roll [Fortitude] to exit.",
+        "Lore": "An ember shared is never diminished—only multiplied."
     }
 ]
