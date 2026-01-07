@@ -1736,6 +1736,15 @@
     "Parameters": "⫘ ★ Companion",
     "Description": "Companions each grant +1 Tinkering when brewing, crafting, smithing, medicine, spellcrafting or ritual casting.",
     "Scaling": "-"
+  },
+  {
+    "Name": "Longshot",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Any Ranged Weapon Training",
+    "Description": "Ranged weapons and traits, gain +X range",
+    "Scaling": "Range X:<br>+2 [lvl 1]<br>+4 [lvl 6]"
   }
 ]
 
