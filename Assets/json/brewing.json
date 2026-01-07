@@ -328,19 +328,48 @@
 
   "ingredients": [
     { "name": "Vitalis Moss", "aspect": "Vital", "value": 6, "tier": 1 },
+    { "name": "Brightleaf", "aspect": "Vital", "value": 3, "tier": 1 },
     { "name": "Sunpetal", "aspect": "Vital", "value": 8, "tier": 2 },
+    { "name": "Lifewater Crystal", "aspect": "Vital", "value": 10, "tier": 3 },
+    { "name": "Dewvine", "aspect": "Vital", "value": 5, "tier": 1 },
+    { "name": "Heartroot", "aspect": "Vital", "value": 7, "tier": 2 },
+    { "name": "Aurora Lotus", "aspect": "Vital", "value": 9, "tier": 3 },
     { "name": "Sanctum Pearl", "aspect": "Vital", "value": 10, "tier": 4 },
 
+    { "name": "Toxic Fungus", "aspect": "Toxic", "value": 3, "tier": 1 },
     { "name": "Rotcap", "aspect": "Toxic", "value": 6, "tier": 2 },
+    { "name": "Venom Gland", "aspect": "Toxic", "value": 9, "tier": 3 },
+    { "name": "Blight Resin", "aspect": "Toxic", "value": 10, "tier": 4 },
+    { "name": "Decay Pollen", "aspect": "Toxic", "value": 4, "tier": 1 },
+    { "name": "Gravecrawler Ichor", "aspect": "Toxic", "value": 7, "tier": 2 },
+    { "name": "Nightbane Leaf", "aspect": "Toxic", "value": 8, "tier": 3 },
     { "name": "Abyssal Toxin", "aspect": "Toxic", "value": 10, "tier": 4 },
 
     { "name": "Swiftthorn", "aspect": "Charging", "value": 4, "tier": 1 },
+    { "name": "Lightning Beetle Core", "aspect": "Charging", "value": 7, "tier": 2 },
+    { "name": "Hastebloom", "aspect": "Charging", "value": 9, "tier": 3 },
+    { "name": "Stormgrain", "aspect": "Charging", "value": 10, "tier": 4 },
+    { "name": "Sparkfruit", "aspect": "Charging", "value": 5, "tier": 1 },
+    { "name": "Blitz Crystal", "aspect": "Charging", "value": 6, "tier": 2 },
+    { "name": "Velocity Sap", "aspect": "Charging", "value": 8, "tier": 3 },
     { "name": "Tempest Feather", "aspect": "Charging", "value": 10, "tier": 4 },
 
     { "name": "Mana Bud", "aspect": "Arcane", "value": 4, "tier": 1 },
+    { "name": "Astral Bud", "aspect": "Arcane", "value": 6, "tier": 2 },
+    { "name": "Spellroot", "aspect": "Arcane", "value": 8, "tier": 3 },
+    { "name": "Null Shard", "aspect": "Arcane", "value": 10, "tier": 4 },
+    { "name": "Runic Leaf", "aspect": "Arcane", "value": 5, "tier": 1 },
+    { "name": "Glimmerstone", "aspect": "Arcane", "value": 7, "tier": 2 },
+    { "name": "Ether Bloom", "aspect": "Arcane", "value": 9, "tier": 3 },
     { "name": "Soulglass Fragment", "aspect": "Arcane", "value": 10, "tier": 4 },
 
     { "name": "Berserker Root", "aspect": "Wrathful", "value": 5, "tier": 1 },
+    { "name": "Rage Pepper", "aspect": "Wrathful", "value": 7, "tier": 2 },
+    { "name": "Ironhide Bark", "aspect": "Wrathful", "value": 9, "tier": 3 },
+    { "name": "War-fiend Horn", "aspect": "Wrathful", "value": 10, "tier": 4 },
+    { "name": "Crusher Seed", "aspect": "Wrathful", "value": 4, "tier": 1 },
+    { "name": "Titan Stem", "aspect": "Wrathful", "value": 6, "tier": 2 },
+    { "name": "Bloodforge Ore", "aspect": "Wrathful", "value": 8, "tier": 3 },
     { "name": "Fury Core", "aspect": "Wrathful", "value": 10, "tier": 4 }
   ],
 
