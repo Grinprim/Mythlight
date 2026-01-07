@@ -1347,7 +1347,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "⫘ Combat Trapper",
-    "Description": "Traps you deploy now knock enemies Prone, they must roll [Reflex] to resist, contesting [6 + Tinkering].",
+    "Description": "Traps you deploy now knock enemies Prone, they must roll [Reflex] vs [6 + Tinkering] to resist.",
     "Scaling": "-"
   },
   {
@@ -1707,7 +1707,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "⫘ Piercing Shot",
-    "Description": "Make one ranged attack with +X Damage, piercing all enemies in a 6 tile line. If any enemy dies to this, regain the traits use. Targets must roll [Reflex] contesting the attack roll.",
+    "Description": "Make one ranged attack with +X Damage, piercing all enemies in a 6 tile line. If any enemy dies to this, regain the traits use. Targets must roll [Reflex] vs the attack roll.",
     "Scaling": "Uses/Damage 🗲/X:<br>1/+3 [lvl 1]<br>2/+4 [lvl 6]<br>3/+5 [lvl 12]"
   },
   {
@@ -1745,6 +1745,141 @@
     "Parameters": "⫘ Any Ranged Weapon Training",
     "Description": "Ranged weapons and traits, gain +X range",
     "Scaling": "Range X:<br>+2 [lvl 1]<br>+4 [lvl 6]"
+  },
+  {
+    "Name": "Enticipation",
+    "Action":"◆",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You cannot attack this round, gain X guard until your next attack.",
+    "Scaling": "Guard X:<br>2 [lvl 1]<br>4 [lvl 3]<br>6 [lvl 6]<br>8 [lvl 9]<br>10 [lvl 12]"
+  },
+  {
+    "Name": "Against the odds",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "If enemies outnumber allies within a 5×5 radius, gain Armor equal to the difference. Enemies at least 2 sizes larger than you count as two.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Thick skin",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "After combat, recover half of your missing hp.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Twoification",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Allies within 2 tiles gain +2 speed and +2 range for 2 turns.",
+    "Scaling": "Uses 🗲:<br>2 [lvl 2]"
+  },
+  {
+    "Name": "Sunblessed",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain +1 Armor while in direct sunlight, loose 1 Armor when in darkness.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Giant slayer",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While targeting a creature thats atleast 1 size larger than you, you gain +1 Damage and +1 Accuracy.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Climber",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You gain advantage on climbing checks, when you are stopped on a wall, you cannot be knocked off.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Carpenter",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can convert between wooden components freely. When creating crafts only consisting of mostly wooded components, you gain advantage.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Combat Carpenter",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Carpenter",
+    "Description": "You can use wooden crafting components as weapons. Combine any number of components to create an improvised melee or ranged weapon that deals Force damage equal to the number of components used; ranged weapons have a 6-unit range.<br><br><i>Throw an ikea furniture set at them.</i>",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Drama queen",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You convince creatures targeting you that you are dead. You are knocked prone; affected creatures must roll [Insight] vs [6 + your Deception] to resist.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Seamstress",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "None",
+    "Description": "Using one piece of clothing, you transform it into another piece of clothing or a copy of non-magical equipment you already own.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Makeup maid",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Outside of combat, you may disguise yourself or allies. Creatures attempting to see through the disguise must roll [Insight] vs [6 + your Performance.]",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Shumpo",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "In combat, rolling a midnight no longer doubles damage; instead, you gain one additional action this turn, which may be used to attack.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Fair Strike",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "The chosen target’s next attack loses all modifiers and deals only base weapon damage.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Fair Fight",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "⫘ Fair Strike",
+    "Description": "You create a 3×3 zone you must occupy on cast. Spells cannot be cast within it, and spells from outside cannot target creatures inside. The zone lasts 3 turns, or ends immediately if you or the caster leaves the zone.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
 
