@@ -1276,7 +1276,7 @@
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "You gain +5 Maximum Encumberance",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+    "Scaling": "-"
   },
   {
     "Name": "Pocket Aces",
