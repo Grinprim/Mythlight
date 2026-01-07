@@ -259,7 +259,7 @@
         "Cost": "0",
         "Type": "Action",
         "Range": "6 units",
-        "Description": "Mark a creature. The next attack made against that creature deals +1 Radiant Damage.",
+        "Description": "Mark a creature. The next attack made against that creature deals +1 Light Damage.",
         "Upcast": "",
         "Lore": "Light finds those who cannot hide from judgment."
     },
@@ -270,7 +270,7 @@
         "Cost": "0",
         "Type": "Action",
         "Range": "4 units",
-        "Description": "Deal 1 Radiant Damage to a creature, or instead stabilize a creature to 1 Health.",
+        "Description": "Deal 1 Light Damage to a creature, or instead stabilize a creature to 1 Health.",
         "Upcast": "",
         "Lore": "Mercy and punishment share the same flame."
     },
@@ -281,7 +281,7 @@
         "Cost": "0",
         "Type": "Passive",
         "Range": "Self",
-        "Description": "Once per turn, when you deal damage, you may change the damage type to Radiant.",
+        "Description": "Once per turn, when you deal damage, you may change the damage type to Light.",
         "Upcast": "",
         "Lore": "An oath shapes not just action, but intent."
     },
@@ -776,7 +776,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "8 units",
-        "Description": "Hurl a lance of condensed starlight, dealing 2 Radiant Damage.",
+        "Description": "Hurl a lance of condensed starlight, dealing 2 Light Damage.",
         "Upcast": "When multicasting this spell, each additional cast may target a different creature.",
         "Lore": "A falling star, aimed by will alone."
     },
@@ -798,7 +798,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "6 units",
-        "Description": "A creature you can see takes 2 Radiant Damage and suffers -2 Accuracy on its next attack.",
+        "Description": "A creature you can see takes 2 Light Damage and suffers -2 Accuracy on its next attack.",
         "Upcast": "When multicasting this spell, each additional cast may target a different creature.",
         "Lore": "Light burns brightest where attention wavers."
     },
@@ -864,8 +864,8 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "Sight",
-        "Description": "Choose a creature you can see. The next time you cast a Cosmic spell targeting a different creature this turn, the chosen creature takes 1 Radiant Damage.",
-        "Upcast": "When multicasting this spell, the echo may trigger once per additional cast.",
+        "Description": "Choose a creature you can see. The next time you cast a Cosmic spell targeting a different creature this turn, the chosen creature takes 1 Light Damage.",
+        "Upcast": "This spell can only be cast once per multicast.",
         "Lore": "The stars remember what you almost aimed for."
     },
     {
@@ -882,11 +882,11 @@
     {
         "ID": "DC1-1",
         "Category": "Divine",
-        "Name": "Radiant Lance",
+        "Name": "Light Lance",
         "Cost": "1",
         "Type": "Action",
         "Range": "7 units",
-        "Description": "Hurl a lance of holy light, dealing 2 Radiant Damage to a creature you can see.",
+        "Description": "Hurl a lance of holy light, dealing 2 Light Damage to a creature you can see.",
         "Upcast": "Increase the damage by +1.",
         "Lore": "Faith given form, sharp and unwavering."
     },
@@ -908,8 +908,8 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "Melee",
-        "Description": "Make a melee weapon attack. On hit, it deals +2 Radiant Damage and the target cannot gain bonuses to Accuracy until the end of their next turn.",
-        "Upcast": "Increase the bonus Radiant Damage by +1.",
+        "Description": "Make a melee weapon attack. On hit, it deals +2 Light Damage and the target cannot gain bonuses to Accuracy until the end of their next turn.",
+        "Upcast": "Increase the bonus Light Damage by +1.",
         "Lore": "An oath strikes truer than steel alone."
     },
     {
@@ -930,7 +930,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "4 units",
-        "Description": "A wave of gentle light heals a creature for 2 Health or deals 2 Radiant Damage to an undead or fiend.",
+        "Description": "A wave of gentle light heals a creature for 2 Health or deals 2 Light Damage to an undead or fiend.",
         "Upcast": "Increase the healing or damage by +1.",
         "Lore": "Mercy and judgment flow from the same source."
     },
@@ -963,7 +963,7 @@
         "Cost": "1",
         "Type": "Reaction",
         "Range": "Self",
-        "Description": "When you are hit by a melee attack, the attacker takes 2 Radiant Damage.",
+        "Description": "When you are hit by a melee attack, the attacker takes 2 Light Damage.",
         "Upcast": "Increase the damage by +1.",
         "Lore": "To strike the faithful is to invite the light’s reply."
     },
@@ -974,7 +974,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "Sight",
-        "Description": "Mark a creature with holy sigils. The next attack made against that creature deals +2 Radiant Damage.",
+        "Description": "Mark a creature with holy sigils. The next attack made against that creature deals +2 Light Damage.",
         "Upcast": "Increase the bonus damage by +1.",
         "Lore": "Judgment does not forget its target."
     },
@@ -1029,7 +1029,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "6 units",
-        "Description": "Mark a creature with chilling runes. Until the end of its next turn, its movement is reduced by 3 units and the next attack against it deals +2 Frost damage.",
+        "Description": "Mark a creature with chilling runes. Until the end of its next turn, its movement is reduced by 3 units and the next attack against it deals +2 Ice damage.",
         "Upcast": "Level 2+: Increase duration by 1 round. Level 3+: Frost damage bonus applies to all attacks against the target during the duration.",
         "Lore": "Cold remembers every wound, preserving pain like a perfect crystal."
     },
@@ -1084,7 +1084,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "5 units",
-        "Description": "Cause the ground beneath a creature to rupture. The target takes Earth damage and must choose to either be knocked prone or lose an action on its next turn.",
+        "Description": "Cause the ground beneath a creature to rupture. The target takes 1 Vibro damage and must choose to either be knocked prone or lose an action on its next turn.",
         "Upcast": "Level 2+: Target suffers both effects. Level 3+: Nearby ground becomes difficult terrain for one round.",
         "Lore": "The earth does not strike swiftly—but when it moves, all must answer."
     },
@@ -1098,5 +1098,38 @@
         "Description": "You attune to elemental currents. You can sense the presence of strong elemental effects, active spells, or elemental creatures within a short distance.",
         "Upcast": "Level 2+: Increase sensing range to 12 units. Level 3+: You can identify the dominant element and its intensity.",
         "Lore": "Aether is the breath between elements, heard only by those who listen."
+    },
+    {
+        "ID": "CC1-11",
+        "Category": "Cosmic",
+        "Name": "Speck of Stardust",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "A speck of stardust orbits you, it will fly to the last enemy you targeted and attempt to deal 1 Light Damage. They must roll [Reflex] to resist",
+        "Upcast": "When multicasting this spell, it waits until all other spells are cast, then increases the number of Specks per spell cast. All Specks release simultaneously.",
+        "Lore": "A small pinch of dust from the stars themselves, its as bright as a star, and as faint as a firefly"
+    },
+    {
+        "ID": "CC1-12",
+        "Category": "Cosmic",
+        "Name": "Edge of Horizon",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "You create a micro black hole for 2 turns. It has a 3×3 area of rough terrain; creatures inside must roll [Fortitude] each turn or be pulled to the center. Creatures at the center take 1 Force damage at the start of every creature’s turn.",
+        "Upcast": "This spell cannot be cast alongside other spells. Recasting it either creates an additional black hole or increases an existing one’s size and duration by 1.",
+        "Lore": "While small, it is powerful, an expresion of the everlasting will of space."
+    },
+    {
+        "ID": "OC1-11",
+        "Category": "Occult",
+        "Name": "Syphoning Bite",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Melee",
+        "Description": "You manefest a crimson maw and attempt to take a bite out of a creature. Make a melee spell attack, it deals 2 Dark damage, and heals you for 4 health on a sucessful hit.",
+        "Upcast": "Increases the damage by 1, and the healing by 2.",
+        "Lore": "Hunger can only be aided by a good chomp."
     }
 ]
