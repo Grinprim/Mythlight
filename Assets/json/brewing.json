@@ -381,15 +381,57 @@
       "tier": 2
     },
     {
+      "name": "Stormvine",
+      "aspects": ["Charging", "Vital"],
+      "values": [6, 4],
+      "tier": 2
+    },
+    {
+      "name": "Embercap",
+      "aspects": ["Wrathful", "Arcane"],
+      "values": [6, 6],
+      "tier": 2
+    },
+    {
+      "name": "Galebloom",
+      "aspects": ["Charging", "Wrathful"],
+      "values": [5, 5],
+      "tier": 2
+    },
+    {
+      "name": "Moonshadow Root",
+      "aspects": ["Toxic", "Arcane"],
+      "values": [5, 7],
+      "tier": 3
+    },
+    {
+      "name": "Soulthorn",
+      "aspects": ["Arcane", "Vital"],
+      "values": [5, 8],
+      "tier": 3
+    },
+    {
       "name": "Thunder Bloom",
       "aspects": ["Charging", "Arcane"],
       "values": [7, 8],
       "tier": 3
     },
     {
+      "name": "Bloodvine",
+      "aspects": ["Wrathful", "Toxic"],
+      "values": [6, 7],
+      "tier": 3
+    },
+    {
       "name": "Aetherleaf",
       "aspects": ["Vital", "Arcane"],
       "values": [9, 9],
+      "tier": 4
+    },
+    {
+      "name": "Voidshard",
+      "aspects": ["Arcane", "Toxic"],
+      "values": [10, 8],
       "tier": 4
     }
   ]
