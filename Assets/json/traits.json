@@ -1365,7 +1365,7 @@
     "Cost": "2",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Each scene you have guard recover X Health",
+    "Description": "Each scene you have guard, recover X Health",
     "Scaling": "Health X:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
