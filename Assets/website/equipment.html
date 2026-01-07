@@ -531,10 +531,15 @@
                 <details open class="rule-card h-fit">
                     <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300">Brewing Rules</summary>
                     <ul class="list-disc list-outside ml-5 text-slate-300 space-y-3 mt-4 text-sm leading-relaxed">
-                        <li>Select ingredients totaling at least one full <strong class="text-white">Aspect Bitcode</strong>.</li>
-                        <li>Majority ingredient tier determines <strong class="text-white">Potion Tier</strong>.</li>
-                        <li>Disparity between aspects increases difficulty.</li>
-                        <li>Failure may weaken, alter, or destabilize the brew.</li>
+                        <li>For each required aspect A, sum ingredient aspect values: <strong>Total(A) = Σ ingredient contributions of A.</strong></li>
+                        <li>Tier = highest tier shared by the majority of ingredients used. <i>If tied, use the highest tier present.</i></li>
+                        <li><strong>Max</strong> = highest Total(A) among all required aspects.
+                         <br>For each required aspect A:
+                         <br><strong>Diff(A) = |Max − Total(A)|</strong>
+                         <br>DISPARITY = Σ Diff(A)</li>
+                        <li><strong>BITS</strong> = number of 1s in the potion’s aspect bitcode.
+                         <br><strong>DC = 6 + BITS + DISPARITY + (Tier − 1)</strong></li>
+                        <li>Use the calculator on the right to help you out.</li>
                     </ul>
                 </details>
 
