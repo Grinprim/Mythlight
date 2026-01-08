@@ -1880,6 +1880,87 @@
     "Parameters": "⫘ Fair Strike",
     "Description": "You create a 3×3 zone you must occupy on cast. Spells cannot be cast within it, and spells from outside cannot target creatures inside. The zone lasts 3 turns, or ends immediately if you or the caster leaves the zone.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Commanding Presance",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You command a creature within 6 units to lay down its arms, it will not act for 2 scenes, or until damaged. It must roll [Insight] vs [6+ Intimidation] to resist.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "All warmed up",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "In combat, once you have spent all of your mana for the first time, all of your non-cantrip spells deal +2 damage.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Jewler",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "☀",
+    "Parameters": "None",
+    "Description": "During a rest, you can restore a found object and increase its perceived market value. The increase is +X.",
+    "Scaling": "Value X:<br>+3 [lvl 1]<br>+5 [lvl 6]<br>+8 [lvl 12]"
+  },
+  {
+    "Name": "Fearsome Sight",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain advantage on intimidation checks.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Crimson Convergence",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Healing beyond your max HP is converted into Guard, up to a maximum of 2 + (X × your level).",
+    "Scaling": "Multiplier X:<br>0.5 [lvl 1]<br>1 [lvl 6]<br>2 [lvl 12]"
+  },
+  {
+    "Name": "Conviniance Fee",
+    "Action":"◇",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When a creature within 6 units is healed by their ally, you may reduce that healing by (your level + X) and heal yourself for the amount reduced.",
+    "Scaling": "Health X:<br>+2 [lvl 1]<br>+4 [lvl 6]<br>+6 [lvl 12]"
+  },
+  {
+    "Name": "Redoubled Valor",
+    "Action":"◇",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While you have no known spells; When you are given a buff by an ally, you may choose to double its duration or effect.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Ghost",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You cannot be targeted by ANY creature until you make your next attack or the start of your next turn, whichever comes first.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Rush",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "If you haven’t acted this scene, swap initiative with a target; on your next turn, you may take only one action.",
+    "Scaling": "-"
   }
 ]
 
