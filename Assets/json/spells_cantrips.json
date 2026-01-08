@@ -1292,5 +1292,219 @@
         "Description": "Plant a volatile elemental core at a point in range. At the start of your next turn, it detonates, dealing 8 damage of an element of your choice to all creatures within 3 units and reshaping the terrain appropriately.",
         "Upcast": "",
         "Lore": "Every disaster begins as something small and patient."
+    },
+
+
+    {
+        "ID": "AC1-14",
+        "Category": "Arcane",
+        "Name": "Phase Step",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "Teleport up to 2 units to an unoccupied space you can see. Until the start of your next turn, you ignore difficult terrain.",
+        "Upcast": "Increase teleport distance by +1 unit per cost.",
+        "Lore": "Distance is only a suggestion."
+    },
+    {
+        "ID": "AC2-3",
+        "Category": "Arcane",
+        "Name": "Spell Reversal",
+        "Cost": "2",
+        "Type": "Reaction",
+        "Range": "Sight",
+        "Description": "When a creature casts a spell targeting you or an ally, invert one numeric modifier of the spell (bonuses become penalties or vice versa).",
+        "Upcast": "Cost 3+: Invert an additional modifier.",
+        "Lore": "Magic hesitates when contradicted."
+    },
+    {
+        "ID": "AC4-2",
+        "Category": "Arcane",
+        "Name": "Rewrite Outcome",
+        "Cost": "4",
+        "Type": "Reaction",
+        "Range": "Sight",
+        "Description": "After any roll is resolved, force it to be rerolled and choose which result applies. The unused result is treated as if it never occurred.",
+        "Upcast": "",
+        "Lore": "Reality edits itself quietly."
+    },
+    {
+        "ID": "DC1-13",
+        "Category": "Divine",
+        "Name": "Consecrated Stand",
+        "Cost": "1",
+        "Type": "Reaction",
+        "Range": "Self",
+        "Description": "When you take damage, reduce it by 2 and gain +2 Accuracy on your next roll this turn.",
+        "Upcast": "Reduce damage by an additional +1.",
+        "Lore": "Pain sharpens devotion."
+    },
+    {
+        "ID": "DC2-3",
+        "Category": "Divine",
+        "Name": "Beacon of Vows",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "Aura 3",
+        "Description": "Until the end of your next turn, allies in range gain +1 Accuracy while adjacent to another ally.",
+        "Upcast": "Extend duration by +1 turn.",
+        "Lore": "Faith grows stronger when shared shoulder to shoulder."
+    },
+    {
+        "ID": "DC4-2",
+        "Category": "Divine",
+        "Name": "Ascension Moment",
+        "Cost": "4",
+        "Type": "Action",
+        "Range": "Touch",
+        "Description": "An ally immediately takes another full turn after this one. That ally cannot be reduced below 1 Health during that turn.",
+        "Upcast": "",
+        "Lore": "For one heartbeat, the divine intervenes directly."
+    },
+    {
+        "ID": "EC1-13",
+        "Category": "Elemental",
+        "Name": "Rolling Frost",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "4 units",
+        "Description": "Create a moving wave of ice that travels 4 units in a straight line. Creatures hit take 2 Cold Damage and have their movement reduced by 1 unit on their next turn.",
+        "Upcast": "Increase damage by +1 or travel distance by +2 units, per upcast level.",
+        "Lore": "Cold advances without urgency."
+    },
+    {
+        "ID": "EC2-3",
+        "Category": "Elemental",
+        "Name": "Grasping Fault",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "5 units",
+        "Description": "Crack the ground beneath a creature. They take 2 Earth Damage and the tile becomes difficult terrain that restrains the first creature entering it each scene.",
+        "Upcast": "Increase damage by +1.",
+        "Lore": "The earth remembers every step taken upon it."
+    },
+    {
+        "ID": "EC3-2",
+        "Category": "Elemental",
+        "Name": "Inferno Spiral",
+        "Cost": "3",
+        "Type": "Action",
+        "Range": "Area (Radius 3)",
+        "Description": "A whirling firestorm fills the area until the end of your next turn. Creatures entering or starting their turn there take 2 Fire Damage. The area is heavily obscured by smoke.",
+        "Upcast": "Cost 4: Increase damage by +1 and radius by +1.",
+        "Lore": "Fire does not explode — it envelops."
+    },
+    {
+        "ID": "EC4-2",
+        "Category": "Elemental",
+        "Name": "Worldroot Eruption",
+        "Cost": "4",
+        "Type": "Action",
+        "Range": "Sight",
+        "Description": "Massive elemental growth erupts from the ground. Creatures of your choice within 4 units are restrained and take 4 Vibro Damage at the start of their next turn.",
+        "Upcast": "",
+        "Lore": "The land itself rises to object."
+    },
+
+    {
+        "ID": "AC0-1",
+        "Category": "Arcane",
+        "Name": "Mana Flick",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "5 units",
+        "Description": "Nudge a Small unattended object or magical effect 1 unit in any direction. If used on a spell zone or terrain effect, you may shift its origin by 1 unit instead.",
+        "Upcast": "",
+        "Lore": "Even magic can be poked."
+    },
+    {
+        "ID": "DC0-1",
+        "Category": "Divine",
+        "Name": "Steady Pulse",
+        "Cost": "0",
+        "Type": "Reaction",
+        "Range": "Touch",
+        "Description": "When a creature you touch fails a defense roll, grant them +1 to that roll, potentially turning it into a success.",
+        "Upcast": "",
+        "Lore": "Faith answers in quiet moments."
+    },
+    {
+        "ID": "EC0-1",
+        "Category": "Elemental",
+        "Name": "Spark",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "4 units",
+        "Description": "Deal 1 Lightning Damage to a creature or object. If the target is Wet, Metallic, or standing in water, increase the damage to 2.",
+        "Upcast": "",
+        "Lore": "All storms begin with a thought."
+    },
+    {
+        "ID": "EC0-2",
+        "Category": "Elemental",
+        "Name": "Frost Film",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "4 units",
+        "Description": "Coat a tile or object in slick frost. The next creature entering the tile suffers -1 movement on their next turn.",
+        "Upcast": "",
+        "Lore": "Cold leaves warnings, not wounds."
+    },
+    {
+        "ID": "EC0-3",
+        "Category": "Elemental",
+        "Name": "Ember Touch",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "Touch",
+        "Description": "Deal 1 Fire Damage. If the target is affected by Cold or Ice, remove that effect before dealing damage.",
+        "Upcast": "",
+        "Lore": "Fire resolves disputes quickly."
+    },
+
+
+    {
+        "ID": "EC1-14",
+        "Category": "Elemental",
+        "Name": "Thermal Shock",
+        "Cost": "1",
+        "Type": "Reaction",
+        "Range": "5 units",
+        "Description": "When a creature affected by Fire takes Cold damage, or a creature affected by Cold takes Fire damage, trigger this spell. The creature takes 2 additional damage and is stunned until the end of their next turn.",
+        "Upcast": "Increase the bonus damage by +1.",
+        "Lore": "Nature punishes indecision."
+    },
+    {
+        "ID": "EC1-15",
+        "Category": "Elemental",
+        "Name": "Conductive Surge",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Area (Radius 2)",
+        "Description": "Deal 1 Lightning Damage to all creatures in the area. Creatures that are Wet, Metallic, or standing in water instead take 2 damage.",
+        "Upcast": "Increase base damage by +1.",
+        "Lore": "Electricity follows opportunity."
+    },
+    {
+        "ID": "EC2-4",
+        "Category": "Elemental",
+        "Name": "Quench the Flame",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "5 units",
+        "Description": "Extinguish all Fire effects in range. For each Fire effect removed, choose a creature in range to heal 3 Health.",
+        "Upcast": "Affect one additional creature per Fire effect removed.",
+        "Lore": "Even fire can be taught restraint."
+    },
+    {
+        "ID": "EC2-5",
+        "Category": "Elemental",
+        "Name": "Shatterpoint",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "Target a creature affected by Cold or restrained by ice. They take 3 damage. If the effect was Cold-based terrain or immobilization, it is destroyed.",
+        "Upcast": "Increase damage by +1.",
+        "Lore": "Frozen things break cleanly."
     }
 ]
