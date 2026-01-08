@@ -1506,5 +1506,27 @@
         "Description": "Target a creature affected by Cold or restrained by ice. They take 3 damage. If the effect was Cold-based terrain or immobilization, it is destroyed.",
         "Upcast": "Increase damage by +1.",
         "Lore": "Frozen things break cleanly."
+    },
+    {
+        "ID": "AC1-15",
+        "Category": "Arcane",
+        "Name": "Climber's companion",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "Deploy a magical ladder that can support itself in any orientation, it is 3 units tall. The ladder is dismissed when you reach the top and step off, or when you are not within 10 units of it.",
+        "Upcast": "Increase height by +2.",
+        "Lore": "Always useful to have one of these around."
+    },
+    {
+        "ID": "AC1-15",
+        "Category": "Arcane",
+        "Name": "Pocket Workshop",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "You deploy a compact 1 unit workshop, it grants you the benefits of a simple workshop, an apprentice brewers kit, an anvil and a ritualist station.",
+        "Upcast": "The benefits increase by 1 tier.",
+        "Lore": "Always useful to have one of these around."
     }
 ]
