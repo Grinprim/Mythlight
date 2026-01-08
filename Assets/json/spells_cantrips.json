@@ -1098,5 +1098,131 @@
         "Description": "You attune to elemental currents. You can sense the presence of strong elemental effects, active spells, or elemental creatures within a short distance.",
         "Upcast": "Level 2+: Increase sensing range to 12 units. Level 3+: You can identify the dominant element and its intensity.",
         "Lore": "Aether is the breath between elements, heard only by those who listen."
+    },
+    {
+        "ID": "EC1-11",
+        "Category": "Elemental",
+        "Name": "Infernus",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "You create a Tile of Rough Magmatic terrain. Any creature standing on the tile takes 1 damage each creatures turn.",
+        "Upcast": "Level 2+: You can create +1 tile. Level 3+: Creatures must roll [Fortitude] to escape the tile.",
+        "Lore": "Aether is the breath between elements, heard only by those who listen."
+    },
+    
+    
+    
+    
+    
+    {
+        "ID": "AC1-13",
+        "Category": "Arcane",
+        "Name": "Mana Brace",
+        "Cost": "1",
+        "Type": "Reaction",
+        "Range": "Self",
+        "Description": "When you would be pushed, pulled, or knocked prone, negate the movement and reduce any damage taken by 1.",
+        "Upcast": "Reduce damage by an additional +1.",
+        "Lore": "When reality shifts, dig your heels into mana."
+    },
+    {
+        "ID": "AC2-2",
+        "Category": "Arcane",
+        "Name": "Spell Lattice",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "Until the start of your next turn, the first time you or an ally within 3 units is targeted by a spell, impose -3 Accuracy on that spell.",
+        "Upcast": "Protect one additional ally.",
+        "Lore": "Interference patterns woven with intent."
+    },
+    {
+        "ID": "DC1-12",
+        "Category": "Divine",
+        "Name": "Shared Benediction",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Touch",
+        "Description": "Bless a creature. Until the end of your next turn, when they gain healing or a bonus, you gain the same benefit.",
+        "Upcast": "Extend the duration by +1 turn.",
+        "Lore": "Grace multiplies when it is not hoarded."
+    },
+    {
+        "ID": "DC2-2",
+        "Category": "Divine",
+        "Name": "Lightbearer’s Reckoning",
+        "Cost": "2",
+        "Type": "Reaction",
+        "Range": "5 units",
+        "Description": "When an ally within range is reduced to 0 Health, they instead remain at 1 Health and emit radiant light. Enemies within 2 units take 2 Light Damage.",
+        "Upcast": "Increase the Radiant Damage by +1.",
+        "Lore": "Even falling can become testimony."
+    },
+    {
+        "ID": "OC1-13",
+        "Category": "Occult",
+        "Name": "Thought Leak",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Sight",
+        "Description": "A creature you can see takes 2 Psychic Damage. Until the end of their next turn, the first time they succeed on a roll, they take 1 Dark Damage.",
+        "Upcast": "The Dark damage increases by +1.",
+        "Lore": "Victory tastes bitter when the mind is cracked."
+    },
+    {
+        "ID": "OC2-12",
+        "Category": "Occult",
+        "Name": "Sentence of Stillness",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "Condemn a creature with oppressive silence. They cannot cast spells until the end of their next turn.",
+        "Upcast": "",
+        "Lore": "Judgment need not be loud to be absolute."
+    },
+    {
+        "ID": "CC1-12",
+        "Category": "Cosmic",
+        "Name": "Offset Trajectory",
+        "Cost": "1",
+        "Type": "Reaction",
+        "Range": "6 units",
+        "Description": "When a ranged attack or spell is made within range, shift either the attacker or the target 1 unit before the roll is resolved.",
+        "Upcast": "When multicasting, each additional cast increases the amount moved by 1 unit.",
+        "Lore": "A fraction of a degree decides everything."
+    },
+    {
+        "ID": "CC1-13",
+        "Category": "Cosmic",
+        "Name": "Probability Skew",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Sight",
+        "Description": "Choose a creature you can see. The next roll they make this turn gains either +2 or -2 Accuracy (your choice).",
+        "Upcast": "When multicasting, You may choose a different creature per cast.",
+        "Lore": "Chance bends easily when observed too closely."
+    },
+    {
+        "ID": "EC1-12",
+        "Category": "Elemental",
+        "Name": "Searing Wake",
+        "Cost": "1",
+        "Type": "Action",
+        "Range": "Self",
+        "Description": "Move up to 3 units. Each tile you leave behind becomes scorched terrain; the first creature to enter each tile takes 1 Fire Damage.",
+        "Upcast": "Level 2+: Increase movement by +2 units. Level 3+: Scorched tiles deal +1 damage.",
+        "Lore": "Fire remembers where you fled."
+    },
+    {
+        "ID": "EC2-2",
+        "Category": "Elemental",
+        "Name": "Cryostatic Lock",
+        "Cost": "2",
+        "Type": "Action",
+        "Range": "5 units",
+        "Description": "Encapsulate a creature in binding frost. They take 2 Cold Damage and are immobilized until the end of their next turn unless they roll [Fortitude].",
+        "Upcast": "Increase the Cold Damage by +1.",
+        "Lore": "Cold does not rush — it waits until escape is forgotten."
     }
 ]
