@@ -1224,5 +1224,73 @@
         "Description": "Encapsulate a creature in binding frost. They take 2 Cold Damage and are immobilized until the end of their next turn unless they roll [Fortitude].",
         "Upcast": "Increase the Cold Damage by +1.",
         "Lore": "Cold does not rush — it waits until escape is forgotten."
+    },
+
+    
+    {
+        "ID": "AC3-1",
+        "Category": "Arcane",
+        "Name": "Null Interval",
+        "Cost": "3",
+        "Type": "Reaction",
+        "Range": "Sight",
+        "Description": "When a creature within range resolves an action, suspend the result until the end of their next turn. Damage, movement, and conditions are delayed and apply simultaneously when the suspension ends.",
+        "Upcast": "You may choose to cancel the suspended effect instead of releasing it.",
+        "Lore": "A moment stolen from causality, returned with interest."
+    },
+    {
+        "ID": "AC4-1",
+        "Category": "Arcane",
+        "Name": "Grand Aegis Array",
+        "Cost": "4",
+        "Type": "Action",
+        "Range": "Self (Aura 4)",
+        "Description": "Until the end of your next turn, allies in range reduce all incoming damage by 6 and cannot be forcibly moved. Each ally may ignore one failed defense roll during the duration.",
+        "Upcast": "",
+        "Lore": "The battlefield locks into a single, immovable theorem."
+    },
+    {
+        "ID": "DC3-1",
+        "Category": "Divine",
+        "Name": "Litany of Restoration",
+        "Cost": "3",
+        "Type": "Action",
+        "Range": "Aura 3",
+        "Description": "Each ally in range immediately heals 8 Health and removes one negative condition. Until the start of your next turn, the first time each ally would take damage, reduce it by 6.",
+        "Upcast": "Healing increased by +4 and damage reduction applies twice.",
+        "Lore": "Faith spoken aloud becomes shelter."
+    },
+    {
+        "ID": "DC4-1",
+        "Category": "Divine",
+        "Name": "Judgment Made Manifest",
+        "Cost": "4",
+        "Type": "Action",
+        "Range": "Sight",
+        "Description": "Call down radiant judgment on a creature. They take 8 Radiant Damage. If this damage reduces them to 0 Health, all allies who can see the target heal 6 Health.",
+        "Upcast": "",
+        "Lore": "Mercy waits for those who survive the light."
+    },
+    {
+        "ID": "EC3-1",
+        "Category": "Elemental",
+        "Name": "Stormbound Expanse",
+        "Cost": "3",
+        "Type": "Action",
+        "Range": "Area (Radius 4)",
+        "Description": "The area becomes a violent lightning field until the end of your next turn. Creatures entering or starting their turn in the area take 4 Lightning Damage and suffer -4 Accuracy.",
+        "Upcast": "Damage increases by +4 and the area becomes difficult terrain.",
+        "Lore": "The storm claims territory, not targets."
+    },
+    {
+        "ID": "EC4-1",
+        "Category": "Elemental",
+        "Name": "Cataclysm Seed",
+        "Cost": "4",
+        "Type": "Action",
+        "Range": "6 units",
+        "Description": "Plant a volatile elemental core at a point in range. At the start of your next turn, it detonates, dealing 8 damage of an element of your choice to all creatures within 3 units and reshaping the terrain appropriately.",
+        "Upcast": "",
+        "Lore": "Every disaster begins as something small and patient."
     }
 ]
