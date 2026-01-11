@@ -8,6 +8,24 @@
     <link rel="icon" type="image/svg+xml" href="../img/Mythlight Logo White.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/styles.css">
+    
+<style>
+.map-tile {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #334155;
+}
+.map-tile.center { background: #6366f1; }
+.map-tile.range { background: rgba(99,102,241,0.3); }
+.map-tile.radius { background: rgba(239,68,68,0.3); }
+
+.condition-card {
+    background: rgba(15,23,42,0.6);
+    border: 1px solid #334155;
+    padding: 12px;
+    border-radius: 10px;
+}
+</style>
 </head>
 
 <body class="bg-custom-dark text-slate-300">
@@ -727,7 +745,183 @@
                             is within melee range.
                         </div>
                     </div>
-                </section>
+                </section><section id="narrator-rules" class="space-y-16">
+
+<!-- ================= COMBAT MAP ================= -->
+<section class="rule-card space-y-6">
+    <h2 class="text-3xl text-white font-bold">Combat Map & Positioning</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-3 text-sm">
+            <p>
+                Combat occurs on a <strong class="text-white">grid-based map</strong>.
+                Each square is <strong class="text-white">1 Unit</strong>.
+            </p>
+
+            <ul class="list-disc ml-5 space-y-1">
+                <li><strong>Movement:</strong> Declared before moving</li>
+                <li><strong>Diagonal:</strong> Costs 1 Unit</li>
+                <li><strong>Range:</strong> Counted in Units</li>
+                <li><strong>Radius:</strong> Affects all tiles from a center point</li>
+            </ul>
+        </div>
+
+        <!-- Visual Map -->
+        <div class="grid grid-cols-5 gap-1 bg-slate-900/50 p-4 rounded-xl border border-slate-700">
+            <span class="map-tile"></span><span class="map-tile"></span><span class="map-tile range"></span><span class="map-tile"></span><span class="map-tile"></span>
+            <span class="map-tile"></span><span class="map-tile radius"></span><span class="map-tile center"></span><span class="map-tile radius"></span><span class="map-tile"></span>
+            <span class="map-tile"></span><span class="map-tile"></span><span class="map-tile range"></span><span class="map-tile"></span><span class="map-tile"></span>
+            <span class="map-tile"></span><span class="map-tile"></span><span class="map-tile"></span><span class="map-tile"></span><span class="map-tile"></span>
+            <span class="map-tile"></span><span class="map-tile"></span><span class="map-tile"></span><span class="map-tile"></span><span class="map-tile"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONDITIONS ================= -->
+<section class="rule-card space-y-6">
+    <h2 class="text-3xl text-white font-bold">Expanded Conditions</h2>
+
+    <div class="grid md:grid-cols-3 gap-4">
+        <div class="condition-card">
+            <strong>Poison</strong>
+            <p>Stacks in severity. Each stack increases damage per turn.</p>
+            <p class="text-xs text-slate-400">Removed via antidotes, rest, or medicine.</p>
+        </div>
+
+        <div class="condition-card">
+            <strong>Bleed</strong>
+            <p>Stacks apply ongoing physical damage.</p>
+            <p class="text-xs text-slate-400">Can be staunched with an action.</p>
+        </div>
+
+        <div class="condition-card">
+            <strong>Slow</strong>
+            <p>Each stack reduces movement by 1 Unit.</p>
+            <p class="text-xs text-slate-400">Ends when stacks reach zero.</p>
+        </div>
+    </div>
+
+    <p class="text-sm text-slate-400">
+        Ending conditions in combat usually costs an <strong class="text-white">Action</strong> or
+        requires a <strong class="text-white">successful check</strong>.
+    </p>
+</section>
+
+<!-- ================= MOUNTED COMBAT ================= -->
+<section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
+
+    <ul class="list-disc ml-5 text-sm space-y-2">
+        <li>Mounts act on their rider’s initiative</li>
+        <li>Movement uses the mount’s speed</li>
+        <li>Mounted characters gain advantage on movement-based checks</li>
+        <li>Forced dismounts trigger Reflex checks</li>
+    </ul>
+</section>
+
+<!-- ================= SIZE RULES ================= -->
+<section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Size Categories</h2>
+
+    <table class="w-full text-sm">
+        <thead>
+            <tr>
+                <th>Size</th>
+                <th>Space</th>
+                <th>Reach</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row"><td>Small</td><td>1</td><td>1</td><td>Stealth advantage</td></tr>
+            <tr class="row"><td>Medium</td><td>1</td><td>1</td><td>Standard</td></tr>
+            <tr class="row"><td>Large</td><td>2×2</td><td>2</td><td>Harder to move through</td></tr>
+            <tr class="row"><td>Huge</td><td>3×3+</td><td>3+</td><td>Area threat</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ================= COMPANIONS ================= -->
+<section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
+
+    <ul class="list-disc ml-5 text-sm space-y-2">
+        <li>Companions act after their controller</li>
+        <li>Commands cost a Bonus or Action</li>
+        <li>Uncommanded companions act defensively</li>
+        <li>Simple stat blocks — no skills required</li>
+    </ul>
+</section>
+
+<!-- ================= COVER ================= -->
+<section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Cover Rules</h2>
+
+    <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div class="condition-card">Half Cover: +1 Defense</div>
+        <div class="condition-card">Full Cover: Cannot be targeted</div>
+        <div class="condition-card">Improvised Cover: Narrator ruling</div>
+    </div>
+
+    <p class="text-xs text-slate-400">
+        Characters may create cover using objects, terrain, or magic.
+    </p>
+</section>
+
+<!-- ================= ACTION ECONOMY ================= -->
+<section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Actions & Reactions</h2>
+
+    <ul class="list-disc ml-5 text-sm space-y-2">
+        <li>1 Action per turn</li>
+        <li>1 Bonus (if available)</li>
+        <li>1 Reaction per round</li>
+        <li>Opportunity Attacks trigger on careless movement</li>
+    </ul>
+</section>
+
+<!-- ================= RITUALS & CRAFTING ================= -->
+<section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Rituals & Creation</h2>
+
+    <p class="text-sm">
+        Rituals, crafting, brewing, and smithing are long-form actions that
+        prioritize preparation over speed.
+    </p>
+
+    <ul class="list-disc ml-5 text-sm space-y-1">
+        <li>Require time, materials, and space</li>
+        <li>Failure has narrative consequences</li>
+        <li>Success may create lasting effects</li>
+    </ul>
+</section>
+
+<!-- ================= NARRATOR HELP ================= -->
+<section class="rule-card space-y-6">
+    <h2 class="text-3xl text-white font-bold">Narrator Guidance</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+            <strong class="text-white">Creating Creatures</strong>
+            <ul class="list-disc ml-5 space-y-1">
+                <li>Pick 3–5 stats</li>
+                <li>No skills needed</li>
+                <li>1–3 defining traits</li>
+            </ul>
+        </div>
+
+        <div>
+            <strong class="text-white">Challenge Score (CS)</strong>
+            <ul class="list-disc ml-5 space-y-1">
+                <li>CS = threat, not HP sponge</li>
+                <li>Match party resources, not level</li>
+                <li>Increase CS with terrain & pressure</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</section>
 
             </div>
         </div>
