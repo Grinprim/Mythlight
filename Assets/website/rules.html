@@ -122,7 +122,7 @@
                                 </div>
                                 <div class="bg-red-900/20 p-4 rounded border border-red-500/30">
                                     <strong class="text-red-400 block mb-1">Disadvantage</strong>
-                                    Remove one d6 (1d6 total). You may reduce pool to 0d6.
+                                    Remove one d6 (1d6 total). You may reduce pool to 0d6. In addition you loose the ability to Midnight.
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                             <ul class="list-disc ml-4 mt-2 text-xs text-slate-400">
                                 <li>Automatically hits.</li>
                                 <li>Deals <strong>Double Damage</strong>.</li>
-                                <li>With Advantage: 3+ sixes increases multiplier.</li>
+                                <li>With Advantage: The trigger remains the same, however any additional rolled sixes will increase the modifier. (ex. 3 sixes = 3x Damage)</li>
                             </ul>
                         </div>
                         <div class="rule-card border-l-4 border-l-red-600">
@@ -164,7 +164,7 @@
                         <h4 class="text-white font-bold mb-2">Grace Mechanics</h4>
                         <p class="text-sm mb-2">You acquire grace as you fail. Use it in dire moments.</p>
                         <ul class="list-disc ml-4 text-xs text-slate-400 space-y-1">
-                            <li><strong>Gain:</strong> +1 Grace on failure. +1 per subsequent consecutive failure.</li>
+                            <li><strong>Gain:</strong> +1 Grace on failure.</li>
                             <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail
                                 twice to grow again).</li>
                             <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max
@@ -187,7 +187,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-bold mb-2">Rest (>10 mins)</h4>
-                                <p>Regain Hits equal to Level. Longer rests stack (1hr = 2x Level). Max 2 rests per day.
+                                <p>Regain Health equal to your Level. Longer rests will heal more, equalling your Level for each Hour rested. Max 2 rests per day.
                                 </p>
                             </div>
                             <div>
@@ -317,17 +317,44 @@
                     </div>
                 </section>
 
+                <section class="rule-card space-y-4">
+    <h2 class="text-3xl text-white font-bold">Health & Guard</h2>
+
+    <p class="text-sm text-slate-300">
+        Health represents a creature’s ability to remain functional in combat.
+        It does not represent vitality alone —
+        injuries, exhaustion, and strain are all represented abstractly.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+            <strong class="text-white block mb-1">Health</strong>
+            <p>When Health reaches 0, the creature is incapacitated.</p>
+            <p>For players health is determined based on this formula: Health = [Level + Brawn * Level]</p>
+        </div>
+
+        <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+            <strong class="text-white block mb-1">Guard</strong>
+            <p>Temporary HP. Always lost before Health. Cannot be healed in any way once lost. Only gainable through traits or if given by others.</p>
+        </div>
+
+        <h4 class="text-white font-bold mb-2">Death</h4>
+                            <p class="text-sm mb-2"><strong>0 Hits:</strong> Unconscious.</p>
+                            <p class="text-sm mb-2"><strong>Final Blow:</strong> Attacker declares on unconscious
+                                target. Instantly kills unless resisted by Fortitude (up to 4 times).</p>
+                            <p class="text-sm"><strong>Certain Death:</strong> Negative HP equal to Max HP kills
+                                instantly.</p>
+    </div>
+</section>
+                
+
                 <section id="progression" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">05</span>
+                        <span class="section-number">06</span>
                         Progression
                     </div>
                     <div class="rule-card">
                         <ul class="space-y-4">
-                            <li>
-                                <strong class="text-white block">Health Calculation</strong>
-                                <span class="font-mono text-indigo-300">HP = Level + (Brawn Modifier × Level)</span>
-                            </li>
                             <li>
                                 <strong class="text-white block">Traits</strong>
                                 Traits are your characters main form of progression, they are how your character gains power, and can be picked up when leveling up.
@@ -412,7 +439,7 @@
 
                 <section id="spellcasting" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">06</span>
+                        <span class="section-number">07</span>
                         Spellcasting
                     </div>
                     <section class="rule-card">
@@ -549,7 +576,7 @@
 
                 <section id="equipment" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">07</span>
+                        <span class="section-number">08</span>
                         Equipment & Encumberance
                     </div>
                     <div class="rule-card">
@@ -635,7 +662,7 @@
         </section>
                 <section id="combat" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">08</span>
+                        <span class="section-number">09</span>
                         Combat Mechanics
                     </div>
                     
@@ -650,7 +677,7 @@
                             before initiative or turn delay</p>
                         <div class="bg-slate-800 p-4 rounded border border-slate-600 mb-4">
                             <strong class="text-white">Action Economy</strong><br>
-                            Each Turn = <strong>2 Actions</strong>.<br>
+                            Each Turn = <strong>2 Actions</strong>. Only 1 Attack per turn (Some traits bypass.)<br>
                             Each Scene = <strong>1 Reaction</strong> (Only valid reaction by default is Opportunity
                             Attack leaving melee).
                         </div>
@@ -686,32 +713,6 @@
                     </div>
                 </section>
 
-                <section id="damage" class="scroll-mt-32">
-                    <div class="section-header">
-                        <span class="section-number">09</span>
-                        Health & Death
-                    </div>
-                    <div class="grid md:grid-cols-1 gap-6">
-                        <div class="rule-card">
-                            <h4 class="text-white font-bold mb-2">Guard</h4>
-                            <p class="text-sm"><strong>Guard:</strong> Temporary HP. Always lost before Health. Cannot
-                                be healed in any way once lost. Only gainable through traits or if given by others.</p>
-                            <br>
-                            <h4 class="text-white font-bold mb-2">Health</h4>
-                            <p class="text-sm"><strong>Health:</strong> Measured in hits and subtracted by taking
-                                damage, can be healed up to your maximum. Overhealing does nothing. Regenerates on rests
-                                and Sleep.</p>
-                            <br>
-                            <h4 class="text-white font-bold mb-2">Death</h4>
-                            <p class="text-sm mb-2"><strong>0 Hits:</strong> Unconscious.</p>
-                            <p class="text-sm mb-2"><strong>Final Blow:</strong> Attacker declares on unconscious
-                                target. Instantly kills unless resisted by Fortitude (up to 3 times).</p>
-                            <p class="text-sm"><strong>Certain Death:</strong> Negative HP equal to Max HP kills
-                                instantly.</p>
-                        </div>
-                    </div>
-                </section>
-
                 <section id="conditions" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">10</span>
@@ -737,7 +738,7 @@
 
                 <section id="environment" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">11</span>
+                        <span class="section-number">12</span>
                         Cover & Terrain
                     </div>
                     <div class="rule-card">
