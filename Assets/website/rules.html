@@ -745,22 +745,56 @@
                         <span class="section-number">10</span>
                         Conditions
                     </div>
-                    <div class="rule-card">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
-                            <div><span class="text-red-400 font-bold">Bleeding:</span> Reduce healing by amount of Bleed
-                            </div>
-                            <div><span class="text-red-400 font-bold">Stunned:</span> Lose 1 action.</div>
-                            <div><span class="text-red-400 font-bold">Prone:</span> No move. Melee hits against you have
-                                adv.</div>
-                            <div><span class="text-red-400 font-bold">Restrained:</span> No move. Attacks against you
-                                have adv.</div>
-                            <div><span class="text-red-400 font-bold">Exhausted:</span> Disadv physical checks. Move
-                                halved.</div>
-                            <div><span class="text-red-400 font-bold">Weakened:</span> Attacks deal half damage.</div>
-                            <div><span class="text-red-400 font-bold">Blinded:</span> Auto-fail sight checks.</div>
-                            <div><span class="text-red-400 font-bold">Slowed:</span> Move halved. No reactions.</div>
-                        </div>
-                    </div>
+                    <section class="rule-card space-y-8">
+            <h2 class="text-3xl text-white font-bold">Conditions</h2>
+
+            <p class="text-sm text-slate-400">
+                Conditions represent ongoing states. Some stack, others persist until removed.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+
+                <div class="condition-card">
+                    <strong class="text-red-400">Poison</strong>
+                    <p>Stacks. Each stack deals damage at turn start.</p>
+                </div>
+
+                <div class="condition-card">
+                    <strong class="text-red-400">Bleeding</strong>
+                    <p>Stacks. Reduces healing by stack value.</p>
+                </div>
+
+                <div class="condition-card">
+                    <strong class="text-red-400">Slow</strong>
+                    <p>Stacks. −1 Unit movement per stack.</p>
+                </div>
+
+                <div class="condition-card"><strong>Stunned</strong>
+                    <p>Lose 1 Action.</p>
+                </div>
+                <div class="condition-card"><strong>Prone</strong>
+                    <p>No movement. Melee attacks gain Advantage.</p>
+                </div>
+                <div class="condition-card"><strong>Restrained</strong>
+                    <p>No movement. Attacks against you gain Advantage.</p>
+                </div>
+                <div class="condition-card"><strong>Exhausted</strong>
+                    <p>Disadvantage on physical checks.</p>
+                </div>
+                <div class="condition-card"><strong>Weakened</strong>
+                    <p>Deal half damage.</p>
+                </div>
+                <div class="condition-card"><strong>Blinded</strong>
+                    <p>Auto-fail sight checks.</p>
+                </div>
+
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
+                <strong class="text-white">Removal</strong><br>
+                Conditions may require checks, items, magic, or rest. Multiple stacks may be removed at once.
+            </div>
+        </section>
                 </section>
 
                 <section id="environment" class="scroll-mt-32">
