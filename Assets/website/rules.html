@@ -191,24 +191,7 @@
                         <span class="section-number">02</span>
                         Time & Rests
                     </div>
-                    <div class="rule-card">
-                        <div class="grid md:grid-cols-2 gap-6 text-sm">
-                            <div>
-                                <h4 class="text-white font-bold mb-2">Rest (>10 mins)</h4>
-                                <p>Regain Health equal to your Level. Longer rests will heal more, equalling your Level for each Hour rested. Max 2 rests per day.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold mb-2">Sleep (8 hrs)</h4>
-                                <p>Full recovery of HP and Mana. Removes Fatigue. Sleeping less avoids exhaustion but
-                                    may not restore resources.</p>
-                            </div>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-slate-700">
-                            <p class="text-xs text-red-400"><strong>Fatigue:</strong> -2 penalty per level (stacking).
-                                Level 6 without sleep is fatal.</p>
-                        </div>
-                    </div>
+                    
                 </section>
             </div>
 
@@ -348,13 +331,27 @@
         </div>
             <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
         <strong class="text-white block mb-1">Death</strong>
-                            <p><strong>0 Health:</strong> Unconscious.</p>
-                            <p><strong>Final Blow:</strong> Attacker declares on unconscious
-                                target. Instantly kills unless resisted by Fortitude (up to 4 times).</p>
-                            <p><strong>Certain Death:</strong> Negative HP equal to Max HP kills
-                                instantly.</p>
+            <p>At 0 Health, you are unconscious. While unconscious, only final blows can harm you; you can resist 4 final blows before dying, these refresh each Sleep. If damage reduces you from alive to Negative max Health, you die instantly.</p>
                  </div>
     </div>
+                     <div class="rule-card">
+                        <div class="grid md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <h4 class="text-white font-bold mb-2">Rest (>10 mins)</h4>
+                                <p>Regain Health equal to your Level. Longer rests will heal more, equalling your Level for each Hour rested. Max 2 rests per day.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2">Sleep (8 hrs)</h4>
+                                <p>Full recovery of HP and Mana. Removes Fatigue. Sleeping less avoids exhaustion but
+                                    may not restore resources.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-700">
+                            <p class="text-xs text-red-400"><strong>Fatigue:</strong> -2 penalty per level (stacking).
+                                Level 6 without sleep is fatal.</p>
+                        </div>
+                    </div>
 </section>
                 <section id="progression" class="scroll-mt-32">
                     <div class="section-header">
