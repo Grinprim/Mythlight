@@ -25,6 +25,12 @@
     padding: 12px;
     border-radius: 10px;
 }
+.correct {
+    color: lime;
+}
+.wrong {
+    color: rose;
+}
 </style>
 </head>
 
@@ -655,8 +661,8 @@
                     <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Becouse of this movement is also declared on the grid as stated bellow. To know how much you can move look at the Speed stat on your character sheet.</p>
                     <ul class="list-disc ml-5 space-y-1 mt-2">
                         <li>Each Tile = <strong>1 Unit of Speed</strong></li>
-                        <li class="text-lime">Movement is limited too tiles directly adjacent to one another.</li>
-                        <li class="text-rose">Diagonal movement does not skip over tiles, you must draw a "staircase" to the tile you want to go to.</li>
+                        <li class="correct"> ✔ Movement is limited too tiles directly adjacent to one another.</li>
+                        <li class="wrong"> ✘ Diagonal movement does not skip over tiles.</li>
                     </ul>
                 </div>
 
@@ -756,36 +762,36 @@
 
                 <div class="condition-card">
                     <strong class="text-red-400">Poison</strong>
-                    <p>Stacks. Each stack deals damage at turn start.</p>
+                    <p>This condition stacks. When you take Poison damage, gain stacks equal to the damage taken. Each scene, one stack expires and deals <strong class="text-lime-400">1 Poison damage</strong>.</p>
                 </div>
 
                 <div class="condition-card">
-                    <strong class="text-red-400">Bleeding</strong>
-                    <p>Stacks. Reduces healing by stack value.</p>
+                    <strong class="text-red-400">Bleed</strong>
+                    <p>This condition stacks. Each stack reduces healing by 1. One stack expires each scene.</p>
                 </div>
 
                 <div class="condition-card">
                     <strong class="text-red-400">Slow</strong>
-                    <p>Stacks. −1 Unit movement per stack.</p>
+                    <p>This condition stacks. You lose 1 tile of movement per stack, cannot make reactions while you have any stacks, and all stacks expire next scene if not reapplied.</p>
                 </div>
 
-                <div class="condition-card"><strong>Stunned</strong>
-                    <p>Lose 1 Action.</p>
+                <div class="condition-card"><strong class="text-red-400">Stunned</strong>
+                    <p>This condition stacks. Each stack reduces your actions per turn by 1; if reduced to 0, your turn is skipped.</p>
                 </div>
-                <div class="condition-card"><strong>Prone</strong>
-                    <p>No movement. Melee attacks gain Advantage.</p>
+                <div class="condition-card"><strong class="text-red-400">Prone</strong>
+                    <p>Your movement becomes 0, attacks against you have advantage, and standing up costs half your movement.</p>
                 </div>
-                <div class="condition-card"><strong>Restrained</strong>
-                    <p>No movement. Attacks against you gain Advantage.</p>
+                <div class="condition-card"><strong class="text-red-400">Restrained</strong>
+                    <p>Your movement becomes 0, attacks against you have advantage. Ending this condition depends on the type of restraints, though usually an Athletics check is required.</p>
                 </div>
-                <div class="condition-card"><strong>Exhausted</strong>
-                    <p>Disadvantage on physical checks.</p>
+                <div class="condition-card"><strong class="text-red-400">Exhausted</strong>
+                    <p>This condition stacks. Each stack grants 1 temporary Fatigue; one stack expires each scene, and Fatigue gained this way cannot be fatal.</p>
                 </div>
-                <div class="condition-card"><strong>Weakened</strong>
-                    <p>Deal half damage.</p>
+                <div class="condition-card"><strong class="text-red-400">Weakened</strong>
+                    <p>This condition stacks. Each stack reduces damage dealt by 1; if an attack would deal 0 damage, it cannot be made. All stacks expire next scene if not reapplied.</p>
                 </div>
-                <div class="condition-card"><strong>Blinded</strong>
-                    <p>Auto-fail sight checks.</p>
+                <div class="condition-card"><strong class="text-red-400">Blinded</strong>
+                    <p>You have disadvantage on attacks you make, attacks against you gain advantage.</p>
                 </div>
 
             </div>
