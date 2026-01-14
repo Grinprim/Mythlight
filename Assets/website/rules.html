@@ -31,6 +31,12 @@
 .wrong {
     color: red;
 }
+.notice {
+    color: yellow;
+}
+.notice_blue {
+    color: rgb(102, 255, 255);
+}
 </style>
 </head>
 
@@ -658,7 +664,7 @@
 
             <div class="grid md:grid-cols-2 gap-6 text-sm">
                 <div>
-                    <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Becouse of this movement is also declared on the grid as stated bellow. To know how much you can move look at the Speed stat on your character sheet.</p>
+                    <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Becouse of this movement is also declared on the grid as stated bellow. To know how much you can move look at the <strong>Speed stat</strong> on your character sheet.</p>
                     <ul class="list-disc ml-5 space-y-1 mt-2">
                         <li>Each Tile = <strong>1 Unit of Speed</strong></li>
                         <li class="correct"> ✔ Movement is limited too tiles directly adjacent to one another.</li>
@@ -668,6 +674,18 @@
 
                 <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
                     <img src="../img/movement_rules.png">
+                </div>
+
+                <div>
+                    <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Becouse of this movement is also declared on the grid as stated bellow. To know how much you can move look at the Speed stat on your character sheet.</p>
+                    <ul class="list-disc ml-5 space-y-1 mt-2">
+                        <li class="notice_blue"> ✎ The maximum distance you can jump is half your Speed (rounded up)</li>
+                        <li class="wrong"> ✘ You cannot jump through an area if any space along the path is occupied.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
+                    <img src="../img/jump.png">
                 </div>
             </div>
         </section>
@@ -680,10 +698,11 @@
             <div class="grid md:grid-cols-2 gap-6 text-sm">
                 <div>
                     <ul class="list-disc ml-5 space-y-2">
-                        <li><strong>Max Range:</strong> Attacks beyond range automatically fail</li>
-                        <li><strong>Melee Threat:</strong> Ranged attacks while adjacent to an enemy suffer Disadvantage</li>
-                        <li><strong>Line of Sight:</strong> Solid obstruction blocks ranged attacks</li>
-                        <li><strong>Elevation:</strong> May negate cover (Narrator ruling)</li>
+                        <li class="correct"> ✔ Any creature within range can be shot at.</li>
+                        <li class="wrong">✘ Attacks beyond range automatically fail.</li>
+                        <li class="notice">✎ Ranged attacks while adjacent to an enemy suffer Disadvantage</li>
+                        <li>Solid obstructions block ranged attacks</li>
+                        <li>Elevation may negate cover (Narrator ruling)</li>
                     </ul>
                 </div>
 
