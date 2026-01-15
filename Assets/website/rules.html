@@ -93,7 +93,7 @@
             <a href="#equipment" class="sidebar-link">Equipment</a>
             <div class="nav-group-title">Combat Rules</div>
             <a href="#movement" class="sidebar-link">Movement</a>
-            <a href="#size" class="sidebar-link">Size</a>
+            <a href="#size" class="sidebar-link">Size & Adjacency</a>
             <a href="#range" class="sidebar-link">Ranged Combat</a>
             <a href="#combat" class="sidebar-link">Turn Structure & Action Economy</a>
             <a href="#companion" class="sidebar-link">Companions</a>
@@ -675,9 +675,9 @@
 
                 <div class="section-header">
                         <span class="section-number">11</span>
-                        Size
+                        Size & Adjacency
                     </div>
-                <section id="movement" class="rule-card space-y-6">
+                <section id="size" class="rule-card space-y-6">
                  
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
                         <div>
@@ -686,14 +686,32 @@
                             <ul class="list-disc ml-5 space-y-1 mt-2">
                                 <li> <strong class="notice_blue">Small [1 x 1]:</strong> While sharing their tile size with medium, small creatures do appear smaller, and <b>CAN</b> occupy spaces of large creatures and above with no penalty.</li>
                                 <li> <strong class="correct">Medium [1 x 1]:</strong>This is the standard tile size for most creatures, players should not exceed this size without the Narrators express permison.</li>
-                                <li> <strong class="notice">>Large [2 x 2]:</strong Larger creatures, these will be your alphas of certain animals, or possibly a large mech. Whatever you need really</li>
+                                <li> <strong class="notice">Large [2 x 2]:</strong> Larger creatures, these will be your alphas of certain animals, or possibly a large mech. Whatever you need really</li>
                                 <li> <strong class="wrong">Huge [3 x 3]:</strong> These should only be used to represent the biggest of the big, creatures that really aren't meant to be fought.</li>
                             </ul>
+                            <br>
                             <p>Creatures larger than huge should not have 1 solid "Hitbox" but should instead be asembled out of multiple smaller size categories (Head is Medium, Body is huge, wings are Large etc.)</p>
                         </div>
 
                         <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
                             <img src="../img/size.png" alt="Size Diagram">
+                        </div>
+
+                        
+                        <div>
+                            <p>Certain spells and effects will specify a radius which is useful for circular effects on a square grid—though using a ruler to draw a circle is often simplest.</p>
+                            <ul class="list-disc ml-5 space-y-1 mt-2"> 
+                                <li class="notice_blue"> ✎ Radius will always start as an [Odd x Odd] square, with each unit expanding by 1 tile outward, to tiles direcly in contact with eachother.</li>
+                                <li>Determining the size of the radius is as simple as starting with a square, then adding tiles on to it, as shown in the diagram.</li>
+                                <li>The center square is what needs to remain within range with certain spells or effects, it can also be centered on the caster of said effects.</li>
+                            </ul>
+                            <br>
+                            <p>Squares are specified simply by 2x2 or 3x3 etc.</p>
+                            <p>Cones stretch out by half their length in each dirrection, and are also always odd.</p>
+                        </div>
+
+                        <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
+                            <img src="../img/radius.png" alt="Radius Diagram">
                         </div>
                     </div>
                 </section>
