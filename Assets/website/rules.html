@@ -677,26 +677,27 @@
                         <span class="section-number">11</span>
                         Size
                     </div>
-                <section id="size" class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Size Categories</h2>
+                <section id="movement" class="rule-card space-y-6">
+                 
+                    <div class="grid md:grid-cols-2 gap-6 text-sm">
+                        <div>
+                            <p>Size defines a creature’s "Hitbox" and affects rules like adjacency and AoE, which rely on measuring covered areas and nearby spaces. Understanding size interactions is essential.</p>
+                            <p>Creatures can also not ocupy the same space, this has only a few exceptions.</p>
+                            <ul class="list-disc ml-5 space-y-1 mt-2">
+                                <li> <strong class="notice_blue">Small [1 x 1]:</strong> While sharing their tile size with medium, small creatures do appear smaller, and <b>CAN</b> occupy spaces of large creatures and above with no penalty.</li>
+                                <li> <strong class="correct">Medium [1 x 1]:</strong>This is the standard tile size for most creatures, players should not exceed this size without the Narrators express permison.</li>
+                                <li> <strong class="notice">>Large [2 x 2]:</strong Larger creatures, these will be your alphas of certain animals, or possibly a large mech. Whatever you need really</li>
+                                <li> <strong class="wrong">Huge [3 x 3]:</strong> These should only be used to represent the biggest of the big, creatures that really aren't meant to be fought.</li>
+                            </ul>
+                            <p>Creatures larger than huge should not have 1 solid "Hitbox" but should instead be asembled out of multiple smaller size categories (Head is Medium, Body is huge, wings are Large etc.)</p>
+                        </div>
 
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Space</th>
-                                <th>Reach</th>
-                                <th>Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row"><td>Small</td><td>1</td><td>1</td><td>Stealth advantage</td></tr>
-                            <tr class="row"><td>Medium</td><td>1</td><td>1</td><td>Standard</td></tr>
-                            <tr class="row"><td>Large</td><td>2×2</td><td>2</td><td>Harder to move through</td></tr>
-                            <tr class="row"><td>Huge</td><td>3×3+</td><td>3+</td><td>Area threat</td></tr>
-                        </tbody>
-                    </table>
+                        <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
+                            <img src="../img/size.png" alt="Size Diagram">
+                        </div>
+                    </div>
                 </section>
+
                 
                 <div class="section-header">
                         <span class="section-number">12</span>
