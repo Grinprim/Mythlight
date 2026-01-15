@@ -244,12 +244,17 @@
                                     bonuses</strong> to base attributes—balanced overall, though some favor specific
                                 playstyles—and provides <strong>one unique trait</strong> that reflects the species’
                                 most characteristic abilities.
+                                <br><br>
+                                You pick one of your choice at character creation.
                             </div>
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-orange-400 block">Path</strong>
                                 Your character's past is primarily governed by their backstory, however, mechanically,
                                 you do get to select a path for your character. Paths grant you a couple skill modifiers
                                 and 1 trait.
+
+                                <br><br>
+                                You pick one of your choice at character creation.
                             </div>
                         </div>
                     </div>
@@ -274,7 +279,7 @@
                                     carrying capacity.</li>
                                 <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, un-armored
                                     defence.</li>
-                                <li><span class="keyword">Brawn:</span> Physical resistance (HP).</li>
+                                <li><span class="keyword">Brawn:</span> Physical resistance (Health).</li>
                             </ul>
                         </div>
                         <div class="rule-card">
@@ -316,7 +321,7 @@
         <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
             <strong class="text-white block mb-1">Health</strong>
             <p>Health represents a creature’s ability to remain functional in combat.</p>
-            <p>Players health is determined based on this formula: <br><span class="font-mono text-indigo-300">HP = Level + (Brawn Modifier × Level)</span></p>
+            <p>Players health is determined based on this formula: <br><span class="font-mono text-indigo-300">Health = Level + (Brawn Modifier × Level)</span></p>
         </div>
 
         <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
@@ -332,13 +337,12 @@
                         <div class="grid md:grid-cols-2 gap-6 text-sm">
                             <div>
                                 <h4 class="text-white font-bold mb-2">Rest (>10 mins)</h4>
-                                <p>Regain Health equal to your Level. Longer rests will heal more, equalling your Level for each Hour rested. Max 2 rests per day.
+                                <p>Regain Health equal to your Level. Longer rests will heal more, equalling your Level for each Hour rested, up to 4 x your Level. In addition rests also replenish active trait uses.<br><br> Max 2 rests per day.
                                 </p>
                             </div>
                             <div>
                                 <h4 class="text-white font-bold mb-2">Sleep (8 hrs)</h4>
-                                <p>Full recovery of HP and Mana. Removes Fatigue. Sleeping less avoids exhaustion but
-                                    may not restore resources.</p>
+                                <p>Full recovery of Health and Mana. Replenish your Active trait uses and remove 1 point of Fatigue.<br><br>Sleeping less than 6 hours, will only replenish half of your Health and Mana. But will still remove a point of fatigue.</p>
                             </div>
                         </div>
                         <div class="mt-4 pt-4 border-t border-slate-700">
@@ -355,8 +359,8 @@
                     <div class="rule-card">
                         <ul class="space-y-4">
                             <li>
-                                <strong class="text-white block">Traits</strong>
-                                Traits are your characters main form of progression, they are how your character gains power, and can be picked up when leveling up.
+                                <h1 class="text-white block">Traits</h1>
+                                In this system, there is no classes, there is no proffesions. Instead features, abilities and bonuses are aquired from traits. These are gained as you level up, and vary in price and power. They are the core of your characters progression, and should be picked with consideration<br><br>At level 1 you have 2 trait points to spend, use them wisely!
                             </li>
                             <li>
                                 <strong class="text-white block">Leveling table:</strong><br>
@@ -370,7 +374,7 @@
                                     </thead>
                                     <tbody class="bg-slate-900/40 text-sm text-slate-300">
                                         <tr class="border-t border-slate-800">
-                                            <td class="px-3 py-2 font-bold text-white">1</td>
+                                            <td class="px-3 py-2 font-bold text-indigo-300">1</td>
                                             <td>2</td>
                                             <td>4</td>
                                         </tr>
@@ -945,7 +949,7 @@
         <div>
             <strong class="text-white">Challenge Score (CS)</strong>
             <ul class="list-disc ml-5 space-y-1">
-                <li>CS = threat, not HP sponge</li>
+                <li>CS = threat, not Health sponge</li>
                 <li>Match party resources, not level</li>
                 <li>Increase CS with terrain & pressure</li>
             </ul>
