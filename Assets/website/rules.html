@@ -83,18 +83,22 @@
             <div class="nav-group-title">Core Rules</div>
             <a href="#intro" class="sidebar-link">Introduction</a>
             <a href="#resolution" class="sidebar-link">Resolution System (2d6)</a>
-            <a href="#time" class="sidebar-link">Time & Rests</a>
-            <div class="nav-group-title">Character Rules</div>
-            <a href="#creation" class="sidebar-link">Character Creation</a>
+            <div class="nav-group-title">Character Creation</div>
+            <a href="#creation" class="sidebar-link">Attributes</a>
+            <a href="#origin" class="sidebar-link">Species & Path</a>
             <a href="#skills" class="sidebar-link">Skills</a>
-            <a href="#progression" class="sidebar-link">Progression</a>
+            <a href="#damage" class="sidebar-link">Health, Guard & Death</a>
+            <a href="#progression" class="sidebar-link">Traits & Level ups</a>
             <a href="#spellcasting" class="sidebar-link">Spellcasting</a>
             <a href="#equipment" class="sidebar-link">Equipment</a>
             <div class="nav-group-title">Combat Rules</div>
-            <a href="#combat" class="sidebar-link">Combat Mechanics</a>
-            <a href="#damage" class="sidebar-link">Health, Guard & Death</a>
+            <a href="#move" class="sidebar-link">Movment</a>
+            <a href="#size" class="sidebar-link">Size</a>
+            <a href="#range" class="sidebar-link">Ranged Combat</a>
+            <a href="#combat" class="sidebar-link">Turn Structure & Action Economy</a>
+            <a href="#companion" class="sidebar-link">Companions</a>
             <a href="#conditions" class="sidebar-link">Conditions</a>
-            <a href="#environment" class="sidebar-link">Cover & Terrain</a>
+            <a href="#mount" class="sidebar-link">Mount & Vehicle Combat</a>
         </aside>
 
         <div class="content space-y-24">
@@ -189,31 +193,10 @@
                         </ul>
                     </div>
                 </section>
-
-                <section id="time" class="scroll-mt-32">
-                    <div class="section-header">
-                        <span class="section-number">02</span>
-                        Time & Rests
-                    </div>
-
-                    <div class="rule-card">
-                        <p class="mb-2">Rules for short rests, long rests, and timekeeping. Narrators may adapt to suit pacing.</p>
-                        <div class="grid md:grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <h4 class="text-white font-bold mb-1">Short Rest</h4>
-                                <p>Short rests (10+ minutes) recover small amounts of health and may refresh minor resources depending on traits.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold mb-1">Long Rest / Sleep</h4>
-                                <p>Sleeping (typically 8 hours) restores Health and Mana fully unless otherwise specified. Lack of sleep causes Fatigue.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
 
             <div id="player-section">
-                <h1 class="text-5xl font-bold text-white mb-4">Character Rules</h1>
+                <h1 class="text-5xl font-bold text-white mb-4">Character Creation</h1>
                 <p class="text-lg text-indigo-300">These rules govern character creation and how each part of your
                     character functions.</p>
                 <div class="mb-12 pt-12 border-t border-slate-800"></div>
@@ -221,7 +204,7 @@
                 <section id="creation" class="scroll-mt-32">
                     <div class="section-header">
                         <span class="section-number">03</span>
-                        Core Attributes + Species & Path
+                        Core Attributes
                     </div>
                     <div class="rule-card">
                         <h3 class="text-xl text-white font-bold mb-4">Attributes (Point Buy)</h3>
@@ -246,9 +229,12 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        Species & Path
+                    </div>
                     <div class="rule-card">
-                        <h3 class="text-xl text-white font-bold mb-4">Species & Path</h3>
+                        <h3 id="origin" class="text-xl text-white font-bold mb-4">Species & Path</h3>
                         <p class="mb-4">Your character is more than just numbers — it's also your past, culture and
                             appearance. Use these to inform roleplay and mechanical choices.</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -270,7 +256,7 @@
 
                 <section id="skills" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">04</span>
+                        <span class="section-number">05</span>
                         Skills
                     </div>
                     <p class="mb-6">Each attribute governs specific skills, which can be enhanced using <strong>skill
@@ -318,7 +304,7 @@
                 </section>
 
                 <div class="section-header">
-                    <span class="section-number">05</span>
+                    <span class="section-number">06</span>
                     Health & Guard
                 </div>
 
@@ -360,14 +346,18 @@
 
                 <section id="progression" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">06</span>
-                        Progression
+                        <span class="section-number">07</span>
+                        Traits & Leveling up
                     </div>
                     <div class="rule-card">
                         <ul class="space-y-4">
                             <li>
                                 <h1 class="text-white block">Traits</h1>
-                                In this system there are no classes or rigid professions. Instead, features, abilities and bonuses are acquired from traits. These are gained as you level up and vary by choice.
+                                In this system, there is no classes, there is no proffesions. Instead features, abilities and bonuses are aquired from traits. These are gained as you level up, and vary in price and power. They are the core of your characters progression, and should be picked with consideration<br><br>At level 1 you have 2 trait points to spend, use them wisely!
+                            </li>
+                            <li>
+                                <h1 class="text-white block">Leveling up</h1>
+                                Leveling up is dicteted by the Narrator. Each level you will gain a trait point, and on a few special levels skill points. These are used as mentioned above. You start at level 1, and make your way to level 12.
                             </li>
                             <li>
                                 <strong class="text-white block">Leveling table:</strong><br>
@@ -451,7 +441,7 @@
 
                 <section id="spellcasting" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">07</span>
+                        <span class="section-number">08</span>
                         Spellcasting
                     </div>
                     <div class="rule-card">
@@ -577,7 +567,7 @@
 
                 <section id="equipment" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">08</span>
+                        <span class="section-number">09</span>
                         Equipment & Encumbrance
                     </div>
                     <div class="rule-card">
@@ -640,10 +630,12 @@
                 <h1 class="text-5xl font-bold text-white mb-4">Combat Rules</h1>
                 <p class="text-lg text-indigo-300">These rules govern combat and all of its sub-systems.</p>
                 <div class="mb-12 pt-12 border-t border-slate-800"></div>
-
-                <section class="rule-card space-y-6">
-                    <h2 class="text-3xl text-white font-bold">Movement & Units</h2>
-
+               <div class="section-header">
+                        <span class="section-number">10</span>
+                        Movement
+                    </div>
+                <section id="movement" class="rule-card space-y-6">
+                 
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
                         <div>
                             <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Movement is declared on the grid as described below.</p>
@@ -681,8 +673,36 @@
                     </div>
                 </section>
 
-                <section class="rule-card space-y-6">
-                    <h2 class="text-3xl text-white font-bold">Ranged Combat</h2>
+                <div class="section-header">
+                        <span class="section-number">11</span>
+                        Size
+                    </div>
+                <section id="size" class="rule-card space-y-4">
+                    <h2 class="text-3xl text-white font-bold">Size Categories</h2>
+
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Space</th>
+                                <th>Reach</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row"><td>Small</td><td>1</td><td>1</td><td>Stealth advantage</td></tr>
+                            <tr class="row"><td>Medium</td><td>1</td><td>1</td><td>Standard</td></tr>
+                            <tr class="row"><td>Large</td><td>2×2</td><td>2</td><td>Harder to move through</td></tr>
+                            <tr class="row"><td>Huge</td><td>3×3+</td><td>3+</td><td>Area threat</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+                
+                <div class="section-header">
+                        <span class="section-number">12</span>
+                        Ranged Combat
+                    </div>
+                <section id="range" class="rule-card space-y-6">
 
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
                         <div>
@@ -724,8 +744,8 @@
 
                 <section id="combat" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">09</span>
-                        Combat Mechanics
+                        <span class="section-number">13</span>
+                        Turn Structure & Action Economy
                     </div>
 
                     <div class="rule-card mb-6">
@@ -771,10 +791,24 @@
                         </div>
                     </div>
                 </section>
+                <div class="section-header">
+                        <span class="section-number">14</span>
+                        Companions
+                    </div>
+                <section id="companion" class="rule-card space-y-4">
+                    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
+
+                    <ul class="list-disc ml-5 text-sm space-y-2">
+                        <li>Companions act after their controller.</li>
+                        <li>Commands cost a Bonus or Action.</li>
+                        <li>Uncommanded companions act defensively.</li>
+                        <li>Simple stat blocks — no skills required.</li>
+                    </ul>
+                </section>
 
                 <section id="conditions" class="scroll-mt-32">
                     <div class="section-header">
-                        <span class="section-number">10</span>
+                        <span class="section-number">12</span>
                         Conditions
                     </div>
                     <div class="rule-card space-y-8">
@@ -835,8 +869,11 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="rule-card space-y-4">
+                <div class="section-header">
+                        <span class="section-number">13</span>
+                        Mounts & Vehicle Combat
+                    </div>
+                <section id="mount" class="rule-card space-y-4">
                     <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
                     <ul class="list-disc ml-5 text-sm space-y-2">
@@ -846,103 +883,6 @@
                         <li>Forced dismounts trigger Reflex checks.</li>
                     </ul>
                 </section>
-
-                <section class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Size Categories</h2>
-
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Space</th>
-                                <th>Reach</th>
-                                <th>Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="row"><td>Small</td><td>1</td><td>1</td><td>Stealth advantage</td></tr>
-                            <tr class="row"><td>Medium</td><td>1</td><td>1</td><td>Standard</td></tr>
-                            <tr class="row"><td>Large</td><td>2×2</td><td>2</td><td>Harder to move through</td></tr>
-                            <tr class="row"><td>Huge</td><td>3×3+</td><td>3+</td><td>Area threat</td></tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
-
-                    <ul class="list-disc ml-5 text-sm space-y-2">
-                        <li>Companions act after their controller.</li>
-                        <li>Commands cost a Bonus or Action.</li>
-                        <li>Uncommanded companions act defensively.</li>
-                        <li>Simple stat blocks — no skills required.</li>
-                    </ul>
-                </section>
-
-                <section id="environment" class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Cover Rules</h2>
-
-                    <div class="grid md:grid-cols-3 gap-4 text-sm">
-                        <div class="condition-card">Half Cover: +1 Defense</div>
-                        <div class="condition-card">Full Cover: Cannot be targeted</div>
-                        <div class="condition-card">Improvised Cover: Narrator ruling</div>
-                    </div>
-
-                    <p class="text-xs text-slate-400">
-                        Characters may create cover using objects, terrain, or magic.
-                    </p>
-                </section>
-
-                <section class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Actions & Reactions</h2>
-
-                    <ul class="list-disc ml-5 text-sm space-y-2">
-                        <li>2 Actions per turn (standard).</li>
-                        <li>Bonus Actions or minor actions as granted by traits.</li>
-                        <li>1 Reaction per round/scene per creature.</li>
-                        <li>Opportunity Attacks trigger on careless movement.</li>
-                    </ul>
-                </section>
-
-                <section class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Rituals & Creation</h2>
-
-                    <p class="text-sm">
-                        Rituals, crafting, brewing, and smithing are long-form actions that prioritize preparation over speed.
-                    </p>
-
-                    <ul class="list-disc ml-5 text-sm space-y-1">
-                        <li>Require time, materials, and space.</li>
-                        <li>Failure has narrative consequences.</li>
-                        <li>Success may create lasting effects.</li>
-                    </ul>
-                </section>
-
-                <section class="rule-card space-y-6">
-                    <h2 class="text-3xl text-white font-bold">Narrator Guidance</h2>
-
-                    <div class="grid md:grid-cols-2 gap-6 text-sm">
-                        <div>
-                            <strong class="text-white">Creating Creatures</strong>
-                            <ul class="list-disc ml-5 space-y-1">
-                                <li>Pick 3–5 stats.</li>
-                                <li>No skills needed.</li>
-                                <li>1–3 defining traits.</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <strong class="text-white">Challenge Score (CS)</strong>
-                            <ul class="list-disc ml-5 space-y-1">
-                                <li>CS = threat, not Health sponge.</li>
-                                <li>Match party resources, not level.</li>
-                                <li>Increase CS with terrain & pressure.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
     </main>
 
     <footer class="py-16 text-center">
