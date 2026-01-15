@@ -699,20 +699,34 @@
 
                         
                         <div>
-                            <p>Certain spells and effects will specify a radius which is useful for circular effects on a square grid —though using a ruler to draw a circle is often simplest.</p>
+                            <p>Certain spells and effects will specify a Radius which is useful for circular effects on a square grid —though using a ruler to draw a circle is often simplest.</p>
                             <ul class="list-disc ml-5 space-y-1 mt-2"> 
                                 <li class="notice"> ✎ Radius will always start as an [3 x 3] square (1 unit radius), with each unit expanding by 1 tile outward, to tiles direcly in contact with eachother.</li>
                                 <li>Determining the size of the radius is as simple as starting with a square, then adding tiles on to it, as shown in the diagram.</li>
                                 <li>The center square is what needs to remain within range with certain spells or effects, it can also be centered on the caster of said effects.</li>
                             </ul>
                             <br>
-                            <p>Squares are specified simply by 2x2 or 3x3 etc.</p>
-                            <p>Cones stretch out by half their length in each dirrection, and are also always odd.</p>
+                            <p>Squares are simpler where it is simply specified a [A x A], the center of even squares should align with the lines on the grid.</p>
                         </div>
 
                         <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
                             <img src="../img/radius.png" alt="Radius Diagram">
                         </div>
+
+
+                        <div>
+                            <p>Certain spells and effects will specify a Cone, this is determined by the formulas below, however rulers and shapes can also be used to represent this.</p>
+                            <ul class="list-disc ml-5 space-y-1 mt-2"> 
+                                <li class="notice_blue"> ✎ Cones are represented by a triangle of tiles, the Width of the cone is equal to half of the Height rounded down</li>
+                                <li>Cones will always be odd, and the "Center" of the cone alignes with the position of the caster.</li>
+                                <li>Cones can be diagonal, following the same rules just tilted.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
+                            <img src="../img/cone.png" alt="Cone Diagram">
+                        </div>
+                        
                     </div>
                 </section>
 
