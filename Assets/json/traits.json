@@ -1961,6 +1961,15 @@
     "Parameters": "None",
     "Description": "If you haven’t acted this scene, swap initiative with a target; on your next turn, you may take only one action.",
     "Scaling": "-"
+  },
+  {
+    "Name": "High Guard",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When Obstructing aim, you count as half cover.",
+    "Scaling": "-"
   }
 ]
 
