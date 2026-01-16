@@ -841,16 +841,146 @@
                         <span class="section-number">14</span>
                         Companions
                     </div>
-                <section id="companion" class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
 
-                    <ul class="list-disc ml-5 text-sm space-y-2">
-                        <li>Companions act after their controller.</li>
-                        <li>Commands cost a Bonus or Action.</li>
-                        <li>Uncommanded companions act defensively.</li>
-                        <li>Simple stat blocks — no skills required.</li>
-                    </ul>
-                </section>
+                
+                <section id="companion" class="rule-card space-y-8">
+    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
+
+    <p class="text-sm text-slate-400">
+        Companions are creatures that fight, assist, or travel alongside a character.
+        They are simpler than player characters and exist to support—not replace—player agency.
+    </p>
+
+    <!-- ================= STAT BLOCK ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Companion Stat Block</h3>
+
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                <strong class="text-white block mb-1">Health</strong>
+                <p>Low to moderate. Designed to survive 1–2 solid hits.</p>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                <strong class="text-white block mb-1">Defense</strong>
+                <p>Fixed value. No scaling bonuses.</p>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                <strong class="text-white block mb-1">Attack</strong>
+                <p>Single attack profile with flat damage.</p>
+            </div>
+        </div>
+
+        <p class="text-xs text-slate-500">
+            Companions do not have Skills, Grace, Traits, or Mana unless explicitly stated.
+        </p>
+    </div>
+
+    <!-- ================= TURN ORDER ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Turn Order & Initiative</h3>
+
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Companions act <strong>immediately after their controller</strong></li>
+            <li>They do not roll initiative</li>
+            <li>If separated, they act at the end of the round</li>
+        </ul>
+    </div>
+
+    <!-- ================= COMMANDS ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Issuing Commands</h3>
+
+        <p class="text-sm">
+            A companion only performs complex actions when commanded.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div class="condition-card">
+                <strong class="text-white">Command (1 Action)</strong>
+                <p>Attack, move, interact, defend, or use a special ability.</p>
+            </div>
+
+            <div class="condition-card">
+                <strong class="text-white">Simple Direction (Free)</strong>
+                <p>Follow, stay close, retreat, guard an area.</p>
+            </div>
+        </div>
+
+        <p class="text-xs text-slate-400">
+            Commands must be clear and reasonable. The Narrator interprets intent.
+        </p>
+    </div>
+
+    <!-- ================= UNCOMMANDED ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Uncommanded Behavior</h3>
+
+        <p class="text-sm">
+            If no command is issued, the companion acts instinctively:
+        </p>
+
+        <ul class="list-disc ml-5 text-sm space-y-1">
+            <li>Stays near its controller</li>
+            <li>Defends itself if attacked</li>
+            <li>Does not initiate attacks</li>
+        </ul>
+    </div>
+
+    <!-- ================= ACTION LIMITS ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Action Economy</h3>
+
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>1 Action per turn</li>
+            <li>No Bonus Actions unless specified</li>
+            <li>No Reactions by default</li>
+            <li>Cannot make Opportunity Attacks</li>
+        </ul>
+    </div>
+
+    <!-- ================= DAMAGE & DEATH ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Damage & Death</h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                <strong class="text-white block mb-1">0 Health</strong>
+                <p>Companion is incapacitated.</p>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                <strong class="text-white block mb-1">Final Blow</strong>
+                <p>Enemies may finish off companions freely.</p>
+            </div>
+        </div>
+
+        <p class="text-xs text-slate-400">
+            Narrators are encouraged to treat companion death narratively unless stakes are high.
+        </p>
+    </div>
+
+    <!-- ================= SCALING ================= -->
+    <div class="space-y-4">
+        <h3 class="text-xl text-white font-bold">Scaling & Balance</h3>
+
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Companions do not scale automatically</li>
+            <li>Improvement requires story justification</li>
+            <li>Only one active combat companion per character by default</li>
+        </ul>
+    </div>
+
+    <!-- ================= DESIGN NOTE ================= -->
+    <div class="bg-slate-900/50 border border-indigo-500/40 rounded-lg p-4 text-xs text-indigo-300">
+        <strong>Design Intent:</strong>
+        Companions add flavor, tactics, and narrative support without overshadowing players.
+    </div>
+</section>
+
+
+                
 
                 <section id="conditions" class="scroll-mt-32">
                     <div class="section-header">
