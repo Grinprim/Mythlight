@@ -276,19 +276,19 @@
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Technique Skills</h4>
                             <ul class="text-sm space-y-2">
-                                <li><span class="keyword">Tinkering:</span> Repairing, crafting, traps.</li>
-                                <li><span class="keyword">Finesse:</span> Sleight of hand, picking locks.</li>
-                                <li><span class="keyword">Aim:</span> Ranged accuracy.</li>
+                                <li><span class="keyword">Aim:</span> Ranged accuracy, hitting very small targets</li>
+                                <li><span class="keyword">Tinkering:</span> Repairing, crafting, brewing.</li>
+                                <li><span class="keyword">Finesse:</span> Sleight of hand, picking locks, finesse melee, looting.</li>
                                 <li><span class="keyword">Reflex:</span> Dodging, reacting.</li>
                             </ul>
                         </div>
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Mystique Skills</h4>
                             <ul class="text-sm space-y-2">
+                                <li><span class="keyword">Spellcraft:</span> Casting and shaping magic.</li>
                                 <li><span class="keyword">Arcana:</span> Spells, rituals, lore.</li>
                                 <li><span class="keyword">Insight:</span> Reading intentions, sensing magic.</li>
                                 <li><span class="keyword">Scholarship:</span> Research, history, number of known spells.</li>
-                                <li><span class="keyword">Spellcraft:</span> Casting and shaping magic.</li>
                             </ul>
                         </div>
                         <div class="rule-card">
@@ -466,7 +466,7 @@
 
                             <div>
                                 <strong>Cosmic</strong><br>
-                                Cannot learn spells above <strong>Level 1</strong>. Instead of upcasting, spending N mana casts N Level 1 spells simultaneously (e.g., 3 mana = 3 spells).
+                                Cannot learn spells above <strong>Level 1</strong>. Instead of upcasting, spending X mana casts X Level 1 spells simultaneously (e.g., 3 mana = 3 spells).
                             </div>
 
                             <div>
@@ -599,8 +599,8 @@
                             <div class="rule-card mt-4 p-4">
                                 <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong></p>
                                 <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3),
-                                    Cumbersome (4). 100 coins = 1 weight.</p>
-
+                                    Cumbersome (4). </p>
+                                <p class="text-sm mb-4">100 coins = 1 weight.</p>
                                 <div class="space-y-3 text-sm">
                                     <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                         <span>Non-encumbered (&lt; Limit)</span>
@@ -799,7 +799,7 @@
                         <p class="mb-4"><strong>Scene:</strong> A scene represents one full cycle of all creatures’ turns. Once every creature has acted, the scene ends and a new one begins; a scene can be extended by Narrator choice.</p>
                         <p class="mb-4"><strong>Initiative:</strong> Determined by order of engagement and Narrator rulings. When a creature falls unconscious, it is moved to the bottom of the turn order until revived.</p>
                         <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span class="text-indigo-400">Turn Delay</span> based on when they joined combat. The turn delay is specified in their stat block.</p>
-                        <p class="mb-4"><strong>Ambush:</strong> When you initiate combat with an unaware enemy, you act before normal initiative or turn delay.</p>
+                        <p class="mb-4"><strong>Ambush:</strong> When combat is initiated with an unaware target, the initiator acts before normal initiative or turn delay.</p>
                         <p class="mb-4"><strong>Opportunity Attack:</strong> When a creature leaves another creature’s melee range, the remaining creature may make a melee attack against it.</p>
                         <div class="bg-slate-800 p-4 rounded border border-slate-600 mb-4">
                             <strong class="text-white">Action Economy</strong><br>
@@ -1030,16 +1030,146 @@
                         <span class="section-number">13</span>
                         Mounts & Vehicle Combat
                     </div>
-                <section id="mount" class="rule-card space-y-4">
-                    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
+                <section class="rule-card space-y-6" id="mount">
+    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
-                    <ul class="list-disc ml-5 text-sm space-y-2">
-                        <li>Mounts act on their rider’s initiative.</li>
-                        <li>Movement uses the mount’s speed.</li>
-                        <li>Mounted characters gain advantage on movement-based checks.</li>
-                        <li>Forced dismounts trigger Reflex checks.</li>
-                    </ul>
-                </section>
+    <p class="text-sm text-slate-300">
+        Mounted combat represents fighting while riding a creature or vehicle capable of movement.
+        Mounts provide increased mobility, altered positioning, and new risks.
+    </p>
+
+    <!-- Mount Basics -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Mount Basics</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>A mount is any creature or vehicle capable of carrying a rider.</li>
+            <li>Mounts occupy their own space on the combat grid.</li>
+            <li>The rider occupies the mount’s space and moves with it.</li>
+            <li>A mount must be at least one size category larger than its rider.</li>
+        </ul>
+    </div>
+
+    <!-- Initiative & Turn Order -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Initiative & Turn Order</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>The mount acts on the rider’s turn.</li>
+            <li>The mount does not receive a separate turn.</li>
+            <li>All mount movement must be declared before the rider acts.</li>
+        </ul>
+    </div>
+
+    <!-- Movement -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Mounted Movement</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Mounted movement uses the mount’s movement speed.</li>
+            <li>The rider may still take Actions normally.</li>
+            <li>Diagonal movement costs 1 Unit, as normal.</li>
+            <li>Mounted creatures may move through difficult terrain only if the mount allows it.</li>
+        </ul>
+
+        <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-3 text-sm mt-3">
+            <strong class="text-white">Charge Movement</strong><br>
+            If the mount moves at least half its total movement in a straight line,
+            the rider gains <strong>+1 Accuracy</strong> on their next melee attack this turn.
+        </div>
+    </div>
+
+    <!-- Attacking While Mounted -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Attacking While Mounted</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Melee attacks use the rider’s reach plus the mount’s height advantage.</li>
+            <li>Mounted riders gain <strong>+1 Accuracy</strong> on melee attacks against unmounted targets.</li>
+            <li>Ranged attacks made while mounted suffer <strong>Disadvantage</strong> unless the mount is stationary.</li>
+            <li>Spells may be cast normally unless disrupted by forced movement.</li>
+        </ul>
+    </div>
+
+    <!-- Being Attacked -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Targeting Rider vs Mount</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Attackers must declare whether they target the rider or the mount.</li>
+            <li>Large mounts provide <strong>Partial Cover</strong> to the rider from the opposite side.</li>
+            <li>Area effects affect both rider and mount if both are within the radius.</li>
+        </ul>
+    </div>
+
+    <!-- Dismounting -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Dismounting</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Voluntary dismount costs <strong>1 Action</strong>.</li>
+            <li>Dismounting places the rider in any adjacent Unit.</li>
+            <li>Forced dismounts require a <strong>Reflex check</strong>.</li>
+        </ul>
+
+        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3 text-sm mt-3">
+            <strong class="text-red-400">Forced Dismount</strong><br>
+            On failure, the rider becomes <strong>Prone</strong> and takes falling damage
+            based on the mount’s size.
+        </div>
+    </div>
+
+    <!-- Mount Damage & Morale -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Mount Damage & Morale</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>If a mount reaches 0 Health, the rider is immediately dismounted.</li>
+            <li>Panicked mounts may move unpredictably at the Narrator’s discretion.</li>
+            <li>Untrained mounts may refuse dangerous actions.</li>
+        </ul>
+    </div>
+
+    <!-- Opportunity Attacks -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Opportunity Attacks</h3>
+        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>Mounted movement can trigger Opportunity Attacks.</li>
+            <li>Opportunity Attacks target the mount unless the attacker has reach.</li>
+            <li>If the mount is stopped, remaining movement is lost.</li>
+        </ul>
+    </div>
+
+    <!-- Mount Types -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-2">Mount Types</h3>
+        <table class="w-full text-sm border border-slate-700 rounded overflow-hidden">
+            <thead class="bg-slate-800/70 text-xs uppercase tracking-widest text-slate-400">
+                <tr>
+                    <th class="px-3 py-2">Type</th>
+                    <th class="px-3 py-2">Traits</th>
+                    <th class="px-3 py-2">Notes</th>
+                </tr>
+            </thead>
+            <tbody class="bg-slate-900/40">
+                <tr class="border-t border-slate-800">
+                    <td class="px-3 py-2 font-bold text-white">Ground</td>
+                    <td>Fast, Stable</td>
+                    <td>Standard mounts</td>
+                </tr>
+                <tr class="border-t border-slate-800">
+                    <td class="px-3 py-2 font-bold text-white">Flying</td>
+                    <td>Aerial, Fragile</td>
+                    <td>Cannot hover without traits</td>
+                </tr>
+                <tr class="border-t border-slate-800">
+                    <td class="px-3 py-2 font-bold text-white">Aquatic</td>
+                    <td>Waterbound</td>
+                    <td>Limited to water terrain</td>
+                </tr>
+                <tr class="border-t border-slate-800">
+                    <td class="px-3 py-2 font-bold text-white">Mechanical</td>
+                    <td>Resilient</td>
+                    <td>Requires maintenance</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
     </main>
 
     <footer class="py-16 text-center">
