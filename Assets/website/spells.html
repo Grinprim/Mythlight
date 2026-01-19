@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mythlight RPG | Cantrips and Spells</title>
+    <title>Mythlight RPG | Grimorie</title>
     <link rel="icon" type="image/svg+xml" href="../img/Mythlight Logo White.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/styles.css">
@@ -25,6 +25,22 @@
                 <a href="spells.html" class="text-indigo-400">Spells</a>
                 <a href="equipment.html" class="hover:text-white transition-colors text-slate-400">Equipment</a>
             </div>
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-700/50">
+            <div class="px-6 pt-2 pb-6 space-y-2 text-sm font-semibold uppercase tracking-widest flex flex-col">
+                <a href="index.html" class="block py-2 text-slate-400 hover:text-white">Home</a>
+                <a href="rules.html" class="block py-2 text-slate-400 hover:text-white">Rules</a>
+                <a href="species.html" class="block py-2 text-slate-400 hover:text-white">Species</a>
+                <a href="paths.html" class="block py-2 text-slate-400 hover:text-white">Paths</a>
+                <a href="traits.html" class="block py-2 text-slate-400 hover:text-white">Traits</a>
+                <a href="spells.html" class="block py-2 text-indigo-400">Spells</a>
+                <a href="equipment.html" class="block py-2 text-slate-400 hover:text-white">Equipment</a>
+            </div>
         </div>
     </nav>
 
@@ -32,16 +48,16 @@
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
                 <h1 class="text-5xl font-bold text-white mb-4">Grimoire</h1>
-                <p class="text-slate-400 text-lg max-w-2xl">Browse the sacred arts. From free-to-cast cantrips to the high-cost rituals of the master mages.</p>
+                <p class="text-slate-400 text-lg max-w-2xl">Browse the sacred arts. Click on a spell to reveal its secrets.</p>
             </div>
-            <div class="flex flex-wrap gap-4">
-                <div class="flex flex-col gap-2 min-w-[200px]">
-                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Search Grimoire</label>
-                    <input type="text" id="search-input" placeholder="Search name, effect, or lore..." class="search-input" oninput="renderMagic()">
+            <div class="flex flex-wrap gap-4 w-full md:w-auto">
+                <div class="flex flex-col gap-2 w-full md:w-auto md:min-w-[200px]">
+                    <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Search</label>
+                    <input type="text" id="search-input" placeholder="Name or Effect..." class="search-input w-full" oninput="renderMagic()">
                 </div>
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2 w-full md:w-auto">
                     <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Sort By</label>
-                    <select id="sort-selector" class="filter-select" onchange="renderMagic()">
+                    <select id="sort-selector" class="filter-select w-full" onchange="renderMagic()">
                         <option value="name">Name (A-Z)</option>
                         <option value="cost">Mana Cost</option>
                         <option value="category">Category</option>
@@ -52,7 +68,6 @@
 
         <div class="flex flex-col lg:flex-row gap-12 items-start relative">
             
-            
             <aside class="w-full lg:w-72 lg:sticky lg:top-28 z-40 self-start">
                 <section id="legend-box" class="p-6 rounded-3xl legend-card shadow-2xl">
                     <div class="mb-6 flex justify-between items-center">
@@ -61,117 +76,105 @@
                     </div>
                     
                     <div id="legend-content" class="space-y-6">
-                        
                         <div>
                             <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Sources</p>
                             <div class="space-y-2">
                                 <button class="filter-btn" onclick="toggleFilter('category', 'Arcane')">
-                                    <span class="font-bold">Arcane</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="font-bold">Arcane</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('category', 'Divine')">
-                                    <span class="font-bold">Divine</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="font-bold">Divine</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('category', 'Occult')">
-                                    <span class="font-bold">Occult</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="font-bold">Occult</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('category', 'Cosmic')">
-                                    <span class="font-bold">Cosmic</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="font-bold">Cosmic</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('category', 'Elemental')">
-                                    <span class="font-bold">Elemental</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="font-bold">Elemental</span><div class="filter-dot"></div>
                                 </button>
                             </div>
                         </div>
-
-                        
                         <div>
                             <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Mana Cost</p>
                             <div class="space-y-2">
                                 <button class="filter-btn" onclick="toggleFilter('cost', '0')">
-                                    <span class="flex items-center gap-2"><span class="text-amber-400">0 ✦</span> <span class="text-xs font-normal text-slate-400">(Cantrip)</span></span>
-                                    <div class="filter-dot"></div>
+                                    <span class="flex items-center gap-2"><span class="text-amber-400">0 ✦</span> <span class="text-xs font-normal text-slate-400">(Cantrip)</span></span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('cost', '1')">
-                                    <span class="text-indigo-300">1 ✦</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="text-indigo-300">1 ✦</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('cost', '2')">
-                                    <span class="text-indigo-300">2 ✦</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="text-indigo-300">2 ✦</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('cost', '3')">
-                                    <span class="text-indigo-300">3 ✦</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="text-indigo-300">3 ✦</span><div class="filter-dot"></div>
                                 </button>
                                 <button class="filter-btn" onclick="toggleFilter('cost', '4')">
-                                    <span class="text-indigo-300">4 ✦</span>
-                                    <div class="filter-dot"></div>
+                                    <span class="text-indigo-300">4 ✦</span><div class="filter-dot"></div>
                                 </button>
-                            </div>
-                        </div>
-
-                        
-                        <div>
-                            <p class="text-[10px] text-slate-500 mb-3 uppercase font-bold tracking-wider">Key</p>
-                            <div class="grid grid-cols-4 gap-2 text-center">
-                                <div class="bg-slate-800/50 rounded p-1" title="Action">⚡</div>
-                                <div class="bg-slate-800/50 rounded p-1" title="Reaction">⮌</div>
-                                <div class="bg-slate-800/50 rounded p-1" title="Upcast">✚</div>
-                                <div class="bg-slate-800/50 rounded p-1" title="Scaling">☄</div>
                             </div>
                         </div>
                     </div>
                 </section>
             </aside>
 
-            
             <div class="flex-1 w-full space-y-24">
                 
                 <section id="section-cantrips" class="scroll-mt-32">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <h2 class="text-3xl font-bold text-white">Cantrips</h2>
-                        <span class="px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase rounded-full">0 Mana</span>
+                    <div class="flex items-center space-x-4 mb-6 justify-between">
+                        <div class="flex items-center gap-4">
+                            <h2 class="text-3xl font-bold text-white">Cantrips</h2>
+                            <span class="px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase rounded-full">0 Mana</span>
+                        </div>
+                        <button onclick="document.getElementById('cantrips-table').classList.toggle('hidden')" class="p-2 hover:bg-slate-800 rounded-lg transition-colors">
+                            <span class="text-slate-400">☰</span>
+                        </button>
                     </div>
-                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
-                        <table class="w-full text-left border-collapse min-w-[700px]">
-                            <thead>
-                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                    <th class="px-6 py-5 font-bold">Cantrip</th>
-                                    <th class="px-6 py-5 font-bold">Category</th>
-                                    <th class="px-6 py-5 font-bold">Action/Range</th>
-                                    <th class="px-6 py-5 font-bold">Effect</th>
-                                </tr>
-                            </thead>
-                            <tbody id="cantrips-body"></tbody>
-                        </table>
+                    <div class="bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table id="cantrips-table" class="w-full text-left border-collapse min-w-[300px]">
+                                <thead>
+                                    <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                        <th class="px-6 py-5 font-bold w-2/5">Name</th>
+                                        <th class="px-6 py-5 font-bold w-1/5">Cost</th>
+                                        <th class="px-6 py-5 font-bold w-1/5">Category</th>
+                                        <th class="px-6 py-5 font-bold w-1/5 text-right">Expand</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cantrips-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
 
                 <section id="section-spells" class="scroll-mt-32">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <h2 class="text-3xl font-bold text-white">Leveled Spells</h2>
-                        <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">1+ Mana</span>
+                    <div class="flex items-center space-x-4 mb-6 justify-between">
+                        <div class="flex items-center gap-4">
+                            <h2 class="text-3xl font-bold text-white">Spells</h2>
+                            <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">1+ Mana</span>
+                        </div>
+                        <button onclick="document.getElementById('spells-table').classList.toggle('hidden')" class="p-2 hover:bg-slate-800 rounded-lg transition-colors">
+                            <span class="text-slate-400">☰</span>
+                        </button>
                     </div>
-                    <div class="overflow-x-auto bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl custom-scroll">
-                        <table class="w-full text-left border-collapse min-w-[700px]">
-                            <thead>
-                                <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                    <th class="px-6 py-5 font-bold">Spell</th>
-                                    <th class="px-6 py-5 font-bold">Category</th>
-                                    <th class="px-6 py-5 font-bold">Action/Range</th>
-                                    <th class="px-6 py-5 font-bold">Effect</th>
-                                </tr>
-                            </thead>
-                            <tbody id="spells-body"></tbody>
-                        </table>
+                    <div class="bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table id="spells-table" class="w-full text-left border-collapse min-w-[300px]">
+                                <thead>
+                                    <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
+                                        <th class="px-6 py-5 font-bold w-2/5">Name</th>
+                                        <th class="px-6 py-5 font-bold w-1/5">Cost</th>
+                                        <th class="px-6 py-5 font-bold w-1/5">Category</th>
+                                        <th class="px-6 py-5 font-bold w-1/5 text-right">Expand</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="spells-body"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </section>
-
             </div>
         </div>
     </main>
@@ -179,7 +182,7 @@
     <footer class="py-16 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <img src="../img/Mythlight Logo White.svg" alt="Mythlight Logo" class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
-            <div class="flex justify-center space-x-6 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
                 <a href="index.html" class="hover:text-indigo-400">Home</a>
                 <a href="rules.html" class="hover:text-indigo-400">Rules</a>
                 <a href="species.html" class="hover:text-indigo-400">Species</a>
@@ -193,22 +196,18 @@
     </footer>
 
     <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
         let rawSpells = [];
         let rawCantrips = [];
         
-        let activeFilters = {
-            category: null,
-            cost: null
-        };
+        let activeFilters = { category: null, cost: null };
 
         function toggleFilter(type, value) {
-            
-            if (activeFilters[type] === value) {
-                activeFilters[type] = null;
-            } else {
-                activeFilters[type] = value;
-            }
-            
+            if (activeFilters[type] === value) activeFilters[type] = null;
+            else activeFilters[type] = value;
             updateFilterUI();
             renderMagic();
         }
@@ -223,129 +222,101 @@
         function updateFilterUI() {
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 const onClickAttr = btn.getAttribute('onclick');
-                
                 if (onClickAttr) {
                     const match = onClickAttr.match(/toggleFilter\('(\w+)',\s*'(.+)'\)/);
                     if (match) {
                         const [_, type, val] = match;
-                        if (activeFilters[type] === val) {
-                            btn.classList.add('active');
-                        } else {
-                            btn.classList.remove('active');
-                        }
+                        if (activeFilters[type] === val) btn.classList.add('active');
+                        else btn.classList.remove('active');
                     }
                 }
             });
-
-            
             const hasFilter = activeFilters.category || activeFilters.cost;
             document.getElementById('clear-filter').classList.toggle('hidden', !hasFilter);
         }
 
-        const createRow = (item) => {
-            
-            return `
-            <tr class="spell-row text-sm">
-                <td class="px-6 py-6">
-                    <div class="font-bold text-white text-base">${item.Name}</div>
-                    <div class="text-[10px] text-indigo-400 font-bold uppercase mt-1 tracking-tighter">
-                        Cost: ${item.Cost} ✦ ${item.ID ? `| ID: ${item.ID}` : ''}
-                    </div>
-                </td>
-                <td class="px-6 py-6">
-                    <span class="category-tag">${item.Category || 'Universal'}</span>
-                </td>
-                <td class="px-6 py-6">
-                    <div class="text-white font-medium text-xs">${item.Type || '-'}</div>
-                    <div class="text-slate-500 text-[10px]">${item.Range || 'Self'}</div>
-                </td>
-                <td class="px-6 py-6">
-                    <div class="text-slate-300 text-sm leading-relaxed mb-2">${item.Description}</div>
-                    ${item.Upcast ? `<div class="text-indigo-300 text-xs mb-2"><span class="font-bold">✚ Upcast:</span> ${item.Upcast}</div>` : ''}
-                    <div class="text-slate-500 italic text-[11px] border-l border-slate-700 pl-3">${item.Lore || ''}</div>
-                </td>
-            </tr>
-            `;
-        };
-
-        function filterAndSort(arr) {
-            const searchTerm = document.getElementById('search-input').value.toLowerCase();
-            const sortBy = document.getElementById('sort-selector').value;
-
-            let filtered = arr.filter(item => {
-                
-                const matchesSearch = 
-                    (item.Name && item.Name.toLowerCase().includes(searchTerm)) || 
-                    (item.Description && item.Description.toLowerCase().includes(searchTerm)) ||
-                    (item.Lore && item.Lore.toLowerCase().includes(searchTerm));
-                
-                
-                const matchesCategory = !activeFilters.category || (item.Category === activeFilters.category);
-
-                
-                const matchesCost = !activeFilters.cost || (item.Cost === activeFilters.cost);
-
-                return matchesSearch && matchesCategory && matchesCost;
-            });
-
-            return filtered.sort((a, b) => {
-                if (sortBy === 'name') return (a.Name || '').localeCompare(b.Name || '');
-                if (sortBy === 'cost') return parseInt(a.Cost || 0) - parseInt(b.Cost || 0);
-                if (sortBy === 'category') return (a.Category || '').localeCompare(b.Category || '');
-                return 0;
-            });
+        function toggleDetails(rowId) {
+            const row = document.getElementById(rowId);
+            if(row.classList.contains('hidden')) row.classList.remove('hidden');
+            else row.classList.add('hidden');
         }
 
         function renderMagic() {
             const spellTable = document.getElementById('spells-body');
             const cantripTable = document.getElementById('cantrips-body');
-            const sectionCantrips = document.getElementById('section-cantrips');
-            const sectionSpells = document.getElementById('section-spells');
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const sortBy = document.getElementById('sort-selector').value;
 
-            const sortedSpells = filterAndSort(rawSpells);
-            const sortedCantrips = filterAndSort(rawCantrips);
+            const filterFn = (item) => {
+                const matchesSearch = (item.Name && item.Name.toLowerCase().includes(searchTerm)) || 
+                                    (item.Description && item.Description.toLowerCase().includes(searchTerm));
+                const matchesCategory = !activeFilters.category || (item.Category === activeFilters.category);
+                const matchesCost = !activeFilters.cost || (item.Cost === activeFilters.cost);
+                return matchesSearch && matchesCategory && matchesCost;
+            };
 
-            if (sortedCantrips.length === 0 && (activeFilters.cost && activeFilters.cost !== '0')) {
-                cantripTable.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No cantrips match filters.</td></tr>';
-            } else {
-                cantripTable.innerHTML = sortedCantrips.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching cantrips found.</td></tr>';
-            }
+            const sortFn = (a, b) => {
+                if (sortBy === 'name') return (a.Name || '').localeCompare(b.Name || '');
+                if (sortBy === 'cost') return parseInt(a.Cost || 0) - parseInt(b.Cost || 0);
+                if (sortBy === 'category') return (a.Category || '').localeCompare(b.Category || '');
+                return 0;
+            };
 
-            
-            if (sortedSpells.length === 0 && (activeFilters.cost === '0')) {
-                spellTable.innerHTML = '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No spells match filters.</td></tr>';
-            } else {
-                spellTable.innerHTML = sortedSpells.map(createRow).join('') || '<tr><td colspan="4" class="p-8 text-center text-slate-600 italic">No matching spells found.</td></tr>';
-            }
+            const createRows = (item, index) => {
+                const rowId = `spell-${item.Cost}-${index}`;
+                
+                const mainRow = `
+                <tr onclick="toggleDetails('${rowId}')" class="expandable-row border-b border-slate-800/50">
+                    <td class="px-6 py-4 font-bold text-white text-base">
+                        ${item.Name}
+                    </td>
+                    <td class="px-6 py-4 text-indigo-300 font-mono text-xs font-bold">
+                        ${item.Cost} ✦
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="category-tag">${item.Category || 'Universal'}</span>
+                    </td>
+                    <td class="px-6 py-4 text-right text-xs text-slate-500">▼</td>
+                </tr>
+                `;
+
+                const detailRow = `
+                <tr id="${rowId}" class="hidden bg-slate-900/40">
+                    <td colspan="4" class="px-6 py-6 border-b border-slate-800">
+                        <div class="space-y-4">
+                             <div class="flex flex-wrap gap-4 text-xs uppercase tracking-widest">
+                                <span class="text-white font-bold bg-slate-700/50 px-2 py-1 rounded">Type: ${item.Type || '-'}</span>
+                                <span class="text-slate-400 bg-slate-800 px-2 py-1 rounded">Range: ${item.Range || 'Self'}</span>
+                             </div>
+                             <p class="text-slate-300 text-sm leading-relaxed">${item.Description}</p>
+                             ${item.Upcast ? `<div class="text-indigo-300 text-xs p-2 bg-indigo-900/20 rounded border border-indigo-500/20"><span class="font-bold">✚ Upcast:</span> ${item.Upcast}</div>` : ''}
+                             <div class="text-slate-500 italic text-[11px] border-l-2 border-slate-700 pl-3">${item.Lore || ''}</div>
+                        </div>
+                    </td>
+                </tr>
+                `;
+                return mainRow + detailRow;
+            };
+
+            const sortedCantrips = rawCantrips.filter(filterFn).sort(sortFn);
+            const sortedSpells = rawSpells.filter(filterFn).sort(sortFn);
+
+            cantripTable.innerHTML = sortedCantrips.length ? sortedCantrips.map(createRows).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching cantrips.</td></tr>';
+            spellTable.innerHTML = sortedSpells.length ? sortedSpells.map(createRows).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching spells.</td></tr>';
         }
 
         async function loadData() {
             try {
                 const res = await fetch('../json/spells_cantrips.json');
                 const allMagic = await res.json();
-                
-                
-                
-                
                 rawCantrips = [];
                 rawSpells = [];
-
                 allMagic.forEach(item => {
-                    
-                    if (String(item.Cost) === "0") {
-                        rawCantrips.push(item);
-                    } else {
-                        rawSpells.push(item);
-                    }
-                });
-
-            } catch (e) {
-                console.warn("Using placeholder data. Ensure '../json/spells_cantrips.json' exists.");
-                                
-                mockData.forEach(item => {
-                    if (item.Cost === "0") rawCantrips.push(item);
+                    if (String(item.Cost) === "0") rawCantrips.push(item);
                     else rawSpells.push(item);
                 });
+            } catch (e) {
+                console.warn("Using placeholder data.");
             }
             renderMagic();
         }
@@ -354,5 +325,3 @@
     </script>
 </body>
 </html>
-
-

@@ -25,6 +25,22 @@
                 <a href="spells.html" class="hover:text-white transition-colors text-slate-400">Spells</a>
                 <a href="equipment.html" class="hover:text-white transition-colors text-slate-400">Equipment</a>
             </div>
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-700/50">
+            <div class="px-6 pt-2 pb-6 space-y-2 text-sm font-semibold uppercase tracking-widest flex flex-col">
+                <a href="index.html" class="block py-2 text-indigo-400">Home</a>
+                <a href="rules.html" class="block py-2 text-slate-400 hover:text-white">Rules</a>
+                <a href="species.html" class="block py-2 text-slate-400 hover:text-white">Species</a>
+                <a href="paths.html" class="block py-2 text-slate-400 hover:text-white">Paths</a>
+                <a href="traits.html" class="block py-2 text-slate-400 hover:text-white">Traits</a>
+                <a href="spells.html" class="block py-2 text-slate-400 hover:text-white">Spells</a>
+                <a href="equipment.html" class="block py-2 text-slate-400 hover:text-white">Equipment</a>
+            </div>
         </div>
     </nav>
 
@@ -118,7 +134,7 @@
     <footer class="py-16 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <img src="../img/Mythlight Logo White.svg" alt="Mythlight Logo" class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
-            <div class="flex justify-center space-x-6 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
                 <a href="index.html" class="hover:text-indigo-400">Home</a>
                 <a href="rules.html" class="hover:text-indigo-400">Rules</a>
                 <a href="species.html" class="hover:text-indigo-400">Species</a>
@@ -131,9 +147,10 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
-
-
-
-
