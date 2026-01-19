@@ -573,7 +573,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Novice Craftsman",
-    "Description": "You gain the ability to craft Simple crafts; Learn 2 Simple(or lower) recipes.",
+    "Description": "You gain the ability to craft Simple crafts; Learn 2 Simple (or lower) recipes.",
     "Scaling": "-"
   },
 {
@@ -582,7 +582,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Apprentice Craftsman",
-    "Description": "You gain the ability to craft Standard crafts; Learn 2 Standard(or lower) recipes.",
+    "Description": "You gain the ability to craft Standard crafts; Learn 2 Standard (or lower) recipes.",
     "Scaling": "-"
   },
 {
@@ -591,7 +591,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Adept Craftsman",
-    "Description": "You gain the ability to craft Difficult crafts; Learn 2 Difficult(or lower) recipes.",
+    "Description": "You gain the ability to craft Difficult crafts; Learn 2 Difficult (or lower) recipes.",
     "Scaling": "-"
   },
 {
@@ -600,7 +600,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Expert Craftsman",
-    "Description": "You gain the ability to craft Complex crafts; Learn 2 Complex(or lower) recipes.",
+    "Description": "You gain the ability to craft Complex crafts; Learn 2 Complex (or lower) recipes.",
     "Scaling": "-"
   },
   {
@@ -1356,7 +1356,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Compelling invite",
-    "Description": "Taunting enemies grants 1 Guard per enemy taunted.",
+    "Description": "Taunting enemies grants 1 Guard per enemy taunted. Doubled for enemies larger than you.",
     "Scaling": "-"
   },
   {
@@ -1927,7 +1927,7 @@
     "Scaling": "Multiplier X:<br>0.5 [lvl 1]<br>1 [lvl 6]<br>2 [lvl 12]"
   },
   {
-    "Name": "Conviniance Fee",
+    "Name": "Convenience Fee",
     "Action":"◇",
     "Cost": "2",
     "Symbols": "⧖",
@@ -1969,6 +1969,213 @@
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "When Obstructing aim, you count as half cover.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Stone Skin",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Casting Eearth spells, or using Earth elemental effects, grants 2 Guard, stacking.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Guardian",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Grant an ally 5 Guard, it disapates the first time they or you attack.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]<br>5 [lvl 12]"
+  },
+  {
+    "Name": "Deaths Respite",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Give yourself or an ally, with the highest current health (Guard included), immunity to death for 1 scene. If they were to drop bellow 1 Health, they remain at 1 Health",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Make it rain",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You fire 3 shots into the sky, these will land and hit 3 random targets within 8 units. They deal 1 Damage, and prioritize Enemies.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Thought out plan",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "As long as you have not acted this turn, you may skip it. Next turn you have 3 Actions.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Combat Wingman",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Allies have advantage against enemies Taunted by you.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Wingman",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Back to back we stand",
+    "Description": "Your chosen ally/companion gains Advantage on Charm checks.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Mystic Sacrifice",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Sacrifice 4 Health to Receive 2 Mana",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
+  },
+  {
+    "Name": "Unshakeable",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You gain [6 + Your Level + Your Fortitude] Guard, you cannot Move, Be Moved or Attack while this guard is active. (Can be removed with any Cleanse Effects.)",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Transfusion",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Deal 3 Damage to yourself, heal a creature other than yourself, by 6 Health.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>3 [lvl 9]"
+  },
+  {
+    "Name": "Death Lotus",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Deal [Half Your Level] damage in a 1 tile radius around you. Taunted enemies take damage an additional time.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Ruthless Predator",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Your Oppertunity attacks deal +2 Damage.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Dummies",
+    "Action":"◇",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You may spend this reaction at any point. You move to an unocupied space within 3 units, you leave a Target Dummy with 3 Health where you were standing. Any attacks targeting you are redirected to the dummy.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Twin Disciplines",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You gain either +2 Armor or +2 Accuracy until your next turn.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Mark of Death",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Transfer any and all negative conditions to a target within 9 tiles. You don't need to see the target, just know of their pressence.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Convenience Tax",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Drain 3 mana from an ally within 6 units, add it to yourself.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Guaranteed Yield",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Any Damage or Guard gain with a base value lower than X is increased to X.",
+    "Scaling": "Value 🗲:<br>2 [lvl 1]<br>3 [lvl 6]<br>4 [lvl 12]"
+  },
+  {
+    "Name": "Morning Light",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You treat the next Action of a chosen ally, or yourself, as if it were the first action they have taken this combat.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Piruette",
+    "Action":"◆",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Deal 1 Damage to all Adjacent creatures. If this is the first action in combat, it deals damage twice.",
+    "Scaling": "Uses 🗲:<br>2 [lvl 1]<br>4 [lvl 6]<br>6 [lvl 12]"
+  },
+  {
+    "Name": "Inhibit",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Remove all weapon proficiencies of a target until your next turn.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Overexertion",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You may activate traits, while you have no uses left. Doing so grants 1 point of fatigue per activation.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Vigor",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Spend all of your grace, granting yourself that amount of Guard.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Measured Restraint",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You loose access to a spell until your next sleep. You replenish Double its Mana cost as Mana.",
     "Scaling": "-"
   }
 ]
