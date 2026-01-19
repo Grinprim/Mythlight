@@ -50,7 +50,16 @@
                 <h1 class="text-5xl font-bold text-white mb-4">Traits</h1>
                 <p class="text-slate-400 text-lg max-w-2xl">Traits are the core of your character’s growth and identity.</p>
             </div>
-            <div class="flex flex-wrap gap-4 w-full md:w-auto">
+            <div class="flex flex-wrap gap-4 w-full md:w-auto items-end">
+                 <div class="flex gap-2">
+                    <button onclick="expandAllTraits(true)" class="px-4 py-2 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-lg text-indigo-300 text-xs font-bold uppercase tracking-wider transition-all">
+                        Expand All
+                    </button>
+                    <button onclick="expandAllTraits(false)" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg text-slate-300 text-xs font-bold uppercase tracking-wider transition-all">
+                        Collapse All
+                    </button>
+                </div>
+
                 <div class="flex flex-col gap-2 w-full md:w-auto md:min-w-[200px]">
                     <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Search Traits</label>
                     <input type="text" id="search-input" placeholder="Search..." class="search-input w-full" oninput="renderTraits()">
@@ -77,47 +86,71 @@
                         <button id="clear-filter" onclick="setSymbolFilter(null)" class="hidden text-[10px] uppercase text-rose-400 font-bold hover:underline">Clear</button>
                     </div>
                     
-                    <div class="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-5">
-                        <div class="col-span-2">
-                             <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold mb-2">Types</p>
-                        </div>
+                    <div class="space-y-5">
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Types</p>
+                        
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⧖')">
                             <div class="legend-symbol text-blue-400 clickable" data-symbol="⧖">⧖</div>
                             <div>
                                 <div class="text-white font-bold text-sm group-hover:text-indigo-300">Passive</div>
+                                <div class="text-slate-500 text-[10px] italic">Always active.</div>
                             </div>
                         </div>
+                        
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('☀')">
                             <div class="legend-symbol text-amber-400 clickable" data-symbol="☀">☀</div>
                             <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Rest</div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Rest-Based</div>
+                                <div class="text-slate-500 text-[10px] italic">Useable during a rest.</div>
                             </div>
                         </div>
+                        
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('🗲')">
                             <div class="legend-symbol text-indigo-400 clickable" data-symbol="🗲">🗲</div>
                             <div>
                                 <div class="text-white font-bold text-sm group-hover:text-indigo-300">Active</div>
+                                <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Tags</p>
+                        
+                        <div class="flex items-center opacity-80">
+                            <div class="legend-symbol text-rose-400" data-symbol="★">★</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Unique</div>
+                                <div class="text-slate-500 text-[10px] italic">Cannot be alongside uniques of the same type.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center opacity-80">
+                            <div class="legend-symbol text-emerald-400" data-symbol="⫘">⫘</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Linked</div>
+                                <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
                             </div>
                         </div>
 
-                        <div class="col-span-2 mt-2">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-2">Actions</p>
-                        </div>
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Action Types</p>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⭘')">
                             <div class="legend-symbol text-white clickable" data-symbol="⭘">⭘</div>
-                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free Action
+                            <div class="text-slate-500 text-[10px] italic">Does not impact action economy, can be used whenever</div></div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◇')">
                             <div class="legend-symbol text-white clickable" data-symbol="◇">◇</div>
-                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction
+                            <div class="text-slate-500 text-[10px] italic">Used only when the relevant condition is met, you have one reaction per scene</div></div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⬖')">
                             <div class="legend-symbol text-white clickable" data-symbol="⬖">⬖</div>
-                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action
+                            <div class="text-slate-500 text-[10px] italic">Uses one of your actions, you have 2 per scene</div></div>
                         </div>
-                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')">
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')">
                             <div class="legend-symbol text-white clickable" data-symbol="◆">◆</div>
-                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack</div>
+                            <div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack Action
+                            <div class="text-slate-500 text-[10px] italic">Counts as an attack, you can only attack once per turn (offhands count differently)</div></div>
                         </div>
                     </div>
 
@@ -133,18 +166,18 @@
                     <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
                         Minor Traits 
                         <span class="text-xs uppercase bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30 whitespace-nowrap">1 Point</span>
-                        <button onclick="toggleTable('t1')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors">
-                            <span class="text-slate-400">☰</span>
+                        <button onclick="toggleTable('t1-wrapper')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors group" title="Toggle Table">
+                            <span class="text-slate-400 group-hover:text-white transition-colors text-xl">☰</span>
                         </button>
                     </h2>
-                    <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+                    <div id="t1-wrapper" class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl transition-all duration-300">
                         <div class="overflow-x-auto">
-                            <table id="t1" class="w-full text-left border-collapse min-w-[300px]">
+                            <table class="w-full text-left border-collapse min-w-[300px]">
                                 <thead>
                                     <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                        <th class="px-6 py-4 font-bold w-1/3">Name</th>
-                                        <th class="px-6 py-4 font-bold text-center w-1/3">Symbols</th>
-                                        <th class="px-6 py-4 font-bold text-right w-1/3">Expand</th>
+                                        <th class="px-6 py-4 font-bold w-1/2">Name</th>
+                                        <th class="px-6 py-4 font-bold w-1/4">Symbols</th>
+                                        <th class="px-6 py-4 font-bold text-right w-1/4">Expand</th>
                                     </tr>
                                 </thead>
                                 <tbody id="traits-1-point"></tbody>
@@ -157,18 +190,18 @@
                     <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
                         Major Traits 
                         <span class="text-xs uppercase bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30 whitespace-nowrap">2 Points</span>
-                        <button onclick="toggleTable('t2')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors">
-                            <span class="text-slate-400">☰</span>
+                        <button onclick="toggleTable('t2-wrapper')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors group" title="Toggle Table">
+                            <span class="text-slate-400 group-hover:text-white transition-colors text-xl">☰</span>
                         </button>
                     </h2>
-                    <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+                    <div id="t2-wrapper" class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl transition-all duration-300">
                          <div class="overflow-x-auto">
-                            <table id="t2" class="w-full text-left border-collapse min-w-[300px]">
+                            <table class="w-full text-left border-collapse min-w-[300px]">
                                 <thead>
                                     <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                        <th class="px-6 py-4 font-bold w-1/3">Name</th>
-                                        <th class="px-6 py-4 font-bold text-center w-1/3">Symbols</th>
-                                        <th class="px-6 py-4 font-bold text-right w-1/3">Expand</th>
+                                        <th class="px-6 py-4 font-bold w-1/2">Name</th>
+                                        <th class="px-6 py-4 font-bold w-1/4">Symbols</th>
+                                        <th class="px-6 py-4 font-bold text-right w-1/4">Expand</th>
                                     </tr>
                                 </thead>
                                 <tbody id="traits-2-point"></tbody>
@@ -205,24 +238,43 @@
         let rawTraits = [];
         let activeSymbolFilter = null;
 
-        function toggleTable(id){
-            const el = document.getElementById(id);
-            el.style.display = (el.style.display === 'none') ? 'table' : 'table';
-            // Custom toggle logic for hiding the whole table wrapper or tbody could be better, 
-            // but sticking to existing logic, we hide the table element itself.
-            if(el.style.display === 'table') el.style.display = 'table'; // ensure block type
-            else el.style.display = 'none';
-            // Actually, simply toggling a class is safer
+        function toggleTable(wrapperId){
+            const el = document.getElementById(wrapperId);
             el.classList.toggle('hidden');
         }
         
         function toggleDetails(rowId) {
             const row = document.getElementById(rowId);
-            if (row.classList.contains('hidden')) {
-                row.classList.remove('hidden');
-            } else {
-                row.classList.add('hidden');
+            row.classList.toggle('hidden');
+            
+            // Toggle arrow rotation
+            const arrow = document.getElementById(`arrow-${rowId}`);
+            if(arrow) {
+                if(row.classList.contains('hidden')) {
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    arrow.style.transform = 'rotate(180deg)';
+                }
             }
+        }
+
+        function expandAllTraits(shouldExpand) {
+            // Get all detail rows
+            const allDetailRows = document.querySelectorAll('tr[id^="trait-"]');
+            allDetailRows.forEach(row => {
+                if (shouldExpand) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+                
+                // Rotate arrows
+                const rowId = row.id;
+                const arrow = document.getElementById(`arrow-${rowId}`);
+                if(arrow) {
+                     arrow.style.transform = shouldExpand ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
         }
 
         function setSymbolFilter(symbol) {
@@ -272,8 +324,10 @@
                 const mainRow = `
                     <tr onclick="toggleDetails('${uniqueId}')" class="expandable-row border-b border-slate-800/50">
                         <td class="px-6 py-4 font-bold text-white text-sm">${trait.Name}</td>
-                        <td class="px-6 py-4 text-center"><span class="symbol-tag">${trait.Symbols || trait.Action || '-'}</span></td>
-                        <td class="px-6 py-4 text-right text-xs text-slate-500">▼</td>
+                        <td class="px-6 py-4 font-mono text-xs"><span class="symbol-tag">${trait.Symbols || trait.Action || '-'}</span></td>
+                        <td class="px-6 py-4 text-right text-xs text-slate-500">
+                             <div id="arrow-${uniqueId}" class="transition-transform duration-200 inline-block">▼</div>
+                        </td>
                     </tr>
                 `;
 
