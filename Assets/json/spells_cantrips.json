@@ -259,7 +259,7 @@
         "Cost": "0",
         "Type": "Action",
         "Range": "6 units",
-        "Description": "Mark a creature. The next attack made against that creature deals +1 Radiant Damage.",
+        "Description": "Mark a creature. The next attack made against that creature deals +1 Light Damage.",
         "Upcast": "",
         "Lore": "Light finds those who cannot hide from judgment."
     },
@@ -270,7 +270,7 @@
         "Cost": "0",
         "Type": "Action",
         "Range": "4 units",
-        "Description": "Deal 1 Radiant Damage to a creature, or instead stabilize a creature to 1 Health.",
+        "Description": "Deal 1 Light Damage to a creature, or instead stabilize a creature to 1 Health.",
         "Upcast": "",
         "Lore": "Mercy and punishment share the same flame."
     },
@@ -281,7 +281,7 @@
         "Cost": "0",
         "Type": "Passive",
         "Range": "Self",
-        "Description": "Once per turn, when you deal damage, you may change the damage type to Radiant.",
+        "Description": "Once per turn, when you deal damage, you may change the damage type to Light.",
         "Upcast": "",
         "Lore": "An oath shapes not just action, but intent."
     },
@@ -776,7 +776,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "8 units",
-        "Description": "Hurl a lance of condensed starlight, dealing 2 Radiant Damage.",
+        "Description": "Hurl a lance of condensed starlight, dealing 2 Light Damage.",
         "Upcast": "When multicasting this spell, each additional cast may target a different creature.",
         "Lore": "A falling star, aimed by will alone."
     },
@@ -798,7 +798,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "6 units",
-        "Description": "A creature you can see takes 2 Radiant Damage and suffers -2 Accuracy on its next attack.",
+        "Description": "A creature you can see takes 2 Light Damage and suffers -2 Accuracy on its next attack.",
         "Upcast": "When multicasting this spell, each additional cast may target a different creature.",
         "Lore": "Light burns brightest where attention wavers."
     },
@@ -864,7 +864,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "Sight",
-        "Description": "Choose a creature you can see. The next time you cast a Cosmic spell targeting a different creature this turn, the chosen creature takes 1 Radiant Damage.",
+        "Description": "Choose a creature you can see. The next time you cast a Cosmic spell targeting a different creature this turn, the chosen creature takes 1 Light Damage.",
         "Upcast": "When multicasting this spell, the echo may trigger once per additional cast.",
         "Lore": "The stars remember what you almost aimed for."
     },
@@ -882,11 +882,11 @@
     {
         "ID": "DC1-1",
         "Category": "Divine",
-        "Name": "Radiant Lance",
+        "Name": "Light Lance",
         "Cost": "1",
         "Type": "Action",
         "Range": "7 units",
-        "Description": "Hurl a lance of holy light, dealing 2 Radiant Damage to a creature you can see.",
+        "Description": "Hurl a lance of holy light, dealing 2 Light Damage to a creature you can see.",
         "Upcast": "Increase the damage by +1.",
         "Lore": "Faith given form, sharp and unwavering."
     },
@@ -908,8 +908,8 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "Melee",
-        "Description": "Make a melee weapon attack. On hit, it deals +2 Radiant Damage and the target cannot gain bonuses to Accuracy until the end of their next turn.",
-        "Upcast": "Increase the bonus Radiant Damage by +1.",
+        "Description": "Make a melee weapon attack. On hit, it deals +2 Light Damage and the target cannot gain bonuses to Accuracy until the end of their next turn.",
+        "Upcast": "Increase the bonus Light Damage by +1.",
         "Lore": "An oath strikes truer than steel alone."
     },
     {
@@ -930,7 +930,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "4 units",
-        "Description": "A wave of gentle light heals a creature for 2 Health or deals 2 Radiant Damage to an undead or fiend.",
+        "Description": "A wave of gentle light heals a creature for 2 Health or deals 2 Light Damage to an undead or fiend.",
         "Upcast": "Increase the healing or damage by +1.",
         "Lore": "Mercy and judgment flow from the same source."
     },
@@ -963,7 +963,7 @@
         "Cost": "1",
         "Type": "Reaction",
         "Range": "Self",
-        "Description": "When you are hit by a melee attack, the attacker takes 2 Radiant Damage.",
+        "Description": "When you are hit by a melee attack, the attacker takes 2 Light Damage.",
         "Upcast": "Increase the damage by +1.",
         "Lore": "To strike the faithful is to invite the light’s reply."
     },
@@ -974,7 +974,7 @@
         "Cost": "1",
         "Type": "Action",
         "Range": "Sight",
-        "Description": "Mark a creature with holy sigils. The next attack made against that creature deals +2 Radiant Damage.",
+        "Description": "Mark a creature with holy sigils. The next attack made against that creature deals +2 Light Damage.",
         "Upcast": "Increase the bonus damage by +1.",
         "Lore": "Judgment does not forget its target."
     },
@@ -1156,7 +1156,7 @@
         "Type": "Reaction",
         "Range": "5 units",
         "Description": "When an ally within range is reduced to 0 Health, they instead remain at 1 Health and emit radiant light. Enemies within 2 units take 2 Light Damage.",
-        "Upcast": "Increase the Radiant Damage by +1.",
+        "Upcast": "Increase the Light Damage by +1.",
         "Lore": "Even falling can become testimony."
     },
     {
@@ -1267,7 +1267,7 @@
         "Cost": "4",
         "Type": "Action",
         "Range": "Sight",
-        "Description": "Call down radiant judgment on a creature. They take 8 Radiant Damage. If this damage reduces them to 0 Health, all allies who can see the target heal 6 Health.",
+        "Description": "Call down radiant judgment on a creature. They take 8 Light Damage. If this damage reduces them to 0 Health, all allies who can see the target heal 6 Health.",
         "Upcast": "",
         "Lore": "Mercy waits for those who survive the light."
     },
