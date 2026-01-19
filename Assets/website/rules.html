@@ -1034,18 +1034,19 @@
     <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
     <p class="text-sm text-slate-300">
-        Mounted combat represents fighting while riding a creature or vehicle capable of movement.
-        Mounts provide increased mobility, altered positioning, and new risks.
+        Mounted combat represents fighting while riding a creature or medium vehicle.
+        Mounts provide increased mobility, greater defences, and a new way of fighting.
     </p>
 
     <!-- Mount Basics -->
     <div>
         <h3 class="text-xl text-white font-bold mb-2">Mount Basics</h3>
         <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>A mount is any creature or vehicle capable of carrying a rider.</li>
+            <li>A mount is any creature capable of carrying a rider.</li>
+            <li>Mounts can also be vehicles of the medium class (Motorcycles, Scooters etc.)</li>
+            <li>Large creatures can also be mounted, large vehicles are not considered mounts.</li>
             <li>Mounts occupy their own space on the combat grid.</li>
             <li>The rider occupies the mount’s space and moves with it.</li>
-            <li>A mount must be at least one size category larger than its rider.</li>
         </ul>
     </div>
 
@@ -1053,36 +1054,21 @@
     <div>
         <h3 class="text-xl text-white font-bold mb-2">Initiative & Turn Order</h3>
         <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>The mount acts on the rider’s turn.</li>
-            <li>The mount does not receive a separate turn.</li>
-            <li>All mount movement must be declared before the rider acts.</li>
-        </ul>
-    </div>
-
-    <!-- Movement -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Mounted Movement</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
+            <li>The mount acts on the rider’s turn. It does not receive a separate turn, unless dismoutned.</li>
+            <li>The rider looses the ability to take movement actions, instead they are taken by the mount with the riders commands.</li>
+            <li>Mounts that are not mounted are at the bottom of initative, unless they are also a companion.</li>
             <li>Mounted movement uses the mount’s movement speed.</li>
-            <li>The rider may still take Actions normally.</li>
-            <li>Diagonal movement costs 1 Unit, as normal.</li>
-            <li>Mounted creatures may move through difficult terrain only if the mount allows it.</li>
+            <li>The rider may still take Actions normally, like attacking or casting spells.</li>
         </ul>
-
-        <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-3 text-sm mt-3">
-            <strong class="text-white">Charge Movement</strong><br>
-            If the mount moves at least half its total movement in a straight line,
-            the rider gains <strong>+1 Accuracy</strong> on their next melee attack this turn.
-        </div>
     </div>
 
     <!-- Attacking While Mounted -->
     <div>
         <h3 class="text-xl text-white font-bold mb-2">Attacking While Mounted</h3>
         <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Melee attacks use the rider’s reach plus the mount’s height advantage.</li>
+            <li>Melee attacks use the rider’s reach.</li>
             <li>Mounted riders gain <strong>+1 Accuracy</strong> on melee attacks against unmounted targets.</li>
-            <li>Ranged attacks made while mounted suffer <strong>Disadvantage</strong> unless the mount is stationary.</li>
+            <li>Ranged attacks made while mounted suffer <strong>-1 Accuracy</strong> unless the mount is stationary.</li>
             <li>Spells may be cast normally unless disrupted by forced movement.</li>
         </ul>
     </div>
@@ -1092,8 +1078,12 @@
         <h3 class="text-xl text-white font-bold mb-2">Targeting Rider vs Mount</h3>
         <ul class="list-disc ml-5 text-sm space-y-2">
             <li>Attackers must declare whether they target the rider or the mount.</li>
-            <li>Large mounts provide <strong>Partial Cover</strong> to the rider from the opposite side.</li>
+            <li>If a creature mount, bellow half hp, is attacked it must roll [Physique] against the attack roll or force a dismount of the rider.</li>
+            <li>Large mounts provide <strong>Partial Cover</strong> to the rider.</li>
             <li>Area effects affect both rider and mount if both are within the radius.</li>
+            <li>Floor hazards will only effect the mount.</li>
+            <li>Mounted movement can trigger Opportunity Attacks.</li>
+            <li>Opportunity Attacks target the mount unless the attacker has reach.</li>
         </ul>
     </div>
 
@@ -1104,12 +1094,13 @@
             <li>Voluntary dismount costs <strong>1 Action</strong>.</li>
             <li>Dismounting places the rider in any adjacent Unit.</li>
             <li>Forced dismounts require a <strong>Reflex check</strong>.</li>
+            
         </ul>
 
         <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3 text-sm mt-3">
-            <strong class="text-red-400">Forced Dismount</strong><br>
-            On failure, the rider becomes <strong>Prone</strong> and takes falling damage
-            based on the mount’s size.
+            <strong class="text-red-400">Forced Dismount & Oppertunity Attacks</strong><br>
+            On failure, the rider becomes <strong>Prone</strong> in an adjacent tile. The mount will attempt to leave combat if it is a creature.
+            
         </div>
     </div>
 
@@ -1118,55 +1109,10 @@
         <h3 class="text-xl text-white font-bold mb-2">Mount Damage & Morale</h3>
         <ul class="list-disc ml-5 text-sm space-y-2">
             <li>If a mount reaches 0 Health, the rider is immediately dismounted.</li>
+            <li>Vehicle mounts will loose Durability instead of Health.</li>
             <li>Panicked mounts may move unpredictably at the Narrator’s discretion.</li>
             <li>Untrained mounts may refuse dangerous actions.</li>
         </ul>
-    </div>
-
-    <!-- Opportunity Attacks -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Opportunity Attacks</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Mounted movement can trigger Opportunity Attacks.</li>
-            <li>Opportunity Attacks target the mount unless the attacker has reach.</li>
-            <li>If the mount is stopped, remaining movement is lost.</li>
-        </ul>
-    </div>
-
-    <!-- Mount Types -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Mount Types</h3>
-        <table class="w-full text-sm border border-slate-700 rounded overflow-hidden">
-            <thead class="bg-slate-800/70 text-xs uppercase tracking-widest text-slate-400">
-                <tr>
-                    <th class="px-3 py-2">Type</th>
-                    <th class="px-3 py-2">Traits</th>
-                    <th class="px-3 py-2">Notes</th>
-                </tr>
-            </thead>
-            <tbody class="bg-slate-900/40">
-                <tr class="border-t border-slate-800">
-                    <td class="px-3 py-2 font-bold text-white">Ground</td>
-                    <td>Fast, Stable</td>
-                    <td>Standard mounts</td>
-                </tr>
-                <tr class="border-t border-slate-800">
-                    <td class="px-3 py-2 font-bold text-white">Flying</td>
-                    <td>Aerial, Fragile</td>
-                    <td>Cannot hover without traits</td>
-                </tr>
-                <tr class="border-t border-slate-800">
-                    <td class="px-3 py-2 font-bold text-white">Aquatic</td>
-                    <td>Waterbound</td>
-                    <td>Limited to water terrain</td>
-                </tr>
-                <tr class="border-t border-slate-800">
-                    <td class="px-3 py-2 font-bold text-white">Mechanical</td>
-                    <td>Resilient</td>
-                    <td>Requires maintenance</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
 </section>
