@@ -213,23 +213,16 @@
         </div>
     </main>
 
-    <footer class="py-16 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <img src="../img/Mythlight Logo White.svg" alt="Mythlight Logo" class="h-12 w-auto mx-auto mb-6 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
-                <a href="index.html" class="hover:text-indigo-400">Home</a>
-                <a href="rules.html" class="hover:text-indigo-400">Rules</a>
-                <a href="species.html" class="hover:text-indigo-400">Species</a>
-                <a href="paths.html" class="hover:text-indigo-400">Paths</a>
-                <a href="traits.html" class="hover:text-indigo-400">Traits</a>
-                <a href="spells.html" class="hover:text-indigo-400">Spells</a>
-                <a href="equipment.html" class="hover:text-indigo-400">Equipment</a>
-            </div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">&copy; 2025 Mythlight RPG System. Designed for Legends. By Grinprim.</p>
-        </div>
-    </footer>
-    
+    <div id="footer-placeholder"></div>
+
     <script>
+        fetch('../css/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+            
         // Mobile Menu Logic
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
