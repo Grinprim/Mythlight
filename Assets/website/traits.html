@@ -30,11 +30,11 @@
 
                 <div class="flex flex-col gap-2 w-full md:w-auto md:min-w-[200px]">
                     <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Search Traits</label>
-                    <input type="text" id="search-input" placeholder="Search..." class="w-full px-5 py-2 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" oninput="renderTraits()">
+                    <input type="text" id="search-input" placeholder="Search..." class="search-input w-full" oninput="renderTraits()">
                 </div>
                 <div class="flex flex-col gap-2 w-full md:w-auto">
                     <label class="text-[10px] uppercase tracking-widest text-slate-500 font-bold ml-1">Sort By</label>
-                    <select id="sort-selector" class="px-4 py-2 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" onchange="renderTraits()">
+                    <select id="sort-selector" class="filter-select w-full" onchange="renderTraits()">
                         <option value="name">Name (A-Z)</option>
                         <option value="symbols">Category</option>
                     </select>
@@ -45,7 +45,7 @@
         <div class="flex flex-col lg:flex-row gap-12 items-start">
             
             <aside class="w-full lg:w-80 lg:sticky lg:top-28 z-40">
-                <section class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 shadow-2xl">
+                <section class="p-6 rounded-3xl legend-card shadow-2xl">
                     <div class="mb-6 flex justify-between items-start">
                         <div>
                             <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Trait Legend</h3>
@@ -57,24 +57,70 @@
                     <div class="space-y-5">
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Types</p>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⧖')">
-                            <div class="w-8 h-8 flex items-center justify-center rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 mr-3" data-symbol="⧖">⧖</div>
+                            <div class="legend-symbol text-blue-400 clickable" data-symbol="⧖">⧖</div>
                             <div>
                                 <div class="text-white font-bold text-sm group-hover:text-indigo-300">Passive</div>
                                 <div class="text-slate-500 text-[10px] italic">Always active.</div>
                             </div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('☀')">
-                            <div class="w-8 h-8 flex items-center justify-center rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 mr-3" data-symbol="☀">☀</div>
+                            <div class="legend-symbol text-amber-400 clickable" data-symbol="☀">☀</div>
                             <div>
                                 <div class="text-white font-bold text-sm group-hover:text-indigo-300">Rest-Based</div>
-                                <div class="text-slate-500 text-[10px] italic">During a rest.</div>
+                                <div class="text-slate-500 text-[10px] italic">Useable during a rest.</div>
                             </div>
                         </div>
                         <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('🗲')">
-                            <div class="w-8 h-8 flex items-center justify-center rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mr-3" data-symbol="🗲">🗲</div>
+                            <div class="legend-symbol text-indigo-400 clickable" data-symbol="🗲">🗲</div>
                             <div>
                                 <div class="text-white font-bold text-sm group-hover:text-indigo-300">Active</div>
-                                <div class="text-slate-500 text-[10px] italic">Limited uses per rest.</div>
+                                <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Tags</p>
+                        <div class="flex items-center opacity-80">
+                            <div class="legend-symbol text-rose-400" data-symbol="★">★</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Unique</div>
+                                <div class="text-slate-500 text-[10px] italic">Cannot be alongside uniques of the same type.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center opacity-80">
+                            <div class="legend-symbol text-emerald-400" data-symbol="⫘">⫘</div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Linked</div>
+                                <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
+                            </div>
+                        </div>
+
+                        <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Action Types</p>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⭘')">
+                            <div class="legend-symbol text-white clickable" data-symbol="⭘">⭘</div>
+                            <div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free Action</div>
+                                <div class="text-slate-500 text-[10px] italic">Does not impact action economy.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◇')">
+                            <div class="legend-symbol text-white clickable" data-symbol="◇">◇</div>
+                            <div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div>
+                                <div class="text-slate-500 text-[10px] italic">1 per scene, condition-based.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⬖')">
+                            <div class="legend-symbol text-white clickable" data-symbol="⬖">⬖</div>
+                            <div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div>
+                                <div class="text-slate-500 text-[10px] italic">Uses 1 of 2 actions per scene.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')">
+                            <div class="legend-symbol text-white clickable" data-symbol="◆">◆</div>
+                            <div>
+                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack Action</div>
+                                <div class="text-slate-500 text-[10px] italic">Once per turn limit.</div>
                             </div>
                         </div>
                     </div>
@@ -89,16 +135,19 @@
                 <section id="section-1pt" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
                         Minor Traits 
-                        <span class="text-xs uppercase bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">1 Point</span>
+                        <span class="text-xs uppercase bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30 whitespace-nowrap">1 Point</span>
+                        <button onclick="toggleTable('t1-wrapper')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors group">
+                            <span class="text-slate-400 group-hover:text-white text-xl">☰</span>
+                        </button>
                     </h2>
-                    <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+                    <div id="t1-wrapper" class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl transition-all duration-300">
                         <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse">
+                            <table class="w-full text-left border-collapse min-w-[300px]">
                                 <thead>
                                     <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                        <th class="px-6 py-4 font-bold">Name</th>
-                                        <th class="px-6 py-4 font-bold">Symbols</th>
-                                        <th class="px-6 py-4 font-bold text-right">Expand</th>
+                                        <th class="px-6 py-4 font-bold w-1/2">Name</th>
+                                        <th class="px-6 py-4 font-bold w-1/4">Symbols</th>
+                                        <th class="px-6 py-4 font-bold text-right w-1/4">Expand</th>
                                     </tr>
                                 </thead>
                                 <tbody id="traits-1-point"></tbody>
@@ -110,16 +159,19 @@
                 <section id="section-2pt" class="scroll-mt-32">
                     <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
                         Major Traits 
-                        <span class="text-xs uppercase bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30">2 Points</span>
+                        <span class="text-xs uppercase bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30 whitespace-nowrap">2 Points</span>
+                        <button onclick="toggleTable('t2-wrapper')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors group">
+                            <span class="text-slate-400 group-hover:text-white text-xl">☰</span>
+                        </button>
                     </h2>
-                    <div class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+                    <div id="t2-wrapper" class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl transition-all duration-300">
                          <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse">
+                            <table class="w-full text-left border-collapse min-w-[300px]">
                                 <thead>
                                     <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                        <th class="px-6 py-4 font-bold">Name</th>
-                                        <th class="px-6 py-4 font-bold">Symbols</th>
-                                        <th class="px-6 py-4 font-bold text-right">Expand</th>
+                                        <th class="px-6 py-4 font-bold w-1/2">Name</th>
+                                        <th class="px-6 py-4 font-bold w-1/4">Symbols</th>
+                                        <th class="px-6 py-4 font-bold text-right w-1/4">Expand</th>
                                     </tr>
                                 </thead>
                                 <tbody id="traits-2-point"></tbody>
@@ -134,12 +186,13 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // 1. Fetch Navbar from ../css/
+        // --- Navigation and Footer Fetch ---
         fetch('../css/navbar.html')
             .then(res => res.text())
             .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
+                const placeholder = document.getElementById('navbar-placeholder');
+                placeholder.innerHTML = data;
+                const scripts = placeholder.querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');
                     newScript.text = oldScript.text;
@@ -147,13 +200,17 @@
                 });
             });
 
-        // 2. Fetch Footer from ../css/
         fetch('../css/footer.html')
             .then(res => res.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data);
 
+        // --- Core Logic ---
         let rawTraits = [];
         let activeSymbolFilter = null;
+
+        function toggleTable(wrapperId){
+            document.getElementById(wrapperId).classList.toggle('hidden');
+        }
 
         function toggleDetails(rowId) {
             const row = document.getElementById(rowId);
@@ -174,7 +231,16 @@
         }
 
         function setSymbolFilter(symbol) {
+            if (symbol === '★' || symbol === '⫘') return; // Non-clickable tags
             activeSymbolFilter = symbol;
+            
+            document.querySelectorAll('.legend-symbol').forEach(btn => {
+                if (btn.getAttribute('data-symbol') === symbol && symbol !== null) {
+                    btn.classList.add('active-filter');
+                } else {
+                    btn.classList.remove('active-filter');
+                }
+            });
             document.getElementById('clear-filter').classList.toggle('hidden', !symbol);
             renderTraits();
         }
@@ -189,22 +255,28 @@
             table2.innerHTML = '';
 
             let filtered = rawTraits.filter(trait => {
-                const matchesSearch = trait.Name.toLowerCase().includes(searchTerm) || trait.Description.toLowerCase().includes(searchTerm);
-                const matchesSymbol = !activeSymbolFilter || (trait.Symbols && trait.Symbols.includes(activeSymbolFilter)) || (trait.Action && trait.Action.includes(activeSymbolFilter));
+                const matchesSearch = trait.Name.toLowerCase().includes(searchTerm) || 
+                                     trait.Description.toLowerCase().includes(searchTerm);
+                
+                const matchesSymbol = !activeSymbolFilter || 
+                                     (trait.Symbols && trait.Symbols.includes(activeSymbolFilter)) ||
+                                     (trait.Action && trait.Action.includes(activeSymbolFilter));
+
                 return matchesSearch && matchesSymbol;
             });
 
             filtered.sort((a, b) => {
                 if (sortBy === 'name') return a.Name.localeCompare(b.Name);
-                return (a.Symbols || '').localeCompare(b.Symbols || '');
+                if (sortBy === 'symbols') return (a.Symbols || '').localeCompare(b.Symbols || '');
+                return 0;
             });
 
             filtered.forEach((trait, index) => {
                 const uniqueId = `trait-${trait.Cost}-${index}`;
                 const mainRow = `
-                    <tr onclick="toggleDetails('${uniqueId}')" class="border-b border-slate-800/50 cursor-pointer hover:bg-slate-800/30 transition-colors">
+                    <tr onclick="toggleDetails('${uniqueId}')" class="expandable-row border-b border-slate-800/50 cursor-pointer">
                         <td class="px-6 py-4 font-bold text-white text-sm">${trait.Name}</td>
-                        <td class="px-6 py-4 font-mono text-xs text-indigo-400">${trait.Symbols || trait.Action || '-'}</td>
+                        <td class="px-6 py-4 font-mono text-xs"><span class="symbol-tag text-indigo-400">${trait.Symbols || trait.Action || '-'}</span></td>
                         <td class="px-6 py-4 text-right text-xs text-slate-500">
                              <div id="arrow-${uniqueId}" class="transition-transform duration-200 inline-block">▼</div>
                         </td>
@@ -212,12 +284,11 @@
                 `;
 
                 const detailsRow = `
-                    <tr id="${uniqueId}" class="hidden bg-slate-900/60">
+                    <tr id="${uniqueId}" class="hidden bg-slate-900/40">
                         <td colspan="3" class="px-6 py-6 border-b border-slate-800">
                              <div class="space-y-4">
-                                <div class="flex flex-wrap gap-4 text-[10px] uppercase font-bold tracking-widest">
-                                   ${trait.Action ? `<span class="text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded border border-indigo-500/20">Action: ${trait.Action}</span>` : ''}
-                                   ${trait.Cost ? `<span class="text-purple-400 bg-purple-500/10 px-2 py-1 rounded border border-purple-500/20">Cost: ${trait.Cost}pt</span>` : ''}
+                                <div class="flex flex-wrap gap-4 text-xs uppercase tracking-widest">
+                                   ${trait.Action ? `<span class="text-indigo-400 font-bold bg-indigo-500/10 px-2 py-1 rounded">Action: ${trait.Action}</span>` : ''}
                                    ${trait.Parameters ? `<span class="text-slate-400 bg-slate-800 px-2 py-1 rounded">Params: ${trait.Parameters}</span>` : ''}
                                 </div>
                                 <p class="text-slate-300 leading-relaxed text-sm">${trait.Description}</p>
@@ -227,26 +298,24 @@
                     </tr>
                 `;
 
-                if (trait.Cost == "1") table1.innerHTML += (mainRow + detailsRow);
-                else if (trait.Cost == "2") table2.innerHTML += (mainRow + detailsRow);
+                if (trait.Cost === "1") table1.innerHTML += (mainRow + detailsRow);
+                else if (trait.Cost === "2") table2.innerHTML += (mainRow + detailsRow);
             });
 
             if (table1.innerHTML === '') table1.innerHTML = '<tr><td colspan="3" class="px-6 py-4 text-center text-slate-600 italic">No traits found.</td></tr>';
             if (table2.innerHTML === '') table2.innerHTML = '<tr><td colspan="3" class="px-6 py-4 text-center text-slate-600 italic">No traits found.</td></tr>';
         }
 
-        // 3. Fetch Traits JSON from ../json/
         async function loadTraits() {
             try {
-                const res = await fetch('../json/traits.json');
-                if (!res.ok) throw new Error('Could not find traits.json in ../json/');
+                const res = await fetch('../json/traits.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error();
                 const data = await res.json();
                 rawTraits = Array.isArray(data) ? data : (data.traits || []);
-                renderTraits();
             } catch (err) {
-                console.error(err);
-                document.getElementById('traits-1-point').innerHTML = `<tr><td colspan="3" class="text-red-400 p-4">${err.message}</td></tr>`;
+                console.error("Failed to load traits.json", err);
             }
+            renderTraits();
         }
 
         window.addEventListener('DOMContentLoaded', loadTraits);
