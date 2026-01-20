@@ -26,39 +26,7 @@
 
 <body class="bg-custom-dark text-slate-300">
 
-    <nav class="fixed w-full z-50 nav-glass">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <img src="../img/Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
-                <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
-                <a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
-                <a href="rules.html" class="hover:text-white transition-colors text-slate-400">Rules</a>
-                <a href="species.html" class="hover:text-white transition-colors text-slate-400">Species</a>
-                <a href="paths.html" class="hover:text-white transition-colors text-slate-400">Paths</a>
-                <a href="traits.html" class="hover:text-white transition-colors text-slate-400">Traits</a>
-                <a href="spells.html" class="hover:text-white transition-colors text-slate-400">Spells</a>
-                <a href="equipment.html" class="hover:text-white transition-colors text-slate-400">Equipment</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-700/50">
-            <div class="px-6 pt-2 pb-6 space-y-2 text-sm font-semibold uppercase tracking-widest flex flex-col">
-                <a href="index.html" class="block py-2 text-slate-400 hover:text-white">Home</a>
-                <a href="rules.html" class="block py-2 text-slate-400 hover:text-white">Rules</a>
-                <a href="species.html" class="block py-2 text-slate-400 hover:text-white">Species</a>
-                <a href="paths.html" class="block py-2 text-slate-400 hover:text-white">Paths</a>
-                <a href="traits.html" class="block py-2 text-slate-400 hover:text-white">Traits</a>
-                <a href="spells.html" class="block py-2 text-slate-400 hover:text-white">Spells</a>
-                <a href="equipment.html" class="block py-2 text-slate-400 hover:text-white">Equipment</a>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-24">
 
@@ -675,7 +643,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Ingredient</th>
+                    <th>Ingredient</th>ž
                     <th>Aspects</th>
                     <th>Values</th>
                     <th>Tier</th>
@@ -694,17 +662,47 @@
         <div id="footer-placeholder"></div>
 
     <script>
+        // --- Helper Functions ---
+        const formatTags = (tags) => {
+            if (!tags || tags === "-") return "-";
+            const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
+            return list.map(t => `<span class="tag-badge">${t}</span>`).join('');
+        };
+
+        // --- Component Loading ---
+        fetch('../css/navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                const navPlaceholder = document.getElementById('navbar-placeholder');
+                navPlaceholder.innerHTML = data;
+                
+                // Execute scripts inside fetched navbar
+                const scripts = navPlaceholder.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript);
+                });
+
+                // Re-bind Mobile Menu (must happen AFTER navbar is in the DOM)
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(err => console.error('Error loading navbar:', err));
+
         fetch('../css/footer.html')
-            .then(response => response.text())
+            .then(res => res.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             })
-            .catch(error => console.error('Error loading footer:', error));
-            
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        
+            .catch(err => console.error('Error loading footer:', err));
+
+        // --- Data Loading Functions ---
         async function loadEquipment() {
             try {
                 const res = await fetch('../json/equipment.json');
@@ -724,13 +722,6 @@
                     `).join("");
                 };
 
-                const formatTags = (tags) => {
-                    if (!tags || tags === "-") return "-";
-                    
-                    const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
-                    return list.map(t => `<span class="tag-badge">${t}</span>`).join('');
-                };
-
                 fill("m1", data.weapons.m1);
                 fill("m2", data.weapons.m2);
                 fill("m3", data.weapons.m3);
@@ -745,14 +736,14 @@
             }
         }
 
-        
         async function loadCrafting() {
             try {
                 const res = await fetch('../json/crafting.json');
                 const data = await res.json();
 
-                document.getElementById("crafting-recipes").innerHTML =
-                    data.recipes.map(r => `
+                const recipesBody = document.getElementById("crafting-recipes");
+                if (recipesBody) {
+                    recipesBody.innerHTML = data.recipes.map(r => `
                         <tr data-tier="${r.tier}" class="row">
                             <td class="font-bold text-white">${r.name}</td>
                             <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">${r.tier}</span></td>
@@ -761,95 +752,75 @@
                             <td class="text-slate-400 italic">${r.effect}</td>
                         </tr>
                     `).join("");
+                }
 
-                document.getElementById("craft-components").innerHTML =
-                    data.components.map(c => `
-                        <tr>
+                const componentsBody = document.getElementById("craft-components");
+                if (componentsBody) {
+                    componentsBody.innerHTML = data.components.map(c => `
+                        <tr class="row">
                             <td class="font-bold text-white">${c.name}</td>
                             <td>${c.category}</td>
                             <td>${c.tier}</td>
                             <td class="text-slate-400 italic">${c.notes ?? ""}</td>
                         </tr>
                     `).join("");
+                }
             } catch (e) {
                 console.error("Could not load crafting.json", e);
             }
         }
 
-        function filterCrafting() {
-            const filter = document.getElementById("tierFilter").value;
-            document.querySelectorAll("#crafting-recipes tr").forEach(row => {
-                row.style.display =
-                    filter === "all" || row.dataset.tier === filter
-                        ? ""
-                        : "none";
-            });
-        }
-
-        
         async function loadBrewing() {
             try {
                 const res = await fetch('../json/brewing.json');
                 const data = await res.json();
 
-                
-                document.getElementById("brew-outcomes").innerHTML =
-                    data.bitcodes.map(b => `
+                const outcomesBody = document.getElementById("brew-outcomes");
+                if (outcomesBody) {
+                    outcomesBody.innerHTML = data.bitcodes.map(b => `
                         <tr class="row">
                             <td class="font-mono text-indigo-400 font-bold tracking-wider">${b.code}</td>
                             <td class="font-bold text-white">${b.name}</td>
-                            ${b.effects.map(e =>
-                                `<td class="text-slate-400 text-xs">${e}</td>`
-                            ).join("")}
+                            ${b.effects.map(e => `<td class="text-slate-400 text-xs">${e}</td>`).join("")}
                         </tr>
                     `).join("");
+                }
 
+                const ingredientsBody = document.getElementById("brew-ingredients");
+                if (ingredientsBody) {
+                    ingredientsBody.innerHTML = data.ingredients.map(i => `
+                        <tr class="row">
+                            <td class="font-bold text-white">${i.name}</td>
+                            <td><span class="tag-badge">${i.aspect}</span></td>
+                            <td class="font-mono text-emerald-300">${i.value}</td>
+                            <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">Tier ${i.tier}</span></td>
+                        </tr>
+                    `).join("");
+                }
 
-                document.getElementById("brew-ingredients").innerHTML =
-    data.ingredients.map(i => `
-        <tr class="row">
-            <td class="font-bold text-white">${i.name}</td>
-            <td>
-            <span class="tag-badge">${i.aspect}</span>
-            </td>
-            <td class="font-mono text-emerald-300">
-                ${i.value}
-            </td>
-            <td>
-                <span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">
-                    Tier ${i.tier}
-                </span>
-            </td>
-        </tr>
-    `).join("");
-
-                /* ---- Compound Ingredients ---- */
-document.getElementById("brew-compounds").innerHTML =
-    data.compoundIngredients.map(ci => `
-        <tr class="row">
-            <td class="font-bold text-white">${ci.name}</td>
-            <td>
-                ${ci.aspects.map(a =>
-                    `<span class="tag-badge">${a}</span>`
-                ).join("")}
-            </td>
-            <td class="font-mono text-emerald-300">
-                ${ci.values.join(" / ")}
-            </td>
-            <td>
-                <span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">
-                    Tier ${ci.tier}
-                </span>
-            </td>
-        </tr>
-    `).join("");
-                
+                const compoundsBody = document.getElementById("brew-compounds");
+                if (compoundsBody) {
+                    compoundsBody.innerHTML = data.compoundIngredients.map(ci => `
+                        <tr class="row">
+                            <td class="font-bold text-white">${ci.name}</td>
+                            <td>${ci.aspects.map(a => `<span class="tag-badge">${a}</span>`).join("")}</td>
+                            <td class="font-mono text-emerald-300">${ci.values.join(" / ")}</td>
+                            <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">Tier ${ci.tier}</span></td>
+                        </tr>
+                    `).join("");
+                }
             } catch (e) {
                 console.error("Could not load brewing.json", e);
             }
         }
 
-        
+        // --- Interaction Logic ---
+        function filterCrafting() {
+            const filter = document.getElementById("tierFilter").value;
+            document.querySelectorAll("#crafting-recipes tr").forEach(row => {
+                row.style.display = (filter === "all" || row.dataset.tier === filter) ? "" : "none";
+            });
+        }
 
         function calculateBrewingDC() {
             const bitcodeEl = document.getElementById("brewBitcode");
@@ -869,24 +840,16 @@ document.getElementById("brew-compounds").innerHTML =
             }
 
             const bits = (bitcode.match(/1/g) || []).length;
-            const dc = 6 + bits + disparity + (tier - 1);
-
-            output.textContent = dc;
+            output.textContent = 6 + bits + disparity + (tier - 1);
         }
 
+        // --- Global Listeners & Initialization ---
         document.addEventListener("input", (e) => {
-            if (
-                e.target.id === "brewBitcode" ||
-                e.target.id === "brewDisparityInput" ||
-                e.target.id === "brewTier"
-            ) {
+            const brewIds = ["brewBitcode", "brewDisparityInput", "brewTier"];
+            if (brewIds.includes(e.target.id)) {
                 calculateBrewingDC();
             }
         });
-
-        
-
-        
 
         document.addEventListener("DOMContentLoaded", () => {
             loadEquipment();

@@ -1,0 +1,63 @@
+<nav class="fixed w-full z-50 nav-container">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <img src="../img/Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+            <span class="text-xl font-bold tracking-widest uppercase fantasy-font nav-logo-text">Mythlight</span>
+        </div>
+
+        <div id="nav-links" class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="rules.html" class="nav-link">Rules</a>
+            <a href="species.html" class="nav-link">Species</a>
+            <a href="paths.html" class="nav-link">Paths</a>
+            <a href="traits.html" class="nav-link">Traits</a>
+            <a href="spells.html" class="nav-link">Spells</a>
+            <a href="equipment.html" class="nav-link">Equipment</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full overflow-hidden transition-all duration-300">
+        <div class="flex flex-col text-sm font-semibold uppercase tracking-widest border-t border-white/5">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="rules.html" class="mobile-link">Rules</a>
+            <a href="species.html" class="mobile-link">Species</a>
+            <a href="paths.html" class="mobile-link">Paths</a>
+            <a href="traits.html" class="mobile-link">Traits</a>
+            <a href="spells.html" class="mobile-link">Spells</a>
+            <a href="equipment.html" class="mobile-link">Equipment</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    (function() {
+        const initNavbar = () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.nav-link, .mobile-link');
+            
+            btn.onclick = (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('hidden');
+            };
+
+            document.addEventListener('click', () => {
+                if (!menu.classList.contains('hidden')) menu.classList.add('hidden');
+            });
+
+            const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentFile) {
+                    link.classList.add('active');
+                }
+            });
+        };
+        initNavbar();
+    })();
+</script>

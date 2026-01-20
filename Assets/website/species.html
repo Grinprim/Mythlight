@@ -10,174 +10,101 @@
 </head>
 <body class="bg-custom-dark text-slate-300">
 
-    <nav class="fixed w-full z-50 nav-glass">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <img src="../img/Mythlight Logo White.svg" alt="Mythlight" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
-                <span class="text-xl font-bold tracking-widest text-white fantasy-font uppercase">Mythlight</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
-                <a href="index.html" class="hover:text-white transition-colors text-slate-400">Home</a>
-                <a href="rules.html" class="hover:text-white transition-colors text-slate-400">Rules</a>
-                <a href="species.html" class="hover:text-white transition-colors text-slate-400">Species</a>
-                <a href="paths.html" class="hover:text-white transition-colors text-slate-400">Paths</a>
-                <a href="traits.html" class="hover:text-white transition-colors text-slate-400">Traits</a>
-                <a href="spells.html" class="hover:text-white transition-colors text-slate-400">Spells</a>
-                <a href="equipment.html" class="hover:text-white transition-colors text-slate-400">Equipment</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-700/50">
-            <div class="px-6 pt-2 pb-6 space-y-2 text-sm font-semibold uppercase tracking-widest flex flex-col">
-                <a href="index.html" class="block py-2 text-slate-400 hover:text-white">Home</a>
-                <a href="rules.html" class="block py-2 text-slate-400 hover:text-white">Rules</a>
-                <a href="species.html" class="block py-2 text-slate-400 hover:text-white">Species</a>
-                <a href="paths.html" class="block py-2 text-slate-400 hover:text-white">Paths</a>
-                <a href="traits.html" class="block py-2 text-slate-400 hover:text-white">Traits</a>
-                <a href="spells.html" class="block py-2 text-slate-400 hover:text-white">Spells</a>
-                <a href="equipment.html" class="block py-2 text-slate-400 hover:text-white">Equipment</a>
-            </div>
-        </div>
-    </nav>
-
+    <div id="navbar-placeholder"></div>
         
     <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
-        
         <div class="mb-12 text-center">
             <h1 class="text-5xl font-bold text-white mb-4">Playable Species</h1>
             <p class="text-lg text-indigo-300">Choose your lineage and the innate gifts it bestows upon you.</p>
         </div>
         
-<div class="mb-10 max-w-xl mx-auto">
-    <input
-        id="speciesSearch"
-        type="text"
-        placeholder="Search species..."
-        class="w-full px-5 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
-    >
-</div>
+        <div class="mb-10 max-w-xl mx-auto">
+            <input id="speciesSearch" type="text" placeholder="Search species..." class="w-full px-5 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-200 focus:ring-2 focus:ring-indigo-500 transition">
+        </div>
         
         <div id="content" class="space-y-8">
-            
-            <div class="text-center py-12 text-slate-500">
-                <div class="animate-pulse">Summoning archives...</div>
-            </div>
+            <div class="text-center py-12 text-slate-500 animate-pulse">Summoning archives...</div>
         </div>
-
     </main>
 
     <div id="footer-placeholder"></div>
 
     <script>
+        // 1. Fetch Navbar from ../css/
+        fetch('../css/navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Re-trigger the script inside the navbar
+                const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript);
+                });
+            });
+
+        // 2. Fetch Footer from ../css/
         fetch('../css/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-            
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
 
+        // 3. Fetch Species JSON from ../json/
         fetch('../json/species.json')
-            .then(response => response.ok ? response.json() : Promise.reject(new Error('Failed to load species.json')))
+            .then(response => {
+                if (!response.ok) throw new Error('Could not find species.json in ../json/');
+                return response.json();
+            })
             .then(data => {
-        const container = document.getElementById('content');
-        container.innerHTML = ''; // Clear loading state
+                const container = document.getElementById('content');
+                container.innerHTML = ''; 
+                const speciesList = data.species || data;
 
-        data.species.forEach(species => {
-          const section = document.createElement('section');
-          section.className = 'rule-card relative overflow-hidden group';
-
-          const accentDiv = document.createElement('div');
-          accentDiv.className = 'absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-50 group-hover:opacity-100 transition-opacity';
-          section.appendChild(accentDiv);
-
-          let htmlContent = `
-            <div class="flex flex-col md:flex-row justify-between items-baseline mb-4 border-b border-slate-700 pb-2">
-                <h2 class="text-3xl text-white font-bold tracking-wide">${species.name}</h2>
-            </div>
-            
-            <p class="text-indigo-300 italic mb-6 text-sm">${species.summary}</p>
-            
-            <div class="space-y-4 text-slate-300 mb-8 leading-relaxed">
-                ${species.description.map(p => `<p>${p}</p>`).join('')}
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-white font-bold mb-4 uppercase text-xs tracking-widest border-b border-slate-700/50 pb-2">Attribute Bonuses</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    ${Object.entries(species.attributes).map(([key, value]) => {
-                        const valStr = value >= 0 ? `+${value}` : `${value}`;
-                        const colorClass = value > 0 ? 'text-emerald-400' : (value < 0 ? 'text-red-400' : 'text-slate-400');
-                        return `
-                        <div class="bg-slate-900/50 p-3 rounded border border-slate-700 flex justify-between items-center">
-                            <span class="text-xs font-bold uppercase text-slate-400">${key}</span>
-                            <span class="${colorClass} font-mono font-bold">${valStr}</span>
-                        </div>
-                        `;
-                    }).join('')}
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-xs tracking-widest border-b border-slate-700/50 pb-2">Species Traits</h3>
-                ${species.traits.map(trait => `
-                  <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700 hover:border-indigo-500/50 transition-colors">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                        <strong class="text-lg text-white font-serif">${trait.Name}</strong>
-                        
-                        <div class="flex flex-wrap gap-2 text-[10px] uppercase font-bold tracking-wider">
-                            ${trait.Action ? `<span class="px-2 py-1 rounded bg-indigo-900/40 text-indigo-300 border border-indigo-500/20">Action: ${trait.Action}</span>` : ''}
-                            ${trait.Cost ? `<span class="px-2 py-1 rounded bg-purple-900/40 text-purple-300 border border-purple-500/20">Cost: ${trait.Cost}</span>` : ''}
-                            ${trait.Parameters ? `<span class="px-2 py-1 rounded bg-slate-700/40 text-slate-300 border border-slate-600/20">${trait.Parameters}</span>` : ''}
-                        </div>
-                    </div>
-
-                    ${trait.Symbols ? `<div class="mb-2 text-xs text-yellow-500 font-mono">${trait.Symbols}</div>` : ''}
+                speciesList.forEach(species => {
+                    const section = document.createElement('section');
+                    section.className = 'rule-card relative overflow-hidden group p-8 bg-slate-900/40 rounded-3xl border border-slate-800 shadow-xl mb-8';
                     
-                    <div class="text-sm text-slate-400 leading-relaxed">
-                        ${trait.Description}
-                    </div>
-                  </div>
-                `).join('')}
-            </div>
-          `;
+                    section.innerHTML = `
+                        <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <h2 class="text-3xl text-white font-bold mb-2">${species.name}</h2>
+                        <p class="text-indigo-300 italic mb-6 text-sm">${species.summary}</p>
+                        <div class="space-y-4 text-slate-300 mb-8">${species.description.map(p => `<p>${p}</p>`).join('')}</div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                            ${Object.entries(species.attributes).map(([key, val]) => `
+                                <div class="bg-slate-900/50 p-3 rounded border border-slate-700 flex justify-between">
+                                    <span class="text-xs font-bold uppercase text-slate-400">${key}</span>
+                                    <span class="${val > 0 ? 'text-emerald-400' : (val < 0 ? 'text-red-400' : 'text-slate-400')} font-bold">${val >= 0 ? '+' : ''}${val}</span>
+                                </div>
+                            `).join('')}
+                        </div>
 
-          section.insertAdjacentHTML('beforeend', htmlContent);
-          container.appendChild(section);
+                        <div class="grid gap-4">
+                            ${species.traits.map(trait => `
+                                <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <strong class="text-white">${trait.Name}</strong>
+                                        <span class="text-[10px] text-indigo-400 uppercase font-bold">${trait.Action || ''}</span>
+                                    </div>
+                                    <p class="text-sm text-slate-400">${trait.Description}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    container.appendChild(section);
+                });
+            })
+            .catch(err => {
+                document.getElementById('content').innerHTML = `<div class="text-red-400 text-center">Error: ${err.message}</div>`;
+            });
+
+        // Search Logic
+        document.getElementById('speciesSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('#content section').forEach(card => {
+                card.style.display = card.innerText.toLowerCase().includes(query) ? '' : 'none';
+            });
         });
-      })
-      .catch(error => {
-        const container = document.getElementById('content');
-        container.innerHTML = `
-            <div class="bg-red-900/20 border border-red-500/50 p-6 rounded-xl text-center">
-                <h3 class="text-red-400 font-bold mb-2">Arcane Interruption</h3>
-                <p class="text-red-200 text-sm">Failed to summon species data. Ensure 'species.json' is present in the archives.</p>
-                <p class="text-xs text-red-900/50 mt-2 font-mono">${error.message}</p>
-            </div>
-        `;
-        console.error(error);
-      });
-        
-        document.addEventListener('input', (e) => {
-    if (e.target.id !== 'speciesSearch') return;
-
-    const query = e.target.value.toLowerCase();
-    const cards = document.querySelectorAll('#content section');
-
-    cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(query) ? '' : 'none';
-    });
-});
     </script>
-
 </body>
 </html>
-
