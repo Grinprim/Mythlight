@@ -17,7 +17,7 @@ h1,h2,h3,h4,.fantasy-font{font-family:'Cinzel',serif}
 
 /* HOME */
 .hero-gradient{background:radial-gradient(circle at center,#1e1b4b 0%,#0f172a 100%)}
-.card-hover{transition:all .3s cubic-bezier(.4,0,.2,1);background:rgba(30,41,59,.3);border:1px solid rgba(255,255,255,.05)}
+.card-hover{transition:all .3s cubic-bezier(.4,0,.2,1);background:rgba(30,41,59,.3);border:1px solid rgba(255,255,255,.05); display: block; text-decoration: none;}
 .card-hover:hover{transform:translateY(-5px);border-color:rgba(129,140,248,.4);background:rgba(30,41,59,.6);box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
 .logo-glow{filter:drop-shadow(0 0 10px rgba(99,102,241,.4))}
 .animate-float{animation:float 6s ease-in-out infinite}
