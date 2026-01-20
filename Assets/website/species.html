@@ -19,7 +19,8 @@
         </div>
         
         <div class="mb-10 max-w-xl mx-auto">
-            <input id="speciesSearch" type="text" placeholder="Search species..." class="w-full px-5 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-200 focus:ring-2 focus:ring-indigo-500 transition">
+            <input id="speciesSearch" type="text" placeholder="Search species..." 
+                class="w-full px-5 py-3 rounded-xl bg-slate-900/60 border border-slate-700 text-slate-200 focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
         </div>
         
         <div id="content" class="space-y-8">
@@ -30,81 +31,117 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // 1. Fetch Navbar from ../css/
+        // 1. Fetch Navbar & Handle Scripts/Menu
         fetch('../css/navbar.html')
             .then(res => res.text())
             .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                // Re-trigger the script inside the navbar
-                const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
+                const navPlaceholder = document.getElementById('navbar-placeholder');
+                navPlaceholder.innerHTML = data;
+                
+                // Trigger scripts inside navbar
+                const scripts = navPlaceholder.querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');
                     newScript.text = oldScript.text;
                     document.body.appendChild(newScript);
                 });
-            });
 
-        // 2. Fetch Footer from ../css/
+                // Mobile Menu Logic (must be inside .then)
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                if (mobileBtn) {
+                    mobileBtn.addEventListener('click', () => {
+                        document.getElementById('mobile-menu').classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(err => console.error("Error loading navbar:", err));
+
+        // 2. Fetch Footer
         fetch('../css/footer.html')
             .then(res => res.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+            .catch(err => console.error("Error loading footer:", err));
 
-        // 3. Fetch Species JSON from ../json/
-        fetch('../json/species.json')
-            .then(response => {
+        // 3. Fetch and Render Species
+        async function loadSpecies() {
+            try {
+                const response = await fetch('../json/species.json');
                 if (!response.ok) throw new Error('Could not find species.json in ../json/');
-                return response.json();
-            })
-            .then(data => {
+                const data = await response.json();
+                
                 const container = document.getElementById('content');
                 container.innerHTML = ''; 
-                const speciesList = data.species || data;
+                
+                // Handle different JSON structures (either an array or an object with a species key)
+                const speciesList = Array.isArray(data) ? data : data.species;
 
                 speciesList.forEach(species => {
                     const section = document.createElement('section');
-                    section.className = 'rule-card relative overflow-hidden group p-8 bg-slate-900/40 rounded-3xl border border-slate-800 shadow-xl mb-8';
+                    section.className = 'rule-card relative overflow-hidden group p-8 bg-slate-900/40 rounded-3xl border border-slate-800 shadow-xl mb-8 transition-all hover:border-indigo-500/30';
                     
                     section.innerHTML = `
-                        <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                        <h2 class="text-3xl text-white font-bold mb-2">${species.name}</h2>
-                        <p class="text-indigo-300 italic mb-6 text-sm">${species.summary}</p>
-                        <div class="space-y-4 text-slate-300 mb-8">${species.description.map(p => `<p>${p}</p>`).join('')}</div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-30 group-hover:opacity-100 transition-opacity"></div>
                         
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                            ${Object.entries(species.attributes).map(([key, val]) => `
-                                <div class="bg-slate-900/50 p-3 rounded border border-slate-700 flex justify-between">
-                                    <span class="text-xs font-bold uppercase text-slate-400">${key}</span>
-                                    <span class="${val > 0 ? 'text-emerald-400' : (val < 0 ? 'text-red-400' : 'text-slate-400')} font-bold">${val >= 0 ? '+' : ''}${val}</span>
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-4">
+                            <div>
+                                <h2 class="text-3xl text-white font-bold">${species.name}</h2>
+                                <p class="text-indigo-400 italic text-sm mt-1">${species.summary || ''}</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-slate-300 mb-8 leading-relaxed">
+                            ${Array.isArray(species.description) 
+                                ? species.description.map(p => `<p>${p}</p>`).join('') 
+                                : `<p>${species.description}</p>`}
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                            ${Object.entries(species.attributes || {}).map(([key, val]) => `
+                                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-700/50 flex justify-between items-center">
+                                    <span class="text-[10px] font-bold uppercase tracking-tighter text-slate-400">${key}</span>
+                                    <span class="${val > 0 ? 'text-emerald-400' : (val < 0 ? 'text-rose-400' : 'text-slate-500')} font-mono font-bold">
+                                        ${val >= 0 ? '+' : ''}${val}
+                                    </span>
                                 </div>
                             `).join('')}
                         </div>
 
                         <div class="grid gap-4">
-                            ${species.traits.map(trait => `
-                                <div class="bg-slate-800/30 rounded-lg p-5 border border-slate-700">
+                            ${(species.traits || []).map(trait => `
+                                <div class="bg-slate-800/20 rounded-xl p-5 border border-slate-700/40 hover:bg-slate-800/40 transition-colors">
                                     <div class="flex justify-between items-center mb-2">
-                                        <strong class="text-white">${trait.Name}</strong>
-                                        <span class="text-[10px] text-indigo-400 uppercase font-bold">${trait.Action || ''}</span>
+                                        <strong class="text-indigo-100">${trait.Name || trait.name}</strong>
+                                        <span class="text-[10px] bg-indigo-900/30 text-indigo-300 px-2 py-1 rounded border border-indigo-500/20 uppercase font-bold">
+                                            ${trait.Action || trait.action || 'Passive'}
+                                        </span>
                                     </div>
-                                    <p class="text-sm text-slate-400">${trait.Description}</p>
+                                    <p class="text-sm text-slate-400 leading-relaxed">${trait.Description || trait.description}</p>
                                 </div>
                             `).join('')}
                         </div>
                     `;
                     container.appendChild(section);
                 });
-            })
-            .catch(err => {
-                document.getElementById('content').innerHTML = `<div class="text-red-400 text-center">Error: ${err.message}</div>`;
-            });
+            } catch (err) {
+                document.getElementById('content').innerHTML = `
+                    <div class="bg-rose-900/20 border border-rose-500/50 text-rose-300 p-6 rounded-2xl text-center">
+                        <p class="font-bold">Error Accessing Archives</p>
+                        <p class="text-sm opacity-80">${err.message}</p>
+                    </div>`;
+            }
+        }
 
-        // Search Logic
+        // 4. Search Functionality
         document.getElementById('speciesSearch').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             document.querySelectorAll('#content section').forEach(card => {
-                card.style.display = card.innerText.toLowerCase().includes(query) ? '' : 'none';
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query) ? '' : 'none';
             });
         });
+
+        // Initialize
+        document.addEventListener("DOMContentLoaded", loadSpecies);
     </script>
 </body>
 </html>
