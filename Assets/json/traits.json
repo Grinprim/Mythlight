@@ -1059,7 +1059,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Flashbangs:<br>Thrown projectile (6 unit Range); Everyone in a 3-tile radius suffers –4 Accuracy until next turn.",
+    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Flashbangs:<br>Thrown projectile with a 6 tile Range; Everyone in a 3 tile radius suffers –4 Accuracy until next turn.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
@@ -1554,7 +1554,7 @@
     "Cost": "2",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Smokebombs:<br>Thrown projectile (6 unit Range); Everyone in a 3-tile radius suffers –2 Accuracy, lasts 4 scenes.",
+    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Smokebombs:<br>Thrown projectile with a 6 tile Range; Everyone in a 3 tile radius suffers –2 Accuracy, lasts 4 scenes.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
@@ -2392,6 +2392,51 @@
     "Parameters": "⫘",
     "Description": "If you climb a wall or jump over an obstacle, you can jump at an enemy and attack with your weaponm, doing +X Damage. An ally can also offer a boost to perform this attack.",
     "Scaling": "Damage X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
+  },
+  {
+    "Name": "Return",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Return an object you threw within 6 tile to your hand.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Molly",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲⧖☀",
+    "Parameters": "⫘",
+    "Description": "Using [1x Glass - Tube, 1x Liquid - Alchohol] you can create Mollies:<br>Thrown projectile with a 6 tile Range; Everyone in a 2x2 square take 2 Fire damage and gains the Burn Condition.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Losers Fallacy",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘",
+    "Description": "Single-target Trait Attacks deal bonus damage equal to the granting trait’s point cost. This effect stacks.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Cold blooded",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "While resting you must rest near a heat source. You consume half the amount of rations.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Syphoning Whirlpool",
+    "Action":"◆",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You deal 1 Damage to all Adjacent Enemies; You regain Mana equal to the Damage dealt.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
 
