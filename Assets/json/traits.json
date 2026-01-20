@@ -2178,14 +2178,220 @@
     "Description": "You loose access to a spell until your next sleep. You replenish Double its Mana cost as Mana.",
     "Scaling": "-"
   },
+
+
+
+
+
+
+
+  
   {
-    "Name": "",
-    "Action":"◆◇⬖⭘",
-    "Cost": "",
-    "Symbols": "🗲⧖☀",
-    "Parameters": "⫘",
-    "Description": "",
+    "Name": "Veiled Blessing",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can no longer be Healed or gain Guard from allies. Gain +X Armor.",
+    "Scaling": "Armor X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
+  },
+  {
+    "Name": "Time Crunch",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Starting after your turn ends, and lasting for 4 Scenes; Everyones turn consists of only 1 Action.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "One of each",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You gain +2 Damage on ALL attacks. You cannot use the same attack multiple times per combat. Lasts until your next rest.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Toss Me",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can throw a grappled creature at least 1 size smaller than you. They are treated as a ranged weapon you are proficient with, and have a max range of [3+ Your Might Total]. If the thrown creature is an ally, they may make an attack on landing; otherwise, they deal damage equal to [your Might total].",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Loaded Dice",
+    "Action":"◆",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "Make an attack that deals bonus damage equal to your Grace, then reset your Grace. Grace cannot increase Accuracy for this attack.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Riposte",
+    "Action":"◇",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "If you took Guard damage without your Guard being fully depleted, make an attack against the creature that struck you.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Risky Strike",
+    "Action":"⬖",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Make a X Damage Melee or Ranged strike with your weapon, if the target dies you gain X Gold",
+    "Scaling": "Damage/Gold X:<br>2 [lvl 1]<br>4 [lvl 6]<br>6 [lvl 12]"
+  },
+  {
+    "Name": "Rite of Dominance",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You lose 4 Health; The next 3 attacks in a 2 tile radius have their damage reduced by 2.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Rite of Negation",
+    "Action":"◇",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When a spell is cast within 8 units, you may counter it; doing so causes you to lose access to a spell you know of your choice until your next rest.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Rite of Calling",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You lose 4 armor, 3 enemies within 8 units have -3 Accuracy until the end of combat.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Sharing is caring",
+    "Action":"◇",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When an ally within 8 units casts a spell, you may pay for it with your mana instead.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Catalyst of Aeons",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You can repair Durability of Crafts or Companions using Mana or Health; Each point of Durability is equal to 4 Mana or, 2 Health.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Intimidating Roar",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "You stun all enemies with their Current Health below [Your Level] within a 3 tile radius.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Take a moment",
+    "Action":"⬖",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "When you reload a firearm, you recover [Half Your Level] Health",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Survival Skills",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "At the start of each Scene you gain Guard equal to the number of times you were hit last Scene.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "One for All",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Any guard you gain is evenly divided among you and your allies.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "All for One",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Half of any guard gained by your allies is instead given to you.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Arenas Favourite",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "None",
+    "Description": "For the next 2 Scenes you lose 4 Armor and gain +4 Accuracy",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Crimson Banquet",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "All mana costs are reduced by 1. You lose 2 Health, each time you cast a spell.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Crimson Pact",
+    "Action":"⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Crimson Banquet",
+    "Description": "Spells cost no mana, instead pay [Double the Spell level] as Health. Crimson Banquet no longer has an effect.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Light Footed",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "If you have traveled at least 8 tiles; You gain +3 Reflex and +1 Armor.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Sojourners",
+    "Action": "◇",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Whenever you receive a Buff from an ally you can apply a copy of the Buff to another ally.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Slam Dunk",
+    "Action":"◆",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘",
+    "Description": "If you climb a wall or jump over an obstacle, you can jump at an enemy and attack with your weaponm, doing +X Damage. An ally can also offer a boost to perform this attack.",
+    "Scaling": "Damage X:<br>+2 [lvl 1]<br>+3 [lvl 6]<br>+4 [lvl 12]"
   }
 ]
 
