@@ -1106,31 +1106,54 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        fetch('../css/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
-                scripts.forEach(oldScript => {
+        // 1. Unified Layout Loader
+        async function loadLayout() {
+            try {
+                // Fetch Navbar
+                const navRes = await fetch('../css/navbar.html');
+                const navData = await navRes.text();
+                const navPlaceholder = document.getElementById('navbar-placeholder');
+                navPlaceholder.innerHTML = navData;
+
+                // Execute Navbar Scripts
+                navPlaceholder.querySelectorAll('script').forEach(oldScript => {
                     const newScript = document.createElement('script');
                     newScript.text = oldScript.text;
                     document.body.appendChild(newScript);
                 });
+
+                // FIX: Attach Mobile Toggle ONLY after Navbar is loaded
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.addEventListener('click', function() {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+
+                // Fetch Footer
+                const footerRes = await fetch('../css/footer.html');
+                const footerData = await footerRes.text();
+                document.getElementById('footer-placeholder').innerHTML = footerData;
+
+            } catch (err) {
+                console.error('Error loading layout components:', err);
+            }
+        }
+
+        // 2. Dice Randomization
+        function randomizeDiceFaces() {
+            const dice = document.querySelectorAll('.die');
+            if (dice.length === 0) return; // Safety check
+            
+            dice.forEach(d => {
+                const face = Math.floor(Math.random() * 6) + 1;
+                // This removes old face classes and adds the new one
+                d.className = 'die face-' + face;
             });
+        }
 
-        fetch('../css/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-
-        // 2. Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-
-        // 3. Active sidebar highlighting using IntersectionObserver
+        // 3. Sidebar Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && entry.target.id) {
@@ -1144,21 +1167,22 @@
             });
         }, { threshold: 0.25 });
 
-        document.querySelectorAll('section[id]').forEach(section => {
-            observer.observe(section);
-        });
-
-        // 4. Randomize dice faces
-        function randomizeDiceFaces() {
-            const dice = document.querySelectorAll('.die');
-            dice.forEach(d => {
-                const face = Math.floor(Math.random() * 6) + 1;
-                d.className = 'die face-' + face;
+        // 4. Initialization
+        document.addEventListener("DOMContentLoaded", () => {
+            loadLayout();
+            
+            // Observe sections for sidebar
+            document.querySelectorAll('section[id]').forEach(section => {
+                observer.observe(section);
             });
-        }
 
-        window.addEventListener('load', () => {
+            // Run dice randomization
             randomizeDiceFaces();
+            
+            // Run data loaders (from your existing equipment code)
+            if (typeof loadEquipment === "function") loadEquipment();
+            if (typeof loadCrafting === "function") loadCrafting();
+            if (typeof loadBrewing === "function") loadBrewing();
         });
     </script>
 </body>
