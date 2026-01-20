@@ -99,7 +99,7 @@
     "Scaling": "-"
   },
   {
-    "Name": "Arcane Student",
+    "Name": "Arcane Spellcaster",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
@@ -108,7 +108,7 @@
     "Scaling": "-"
   },
   {
-    "Name": "Divine Initiate",
+    "Name": "Divine Spellcaster",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
@@ -117,7 +117,7 @@
     "Scaling": "-"
   },
   {
-    "Name": "Cosmic Novice",
+    "Name": "Cosmic Spellcaster",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
@@ -126,7 +126,7 @@
     "Scaling": "-"
   },
   {
-    "Name": "Occult Apprentice",
+    "Name": "Occult Spellcaster",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
@@ -135,13 +135,13 @@
     "Scaling": "-"
   },
   {
-    "Name": "Elementalist’s Spark",
+    "Name": "Elemental Spellcaster",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "★ Spellcasting",
     "Description": "Gain access to Elemental Spellcasting. You learn a number of Elemental spells equal to your Scholarship, choose one element; spells of that element deal +X damage . You learn 2 Elemental cantrips.",
-    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
   },
   {
     "Name": "Cantrip Adept",
@@ -230,7 +230,7 @@
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "⫘ Apprentice Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
     "Scaling": "-"
   },
 {
@@ -239,7 +239,7 @@
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "⫘ Adept Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
     "Scaling": "-"
   },
 {
@@ -248,7 +248,7 @@
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "⫘ Expert Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes",
+    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
     "Scaling": "-"
   },
 
@@ -258,8 +258,8 @@
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "None",
-    "Description": "When resting near water, regain +50% Health; You can fish while resting, guarantee treasure worth at least 2 gold (+1 gold at levels 3, 6, 9, 12).",
-    "Scaling": "-"
+    "Description": "When resting near water, regain +50% Health; You can fish while resting, guarantee treasure worth at least X gold.",
+    "Scaling": "Gold X:<br>2 [lvl 1]<br>3 [lvl 3]<br>4 [lvl 6]<br>5 [lvl 9]<br>6 [lvl 12]"
   },
   {
     "Name": "Storyteller",
@@ -321,16 +321,16 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "[1× Common Component]: Create a trap in an unoccupied tile that deals X damage and reduces movement by 3 tiles.<br>[1× Rope Component]: Create a Bola. You are proficient with it; it can be thrown as a ranged trap (Range 6 units).",
+    "Description": "Using [1× Common Component] you can create a trap in an adjacent unoccupied tile. The trap can activate only once, dealing X damage and applying 3 stacks of Slow to a creature that stepped on the same tile as the trap. Using [1× Rope Component] you can create and throw a Bola. You are proficient with Bolas. Bolas can be thrown up to 6 tiles away doing X damage and applying 3 stacks of Slow to the creature.",
     "Scaling": "Damage X:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Conductive Wiring",
     "Action":"⬖",
     "Cost": "1",
-    "Symbols": "🗲",
+    "Symbols": "⧖",
     "Parameters": "⫘ Combat Trapper",
-    "Description": "Using [1× Metal - Wire], you can create fences up to 4 units long. Each fence deals X Lightning Damage the first time a creature crosses it, and stuns any creature below half health.",
+    "Description": "Using [1× Metal - Wire], you can create fences up to 4 Tiles long and 1 Unit tall. Each fence deals Stuns dealing X Lightning Damage when a creature crosses it, loosing 1 durability.. The fence has 1 Durability.",
     "Scaling": "Damage X:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
@@ -375,7 +375,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "★ Infused Strike",
-    "Description": "Your next attack deals +X elemental damage of a chosen type.",
+    "Description": "You make an attack that deals +X elemental damage of a chosen type.",
     "Scaling": "Damage/Uses X/🗲:<br>+1/1 [lvl 1]<br>+2/2 [lvl 3]<br>+3/3 [lvl 6]<br>+4/4 [lvl 9]"
   },
   {
@@ -465,7 +465,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Gain +2 tiles of movement while retreating or feared.",
+    "Description": "Gain +2 tiles of movement while moving away from enemies or feared.",
     "Scaling": "-"
   },
   {
@@ -681,7 +681,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "None",
-    "Description": "Teleport your companion to your side and restore 2 Health to it.",
+    "Description": "If your companion is within 10 units, and is injured. You may teleport them to yourself and heal them by [half Your Level] Health",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
@@ -699,7 +699,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "★ Impact ⫘ Pathmaker",
-    "Description": "The target you dash to is slowed until your next turn and takes +1 Force damage.",
+    "Description": "The target you dash to gains 3 stacks of Slow until your next turn and takes +1 Force damage.",
     "Scaling": "-"
   },
   {
@@ -717,7 +717,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "★ Impact ⫘ Pathmaker",
-    "Description": "The target you dash through is pushed 3 units away in the direction of the dash and takes +1 Force damage.",
+    "Description": "The target you dash into is pushed 3 units away in the direction of the dash and takes +1 Force damage.",
     "Scaling": "-"
   },
   {
@@ -753,7 +753,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "★ Companion",
-    "Description": "Using [1× Metal - Wire, 1× Metal - Plate], construct a small mechanical assistant that can carry, retrieve, or activate simple objects. It has 6 Durability, replenished each rest.",
+    "Description": "Using [1× Metal - Wire, 1× Metal - Plate], construct a small mechanical assistant. It counts as a companion with the following stat block: <br><br>| Health/Durability [Your Level] <br>| Armor [6+Your Tinkering] <br>| PHY 0 | TEC 1 | MYS 2 <br>| Traits: <br>- Assist: This companion assist you while crafting, smithing, brewing or casting a ritual. It grants you +2 to the relevant rolls.",
     "Scaling": "-"
   },
   {
@@ -762,7 +762,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Mechanical Assistant",
-    "Description": "Using [1× Metal - Wire, 1× Wooden - Core], create a flying spell drone that stays within 3 units of you. You may cast spells from its position. It has 3 Durability, replenished each rest.",
+    "Description": "Using [1× Metal - Wire, 1× Wooden - Core], create a flying spell drone that stays within 3 units of you. It counts as a companion with the following stat block: <br><br>| Health/Durability [Your Level] <br>| Armor [6+Your Tinkering] <br>| PHY 0 | TEC 1 | MYS 2 <br>| Traits: <br>- Conduit (1 Durability): You cast a spell from this companions position.",
     "Scaling": "-"
   },
   {
@@ -771,58 +771,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Mechanical Assistant",
-    "Description": "Using [1× Metal - Wire, 1× Stone - Cut], create a small combat rover, it counts as a companion with the following stat block: <br><br><table class=\"w-72 text-sm border border-slate-700 rounded-lg overflow-hidden bg-slate-900/40\">
-    <tbody>
-        <tr class=\"bg-slate-800/60\">
-            <td colspan=\"2\" class=\"px-3 py-2 font-bold text-white text-center\">
-                Combat Rover
-            </td>
-        </tr>
-
-        <tr class=\"border-t border-slate-800\">
-            <td class=\"px-3 py-1 font-semibold text-slate-300\">Health / Durability</td>
-            <td class=\"px-3 py-1 text-right\">3 + Your Level</td>
-        </tr>
-
-        <tr class=\"border-t border-slate-800\">
-            <td class=\"px-3 py-1 font-semibold text-slate-300\">Armor</td>
-            <td class=\"px-3 py-1 text-right\">6 + Your Level</td>
-        </tr>
-
-        <tr class=\"bg-slate-800/40 border-t border-slate-800\">
-            <td colspan=\"2\" class=\"px-3 py-1 font-semibold text-white text-center\">
-                Stats
-            </td>
-        </tr>
-
-        <tr class=\"border-t border-slate-800\">
-            <td class=\"px-3 py-1\">Physique</td>
-            <td class=\"px-3 py-1 text-right\">2</td>
-        </tr>
-
-        <tr class=\"border-t border-slate-800\">
-            <td class=\"px-3 py-1\">Technique</td>
-            <td class=\"px-3 py-1 text-right\">1</td>
-        </tr>
-
-        <tr class=\"border-t border-slate-800\">
-            <td class=\"px-3 py-1\">Mystique</td>
-            <td class=\"px-3 py-1 text-right\">0</td>
-        </tr>
-
-        <tr class=\"bg-slate-800/40 border-t border-slate-800\">
-            <td colspan=\"2\" class=\"px-3 py-1 font-semibold text-white text-center\">
-                Traits
-            </td>
-        </tr>
-
-        <tr class=\"border-t border-slate-800\">
-            <td colspan=\"2\" class=\"px-3 py-2 text-slate-400 text-center\">
-                Melee Strike (1 Durability): Deal [1 + Your Tinkering] Damage to an adjacent target; This attack has [Your Tinkering] Accuracy.
-            </td>
-        </tr>
-    </tbody>
-</table>",
+    "Description": "Using [1× Metal - Wire, 1× Stone - Cut], create a small combat rover, It counts as a companion with the following stat block: <br><br>| Health/Durability [Your Level] <br>| Armor [6+Your Tinkering] <br>| PHY 2 | TEC 1 | MYS 0 <br>| Traits: <br>- Melee Strike: Strike a target within Melee range with [Your Tinkering] Accuracy; It deals [1+ Your Tinkering] Force Damage.",
     "Scaling": "-"
   },
   {
@@ -1343,8 +1292,8 @@
     "Action":"⬖",
     "Cost": "1",
     "Symbols": "⧖",
-    "Parameters": "None",
-    "Description": "All enemies within 1 unit will target you with their next attack, Counts as a Taunt Effect.",
+    "Parameters": "★ Taunt",
+    "Description": "All adjacent enemies become Taunted",
     "Scaling": "-"
   },
   {
@@ -1371,7 +1320,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Combat Trapper",
-    "Description": "Traps you can deploy now can be deployed within a range of 5 units.",
+    "Description": "Traps you can deploy can be deployed within a range of 5 units.",
     "Scaling": "-"
   },
   {
@@ -1406,7 +1355,7 @@
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
-    "Parameters": "⫘ Compelling invite",
+    "Parameters": "⫘ ★ Taunt",
     "Description": "Taunting enemies grants 1 Guard per enemy taunted. Doubled for enemies larger than you.",
     "Scaling": "-"
   },
@@ -1771,12 +1720,12 @@
     "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
   },
   {
-    "Name": "Enduring rage",
+    "Name": "Enduring Rage",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Breserk",
-    "Description": "When you enter Rage, gain Guard equal to your level + 2.",
+    "Description": "When you enter Rage, gain Guard equal to [Your Level + 2].",
     "Scaling": "-"
   },
   {
@@ -1803,7 +1752,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You cannot attack this round, gain X guard until your next attack.",
+    "Description": "You cannot attack this round, gain X Guard until your next attack.",
     "Scaling": "Guard X:<br>2 [lvl 1]<br>4 [lvl 3]<br>6 [lvl 6]<br>8 [lvl 9]<br>10 [lvl 12]"
   },
   {
@@ -1843,12 +1792,12 @@
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
-    "Name": "Giant slayer",
+    "Name": "Giant Slayer",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "While targeting a creature thats atleast 1 size larger than you, you gain +1 Damage and +1 Accuracy.",
+    "Description": "While targeting a creature thats at least 1 size larger than you, you gain +1 Damage and +1 Accuracy.",
     "Scaling": "-"
   },
   {
@@ -1879,13 +1828,13 @@
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
-    "Name": "Drama queen",
+    "Name": "Drama Queen",
     "Action":"⬖",
     "Cost": "1",
-    "Symbols": "🗲",
+    "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You convince creatures targeting you that you are dead. You are knocked prone; affected creatures must roll [Insight] vs [6 + your Deception] to resist.",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+    "Description": "You attempt to convince creatures targeting you that you are dead. You are knocked prone; affected creatures must roll [Insight] vs [6 + your Deception] to resist; Creatures you have already tricked will gain +3 to the roll.",
+    "Scaling": "-"
   },
   {
     "Name": "Seamstress",
@@ -1929,7 +1878,7 @@
     "Cost": "1",
     "Symbols": "🗲",
     "Parameters": "⫘ Fair Strike",
-    "Description": "You create a 3×3 zone you must occupy on cast. Spells cannot be cast within it, and spells from outside cannot target creatures inside. The zone lasts 3 turns, or ends immediately if you or the caster leaves the zone.",
+    "Description": "You create a 3×3 zone you must occupy on cast. Spells cannot be cast within it, and spells from outside cannot target creatures inside. The zone lasts 3 Scenes, or ends immediately if you or the caster leaves the zone.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
