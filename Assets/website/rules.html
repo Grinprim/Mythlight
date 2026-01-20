@@ -1110,7 +1110,6 @@
             .then(res => res.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
-                // Execute scripts inside the fetched navbar
                 const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');

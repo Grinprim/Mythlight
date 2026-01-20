@@ -662,200 +662,172 @@
         <div id="footer-placeholder"></div>
 
     <script>
-        // --- Helper Functions ---
-        const formatTags = (tags) => {
-            if (!tags || tags === "-") return "-";
-            const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
-            return list.map(t => `<span class="tag-badge">${t}</span>`).join('');
+// --- 1. Helper Functions ---
+const formatTags = (tags) => {
+    if (!tags || tags === "-") return "-";
+    const list = Array.isArray(tags) ? tags : String(tags).split(',').map(t => t.trim());
+    return list.map(t => `<span class="tag-badge">${t}</span>`).join('');
+};
+
+// --- 2. Layout & Mobile Support (Wait for Fetch) ---
+async function loadLayout() {
+    try {
+        const navRes = await fetch('../css/navbar.html');
+        const navData = await navRes.text();
+        const navPlaceholder = document.getElementById('navbar-placeholder');
+        navPlaceholder.innerHTML = navData;
+
+        // Execute any scripts inside the navbar
+        navPlaceholder.querySelectorAll('script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.text = oldScript.text;
+            document.body.appendChild(newScript);
+        });
+
+        // Setup Mobile Menu AFTER HTML is injected
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.onclick = (e) => {
+                e.preventDefault();
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                // Force display style to bypass Tailwind flex conflicts
+                mobileMenu.style.display = isHidden ? 'none' : 'block';
+            };
+        }
+
+        // Fetch Footer
+        const footerRes = await fetch('../css/footer.html');
+        const footerData = await footerRes.text();
+        document.getElementById('footer-placeholder').innerHTML = footerData;
+
+    } catch (err) {
+        console.error("Layout initialization failed:", err);
+    }
+}
+
+// --- 3. Data Loading with "Safety Guards" ---
+async function loadEquipment() {
+    try {
+        const res = await fetch('../json/equipment.json');
+        const data = await res.json();
+        const fill = (id, rows) => {
+            const body = document.getElementById(id);
+            if (!body || !rows) return;
+            body.innerHTML = rows.map(r => `
+                <tr class="row">
+                    <td class="font-bold text-white">${r.Name}</td>
+                    <td><span class="text-emerald-300 font-mono">${r.Damage ?? r.Rating ?? r.Bonus ?? "-"}</span></td>
+                    <td>${r.Reach ?? r.Range ?? "-"}</td>
+                    <td>${formatTags(r.Ammo ?? r.Tags ?? "-")}</td>
+                    <td class="text-slate-400 text-xs leading-relaxed italic">${r.Description ?? ""}</td>
+                </tr>
+            `).join("");
         };
 
-        // --- Component Loading ---
-        fetch('../css/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-                const navPlaceholder = document.getElementById('navbar-placeholder');
-                navPlaceholder.innerHTML = data;
-                
-                // Execute scripts inside fetched navbar
-                const scripts = navPlaceholder.querySelectorAll('script');
-                scripts.forEach(oldScript => {
-                    const newScript = document.createElement('script');
-                    newScript.text = oldScript.text;
-                    document.body.appendChild(newScript);
-                });
+        if (data.weapons) {
+            const w = data.weapons;
+            fill("m1", w.m1); fill("m2", w.m2); fill("m3", w.m3);
+            fill("r1", w.r1); fill("r2", w.r2);
+            fill("f1", w.f1); fill("f2", w.f2);
+        }
+        if (data.armor) fill("armor", [...(data.armor.a1 || []), ...(data.armor.a2 || []), ...(data.armor.a3 || [])]);
+        if (data.shields) fill("shields", data.shields.ss);
+    } catch (e) { console.error("Equipment JSON error:", e); }
+}
 
-                // Re-bind Mobile Menu (must happen AFTER navbar is in the DOM)
-                const mobileBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileBtn && mobileMenu) {
-                    mobileBtn.addEventListener('click', () => {
-                        mobileMenu.classList.toggle('hidden');
-                    });
-                }
-            })
-            .catch(err => console.error('Error loading navbar:', err));
+async function loadCrafting() {
+    try {
+        const res = await fetch('../json/crafting.json');
+        const data = await res.json();
 
-        fetch('../css/footer.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(err => console.error('Error loading footer:', err));
-
-        // --- Data Loading Functions ---
-        async function loadEquipment() {
-            try {
-                const res = await fetch('../json/equipment.json');
-                const data = await res.json();
-
-                const fill = (id, rows) => {
-                    const body = document.getElementById(id);
-                    if (!body || !rows) return;
-                    body.innerHTML = rows.map(r => `
-                        <tr class="row">
-                            <td class="font-bold text-white">${r.Name}</td>
-                            <td><span class="text-emerald-300 font-mono">${r.Damage ?? r.Rating ?? r.Bonus ?? "-"}</span></td>
-                            <td>${r.Reach ?? r.Range ?? "-"}</td>
-                            <td>${formatTags(r.Ammo ?? r.Tags ?? "-")}</td>
-                            <td class="text-slate-400 text-xs leading-relaxed italic">${r.Description ?? ""}</td>
-                        </tr>
-                    `).join("");
-                };
-
-                fill("m1", data.weapons.m1);
-                fill("m2", data.weapons.m2);
-                fill("m3", data.weapons.m3);
-                fill("r1", data.weapons.r1);
-                fill("r2", data.weapons.r2);
-                fill("f1", data.weapons.f1);
-                fill("f2", data.weapons.f2);
-                fill("armor", [...data.armor.a1, ...data.armor.a2, ...data.armor.a3]);
-                fill("shields", data.shields.ss);
-            } catch (e) {
-                console.error("Could not load equipment.json", e);
-            }
+        const recipesBody = document.getElementById("crafting-recipes");
+        if (recipesBody) {
+            // Using (data.recipes || []) prevents the "map of undefined" error
+            recipesBody.innerHTML = (data.recipes || []).map(r => `
+                <tr data-tier="${r.tier}" class="row">
+                    <td class="font-bold text-white">${r.name}</td>
+                    <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">${r.tier}</span></td>
+                    <td>${r.category}</td>
+                    <td class="text-xs">${(r.components || []).join(", ")}</td>
+                    <td class="text-slate-400 italic">${r.effect}</td>
+                </tr>
+            `).join("");
         }
 
-        async function loadCrafting() {
-            try {
-                const res = await fetch('../json/crafting.json');
-                const data = await res.json();
+        const componentsBody = document.getElementById("craft-components");
+        if (componentsBody) {
+            componentsBody.innerHTML = (data.components || []).map(c => `
+                <tr class="row">
+                    <td class="font-bold text-white">${c.name}</td>
+                    <td>${c.category}</td>
+                    <td>${c.tier}</td>
+                    <td class="text-slate-400 italic">${c.notes ?? ""}</td>
+                </tr>
+            `).join("");
+        }
+    } catch (e) { console.error("Crafting JSON error:", e); }
+}
 
-                const recipesBody = document.getElementById("crafting-recipes");
-                if (recipesBody) {
-                    recipesBody.innerHTML = data.recipes.map(r => `
-                        <tr data-tier="${r.tier}" class="row">
-                            <td class="font-bold text-white">${r.name}</td>
-                            <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">${r.tier}</span></td>
-                            <td>${r.category}</td>
-                            <td class="text-xs">${r.components.join(", ")}</td>
-                            <td class="text-slate-400 italic">${r.effect}</td>
-                        </tr>
-                    `).join("");
-                }
-
-                const componentsBody = document.getElementById("craft-components");
-                if (componentsBody) {
-                    componentsBody.innerHTML = data.components.map(c => `
-                        <tr class="row">
-                            <td class="font-bold text-white">${c.name}</td>
-                            <td>${c.category}</td>
-                            <td>${c.tier}</td>
-                            <td class="text-slate-400 italic">${c.notes ?? ""}</td>
-                        </tr>
-                    `).join("");
-                }
-            } catch (e) {
-                console.error("Could not load crafting.json", e);
-            }
+async function loadBrewing() {
+    try {
+        const res = await fetch('../json/brewing.json');
+        const data = await res.json();
+        
+        const outcomesBody = document.getElementById("brew-outcomes");
+        if (outcomesBody) {
+            outcomesBody.innerHTML = (data.bitcodes || []).map(b => `
+                <tr class="row">
+                    <td class="font-mono text-indigo-400 font-bold tracking-wider">${b.code}</td>
+                    <td class="font-bold text-white">${b.name}</td>
+                    ${(b.effects || []).map(e => `<td class="text-slate-400 text-xs">${e}</td>`).join("")}
+                </tr>
+            `).join("");
         }
 
-        async function loadBrewing() {
-            try {
-                const res = await fetch('../json/brewing.json');
-                const data = await res.json();
-
-                const outcomesBody = document.getElementById("brew-outcomes");
-                if (outcomesBody) {
-                    outcomesBody.innerHTML = data.bitcodes.map(b => `
-                        <tr class="row">
-                            <td class="font-mono text-indigo-400 font-bold tracking-wider">${b.code}</td>
-                            <td class="font-bold text-white">${b.name}</td>
-                            ${b.effects.map(e => `<td class="text-slate-400 text-xs">${e}</td>`).join("")}
-                        </tr>
-                    `).join("");
-                }
-
-                const ingredientsBody = document.getElementById("brew-ingredients");
-                if (ingredientsBody) {
-                    ingredientsBody.innerHTML = data.ingredients.map(i => `
-                        <tr class="row">
-                            <td class="font-bold text-white">${i.name}</td>
-                            <td><span class="tag-badge">${i.aspect}</span></td>
-                            <td class="font-mono text-emerald-300">${i.value}</td>
-                            <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">Tier ${i.tier}</span></td>
-                        </tr>
-                    `).join("");
-                }
-
-                const compoundsBody = document.getElementById("brew-compounds");
-                if (compoundsBody) {
-                    compoundsBody.innerHTML = data.compoundIngredients.map(ci => `
-                        <tr class="row">
-                            <td class="font-bold text-white">${ci.name}</td>
-                            <td>${ci.aspects.map(a => `<span class="tag-badge">${a}</span>`).join("")}</td>
-                            <td class="font-mono text-emerald-300">${ci.values.join(" / ")}</td>
-                            <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">Tier ${ci.tier}</span></td>
-                        </tr>
-                    `).join("");
-                }
-            } catch (e) {
-                console.error("Could not load brewing.json", e);
-            }
+        const ingredientsBody = document.getElementById("brew-ingredients");
+        if (ingredientsBody) {
+            ingredientsBody.innerHTML = (data.ingredients || []).map(i => `
+                <tr class="row">
+                    <td class="font-bold text-white">${i.name}</td>
+                    <td><span class="tag-badge">${i.aspect}</span></td>
+                    <td class="font-mono text-emerald-300">${i.value}</td>
+                    <td><span class="text-xs font-bold uppercase bg-slate-800 px-2 py-1 rounded border border-slate-700 text-slate-300">Tier ${i.tier}</span></td>
+                </tr>
+            `).join("");
         }
+    } catch (e) { console.error("Brewing JSON error:", e); }
+}
 
-        // --- Interaction Logic ---
-        function filterCrafting() {
-            const filter = document.getElementById("tierFilter").value;
-            document.querySelectorAll("#crafting-recipes tr").forEach(row => {
-                row.style.display = (filter === "all" || row.dataset.tier === filter) ? "" : "none";
-            });
-        }
+// --- 4. Interaction & Initialization ---
+function calculateBrewingDC() {
+    const bitcode = document.getElementById("brewBitcode")?.value.trim() || "";
+    const disparity = parseInt(document.getElementById("brewDisparityInput")?.value || 0);
+    const tier = parseInt(document.getElementById("brewTier")?.value || 1);
+    const output = document.getElementById("brewDCResult");
 
-        function calculateBrewingDC() {
-            const bitcodeEl = document.getElementById("brewBitcode");
-            const disparityEl = document.getElementById("brewDisparityInput");
-            const tierEl = document.getElementById("brewTier");
-            const output = document.getElementById("brewDCResult");
+    if (!output || !/^[01]{1,5}$/.test(bitcode)) {
+        if(output) output.textContent = "—";
+        return;
+    }
+    const bits = (bitcode.match(/1/g) || []).length;
+    output.textContent = 6 + bits + disparity + (tier - 1);
+}
 
-            if (!bitcodeEl || !disparityEl || !tierEl || !output) return;
+document.addEventListener("DOMContentLoaded", () => {
+    // These run in parallel so everything works together
+    loadLayout();
+    loadEquipment();
+    loadCrafting();
+    loadBrewing();
+});
 
-            const bitcode = bitcodeEl.value.trim();
-            const disparity = parseInt(disparityEl.value || 0);
-            const tier = parseInt(tierEl.value);
-
-            if (!/^[01]{1,5}$/.test(bitcode)) {
-                output.textContent = "—";
-                return;
-            }
-
-            const bits = (bitcode.match(/1/g) || []).length;
-            output.textContent = 6 + bits + disparity + (tier - 1);
-        }
-
-        // --- Global Listeners & Initialization ---
-        document.addEventListener("input", (e) => {
-            const brewIds = ["brewBitcode", "brewDisparityInput", "brewTier"];
-            if (brewIds.includes(e.target.id)) {
-                calculateBrewingDC();
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            loadEquipment();
-            loadCrafting();
-            loadBrewing();
-        });
+document.addEventListener("input", (e) => {
+    if (["brewBitcode", "brewDisparityInput", "brewTier"].includes(e.target.id)) {
+        calculateBrewingDC();
+    }
+});
     </script>
 </body>
 
