@@ -149,7 +149,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ ★ Spellcasting",
-    "Description": "You learn 2 additional cantrips from your chosen spellcasting type.",
+    "Description": "You learn 2 additional cantrips from your chosen spellcasting type. If you have chosen cosmic, learn 1 extra spell instead.",
     "Scaling": "-"
   },
   {
@@ -185,8 +185,8 @@
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "None",
-    "Description": "Cook allies a meal during a rest. Eating grants +X Accuracy or +Y Armor next combat.",
-    "Scaling": "Accuracy/Damage X/Y:<br>+2/+1 [lvl 1]<br>+3/+2 [lvl 3]<br>+4/+3 [lvl 6]<br>+5/+4 [lvl 9]"
+    "Description": "Cook allies a meal during a rest. Eating the meal grants them either +X+1 Accuracy or +X Armor next combat.",
+    "Scaling": "Value X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
   },
   {
     "Name": "Tavern Brawler",
@@ -312,7 +312,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Light sources you hold never go out. While lit, gain +1 Insight and +1 Reflex.",
+    "Description": "Light sources you hold never go out. While in its light, gain +1 Insight and +1 Reflex.",
     "Scaling": "-"
   },
   {
@@ -366,8 +366,8 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "If you cast a spell and strike with a melee attack in the same turn, the attack deals +X damage.",
-    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
+    "Description": "Melee spell effects have +X Accuracy",
+    "Scaling": "Accuracy X:<br>+2 [lvl 1]<br>+3 [lvl 3]<br>+4 [lvl 6]<br>+5 [lvl 9]"
   },
   {
     "Name": "Elemental Draw",
@@ -402,7 +402,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ ★ Companion",
-    "Description": "Command your companion to attack the target you struck; it gains +X Accuracy.",
+    "Description": "When you command your companion to strike the same target as you. It gains +X Accuracy.",
     "Scaling": "Accuracy X:<br>+2 [lvl 1]<br>+3 [lvl 3]<br>+4 [lvl 6]<br>+5 [lvl 9]"
   },
   {
@@ -636,7 +636,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Constructs/Machines you have deployed can expend one unit of Durability(Fuel) to shock targets within 2 units, dealing 2 Lightning Damage. This counts as an attack by the machine.",
+    "Description": "Constructs/Machines you have deployed can expend one unit of Durability (Fuel) to shock targets within 2 units, dealing 2 Lightning Damage. This counts as an attack by the machine.",
     "Scaling": "-"
   },
   {
@@ -663,7 +663,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "Moving into melee range of a new enemy grants +X Accuracy for your next attack.",
+    "Description": "Moving into melee range of an enemy grants +X Accuracy for your next attack.",
     "Scaling": "Accuracy X:<br>+2 [lvl 1]<br>+3 [lvl 3]<br>+4 [lvl 6]<br>+5 [lvl 9]"
   },
   {
@@ -771,8 +771,59 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "⫘ Mechanical Assistant",
-    "Description": "Using [1× Metal - Wire, 1× Stone - Cut], create a small combat rover that can be commanded to attack [X Damage, Y Accuracy] targets within 5 tiles, dealing 2 Damage. It has 3 Durability, replenished each rest.",
-    "Scaling": "Damage/Accuracy X/Y:<br>1/2 [lvl 1]<br>2/3 [lvl 3]<br>3/4 [lvl 6]<br>4/5 [lvl 9]"
+    "Description": "Using [1× Metal - Wire, 1× Stone - Cut], create a small combat rover, it counts as a companion with the following stat block: <br><br><table class=\"w-72 text-sm border border-slate-700 rounded-lg overflow-hidden bg-slate-900/40\">
+    <tbody>
+        <tr class=\"bg-slate-800/60\">
+            <td colspan=\"2\" class=\"px-3 py-2 font-bold text-white text-center\">
+                Combat Rover
+            </td>
+        </tr>
+
+        <tr class=\"border-t border-slate-800\">
+            <td class=\"px-3 py-1 font-semibold text-slate-300\">Health / Durability</td>
+            <td class=\"px-3 py-1 text-right\">3 + Your Level</td>
+        </tr>
+
+        <tr class=\"border-t border-slate-800\">
+            <td class=\"px-3 py-1 font-semibold text-slate-300\">Armor</td>
+            <td class=\"px-3 py-1 text-right\">6 + Your Level</td>
+        </tr>
+
+        <tr class=\"bg-slate-800/40 border-t border-slate-800\">
+            <td colspan=\"2\" class=\"px-3 py-1 font-semibold text-white text-center\">
+                Stats
+            </td>
+        </tr>
+
+        <tr class=\"border-t border-slate-800\">
+            <td class=\"px-3 py-1\">Physique</td>
+            <td class=\"px-3 py-1 text-right\">2</td>
+        </tr>
+
+        <tr class=\"border-t border-slate-800\">
+            <td class=\"px-3 py-1\">Technique</td>
+            <td class=\"px-3 py-1 text-right\">1</td>
+        </tr>
+
+        <tr class=\"border-t border-slate-800\">
+            <td class=\"px-3 py-1\">Mystique</td>
+            <td class=\"px-3 py-1 text-right\">0</td>
+        </tr>
+
+        <tr class=\"bg-slate-800/40 border-t border-slate-800\">
+            <td colspan=\"2\" class=\"px-3 py-1 font-semibold text-white text-center\">
+                Traits
+            </td>
+        </tr>
+
+        <tr class=\"border-t border-slate-800\">
+            <td colspan=\"2\" class=\"px-3 py-2 text-slate-400 text-center\">
+                Melee Strike (1 Durability): Deal [1 + Your Tinkering] Damage to an adjacent target; This attack has [Your Tinkering] Accuracy.
+            </td>
+        </tr>
+    </tbody>
+</table>",
+    "Scaling": "-"
   },
   {
     "Name": "Dual Wielding",
@@ -1351,7 +1402,7 @@
     "Scaling": "-"
   },
   {
-    "Name": "Combat guard",
+    "Name": "Combat Guard",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
@@ -1806,7 +1857,7 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You gain advantage on climbing checks, when you are stopped on a wall, you cannot be knocked off.",
+    "Description": "You gain advantage on climbing checks, while not moving and on a wall, you cannot be knocked off.",
     "Scaling": "-"
   },
   {
@@ -1815,16 +1866,16 @@
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "None",
-    "Description": "You can convert between wooden components freely. When creating crafts only consisting of mostly wooded components, you gain advantage.",
+    "Description": "You can convert between wooden components freely. When creating crafts mostly consisting of wooded components, you gain advantage.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Combat Carpenter",
     "Action":"⭘",
     "Cost": "1",
-    "Symbols": "⧖",
+    "Symbols": "🗲",
     "Parameters": "⫘ Carpenter",
-    "Description": "You can use wooden crafting components as weapons. Combine any number of components to create an improvised melee or ranged weapon that deals Force damage equal to the number of components used; ranged weapons have a 6-unit range.<br><br><i>Throw an ikea furniture set at them.</i>",
+    "Description": "You can use wooden crafting components as weapons; Combine any number of components to create an improvised melee or ranged weapon that deals Force damage equal to the number of components used; ranged weapons have a 6 tile range. It has Durability equal to the number of components used.<br><br><i>Throw an ikea furniture set at them.</i>",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
@@ -2177,6 +2228,15 @@
     "Parameters": "None",
     "Description": "You loose access to a spell until your next sleep. You replenish Double its Mana cost as Mana.",
     "Scaling": "-"
+  },
+  {
+    "Name": "",
+    "Action":"◆◇⬖⭘",
+    "Cost": "",
+    "Symbols": "🗲⧖☀",
+    "Parameters": "⫘",
+    "Description": "",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   }
 ]
 
