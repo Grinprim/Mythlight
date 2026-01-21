@@ -54,7 +54,7 @@
 </head>
 
 <body class="bg-custom-dark text-slate-300">
-    
+
     <div id="navbar-placeholder"></div>
 
     <main class="pt-32 pb-20 px-6 rules-layout">
@@ -96,8 +96,8 @@
                     <div class="rule-card">
                         <h2 class="text-2xl text-white font-bold mb-4">Introduction</h2>
                         <p class="mb-4">Mythlight is designed to be a simple narrative-focused roleplaying game, with
-                            rules that are easy to pick up and encourage roleplay. Combat uses a small number of rolls so
-                            play stays fast.</p>
+                            rules that are easy to pick up and encourage roleplay. Combat uses a small number of rolls
+                            so play stays fast.</p>
                         <p class="mb-4"><strong>What you need to play:</strong></p>
                         <ul class="list-disc ml-6 space-y-2 text-sm">
                             <li><strong>2 six-sided dice (2d6)</strong> per player. This system doesn’t use polyhedral
@@ -129,13 +129,15 @@
                                 </div>
                                 <div class="bg-red-900/20 p-4 rounded border border-red-500/30">
                                     <strong class="text-red-400 block mb-1">Disadvantage</strong>
-                                    Remove one d6 (1d6 total). You may reduce pool to 0d6. In addition you lose the ability to Midnight.
+                                    Remove one d6 (1d6 total). You may reduce pool to 0d6. In addition you lose the
+                                    ability to Midnight.
                                 </div>
                             </div>
                         </div>
 
-                        <div
-                            class="flex flex-col items-center justify-center bg-slate-800/50 p-6 rounded-xl border border-slate-700 w-full md:w-auto">
+                        <div class="flex flex-col items-center justify-center bg-slate-800/50 p-6 rounded-xl border border-slate-700 w-full md:w-auto relative group">
+                            <button onclick="randomizeDiceFaces()" class="absolute inset-0 w-full h-full opacity-0 z-10 cursor-pointer" title="Click to Reroll"></button>
+                            
                             <div class="dice-visual mb-4">
                                 <div class="die face-6" aria-hidden="true"></div>
                                 <div class="die face-6" aria-hidden="true"></div>
@@ -152,7 +154,8 @@
                             <ul class="list-disc ml-4 mt-2 text-xs text-slate-400">
                                 <li>Automatically hits.</li>
                                 <li>Deals <strong>Double Damage</strong>.</li>
-                                <li>With Advantage: The trigger remains the same; however any additional rolled sixes will increase the effect (ex. 3 sixes = increased effect).</li>
+                                <li>With Advantage: The trigger remains the same; however any additional rolled sixes
+                                    will increase the effect (ex. 3 sixes = increased effect).</li>
                             </ul>
                         </div>
                         <div class="rule-card border-l-4 border-l-red-600">
@@ -171,8 +174,10 @@
                         <p class="text-sm mb-2">You acquire Grace as you fail. Use it in dire moments.</p>
                         <ul class="list-disc ml-4 text-xs text-slate-400 space-y-1">
                             <li><strong>Gain:</strong> +1 Grace on failure.</li>
-                            <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail twice to grow again).</li>
-                            <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max Grace is 6.</li>
+                            <li><strong>Delay:</strong> Success does not reset Grace, but delays growth by 1 (must fail
+                                twice to grow again).</li>
+                            <li><strong>Spend:</strong> Must spend <strong>ALL</strong> Grace to boost any roll. Max
+                                Grace is 6.</li>
                             <li><strong>Reset:</strong> Resets when combat starts/ends or on sleep.</li>
                         </ul>
                     </div>
@@ -224,13 +229,16 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-orange-400 block">Species</strong>
-                                Species represent your character’s physical traits and cultural background. Each species grants <strong>minor bonuses</strong> to base attributes and provides <strong>one unique trait</strong>.
+                                Species represent your character’s physical traits and cultural background. Each species
+                                grants <strong>minor bonuses</strong> to base attributes and provides <strong>one unique
+                                    trait</strong>.
                                 <br><br>
                                 You pick one at character creation.
                             </div>
                             <div class="bg-slate-900/50 p-4 rounded border border-slate-700">
                                 <strong class="text-orange-400 block">Path</strong>
-                                Paths represent training and past experiences. Paths grant skill modifiers and one trait.
+                                Paths represent training and past experiences. Paths grant skill modifiers and one
+                                trait.
                                 <br><br>
                                 You pick one at character creation.
                             </div>
@@ -244,16 +252,20 @@
                         Skills
                     </div>
                     <p class="mb-6">Each attribute governs specific skills, which can be enhanced using <strong>skill
-                            points</strong>. At character creation you are given <strong>4 skill points</strong>. You can assign these however you wish, with a max of 2 in a single skill. Skill Checks follow:
-                        <span class="text-white font-bold">[2d6 + Attribute + Skill Modifier]</span>.</p>
+                            points</strong>. At character creation you are given <strong>4 skill points</strong>. You
+                        can assign these however you wish, with a max of 2 in a single skill. Skill Checks follow:
+                        <span class="text-white font-bold">[2d6 + Attribute + Skill Modifier]</span>.
+                    </p>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="rule-card">
                             <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">Physique Skills</h4>
                             <ul class="text-sm space-y-2">
                                 <li><span class="keyword">Might:</span> Lifting, breaking, melee strikes.</li>
-                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing, grappling, carrying capacity.</li>
-                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, unarmored defence.</li>
+                                <li><span class="keyword">Athletics:</span> Running, jumping, climbing, grappling,
+                                    carrying capacity.</li>
+                                <li><span class="keyword">Fortitude:</span> Resisting poison, pain, disease, unarmored
+                                    defence.</li>
                                 <li><span class="keyword">Brawn:</span> Physical resistance (Health).</li>
                             </ul>
                         </div>
@@ -262,7 +274,8 @@
                             <ul class="text-sm space-y-2">
                                 <li><span class="keyword">Aim:</span> Ranged accuracy, hitting very small targets</li>
                                 <li><span class="keyword">Tinkering:</span> Repairing, crafting, brewing.</li>
-                                <li><span class="keyword">Finesse:</span> Sleight of hand, picking locks, finesse melee, looting.</li>
+                                <li><span class="keyword">Finesse:</span> Sleight of hand, picking locks, finesse melee,
+                                    looting.</li>
                                 <li><span class="keyword">Reflex:</span> Dodging, reacting.</li>
                             </ul>
                         </div>
@@ -272,7 +285,8 @@
                                 <li><span class="keyword">Spellcraft:</span> Casting and shaping magic.</li>
                                 <li><span class="keyword">Arcana:</span> Spells, rituals, lore.</li>
                                 <li><span class="keyword">Insight:</span> Reading intentions, sensing magic.</li>
-                                <li><span class="keyword">Scholarship:</span> Research, history, number of known spells.</li>
+                                <li><span class="keyword">Scholarship:</span> Research, history, number of known spells.
+                                </li>
                             </ul>
                         </div>
                         <div class="rule-card">
@@ -297,17 +311,21 @@
                         <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
                             <strong class="text-white block mb-1">Health</strong>
                             <p>Health represents a creature’s ability to remain functional in combat.</p>
-                            <p>Player Health is determined by: <br><span class="font-mono text-indigo-300">Health = Level + (Brawn Modifier × Level)</span></p>
+                            <p>Player Health is determined by: <br><span class="font-mono text-indigo-300">Health =
+                                    Level + (Brawn Modifier × Level)</span></p>
                         </div>
 
                         <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
                             <strong class="text-white block mb-1">Guard</strong>
-                            <p>Temporary Health. Always lost <strong>before Health</strong>. Guard cannot be healed once lost; it must be regained by traits or external effects.</p>
+                            <p>Temporary Health. Always lost <strong>before Health</strong>. Guard cannot be healed once
+                                lost; it must be regained by traits or external effects.</p>
                         </div>
 
                         <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
                             <strong class="text-white block mb-1">Death</strong>
-                            <p>At <strong>0 Health</strong>, you are unconscious. While unconscious, only <strong>Final Blows</strong> can harm you; you can resist <strong>4 Final Blows</strong> before dying. Narrator rulings may adjust this.</p>
+                            <p>At <strong>0 Health</strong>, you are unconscious. While unconscious, only <strong>Final
+                                    Blows</strong> can harm you; you can resist <strong>4 Final Blows</strong> before
+                                dying. Narrator rulings may adjust this.</p>
                         </div>
                     </div>
 
@@ -315,15 +333,20 @@
                         <div class="grid md:grid-cols-2 gap-6 text-sm">
                             <div>
                                 <h4 class="text-white font-bold mb-2">Rest (>10 mins)</h4>
-                                <p>Regain Health equal to your Level for a short rest. Longer rests heal more — typically equal to your Level per hour up to 4 × Level. Rests may also replenish certain resources depending on traits.</p>
+                                <p>Regain Health equal to your Level for a short rest. Longer rests heal more —
+                                    typically equal to your Level per hour up to 4 × Level. Rests may also replenish
+                                    certain resources depending on traits.</p>
                             </div>
                             <div>
                                 <h4 class="text-white font-bold mb-2">Sleep (8 hrs)</h4>
-                                <p>Full recovery of Health and Mana. Replenish charged trait uses and remove 1 point of Fatigue. Sleeping less than 6 hours gives partial benefit as determined by the Narrator.</p>
+                                <p>Full recovery of Health and Mana. Replenish charged trait uses and remove 1 point of
+                                    Fatigue. Sleeping less than 6 hours gives partial benefit as determined by the
+                                    Narrator.</p>
                             </div>
                         </div>
                         <div class="mt-4 pt-4 border-t border-slate-700">
-                            <p class="text-xs text-red-400"><strong>Fatigue:</strong> -2 penalty to all rolls per level (stacking). Level 6 without sleep is fatal.</p>
+                            <p class="text-xs text-red-400"><strong>Fatigue:</strong> -2 penalty to all rolls per level
+                                (stacking). Level 6 without sleep is fatal.</p>
                         </div>
                     </div>
                 </section>
@@ -337,11 +360,17 @@
                         <ul class="space-y-4">
                             <li>
                                 <h1 class="text-white block">Traits</h1>
-                                In this system, there is no classes, there is no proffesions. Instead features, abilities and bonuses are aquired from traits. These are gained as you level up, and vary in price and power. They are the core of your characters progression, and should be picked with consideration<br><br>At level 1 you have 2 trait points to spend, use them wisely!
+                                In this system, there is no classes, there is no proffesions. Instead features,
+                                abilities and bonuses are aquired from traits. These are gained as you level up, and
+                                vary in price and power. They are the core of your characters progression, and should be
+                                picked with consideration<br><br>At level 1 you have 2 trait points to spend, use them
+                                wisely!
                             </li>
                             <li>
                                 <h1 class="text-white block">Leveling up</h1>
-                                Leveling up is dicteted by the Narrator. Each level you will gain a trait point, and on a few special levels skill points. These are used as mentioned above. You start at level 1, and make your way to level 12.
+                                Leveling up is dicteted by the Narrator. Each level you will gain a trait point, and on
+                                a few special levels skill points. These are used as mentioned above. You start at level
+                                1, and make your way to level 12.
                             </li>
                             <li>
                                 <strong class="text-white block">Leveling table:</strong><br>
@@ -440,33 +469,39 @@
 
                             <div>
                                 <strong>Divine</strong><br>
-                                Focuses on healing, blessings, and radiant power. Excels at support, recovery, and sustained protection through sacred magic.
+                                Focuses on healing, blessings, and radiant power. Excels at support, recovery, and
+                                sustained protection through sacred magic.
                             </div>
 
                             <div>
                                 <strong>Occult</strong><br>
-                                Cannot learn spells above <strong>Level 2</strong>. All spells are always cast at the highest spell level currently unlocked.
+                                Cannot learn spells above <strong>Level 2</strong>. All spells are always cast at the
+                                highest spell level currently unlocked.
                             </div>
 
                             <div>
                                 <strong>Cosmic</strong><br>
-                                Cannot learn spells above <strong>Level 1</strong>. Instead of upcasting, spending X mana casts X Level 1 spells simultaneously (e.g., 3 mana = 3 spells).
+                                Cannot learn spells above <strong>Level 1</strong>. Instead of upcasting, spending X
+                                mana casts X Level 1 spells simultaneously (e.g., 3 mana = 3 spells).
                             </div>
 
                             <div>
                                 <strong>Elemental</strong><br>
-                                Draws from multiple elemental sub-schools (fire, ice, lightning, earth, and more). Each element alters spell behavior and excels in different environments.
+                                Draws from multiple elemental sub-schools (fire, ice, lightning, earth, and more). Each
+                                element alters spell behavior and excels in different environments.
                             </div>
                         </div>
                     </div>
 
                     <div class="rule-card">
                         <h3 class="section-header">Mana Growth</h3>
-                        <p class="mb-4">Magic draws from a central pool of <strong>Mana</strong>. Mana restores on Sleep.</p>
+                        <p class="mb-4">Magic draws from a central pool of <strong>Mana</strong>. Mana restores on
+                            Sleep.</p>
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <strong class="text-white">Upcasting</strong>
-                                <p class="text-sm text-slate-400">Cast a spell at a higher level for enhanced effects. Cost: +1 Mana per level.</p>
+                                <p class="text-sm text-slate-400">Cast a spell at a higher level for enhanced effects.
+                                    Cost: +1 Mana per level.</p>
                             </div>
                             <div>
                                 <strong class="text-white">Cantrips</strong>
@@ -568,7 +603,8 @@
                             </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Weaponry</span>
-                                <span class="text-slate-400">You can wield as many weapons as you have arms. Without traits only <strong>1 weapon</strong> is fully effective.</span>
+                                <span class="text-slate-400">You can wield as many weapons as you have arms. Without
+                                    traits only <strong>1 weapon</strong> is fully effective.</span>
                             </div>
                             <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                 <span>Proficiencies</span>
@@ -581,7 +617,8 @@
                             </div>
 
                             <div class="rule-card mt-4 p-4">
-                                <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong></p>
+                                <p class="mb-4"><strong>Encumbrance Limit = Physique + (2 × Athletics Total)</strong>
+                                </p>
                                 <p class="text-sm mb-4">Item Weights: None (0), Light (1), Medium (2), Heavy (3),
                                     Cumbersome (4). </p>
                                 <p class="text-sm mb-4">100 coins = 1 weight.</p>
@@ -596,11 +633,13 @@
                                     </div>
                                     <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                         <span>Overencumbered (&gt; 2× Limit)</span>
-                                        <span class="text-slate-400">Speed halved. Disadvantage on Physique/Technique.</span>
+                                        <span class="text-slate-400">Speed halved. Disadvantage on
+                                            Physique/Technique.</span>
                                     </div>
                                     <div class="bg-slate-900/30 p-2 rounded flex justify-between">
                                         <span>Crushed (&gt; 3× Limit)</span>
-                                        <span class="text-slate-400">Speed 0. Disadvantage on all checks. 1 damage / 10 min.</span>
+                                        <span class="text-slate-400">Speed 0. Disadvantage on all checks. 1 damage / 10
+                                            min.</span>
                                     </div>
                                 </div>
                             </div>
@@ -614,18 +653,20 @@
                 <h1 class="text-5xl font-bold text-white mb-4">Combat Rules</h1>
                 <p class="text-lg text-indigo-300">These rules govern combat and all of its sub-systems.</p>
                 <div class="mb-12 pt-12 border-t border-slate-800"></div>
-               <div class="section-header">
-                        <span class="section-number">10</span>
-                        Movement
-                    </div>
+                <div class="section-header">
+                    <span class="section-number">10</span>
+                    Movement
+                </div>
                 <section id="movement" class="rule-card space-y-6">
-                 
+
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
                         <div>
-                            <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Movement is declared on the grid as described below.</p>
+                            <p>Combat takes place on a <strong class="text-white">grid-based map</strong>. Movement is
+                                declared on the grid as described below.</p>
                             <ul class="list-disc ml-5 space-y-1 mt-2">
                                 <li>Each Tile = <strong>1 Unit of Speed</strong></li>
-                                <li class="correct"> ✔ Movement is limited to tiles directly adjacent to one another.</li>
+                                <li class="correct"> ✔ Movement is limited to tiles directly adjacent to one another.
+                                </li>
                                 <li class="wrong"> ✘ Diagonal movement does not skip over tiles.</li>
                             </ul>
                         </div>
@@ -635,10 +676,14 @@
                         </div>
 
                         <div>
-                            <p>Jumping is an alternative to normal movement. It can be useful when trying to avoid <strong>Rough</strong> or <strong>Slippery</strong> terrain, or jumping over floor hazards.</p>
+                            <p>Jumping is an alternative to normal movement. It can be useful when trying to avoid
+                                <strong>Rough</strong> or <strong>Slippery</strong> terrain, or jumping over floor
+                                hazards.</p>
                             <ul class="list-disc ml-5 space-y-1 mt-2">
-                                <li class="notice_blue"> ✎ The maximum distance you can jump is half your Speed (rounded up)</li>
-                                <li class="wrong"> ✘ You cannot jump through an area if any space along the path is occupied.</li>
+                                <li class="notice_blue"> ✎ The maximum distance you can jump is half your Speed (rounded
+                                    up)</li>
+                                <li class="wrong"> ✘ You cannot jump through an area if any space along the path is
+                                    occupied.</li>
                             </ul>
                         </div>
 
@@ -650,47 +695,72 @@
                     <div class="condition-card mt-4">
                         <h4 class="text-white font-bold mb-2">Terrain Types</h4>
                         <ul class="text-sm space-y-1">
-                            <li><div class="condition-card"><strong>Firm:</strong> No movement penalties.</div></li>
-                            <li><div class="condition-card"><strong>Rough:</strong> Each tile of movement costs 2 Units of speed.</div></li>
-                            <li><div class="condition-card"><strong>Slippery:</strong> You can only move in one direction at a time; each turn you make will prompt a <strong>Reflex check</strong>.</div></li>
+                            <li>
+                                <div class="condition-card"><strong>Firm:</strong> No movement penalties.</div>
+                            </li>
+                            <li>
+                                <div class="condition-card"><strong>Rough:</strong> Each tile of movement costs 2 Units
+                                    of speed.</div>
+                            </li>
+                            <li>
+                                <div class="condition-card"><strong>Slippery:</strong> You can only move in one
+                                    direction at a time; each turn you make will prompt a <strong>Reflex check</strong>.
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </section>
 
                 <div class="section-header">
-                        <span class="section-number">11</span>
-                        Map Sizes and Effects
-                    </div>
+                    <span class="section-number">11</span>
+                    Map Sizes and Effects
+                </div>
                 <section id="size" class="rule-card space-y-6">
-                 
+
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
                         <div>
-                            <p>Size defines a creature’s "Hitbox" and affects rules like adjacency and AoE, which rely on measuring covered areas and nearby spaces. Understanding size interactions is essential.</p>
+                            <p>Size defines a creature’s "Hitbox" and affects rules like adjacency and AoE, which rely
+                                on measuring covered areas and nearby spaces. Understanding size interactions is
+                                essential.</p>
                             <p>Creatures can also not ocupy the same space, this has only a few exceptions.</p>
                             <ul class="list-disc ml-5 space-y-1 mt-2">
-                                <li> <strong class="notice_blue">Small [1 x 1]:</strong> While sharing their tile size with medium, small creatures do appear smaller, and <b>CAN</b> occupy spaces of large creatures and above with no penalty.</li>
-                                <li> <strong class="correct">Medium [1 x 1]:</strong>This is the standard tile size for most creatures, players should not exceed this size without the Narrators express permison.</li>
-                                <li> <strong class="notice">Large [2 x 2]:</strong> Larger creatures, these will be your alphas of certain animals, or possibly a large mech. Whatever you need really</li>
-                                <li> <strong class="wrong">Huge [3 x 3]:</strong> These should only be used to represent the biggest of the big, creatures that really aren't meant to be fought.</li>
+                                <li> <strong class="notice_blue">Small [1 x 1]:</strong> While sharing their tile size
+                                    with medium, small creatures do appear smaller, and <b>CAN</b> occupy spaces of
+                                    large creatures and above with no penalty.</li>
+                                <li> <strong class="correct">Medium [1 x 1]:</strong>This is the standard tile size for
+                                    most creatures, players should not exceed this size without the Narrators express
+                                    permison.</li>
+                                <li> <strong class="notice">Large [2 x 2]:</strong> Larger creatures, these will be your
+                                    alphas of certain animals, or possibly a large mech. Whatever you need really</li>
+                                <li> <strong class="wrong">Huge [3 x 3]:</strong> These should only be used to represent
+                                    the biggest of the big, creatures that really aren't meant to be fought.</li>
                             </ul>
                             <br>
-                            <p>Creatures larger than huge should not have 1 solid "Hitbox" but should instead be asembled out of multiple smaller size categories (Head is Medium, Body is huge, wings are Large etc.)</p>
+                            <p>Creatures larger than huge should not have 1 solid "Hitbox" but should instead be
+                                asembled out of multiple smaller size categories (Head is Medium, Body is huge, wings
+                                are Large etc.)</p>
                         </div>
 
                         <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
                             <img src="../img/size.png" alt="Size Diagram">
                         </div>
 
-                        
+
                         <div>
-                            <p>Certain spells and effects will specify a Radius which is useful for circular effects on a square grid —though using a ruler to draw a circle is often simplest.</p>
-                            <ul class="list-disc ml-5 space-y-1 mt-2"> 
-                                <li class="notice"> ✎ Radius will always start as an [3 x 3] square (1 unit radius), with each unit expanding by 1 tile outward, to tiles direcly in contact with eachother.</li>
-                                <li>Determining the size of the radius is as simple as starting with a square, then adding tiles on to it, as shown in the diagram.</li>
-                                <li>The center square is what needs to remain within range with certain spells or effects, it can also be centered on the caster of said effects.</li>
+                            <p>Certain spells and effects will specify a Radius which is useful for circular effects on a
+                                square grid —though using a ruler to draw a circle is often simplest.</p>
+                            <ul class="list-disc ml-5 space-y-1 mt-2">
+                                <li class="notice"> ✎ Radius will always start as an [3 x 3] square (1 unit radius),
+                                    with each unit expanding by 1 tile outward, to tiles direcly in contact with
+                                    eachother.</li>
+                                <li>Determining the size of the radius is as simple as starting with a square, then
+                                    adding tiles on to it, as shown in the diagram.</li>
+                                <li>The center square is what needs to remain within range with certain spells or
+                                    effects, it can also be centered on the caster of said effects.</li>
                             </ul>
                             <br>
-                            <p>Squares are simpler where it is simply specified a [A x A], the center of even squares should align with the lines on the grid.</p>
+                            <p>Squares are simpler where it is simply specified a [A x A], the center of even squares
+                                should align with the lines on the grid.</p>
                         </div>
 
                         <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
@@ -699,10 +769,13 @@
 
 
                         <div>
-                            <p>Certain spells and effects will specify a Cone, this is determined by the formulas below, however rulers and shapes can also be used to represent this.</p>
-                            <ul class="list-disc ml-5 space-y-1 mt-2"> 
-                                <li class="notice_blue"> ✎ Cones are represented by a triangle of tiles, the Width of the cone is equal to half of the Height rounded down</li>
-                                <li>Cones will always be odd, and the "Center" of the cone alignes with the position of the caster.</li>
+                            <p>Certain spells and effects will specify a Cone, this is determined by the formulas below,
+                                however rulers and shapes can also be used to represent this.</p>
+                            <ul class="list-disc ml-5 space-y-1 mt-2">
+                                <li class="notice_blue"> ✎ Cones are represented by a triangle of tiles, the Width of
+                                    the cone is equal to half of the Height rounded down</li>
+                                <li>Cones will always be odd, and the "Center" of the cone alignes with the position of
+                                    the caster.</li>
                                 <li>Cones can be diagonal, following the same rules just tilted.</li>
                             </ul>
                         </div>
@@ -710,15 +783,15 @@
                         <div class="bg-slate-900/40 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
                             <img src="../img/cone.png" alt="Cone Diagram">
                         </div>
-                        
+
                     </div>
                 </section>
 
-                
+
                 <div class="section-header">
-                        <span class="section-number">12</span>
-                        Ranged Combat
-                    </div>
+                    <span class="section-number">12</span>
+                    Ranged Combat
+                </div>
                 <section id="range" class="rule-card space-y-6">
 
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
@@ -737,10 +810,13 @@
                         </div>
 
                         <div>
-                            <p>Adjacency is important when considering melee combat, aswell as ranged. Being adjacent to another creature might not think what you think it means.</p>
-                            <ul class="list-disc ml-5 space-y-1 mt-2"> 
-                                <li class="notice"> ✎ Creatures in a 1 unit radius around the target are considered adjacent, including diagonals</li>
-                                <li>Adjacent creatures are valid targets for melee attacks, including oppertunity attacks, assuming they leave your melee range.</li>
+                            <p>Adjacency is important when considering melee combat, aswell as ranged. Being adjacent to
+                                another creature might not think what you think it means.</p>
+                            <ul class="list-disc ml-5 space-y-1 mt-2">
+                                <li class="notice"> ✎ Creatures in a 1 unit radius around the target are considered
+                                    adjacent, including diagonals</li>
+                                <li>Adjacent creatures are valid targets for melee attacks, including oppertunity
+                                    attacks, assuming they leave your melee range.</li>
                             </ul>
                         </div>
 
@@ -749,8 +825,10 @@
                         </div>
                         <div>
                             <ul class="list-disc ml-5 space-y-2">
-                                <li class="notice">✎ Creatures count as an <strong class="notice">"Obstruction"</strong>, which is considered <strong class="notice">Partial (Reinforced) Cover</strong></li>
-                                <li class="notice">✎ An Obstructing creature has a 1 tile radius on each side facing you that it also obstructs.</li>
+                                <li class="notice">✎ Creatures count as an <strong class="notice">"Obstruction"</strong>,
+                                    which is considered <strong class="notice">Partial (Reinforced) Cover</strong></li>
+                                <li class="notice">✎ An Obstructing creature has a 1 tile radius on each side facing you
+                                    that it also obstructs.</li>
                             </ul>
                         </div>
 
@@ -759,16 +837,28 @@
                         </div>
                     </div>
 
-                        
+
 
                     <div class="condition-card mt-4">
                         <h4 class="text-white font-bold mb-2">Cover</h4>
                         <ul class="text-sm space-y-1">
-                            <li><div class="condition-card"><strong>Partial (Flimsy / Sturdy / Reinforced):</strong> Aiming at targets behind this cover will impose a -1 to -3 penalty to the roll, depending on material and reinforcement.</div></li>
-                            <li><div class="condition-card"><strong>Half:</strong> Aiming at targets behind this cover will impose disadvantage on the roll.</div></li>
-                            <li><div class="condition-card"><strong>Full:</strong> You cannot aim at targets behind full cover (Some traits bypass this restriction.)</div></li>
+                            <li>
+                                <div class="condition-card"><strong>Partial (Flimsy / Sturdy / Reinforced):</strong>
+                                    Aiming at targets behind this cover will impose a -1 to -3 penalty to the roll,
+                                    depending on material and reinforcement.</div>
+                            </li>
+                            <li>
+                                <div class="condition-card"><strong>Half:</strong> Aiming at targets behind this cover
+                                    will impose disadvantage on the roll.</div>
+                            </li>
+                            <li>
+                                <div class="condition-card"><strong>Full:</strong> You cannot aim at targets behind full
+                                    cover (Some traits bypass this restriction.)</div>
+                            </li>
                         </ul>
-                        <p class="mt-2 text-sm text-slate-400">Cover is made of various materials and may have durability. It only applies to ranged attacks; melee attacks can damage the cover directly to reduce its durability. Narrator should track cover durability if used.</p>
+                        <p class="mt-2 text-sm text-slate-400">Cover is made of various materials and may have
+                            durability. It only applies to ranged attacks; melee attacks can damage the cover directly
+                            to reduce its durability. Narrator should track cover durability if used.</p>
                     </div>
                 </section>
 
@@ -780,14 +870,23 @@
 
                     <div class="rule-card mb-6">
                         <h3 class="text-white font-bold mb-4">The Turn Structure</h3>
-                        <p class="mb-4"><strong>Scene:</strong> A scene represents one full cycle of all creatures’ turns. Once every creature has acted, the scene ends and a new one begins; a scene can be extended by Narrator choice.</p>
-                        <p class="mb-4"><strong>Initiative:</strong> Determined by order of engagement and Narrator rulings. When a creature falls unconscious, it is moved to the bottom of the turn order until revived.</p>
-                        <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span class="text-indigo-400">Turn Delay</span> based on when they joined combat. The turn delay is specified in their stat block.</p>
-                        <p class="mb-4"><strong>Ambush:</strong> When combat is initiated with an unaware target, the initiator acts before normal initiative or turn delay.</p>
-                        <p class="mb-4"><strong>Opportunity Attack:</strong> When a creature leaves another creature’s melee range, the remaining creature may make a melee attack against it.</p>
+                        <p class="mb-4"><strong>Scene:</strong> A scene represents one full cycle of all creatures’
+                            turns. Once every creature has acted, the scene ends and a new one begins; a scene can be
+                            extended by Narrator choice.</p>
+                        <p class="mb-4"><strong>Initiative:</strong> Determined by order of engagement and Narrator
+                            rulings. When a creature falls unconscious, it is moved to the bottom of the turn order
+                            until revived.</p>
+                        <p class="mb-4"><strong>NPC Initiative:</strong> NPCs have a <span
+                                class="text-indigo-400">Turn Delay</span> based on when they joined combat. The turn
+                            delay is specified in their stat block.</p>
+                        <p class="mb-4"><strong>Ambush:</strong> When combat is initiated with an unaware target, the
+                            initiator acts before normal initiative or turn delay.</p>
+                        <p class="mb-4"><strong>Opportunity Attack:</strong> When a creature leaves another creature’s
+                            melee range, the remaining creature may make a melee attack against it.</p>
                         <div class="bg-slate-800 p-4 rounded border border-slate-600 mb-4">
                             <strong class="text-white">Action Economy</strong><br>
-                            Each Turn = <strong>2 Actions</strong>. Only 1 Attack per turn by default (some traits bypass).<br>
+                            Each Turn = <strong>2 Actions</strong>. Only 1 Attack per turn by default (some traits
+                            bypass).<br>
                             Each Scene = <strong>1 Reaction per creature</strong>.
                         </div>
                     </div>
@@ -822,131 +921,139 @@
                     </div>
                 </section>
                 <div class="section-header">
-                        <span class="section-number">14</span>
-                        Companions
+                    <span class="section-number">14</span>
+                    Companions
+                </div>
+
+
+                <section id="companion" class="rule-card space-y-8">
+                    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
+
+                    <p class="text-sm text-slate-400">
+                        Companions are creatures that fight, assist, or travel alongside a character.
+                        They are simpler than player characters and exist to support, not replace, player agency.
+                    </p>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl text-white font-bold">Companion Stat Block</h3>
+
+                        <div class="grid md:grid-cols-3 gap-4 text-sm">
+                            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                <strong class="text-white block mb-1">Health</strong>
+                                <p>The health of companions is determined by 2 metrics:</p>
+                                <br>
+                                <p>Crafted companions Health equals their Durability</p>
+                                <br>
+                                <p>Tamed companions Health equals the max health on their original stat block</p>
+                            </div>
+
+                            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                <strong class="text-white block mb-1">Armor</strong>
+                                <p>Fixed value. Equaling 6 + Half your level (rounded down).</p>
+                                <br>
+                                <p>Armor bonuses can be granted with equipment for your companions, or traits you
+                                    possess.</p>
+                            </div>
+
+                            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                <strong class="text-white block mb-1">Attributes</strong>
+                                <p>Companions only have 3 core attributes, Physique, Mystique and Technique.</p>
+                                <br>
+                                <p>Crafted companions have all of their stats set to 2, unless otherwise specified.</p>
+                                <br>
+                                <p>Tamed companions get these stats from their original stat block</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="text-xs text-slate-500">
+                        Companions do not have Skills, Grace or Mana unless explicitly stated.
+                        <br><br>Companions can have Traits, this is determined by the Narrator. When taming a companion,
+                        some will have a "Tamed trait" on their sheet.
+                    </p>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl text-white font-bold">Damage & Death</h3>
+
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                <strong class="text-white block mb-1">0 Health</strong>
+                                <p>Companion is incapacitated. Companions have 1 Final Blow resitance per Sleep.</p>
+                            </div>
+
+                            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
+                                <strong class="text-white block mb-1">Final Blow</strong>
+                                <p>Enemies may finish off companions as an Action. If a Blow is dealt with no resistance
+                                    left, the Companion Dies.</p>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-slate-400">
+                            Narrators are encouraged to treat companion deaths narratively, as if a player would die.
+                            Although work within reason, killing a pet cat is not a priority in combat.
+                        </p>
                     </div>
 
-                
-                <section id="companion" class="rule-card space-y-8">
-    <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
+                    <div class="space-y-4">
+                        <h3 class="text-xl text-white font-bold">Turn Order & Action Economy</h3>
 
-    <p class="text-sm text-slate-400">
-        Companions are creatures that fight, assist, or travel alongside a character.
-        They are simpler than player characters and exist to support, not replace, player agency.
-    </p>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>Companions act <strong>immediately after their controller</strong></li>
+                            <li>Unconcious Companions will be moved to the bottom of initative.</li>
+                        </ul>
 
-    <!-- ================= STAT BLOCK ================= -->
-    <div class="space-y-4">
-        <h3 class="text-xl text-white font-bold">Companion Stat Block</h3>
+                        <h3 class="text-xl text-white font-bold">Action Economy</h3>
 
-        <div class="grid md:grid-cols-3 gap-4 text-sm">
-            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                <strong class="text-white block mb-1">Health</strong>
-                <p>The health of companions is determined by 2 metrics:</p>
-                <br><p>Crafted companions Health equals their Durability</p>
-                <br><p>Tamed companions Health equals the max health on their original stat block</p>
-            </div>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>2 Action per turn</li>
+                            <li>Can only make 1 Attack per turn.</li>
+                            <li>1 Reaction per Scene</li>
+                            <li>Can make Opportunity Attacks</li>
+                        </ul>
+                    </div>
 
-            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                <strong class="text-white block mb-1">Armor</strong>
-                <p>Fixed value. Equaling 6 + Half your level (rounded down).</p>
-                <br><p>Armor bonuses can be granted with equipment for your companions, or traits you possess.</p>
-            </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl text-white font-bold">Issuing Commands</h3>
 
-            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                <strong class="text-white block mb-1">Attributes</strong>
-                <p>Companions only have 3 core attributes, Physique, Mystique and Technique.</p>
-                <br><p>Crafted companions have all of their stats set to 2, unless otherwise specified.</p>
-                <br><p>Tamed companions get these stats from their original stat block</p>
-            </div>
-        </div>
+                        <p class="text-sm">
+                            A companion only performs complex actions when commanded. Otherwise they will act within their
+                            natural instinct, or follow a previously issued command.
+                        </p>
 
-        </div>
-        <p class="text-xs text-slate-500">
-            Companions do not have Skills, Grace or Mana unless explicitly stated.
-            <br><br>Companions can have Traits, this is determined by the Narrator. When taming a companion, some will have a "Tamed trait" on their sheet.
-        </p>
-   
-         <!-- ================= DAMAGE & DEATH ================= -->
-    <div class="space-y-4">
-        <h3 class="text-xl text-white font-bold">Damage & Death</h3>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="condition-card">
+                                <strong class="text-white">Command (1 Controller Action)</strong>
+                                <p>Attack, Move, Interact, Defend, or use a Special ability.</p>
+                            </div>
 
-        <div class="grid md:grid-cols-2 gap-4 text-sm">
-            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                <strong class="text-white block mb-1">0 Health</strong>
-                <p>Companion is incapacitated. Companions have 1 Final Blow resitance per Sleep.</p>
-            </div>
+                            <div class="condition-card">
+                                <strong class="text-white">Simple Direction (Free)</strong>
+                                <p>Follow, Stay or Retreat. Other smaller commands may fit here, Narrators Discretion.
+                                </p>
+                            </div>
+                        </div>
 
-            <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
-                <strong class="text-white block mb-1">Final Blow</strong>
-                <p>Enemies may finish off companions as an Action. If a Blow is dealt with no resistance left, the Companion Dies.</p>
-            </div>
-        </div>
+                        <p class="text-xs text-slate-400">
+                            Commands must be clear and reasonable, the Companion will always act to its best abilities
+                            to fulfill the command.
+                        </p>
+                    </div>
 
-        <p class="text-xs text-slate-400">
-            Narrators are encouraged to treat companion deaths narratively, as if a player would die. Although work within reason, killing a pet cat is not a priority in combat.
-        </p>
-    </div>
-    
-    <!-- ================= TURN ORDER ================= -->
-    <div class="space-y-4">
-        <h3 class="text-xl text-white font-bold">Turn Order & Action Economy</h3>
+                    <div class="space-y-4">
+                        <h3 class="text-xl text-white font-bold">Companion numbers</h3>
 
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Companions act <strong>immediately after their controller</strong></li>
-            <li>Unconcious Companions will be moved to the bottom of initative.</li>
-        </ul>
-
-        <h3 class="text-xl text-white font-bold">Action Economy</h3>
-
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>2 Action per turn</li>
-            <li>Can only make 1 Attack per turn.</li>
-            <li>1 Reaction per Scene</li>
-            <li>Can make Opportunity Attacks</li>
-        </ul>
-    </div>
-
-    <!-- ================= COMMANDS ================= -->
-    <div class="space-y-4">
-        <h3 class="text-xl text-white font-bold">Issuing Commands</h3>
-
-        <p class="text-sm">
-            A companion only performs complex actions when commanded. Otherwise they will act within their natural instinct, or follow a previously issued command.
-        </p>
-
-        <div class="grid md:grid-cols-2 gap-4 text-sm">
-            <div class="condition-card">
-                <strong class="text-white">Command (1 Controller Action)</strong>
-                <p>Attack, Move, Interact, Defend, or use a Special ability.</p>
-            </div>
-
-            <div class="condition-card">
-                <strong class="text-white">Simple Direction (Free)</strong>
-                <p>Follow, Stay or Retreat. Other smaller commands may fit here, Narrators Discretion.</p>
-            </div>
-        </div>
-
-        <p class="text-xs text-slate-400">
-            Commands must be clear and reasonable, the Companion will always act to its best abilities to fulfill the command.
-        </p>
-    </div>
-
-    <!-- ================= SCALING ================= -->
-    <div class="space-y-4">
-        <h3 class="text-xl text-white font-bold">Companion numbers</h3>
-
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Only one active combat companion per character by default</li>
-            <li>Having multiple companions is left to the Narrators discretion, either having to switch them out during rests, or allowing it.</li>
-            <li>There are traits in place that allow multiple companions.</li>
-            <li>Companions summoned from spells do not count against this total.</li>
-        </ul>
-    </div>
-</section>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>Only one active combat companion per character by default</li>
+                            <li>Having multiple companions is left to the Narrators discretion, either having to switch
+                                them out during rests, or allowing it.</li>
+                            <li>There are traits in place that allow multiple companions.</li>
+                            <li>Companions summoned from spells do not count against this total.</li>
+                        </ul>
+                    </div>
+                </section>
 
 
-                
+
 
                 <section id="conditions" class="scroll-mt-32">
                     <div class="section-header">
@@ -956,151 +1063,165 @@
                     <div class="rule-card space-y-8">
                         <h2 class="text-3xl text-white font-bold">Conditions</h2>
 
-                        <p class="text-sm text-slate-400">Conditions represent ongoing states. Some stack, others persist until removed.</p>
+                        <p class="text-sm text-slate-400">Conditions represent ongoing states. Some stack, others
+                            persist until removed.</p>
 
                         <div class="grid md:grid-cols-3 gap-4 text-sm">
                             <div class="condition-card">
                                 <strong class="text-red-400">Poison</strong>
-                                <p>This condition stacks. When you take Poison damage, gain stacks equal to the damage taken. Each scene, one stack expires and deals 1 Poison damage while active.</p>
+                                <p>This condition stacks. When you take Poison damage, gain stacks equal to the damage
+                                    taken. Each scene, one stack expires and deals 1 Poison damage while active.</p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Bleed</strong>
-                                <p>This condition stacks. Each stack reduces healing by 1. One stack expires each scene.</p>
+                                <p>This condition stacks. Each stack reduces healing by 1. One stack expires each scene.
+                                </p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Slow</strong>
-                                <p>This condition stacks. You lose 1 tile of movement per stack, cannot make reactions while you have any stacks, and all stacks expire next scene if not reapplied.</p>
+                                <p>This condition stacks. You lose 1 tile of movement per stack, cannot make reactions
+                                    while you have any stacks, and all stacks expire next scene if not reapplied.</p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Stunned</strong>
-                                <p>This condition stacks. Each stack reduces your actions per turn by 1; if reduced to 0, your turn is skipped.</p>
+                                <p>This condition stacks. Each stack reduces your actions per turn by 1; if reduced to
+                                    0, your turn is skipped.</p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Prone</strong>
-                                <p>Your movement becomes 0, attacks against you have advantage, and standing up costs half your movement.</p>
+                                <p>Your movement becomes 0, attacks against you have advantage, and standing up costs
+                                    half your movement.</p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Restrained</strong>
-                                <p>Your movement becomes 0, attacks against you have advantage. Ending this condition depends on the type of restraints, though usually an Athletics check is required.</p>
+                                <p>Your movement becomes 0, attacks against you have advantage. Ending this condition
+                                    depends on the type of restraints, though usually an Athletics check is required.
+                                </p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Exhausted</strong>
-                                <p>This condition stacks. Each stack grants 1 temporary Fatigue; one stack expires each scene, and Fatigue gained this way cannot be fatal.</p>
+                                <p>This condition stacks. Each stack grants 1 temporary Fatigue; one stack expires each
+                                    scene, and Fatigue gained this way cannot be fatal.</p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Weakened</strong>
-                                <p>This condition stacks. Each stack reduces damage dealt by 1; if an attack would deal 0 damage, it cannot be made. All stacks expire next scene if not reapplied.</p>
+                                <p>This condition stacks. Each stack reduces damage dealt by 1; if an attack would deal
+                                    0 damage, it cannot be made. All stacks expire next scene if not reapplied.</p>
                             </div>
 
                             <div class="condition-card">
                                 <strong class="text-red-400">Blinded</strong>
-                                <p>You have disadvantage on attacks you make, and attacks against you gain advantage.</p>
+                                <p>You have disadvantage on attacks you make, and attacks against you gain advantage.
+                                </p>
                             </div>
                         </div>
 
                         <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4 text-xs text-slate-400">
                             <strong class="text-white">Removal</strong><br>
-                            Conditions may require checks, items, magic, or rest. Multiple stacks may be removed at once.
+                            Conditions may require checks, items, magic, or rest. Multiple stacks may be removed at
+                            once.
                         </div>
                     </div>
                 </section>
                 <div class="section-header">
-                        <span class="section-number">13</span>
-                        Mounts & Vehicle Combat
-                    </div>
+                    <span class="section-number">13</span>
+                    Mounts & Vehicle Combat
+                </div>
                 <section class="rule-card space-y-6" id="mount">
-    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
+                    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
-    <p class="text-sm text-slate-300">
-        Mounted combat represents fighting while riding a creature or medium vehicle.
-        Mounts provide increased mobility, greater defences, and a new way of fighting.
-    </p>
+                    <p class="text-sm text-slate-300">
+                        Mounted combat represents fighting while riding a creature or medium vehicle.
+                        Mounts provide increased mobility, greater defences, and a new way of fighting.
+                    </p>
 
-    <!-- Mount Basics -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Mount Basics</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>A mount is any creature capable of carrying a rider.</li>
-            <li>Mounts can also be vehicles of the medium class (Motorcycles, Scooters etc.)</li>
-            <li>Large creatures can also be mounted, Large vehicles are not considered mounts, but are instead handled by vehicle rules.</li>
-            <li>Mounts occupy their own space on the combat grid.</li>
-            <li>The rider occupies the mount’s space and moves with it.</li>
-        </ul>
-    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-bold mb-2">Mount Basics</h3>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>A mount is any creature capable of carrying a rider.</li>
+                            <li>Mounts can also be vehicles of the medium class (Motorcycles, Scooters etc.)</li>
+                            <li>Large creatures can also be mounted, Large vehicles are not considered mounts, but are
+                                instead handled by vehicle rules.</li>
+                            <li>Mounts occupy their own space on the combat grid.</li>
+                            <li>The rider occupies the mount’s space and moves with it.</li>
+                        </ul>
+                    </div>
 
-    <!-- Initiative & Turn Order -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Initiative & Turn Order</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>The mount acts on the rider’s turn. It does not receive a separate turn, unless dismoutned.</li>
-            <li>The rider looses the ability to take movement actions, instead they are taken by the mount with the riders commands.</li>
-            <li>Mounts that are not mounted are at the bottom of initative, unless they are also a companion.</li>
-            <li>Mounted movement uses the mount’s movement speed.</li>
-            <li>The rider may still take Actions normally, like attacking or casting spells.</li>
-        </ul>
-    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-bold mb-2">Initiative & Turn Order</h3>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>The mount acts on the rider’s turn. It does not receive a separate turn, unless
+                                dismoutned.</li>
+                            <li>The rider looses the ability to take movement actions, instead they are taken by the
+                                mount with the riders commands.</li>
+                            <li>Mounts that are not mounted are at the bottom of initative, unless they are also a
+                                companion.</li>
+                            <li>Mounted movement uses the mount’s movement speed.</li>
+                            <li>The rider may still take Actions normally, like attacking or casting spells.</li>
+                        </ul>
+                    </div>
 
-    <!-- Attacking While Mounted -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Attacking While Mounted</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Melee attacks use the rider’s reach.</li>
-            <li>Mounted riders gain <strong>+1 Accuracy</strong> on melee attacks against unmounted targets.</li>
-            <li>Ranged attacks made while mounted suffer <strong>-1 Accuracy</strong> unless the mount is stationary.</li>
-            <li>Spells may be cast normally unless disrupted by forced movement.</li>
-        </ul>
-    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-bold mb-2">Attacking While Mounted</h3>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>Melee attacks use the rider’s reach.</li>
+                            <li>Mounted riders gain <strong>+1 Accuracy</strong> on melee attacks against unmounted
+                                targets.</li>
+                            <li>Ranged attacks made while mounted suffer <strong>-1 Accuracy</strong> unless the mount
+                                is stationary.</li>
+                            <li>Spells may be cast normally unless disrupted by forced movement.</li>
+                        </ul>
+                    </div>
 
-    <!-- Being Attacked -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Targeting Rider vs Mount</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Attackers must declare whether they target the rider or the mount.</li>
-            <li>Large mounts provide <strong>Partial Cover</strong> to the rider.</li>
-            <li>Area effects affect both rider and mount if both are within the radius.</li>
-            <li>Floor hazards will only effect the mount.</li>
-            <li>Mounted movement can trigger Opportunity Attacks.</li>
-            <li>Opportunity Attacks target the mount unless the attacker has reach.</li>
-        </ul>
-    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-bold mb-2">Targeting Rider vs Mount</h3>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>Attackers must declare whether they target the rider or the mount.</li>
+                            <li>Large mounts provide <strong>Partial Cover</strong> to the rider.</li>
+                            <li>Area effects affect both rider and mount if both are within the radius.</li>
+                            <li>Floor hazards will only effect the mount.</li>
+                            <li>Mounted movement can trigger Opportunity Attacks.</li>
+                            <li>Opportunity Attacks target the mount unless the attacker has reach.</li>
+                        </ul>
+                    </div>
 
-    <!-- Dismounting -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Dismounting</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>Voluntary dismount costs <strong>1 Action</strong>.</li>
-            <li>Dismounting places the rider in any adjacent Unit.</li>
-            <li>If a creature mount, bellow half hp, is attacked it must roll [Physique] against the attack roll or Force Dismount the rider.</li>
-            <li>Forced dismounts require a <strong>Reflex check</strong> from the rider.</li>
-            
-        </ul>
+                    <div>
+                        <h3 class="text-xl text-white font-bold mb-2">Dismounting</h3>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>Voluntary dismount costs <strong>1 Action</strong>.</li>
+                            <li>Dismounting places the rider in any adjacent Unit.</li>
+                            <li>If a creature mount, bellow half hp, is attacked it must roll [Physique] against the
+                                attack roll or Force Dismount the rider.</li>
+                            <li>Forced dismounts require a <strong>Reflex check</strong> from the rider.</li>
 
-        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3 text-sm mt-3">
-            <strong class="text-red-400">Forced Dismount</strong><br>
-            On failure, the rider becomes <strong>Prone</strong> in an adjacent tile. The mount will attempt to leave combat if it is a creature.
-            
-        </div>
-    </div>
+                        </ul>
 
-    <!-- Mount Damage & Morale -->
-    <div>
-        <h3 class="text-xl text-white font-bold mb-2">Mount Damage & Morale</h3>
-        <ul class="list-disc ml-5 text-sm space-y-2">
-            <li>If a mount reaches 0 Health, the rider is immediately dismounted.</li>
-            <li>Vehicle mounts will loose Durability instead of Health.</li>
-            <li>Panicked mounts may move unpredictably at the Narrator’s discretion.</li>
-            <li>Untrained mounts may refuse dangerous actions.</li>
-        </ul>
-    </div>
+                        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3 text-sm mt-3">
+                            <strong class="text-red-400">Forced Dismount</strong><br>
+                            On failure, the rider becomes <strong>Prone</strong> in an adjacent tile. The mount will
+                            attempt to leave combat if it is a creature.
 
-</section>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-white font-bold mb-2">Mount Damage & Morale</h3>
+                        <ul class="list-disc ml-5 text-sm space-y-2">
+                            <li>If a mount reaches 0 Health, the rider is immediately dismounted.</li>
+                            <li>Vehicle mounts will loose Durability instead of Health.</li>
+                            <li>Panicked mounts may move unpredictably at the Narrator’s discretion.</li>
+                            <li>Untrained mounts may refuse dangerous actions.</li>
+                        </ul>
+                    </div>
+
+                </section>
     </main>
 
     <div id="footer-placeholder"></div>
@@ -1126,7 +1247,7 @@
                 const mobileBtn = document.getElementById('mobile-menu-btn');
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileBtn && mobileMenu) {
-                    mobileBtn.addEventListener('click', function() {
+                    mobileBtn.addEventListener('click', function () {
                         mobileMenu.classList.toggle('hidden');
                     });
                 }
@@ -1145,7 +1266,7 @@
         function randomizeDiceFaces() {
             const dice = document.querySelectorAll('.die');
             if (dice.length === 0) return; // Safety check
-            
+
             dice.forEach(d => {
                 const face = Math.floor(Math.random() * 6) + 1;
                 // This removes old face classes and adds the new one
@@ -1170,7 +1291,7 @@
         // 4. Initialization
         document.addEventListener("DOMContentLoaded", () => {
             loadLayout();
-            
+
             // Observe sections for sidebar
             document.querySelectorAll('section[id]').forEach(section => {
                 observer.observe(section);
@@ -1178,7 +1299,7 @@
 
             // Run dice randomization
             randomizeDiceFaces();
-            
+
             // Run data loaders (from your existing equipment code)
             if (typeof loadEquipment === "function") loadEquipment();
             if (typeof loadCrafting === "function") loadCrafting();
@@ -1186,4 +1307,5 @@
         });
     </script>
 </body>
+
 </html>
