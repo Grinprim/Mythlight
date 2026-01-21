@@ -3,7 +3,8 @@
 :root{--glass-border:rgba(255,255,255,0.1);--glass-bg:rgba(15,23,42,0.6);--accent-glow:rgba(99,102,241,0.3)}
 
 /* Global */
-body{font-family:'Inter',sans-serif;scroll-behavior:smooth;color:#cbd5e1}
+body{font-family:'Inter',sans-serif;scroll-behavior:smooth;color:#cbd5e1 background: #0f0024;
+background: radial-gradient(circle, rgba(15, 0, 36, 1) 74%, rgba(105, 30, 135, 1) 100%);}
 h1,h2,h3,h4,.fantasy-font{font-family:'Cinzel',serif}
 .bg-custom-dark{background-color:#0f172a}
 .nav-glass{background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1)}
