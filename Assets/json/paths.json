@@ -3,6 +3,8 @@
     {
       "id": "warlord",
       "name": "Path of the Warlord",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Victory is seized through presence, command, and unshakable fury.",
       "bonuses": [
         "Athletics +1",
@@ -20,6 +22,8 @@
     {
       "id": "duelist",
       "name": "Path of the Duelist",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "A blade perfected through grace, patience, and lethal precision.",
       "bonuses": [
         "Reflex +1",
@@ -37,6 +41,8 @@
     {
       "id": "bloodmage",
       "name": "Path of the Bloodmage",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Power carved from flesh and paid for in blood.",
       "bonuses": [
         "Fortitude +1",
@@ -54,6 +60,8 @@
     {
       "id": "stormsinger",
       "name": "Path of the Stormsinger",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Lightning answers your song.",
       "bonuses": [
         "Performance +1",
@@ -71,6 +79,8 @@
     {
       "id": "beastcaller",
       "name": "Path of the Beastcaller",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "The wild answers your call.",
       "bonuses": [
         "Insight +1",
@@ -88,6 +98,8 @@
     {
       "id": "wanderer",
       "name": "Path of the Wanderer",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "The road itself is your home.",
       "bonuses": [
         "Reflex +1",
@@ -105,6 +117,8 @@
     {
       "id": "shadowblade",
       "name": "Path of the Shadowblade",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "The perfect strike leaves no witness.",
       "bonuses": [
         "Finesse +1",
@@ -122,6 +136,8 @@
     {
       "id": "silver_tongue",
       "name": "Path of the Silver Tongue",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Words carve deeper than steel.",
       "bonuses": [
         "Persuasion +1",
@@ -139,6 +155,8 @@
     {
       "id": "juggernaut",
       "name": "Path of the Juggernaut",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "An avalanche given form.",
       "bonuses": [
         "Fortitude +2"
@@ -155,6 +173,8 @@
     {
       "id": "pyromancer",
       "name": "Path of the Pyromancer",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Creation through flame.",
       "bonuses": [
         "Scholarship +1",
@@ -172,6 +192,7 @@
     {
       "id": "frostwarden",
       "name": "Path of the Frostwarden",
+      "source": "CORE",
       "summary": "The stillness of the glacier’s heart.",
       "bonuses": [
         "Fortitude +1",
@@ -189,6 +210,8 @@
     {
       "id": "revenant",
       "name": "Path of the Revenant",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Death obeys.",
       "bonuses": [
         "Fortitude +1",
@@ -206,6 +229,8 @@
     {
       "id": "shepherd",
       "name": "Path of the Shepherd",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Strength measured in protection.",
       "bonuses": [
         "Persuasion +1",
@@ -223,6 +248,8 @@
     {
       "id": "seer",
       "name": "Path of the Seer",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "You read the future like a flickering map.",
       "bonuses": [
         "Insight +1",
@@ -240,6 +267,8 @@
     {
       "id": "chronomancer",
       "name": "Path of the Chronomancer",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "You pull at the seams of time.",
       "bonuses": [
         "Arcana +1",
@@ -257,6 +286,8 @@
     {
       "id": "harbinger",
       "name": "Path of the Harbinger",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "You bring inevitable endings.",
       "bonuses": [
         "Intimidation +1",
@@ -274,6 +305,8 @@
     {
       "id": "veteran",
       "name": "Path of the Veteran",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Wisdom carved into scar tissue.",
       "bonuses": [
         "Fortitude +1",
@@ -291,6 +324,8 @@
     {
       "id": "artisan",
       "name": "Path of the Artisan",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Creation is your weapon.",
       "bonuses": [
         "Tinkering +1",
@@ -308,6 +343,8 @@
     {
       "id": "hunter",
       "name": "Path of the Hunter",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "You strike before fear sets in.",
       "bonuses": [
         "Finesse +1",
@@ -325,6 +362,8 @@
     {
       "id": "miner",
       "name": "Path of the Miner",
+      "source": "CORE",
+      "source_color": "indigo",
       "summary": "Stone knows your name.",
       "bonuses": [
         "Athletics +1",
