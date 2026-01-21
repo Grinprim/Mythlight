@@ -2406,7 +2406,7 @@
     "Name": "Molly",
     "Action":"⬖",
     "Cost": "2",
-    "Symbols": "🗲⧖☀",
+    "Symbols": "⧖",
     "Parameters": "⫘",
     "Description": "Using [1x Glass - Tube, 1x Liquid - Alchohol] you can create Mollies:<br>Thrown projectile with a 6 tile Range; Everyone in a 2x2 square take 2 Fire damage and gains the Burn Condition.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
