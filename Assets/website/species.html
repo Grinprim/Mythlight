@@ -31,16 +31,26 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // 1. Define loadSpecies FIRST so it's ready to be called
+        // 1. Define loadSpecies
         async function loadSpecies() {
             try {
-                const response = await fetch('../json/species.json');
+                // Added 'no-cache' to ensure you get the latest JSON edits immediately
+                const response = await fetch('../json/species.json', { cache: 'no-cache' });
+                
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                
                 const data = await response.json();
                 const container = document.getElementById('content');
                 container.innerHTML = '';
                 
-                const speciesList = Array.isArray(data) ? data : data.species;
+                // robust check for data structure (Array vs Object)
+                const speciesList = Array.isArray(data) ? data : (data.species || []);
                 const attrNames = { P: 'Physique', M: 'Mystique', T: 'Technique', C: 'Charm' };
+
+                if (speciesList.length === 0) {
+                    container.innerHTML = '<div class="text-center text-slate-500">No species found.</div>';
+                    return;
+                }
 
                 speciesList.forEach(species => {
                     const section = document.createElement('section');
@@ -75,24 +85,38 @@
                 });
             } catch (err) {
                 console.error("Species Load Error:", err);
+                document.getElementById('content').innerHTML = `
+                    <div class="text-center py-12 text-rose-400">
+                        <p class="font-bold">Failed to load species data.</p>
+                        <p class="text-xs opacity-70 mt-2">${err.message}</p>
+                    </div>`;
             }
         }
 
-        // 2. Define loadLayout
+        // 2. Define loadLayout with the FIX
         async function loadLayout() {
             try {
+                // --- NAVBAR ---
                 const navRes = await fetch('../css/navbar.html');
                 const navData = await navRes.text();
                 const navPlaceholder = document.getElementById('navbar-placeholder');
                 navPlaceholder.innerHTML = navData;
 
+                // [FIX START] Execute scripts inside navbar (Fixes Highlight)
+                navPlaceholder.querySelectorAll('script').forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript);
+                });
+                // [FIX END]
+
+                // Mobile Menu Logic (Fallback if scripts inside navbar don't run properly)
                 const mobileBtn = document.getElementById('mobile-menu-btn');
                 const mobileMenu = document.getElementById('mobile-menu');
 
                 if (mobileBtn && mobileMenu) {
                     mobileBtn.addEventListener('click', () => {
                         mobileMenu.classList.toggle('hidden');
-                        // Force hide if it's still showing flex/block from external styles
                         if (!mobileMenu.classList.contains('hidden')) {
                             mobileMenu.style.display = 'block';
                         } else {
@@ -101,9 +125,11 @@
                     });
                 }
 
+                // --- FOOTER ---
                 const footerRes = await fetch('../css/footer.html');
                 const footerData = await footerRes.text();
                 document.getElementById('footer-placeholder').innerHTML = footerData;
+
             } catch (err) {
                 console.error("Layout Load Error:", err);
             }
