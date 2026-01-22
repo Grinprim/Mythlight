@@ -157,7 +157,7 @@
         "Cost": "🗲",
         "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
         "Parameters": "",
-        "Description": "Attempt to Charm one intelligent creature for 3 turns, they must roll [Insight] contesting [6 + Your Persuasion]. Outside combat, you have advantage on negotiations and deals."
+        "Description": "Attempt to Charm one intelligent creature for 3 turns, they must roll [Insight] vs [6 + Your Persuasion] to resist. Outside combat, you have advantage on negotiations and deals."
       }
     },
     {
