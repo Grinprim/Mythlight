@@ -264,7 +264,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You read the future like a flickering map.",
-      "description": "",
+      "description": "Glimpses of all possibilities flashing by, flowing from one second to another, what could possibly happen next? Doesn’t matter if you already know.",
       "bonuses": [
         "Insight +1",
         "Scholarship +1"
@@ -284,7 +284,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You pull at the seams of time.",
-      "description": "",
+      "description": "The fabric of reality unfolds at your finger tips, it reverberates like waves through time. It all makes sense to you, infinities upon infinities, at your grasp.",
       "bonuses": [
         "Arcana +1",
         "Reflex +1"
@@ -299,12 +299,12 @@
       }
     },
     {
-      "id": "harbinger",
-      "name": "Path of the Harbinger",
+      "id": "executioner",
+      "name": "Path of the Executioner",
       "source": "CORE",
       "source_color": "indigo",
-      "summary": "You bring inevitable endings.",
-      "description": "",
+      "summary": "You bring the inevitable end.",
+      "description": "End them all, bring ruin and death to those who dare stand in your way. Be the executioner, be their final moment.",
       "bonuses": [
         "Intimidation +1",
         "Spellcraft +1"
@@ -324,7 +324,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Wisdom carved into scar tissue.",
-      "description": "",
+      "description": "Your knowledge is vast, you have fought many battles, leaving scars all over your flesh. But these scars carry more than pain, they carry experience.",
       "bonuses": [
         "Fortitude +1",
         "Insight +1"
@@ -344,7 +344,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Creation is your weapon.",
-      "description": "",
+      "description": "Your hands blister, you're covered in wood dust and oils. No matter, it is all worth it in the end, your crafts will carry your name louder than any words ever could.",
       "bonuses": [
         "Tinkering +1",
         "Scholarship +1"
@@ -352,10 +352,10 @@
       "feature": {
         "Name": "Master Crafter",
         "Action": "⭘",
-        "Cost": "⧖",
+        "Cost": "☀",
         "Symbols": "",
         "Parameters": "None",
-        "Description": "Repair equipment or create basic tools freely. Once per Rest, imbue an item with +1 Damage or +1 Defense for one combat."
+        "Description": "Repair or create simple crafts freely (No rolls required). During rest you may imbue 1 item with +1 Damage or +1 Armor until your next rest."
       }
     },
     {
@@ -364,7 +364,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You strike before fear sets in.",
-      "description": "",
+      "description": "The smell is unmistakeable, your prey is near, rushing from bush to tree top you see it. It lays unaware of your presence, just how you like it.",
       "bonuses": [
         "Finesse +1",
         "Aim +1"
@@ -375,7 +375,7 @@
         "Cost": "⧖",
         "Symbols": "",
         "Parameters": "None",
-        "Description": "Attacks against unaware or distant targets deal +2 Damage. Ignore movement penalties from rough terrain."
+        "Description": "The first attack against an ambushed or taunted target deals +2 Damage. Ignore movement penalties from rough terrain."
       }
     },
     {
@@ -384,7 +384,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Stone knows your name.",
-      "description": "",
+      "description": "Hard work is your blood and soul. You dig and dig to find the beauty from within the earth itself. It's almost comforting, being so deep under the soil others call home.",
       "bonuses": [
         "Athletics +1",
         "Fortitude +1"
