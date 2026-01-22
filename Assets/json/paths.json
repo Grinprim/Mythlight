@@ -5,7 +5,8 @@
       "name": "Path of the Warlord",
       "source": "CORE",
       "source_color": "indigo",
-      "summary": "Victory is seized through presence, command, and unshakable fury.",
+      "summary": "Victory is seized through command and unshakable fury.",
+      "description": "It's not brutality, it's a calculated risk. You guide your allies with ferocity, into battle no matter how unwinnable. And you always work to come out on top.",
       "bonuses": [
         "Athletics +1",
         "Intimidation +1"
@@ -25,6 +26,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "A blade perfected through grace, patience, and lethal precision.",
+      "description": "A Duel is the most honorable of fights, one on one and to the death. You fight with grit and determination to strike down the foe standing across you. One blade, one strike, one kill.",
       "bonuses": [
         "Reflex +1",
         "Finesse +1"
@@ -44,6 +46,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Power carved from flesh and paid for in blood.",
+      "description": "Your body's limits are merely suggestions, push past what is there, break it and reform it, that is your right. Blood is fuel for your magic, and your body will not resist.",
       "bonuses": [
         "Fortitude +1",
         "Scholarship +1"
@@ -63,6 +66,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Lightning answers your song.",
+      "description": "The song of the heavens calls to you, the rumble, crackle and pop of lightning. Electricity courses through your voice, breaking the air you speak thorough.",
       "bonuses": [
         "Performance +1",
         "Aim +1"
@@ -82,6 +86,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "The wild answers your call.",
+      "description": "Nature is an extension of your body, the creatures who roam it are as much you as you are. You call upon your own pack, you command them, you are the alpha.",
       "bonuses": [
         "Insight +1",
         "Athletics +1"
@@ -101,6 +106,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "The road itself is your home.",
+      "description": "You have traveled, and will keep traveling, there is no path you will not take, no place you will not see. Forever traveling, forever going, that is your calling.",
       "bonuses": [
         "Reflex +1",
         "Fortitude +1"
@@ -120,6 +126,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "The perfect strike leaves no witness.",
+      "description": "",
       "bonuses": [
         "Finesse +1",
         "Stealth +1"
@@ -139,6 +146,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Words carve deeper than steel.",
+      "description": "",
       "bonuses": [
         "Persuasion +1",
         "Scholarship +1"
@@ -158,6 +166,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "An avalanche given form.",
+      "description": "",
       "bonuses": [
         "Fortitude +2"
       ],
@@ -176,6 +185,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Creation through flame.",
+      "description": "",
       "bonuses": [
         "Scholarship +1",
         "Reflex +1"
@@ -194,6 +204,7 @@
       "name": "Path of the Frostwarden",
       "source": "CORE",
       "summary": "The stillness of the glacier’s heart.",
+      "description": "",
       "bonuses": [
         "Fortitude +1",
         "Insight +1"
@@ -213,6 +224,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Death obeys.",
+      "description": "",
       "bonuses": [
         "Fortitude +1",
         "Intimidation +1"
@@ -232,6 +244,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Strength measured in protection.",
+      "description": "",
       "bonuses": [
         "Persuasion +1",
         "Insight +1"
@@ -251,6 +264,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You read the future like a flickering map.",
+      "description": "",
       "bonuses": [
         "Insight +1",
         "Scholarship +1"
@@ -270,6 +284,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You pull at the seams of time.",
+      "description": "",
       "bonuses": [
         "Arcana +1",
         "Reflex +1"
@@ -289,6 +304,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You bring inevitable endings.",
+      "description": "",
       "bonuses": [
         "Intimidation +1",
         "Spellcraft +1"
@@ -308,6 +324,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Wisdom carved into scar tissue.",
+      "description": "",
       "bonuses": [
         "Fortitude +1",
         "Insight +1"
@@ -327,6 +344,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Creation is your weapon.",
+      "description": "",
       "bonuses": [
         "Tinkering +1",
         "Scholarship +1"
@@ -346,6 +364,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "You strike before fear sets in.",
+      "description": "",
       "bonuses": [
         "Finesse +1",
         "Aim +1"
@@ -365,6 +384,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Stone knows your name.",
+      "description": "",
       "bonuses": [
         "Athletics +1",
         "Fortitude +1"
