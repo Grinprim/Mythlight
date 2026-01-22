@@ -66,7 +66,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Lightning answers your song.",
-      "description": "The song of the heavens calls to you, the rumble, crackle and pop of lightning. Electricity courses through your voice, breaking the air you speak thorough.",
+      "description": "The song of the heavens calls to you, the rumble, crackle and pop of lightning. Electricity courses through your voice, breaking the air you speak through.",
       "bonuses": [
         "Performance +1",
         "Aim +1"
@@ -126,7 +126,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "The perfect strike leaves no witness.",
-      "description": "",
+      "description": "Shadowblades strike from darkness, eliminating targets before they can react. Within the darkness they find their strength, waiting for the perfect time to strike.",
       "bonuses": [
         "Finesse +1",
         "Stealth +1"
@@ -137,7 +137,7 @@
         "Cost": "⧖",
         "Symbols": "",
         "Parameters": "None",
-        "Description": "While hidden, your first attack deals +2 Damage. After striking, you become invisible for 1 turn."
+        "Description": "While hidden, your first attack deals +2 Damage. While in darkness or dim light, you are considered hidden."
       }
     },
     {
@@ -146,7 +146,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Words carve deeper than steel.",
-      "description": "",
+      "description": "You speak such sweet words, people hang on your every word. Such fluent speech is bound to draw even the ones most opposed to you to your side.",
       "bonuses": [
         "Persuasion +1",
         "Scholarship +1"
@@ -157,7 +157,7 @@
         "Cost": "🗲",
         "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
         "Parameters": "None",
-        "Description": "Attempt to charm one intelligent creature for 3 turns. Outside combat, you have advantage on negotiations and deals."
+        "Description": "Attempt to Charm one intelligent creature for 3 turns, they must roll [Insight] contesting [6 + Your Persuasion]. Outside combat, you have advantage on negotiations and deals."
       }
     },
     {
@@ -166,7 +166,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "An avalanche given form.",
-      "description": "",
+      "description": "You are a living siege engine, advancing through pain and resistance without slowing. The more wounded they become, the harder they are to stop.",
       "bonuses": [
         "Fortitude +2"
       ],
@@ -185,7 +185,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Creation through flame.",
-      "description": "",
+      "description": "Heat and flame, they are to you as your own soul. You emit a burning presence, scorching the very earth you tread.",
       "bonuses": [
         "Scholarship +1",
         "Reflex +1"
@@ -194,9 +194,9 @@
         "Name": "Living Flame",
         "Action": "⭘",
         "Cost": "⧖",
-        "Symbols": "Damage X:+1 [lvl 1] | +2 [lvl 3] | +3 [lvl 6] | +4 [lvl 9]",
+        "Symbols": "Damage X:+1 [lvl 1] | +2 [lvl 6] | +3 [lvl 12]",
         "Parameters": "None",
-        "Description": "Fire spells deal +X Damage and ignite enemies for 1 extra Damage for 2 rounds."
+        "Description": "Fire spells deal +X Damage, you gain resistance to the Burn Condition."
       }
     },
     {
@@ -204,7 +204,7 @@
       "name": "Path of the Frostwarden",
       "source": "CORE",
       "summary": "The stillness of the glacier’s heart.",
-      "description": "",
+      "description": "Oh the stillness of ice, the frost that burns your flesh with its seething cold. They will not move unless you permit it.",
       "bonuses": [
         "Fortitude +1",
         "Insight +1"
@@ -215,7 +215,7 @@
         "Cost": "⧖",
         "Symbols": "Armor X:+1 [lvl 1] | +2 [lvl 6] | +3 [lvl 12]",
         "Parameters": "None",
-        "Description": "Ice abilities reduce enemy Speed by 1 tile and grant you +X Armor for 1 turn per cast."
+        "Description": "Ice abilities Slow by 2 and grant you +X Armor for 1 turn per cast."
       }
     },
     {
@@ -224,7 +224,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Death obeys.",
-      "description": "",
+      "description": "You refuse to fall, fueled by stubborn will and defiance of death itself. Each return from the brink makes you deadlier and harder to finish.",
       "bonuses": [
         "Fortitude +1",
         "Intimidation +1"
@@ -235,7 +235,7 @@
         "Cost": "⧖",
         "Symbols": "Damage X:+1 [lvl 1] | +2 [lvl 3] | +3 [lvl 6] | +4 [lvl 9]",
         "Parameters": "None",
-        "Description": "When reduced to 0 Health, regain 4 Health. While below half Health, your attacks deal +X Damage."
+        "Description": "When reduced to 0 Health, lose Half your Max Health until your next rest and stand back up with Full Health. You perish if your maximum reaches 0. The first time this triggers each combat gain +X Damage."
       }
     },
     {
@@ -244,7 +244,7 @@
       "source": "CORE",
       "source_color": "indigo",
       "summary": "Strength measured in protection.",
-      "description": "",
+      "description": "You command your flock, those who follow you, those who stand beside you. Keep them safe, heal their aches. Bring them peace.",
       "bonuses": [
         "Persuasion +1",
         "Insight +1"
@@ -255,7 +255,7 @@
         "Cost": "🗲",
         "Symbols": "Uses 🗲: 1 [lvl 1] | 2 [lvl 3] | 3 [lvl 6] | 4 [lvl 9]",
         "Parameters": "None",
-        "Description": "Heal all allies within 2 tiles for 3 Health. Uppon activation, gain +1 Armor and +1 Reflex until your next turn."
+        "Description": "Heal all allies within 2 tiles for [Your Level] Health. Uppon activation, gain +1 Armor and +1 Reflex until your next turn."
       }
     },
     {
