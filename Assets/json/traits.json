@@ -2788,6 +2788,33 @@
     "Parameters": "",
     "Description": "You can play your chosen instrument and are proficient with it as an improvised weapon. While playing, allies within hearing range gain either +1 Armor or +2 Accuracy.",
     "Scaling": ""
+  },
+  {
+    "Name": "Sailor",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "You are proficient with maps and compasses. Gain advantage on Scholarship checks regarding ports or islands. You can determine North while viewing any type of sky",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Sharp Nose",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Gain advantage on checks involving smell (e.g. detecting poison).",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Hard Target",
+    "Action": "⭘",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "None",
+    "Description": "Cover grants one higher tier of protection. While in cover, gain +2 Accuracy. You may move between covers (min. 3 units apart) as a Free Action.",
+    "Scaling": "-"
   }
   
 ]
