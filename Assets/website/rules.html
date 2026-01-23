@@ -1199,52 +1199,67 @@
     <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
     <p class="text-sm text-slate-400 max-w-3xl">
-        Mounted combat trades personal movement and positioning for speed, protection,
-        and shared risk. Creature mounts and vehicle mounts follow distinct rules.
+        Mounted combat allows a rider to trade personal movement and positioning
+        for the speed, protection, and shared risk of a mount. Creature mounts
+        and vehicle mounts follow distinct rules.
     </p>
 
     <!-- BASICS -->
     <div>
         <h3 class="text-xl text-white font-bold mb-3">Mount Basics</h3>
-        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
-            <li>• Any creature capable of carrying a passenger can be a mount</li>
-            <li>• Medium vehicles count as mounts</li>
-            <li>• Large vehicles use full vehicle rules</li>
-            <li>• Rider and mount share the same tile</li>
-            <li>• Rider uses the mount’s Speed while mounted</li>
-        </ul>
+        <p class="text-sm text-slate-300 max-w-3xl">
+            Any creature capable of carrying a passenger can serve as a <strong>mount</strong>.
+            <strong>Medium vehicles</strong> are also considered mounts, while
+            <strong>large vehicles</strong> use full vehicle rules instead.
+            While mounted, the rider and mount <strong>share the same tile</strong>,
+            and the rider uses the mount’s <strong>Speed</strong>.
+        </p>
     </div>
 
     <!-- INITIATIVE & MOVEMENT -->
     <div>
         <h3 class="text-xl text-white font-bold mb-3">Initiative & Movement</h3>
-        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
-            <li>• Rider and mount share an initiative slot while mounted</li>
-            <li>• Unmounted mounts act on their own initiative</li>
-            <li>• Non-companion mounts always act last</li>
-            <li>• Mounting costs 1 Action</li>
-            <li>• Dismounting costs 1 Action</li>
-            <li>• Rider cannot take movement-based actions while mounted</li>
-            <li>• Mount movement traits may still be used</li>
-        </ul>
+        <p class="text-sm text-slate-300 max-w-3xl">
+            While mounted, the rider and mount <strong>share an initiative slot</strong>.
+            If the mount is unmounted, it acts on its own initiative, with
+            <strong>non-companion mounts always acting last</strong>.
+        </p>
+        <p class="text-sm text-slate-300 max-w-3xl mt-2">
+            <strong>Mounting</strong> and <strong>dismounting</strong> each cost
+            <strong>1 Action</strong>. While mounted, the rider cannot take
+            <strong>movement-based actions</strong>; instead, the mount’s movement
+            fully replaces the rider’s movement. Mount-specific movement traits
+            may still be used.
+        </p>
     </div>
 
     <!-- ATTACKING & TARGETING -->
     <div>
         <h3 class="text-xl text-white font-bold mb-3">Attacking & Targeting</h3>
-        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
-            <li>• Melee attacks against mounted targets suffer an Accuracy penalty equal to the rider’s Reflex</li>
-            <li>• Attacker must declare rider or mount as the target</li>
-            <li>• Area effects hit both rider and mount</li>
-            <li>• Floor hazards affect the mount only</li>
-            <li>• Opportunity Attacks target the mount by default</li>
-            <li>• Attackers with Reach may target the rider instead</li>
-        </ul>
+        <p class="text-sm text-slate-300 max-w-3xl">
+            Melee attacks made against a <strong>mounted target</strong> suffer
+            an <strong>Accuracy penalty</strong> equal to the rider’s
+            <strong>Reflex</strong>. When attacking a mounted creature, the
+            attacker must <strong>declare whether they are targeting the rider
+            or the mount</strong>.
+        </p>
+        <p class="text-sm text-slate-300 max-w-3xl mt-2">
+            <strong>Area effects</strong> affect both rider and mount, while
+            <strong>floor hazards</strong> affect only the mount.
+            <strong>Opportunity Attacks</strong> normally target the mount;
+            attackers with <strong>Reach</strong> may instead target the rider.
+        </p>
     </div>
 
     <!-- CREATURE MOUNTS -->
     <div>
         <h3 class="text-xl text-white font-bold mb-3">Creature Mounts</h3>
+
+        <p class="text-sm text-slate-300 max-w-3xl mb-3">
+            Creature mounts operate differently from Companions and have
+            <strong>two stat profiles</strong> depending on whether they are
+            currently mounted.
+        </p>
 
         <div class="overflow-x-auto">
             <table class="w-full text-sm text-slate-300 border border-slate-700 rounded-lg">
@@ -1259,12 +1274,12 @@
                     <tr class="border-t border-slate-700">
                         <td class="p-2">Health</td>
                         <td class="p-2">Health</td>
-                        <td class="p-2">Morale (replaces Health)</td>
+                        <td class="p-2"><strong>Morale</strong> (replaces Health)</td>
                     </tr>
                     <tr class="border-t border-slate-700">
                         <td class="p-2">Armor</td>
                         <td class="p-2">6 + Mount’s Physique</td>
-                        <td class="p-2">6 + Rider’s Reflex</td>
+                        <td class="p-2">6 + Rider’s <strong>Reflex</strong></td>
                     </tr>
                     <tr class="border-t border-slate-700">
                         <td class="p-2">Speed</td>
@@ -1279,31 +1294,46 @@
     <!-- MORALE -->
     <div>
         <h3 class="text-xl text-white font-bold mb-3">Morale</h3>
-        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
-            <li>• Morale equals the mount’s current Health when mounted</li>
-            <li>• Mount loses Morale equal to half the damage the rider takes</li>
-            <li>• Directly targeted mounts take full Morale damage</li>
-            <li>• You may spend 1 Action to soothe the mount</li>
-            <li>• Soothe restores Morale equal to half your level</li>
-        </ul>
+        <p class="text-sm text-slate-300 max-w-3xl">
+            While mounted, a creature’s <strong>Health is replaced by Morale</strong>.
+            Morale is set to the mount’s <strong>current Health</strong> at the
+            moment it is mounted. Whenever the rider takes damage, the mount
+            loses <strong>Morale equal to half the damage taken</strong>.
+        </p>
+        <p class="text-sm text-slate-300 max-w-3xl mt-2">
+            If a mount is <strong>targeted directly</strong>, it takes
+            <strong>full Morale damage</strong>. The rider may spend
+            <strong>1 Action</strong> to <strong>Soothe</strong> the mount,
+            restoring Morale equal to <strong>half the rider’s level</strong>.
+        </p>
     </div>
 
     <!-- MORALE BREAK -->
     <div class="bg-amber-900/20 border border-amber-500/30 rounded-lg p-4 text-sm">
         <span class="font-bold text-amber-400">Morale Break</span><br>
-        When a mount’s Morale is fully depleted, it attempts to forcefully dismount the rider.
-        <ul class="list-disc ml-5 mt-2 text-slate-300">
-            <li>• On a successful resist, the mount recovers Morale equal to your Reflex</li>
-            <li>• On failure, you are dismounted, knocked <strong>Prone</strong>, and placed in an adjacent tile</li>
-            <li>• The mount becomes <strong>Feared</strong> of the source of Morale loss</li>
-            <li>• The mount spends all movement fleeing as far as possible</li>
-            <li>• While fleeing, it will only obey commands to Hide or Seek Cover</li>
-        </ul>
+        When a mount’s <strong>Morale is fully depleted</strong>, it attempts to
+        <strong>forcefully dismount</strong> the rider.
+        <p class="text-slate-300 mt-2">
+            On a successful resist, the mount immediately recovers Morale equal
+            to the rider’s <strong>Reflex</strong>. On a failure, the rider is
+            dismounted, knocked <strong>Prone</strong>, and placed in an
+            adjacent tile. The mount becomes <strong>Feared</strong> of the
+            creature that caused the Morale loss and spends all movement fleeing.
+        </p>
+        <p class="text-slate-300 mt-2">
+            While fleeing, the mount will obey commands to
+            <strong>Hide</strong> or <strong>Seek Cover</strong>, but ignores all
+            other commands.
+        </p>
     </div>
 
     <!-- VEHICLE MOUNTS -->
     <div>
         <h3 class="text-xl text-white font-bold mb-3">Vehicle Mounts</h3>
+        <p class="text-sm text-slate-300 max-w-3xl mb-3">
+            Vehicle mounts use a <strong>fixed stat block</strong> that does not
+            change while mounted and do not use Morale.
+        </p>
 
         <div class="overflow-x-auto">
             <table class="w-full text-sm text-slate-300 border border-slate-700 rounded-lg">
@@ -1316,11 +1346,11 @@
                 <tbody>
                     <tr class="border-t border-slate-700">
                         <td class="p-2">Durability</td>
-                        <td class="p-2">Repairable</td>
+                        <td class="p-2"><strong>Repairable</strong></td>
                     </tr>
                     <tr class="border-t border-slate-700">
                         <td class="p-2">Armor</td>
-                        <td class="p-2">Fixed Value</td>
+                        <td class="p-2"><strong>Fixed Value</strong></td>
                     </tr>
                     <tr class="border-t border-slate-700">
                         <td class="p-2">Speed</td>
@@ -1330,13 +1360,12 @@
             </table>
         </div>
 
-        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300 mt-3">
-            <li>• Vehicles do not use Morale</li>
-            <li>• Vehicles do not take damage when the rider is harmed</li>
-            <li>• Vehicles can only lose Durability from hazards, targeting, or traits</li>
-            <li>• Vehicles are non-functional unless ridden</li>
-            <li>• Unridden vehicles act as combat obstacles</li>
-        </ul>
+        <p class="text-sm text-slate-300 max-w-3xl mt-3">
+            Vehicles only lose Durability when <strong>targeted directly</strong>,
+            affected by <strong>floor hazards</strong>, or through traits that
+            consume Durability as a resource. An unridden vehicle is
+            <strong>non-functional</strong> and acts as a <strong>combat obstacle</strong>.
+        </p>
     </div>
 </section>
     </main>
