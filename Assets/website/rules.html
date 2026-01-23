@@ -1195,94 +1195,91 @@
                     <span class="section-number">13</span>
                     Mounts & Vehicle Combat
                 </div>
-                <section class="rule-card space-y-6" id="mount">
-                    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
+                <section class="rule-card space-y-8" id="mount">
+    <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
-                    <p class="text-sm text-slate-300">
-                        Mounted combat represents fighting while riding a creature or medium vehicle.
-                        Mounts provide increased mobility, greater defences, and a new way of fighting.
-                    </p>
+    <p class="text-sm text-slate-400 max-w-3xl">
+        Fighting while riding a creature or medium vehicle trades personal movement
+        for speed, momentum, and positional advantage.
+    </p>
 
-                    <div>
-                        <h3 class="text-xl text-white font-bold mb-2">Mount Basics</h3>
-                        <ul class="list-disc ml-5 text-sm space-y-2">
-                            <li>A mount is any creature capable of carrying a rider.</li>
-                            <li>Mounts can also be vehicles of the medium class (Motorcycles, Scooters etc.)</li>
-                            <li>Large creatures can also be mounted, Large vehicles are not considered mounts, but are
-                                instead handled by vehicle rules.</li>
-                            <li>Mounts occupy their own space on the combat grid.</li>
-                            <li>The rider occupies the mount’s space and moves with it.</li>
-                        </ul>
-                    </div>
+    <!-- BASICS -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-3">Mount Basics</h3>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
+            <li>• Any creature capable of carrying a rider can be a mount</li>
+            <li>• Medium vehicles (motorcycles, scooters) count as mounts</li>
+            <li>• Large creatures may be mounted; large vehicles use vehicle rules</li>
+            <li>• Mounts occupy their own grid space</li>
+            <li>• Rider shares the mount’s space and movement</li>
+        </ul>
+    </div>
 
-                    <div>
-                        <h3 class="text-xl text-white font-bold mb-2">Initiative & Turn Order</h3>
-                        <ul class="list-disc ml-5 text-sm space-y-2">
-                            <li>The mount acts on the rider’s turn. It does not receive a separate turn, unless
-                                dismoutned.</li>
-                            <li>The rider looses the ability to take movement actions, instead they are taken by the
-                                mount with the riders commands.</li>
-                            <li>Mounts that are not mounted are at the bottom of initative, unless they are also a
-                                companion.</li>
-                            <li>Mounted movement uses the mount’s movement speed.</li>
-                            <li>The rider may still take Actions normally, like attacking or casting spells.</li>
-                        </ul>
-                    </div>
+    <!-- TURN ORDER -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-3">Initiative & Movement</h3>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
+            <li>• Mount acts on the rider’s turn</li>
+            <li>• Rider cannot take movement actions</li>
+            <li>• Mount movement replaces rider movement</li>
+            <li>• Rider may still take Actions normally</li>
+            <li>• Unmounted mounts act last unless companions</li>
+        </ul>
+    </div>
 
-                    <div>
-                        <h3 class="text-xl text-white font-bold mb-2">Attacking While Mounted</h3>
-                        <ul class="list-disc ml-5 text-sm space-y-2">
-                            <li>Melee attacks use the rider’s reach.</li>
-                            <li>Mounted riders gain <strong>+1 Accuracy</strong> on melee attacks against unmounted
-                                targets.</li>
-                            <li>Ranged attacks made while mounted suffer <strong>-1 Accuracy</strong> unless the mount
-                                is stationary.</li>
-                            <li>Spells may be cast normally unless disrupted by forced movement.</li>
-                        </ul>
-                    </div>
+    <!-- ATTACKING -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-3">Attacking While Mounted</h3>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
+            <li>• Melee uses rider’s reach</li>
+            <li>• +1 Accuracy vs unmounted targets (melee)</li>
+            <li>• −1 Accuracy on ranged attacks while moving</li>
+            <li>• No penalty if the mount is stationary</li>
+            <li>• Spellcasting functions normally</li>
+        </ul>
+    </div>
 
-                    <div>
-                        <h3 class="text-xl text-white font-bold mb-2">Targeting Rider vs Mount</h3>
-                        <ul class="list-disc ml-5 text-sm space-y-2">
-                            <li>Attackers must declare whether they target the rider or the mount.</li>
-                            <li>Large mounts provide <strong>Partial Cover</strong> to the rider.</li>
-                            <li>Area effects affect both rider and mount if both are within the radius.</li>
-                            <li>Floor hazards will only effect the mount.</li>
-                            <li>Mounted movement can trigger Opportunity Attacks.</li>
-                            <li>Opportunity Attacks target the mount unless the attacker has reach.</li>
-                        </ul>
-                    </div>
+    <!-- TARGETING -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-3">Targeting & Threats</h3>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
+            <li>• Attacker declares rider or mount</li>
+            <li>• Large mounts grant Partial Cover to rider</li>
+            <li>• Area effects hit both if in radius</li>
+            <li>• Ground hazards affect the mount only</li>
+            <li>• Mounted movement can trigger Opportunity Attacks</li>
+            <li>• Opportunity Attacks target the mount unless attacker has reach</li>
+        </ul>
+    </div>
 
-                    <div>
-                        <h3 class="text-xl text-white font-bold mb-2">Dismounting</h3>
-                        <ul class="list-disc ml-5 text-sm space-y-2">
-                            <li>Voluntary dismount costs <strong>1 Action</strong>.</li>
-                            <li>Dismounting places the rider in any adjacent Unit.</li>
-                            <li>If a creature mount, bellow half hp, is attacked it must roll [Physique] against the
-                                attack roll or Force Dismount the rider.</li>
-                            <li>Forced dismounts require a <strong>Reflex check</strong> from the rider.</li>
+    <!-- DISMOUNT -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-3">Dismounting</h3>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
+            <li>• Voluntary dismount costs 1 Action</li>
+            <li>• Rider appears in an adjacent unit</li>
+            <li>• Mount below half HP may force a dismount</li>
+            <li>• Forced dismounts require a Reflex check</li>
+        </ul>
 
-                        </ul>
+        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-sm mt-4">
+            <span class="font-bold text-red-400">Forced Dismount</span><br>
+            On failure, the rider becomes <strong>Prone</strong> in an adjacent unit.
+            Creature mounts may immediately flee combat.
+        </div>
+    </div>
 
-                        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3 text-sm mt-3">
-                            <strong class="text-red-400">Forced Dismount</strong><br>
-                            On failure, the rider becomes <strong>Prone</strong> in an adjacent tile. The mount will
-                            attempt to leave combat if it is a creature.
-
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl text-white font-bold mb-2">Mount Damage & Morale</h3>
-                        <ul class="list-disc ml-5 text-sm space-y-2">
-                            <li>If a mount reaches 0 Health, the rider is immediately dismounted.</li>
-                            <li>Vehicle mounts will loose Durability instead of Health.</li>
-                            <li>Panicked mounts may move unpredictably at the Narrator’s discretion.</li>
-                            <li>Untrained mounts may refuse dangerous actions.</li>
-                        </ul>
-                    </div>
-
-                </section>
+    <!-- DAMAGE & MORALE -->
+    <div>
+        <h3 class="text-xl text-white font-bold mb-3">Mount Damage & Morale</h3>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm text-slate-300">
+            <li>• 0 Health immediately dismounts the rider</li>
+            <li>• Vehicles lose Durability instead of Health</li>
+            <li>• Panicked mounts act unpredictably</li>
+            <li>• Untrained mounts may refuse risky commands</li>
+        </ul>
+    </div>
+</section>
     </main>
 
     <div id="footer-placeholder"></div>
