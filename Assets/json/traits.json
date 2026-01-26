@@ -1054,15 +1054,6 @@
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
-    "Name": "Flashbang",
-    "Action":"⬖",
-    "Cost": "2",
-    "Symbols": "🗲",
-    "Parameters": "",
-    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Flashbangs:<br>Thrown projectile with a 6 tile Range; Everyone in a 3 tile radius suffers –4 Accuracy until next turn.",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
-  },
-  {
     "Name": "Sudden Camouflage",
     "Action":"⭘",
     "Cost": "2",
@@ -1231,24 +1222,6 @@
     "Symbols": "🗲",
     "Parameters": "⫘ Novice Craftsman",
     "Description": "Restore a broken craft to 1 Durability for a scene. While active, it gains +2 Damage when applicable.",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
-  },
-  {
-    "Name": "Inventor’s Focus",
-    "Action":"⬖",
-    "Cost": "2",
-    "Symbols": "🗲",
-    "Parameters": "⫘ Adept Craftsman",
-    "Description": "Modify a mechanical or electrical item to gain +4 Accuracy or +3 Damage for one scene.",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
-  },
-  {
-    "Name": "Combat Engineer",
-    "Action":"⬖",
-    "Cost": "2",
-    "Symbols": "🗲",
-    "Parameters": "⫘ Apprentice Craftsman",
-    "Description": "Using [2× Metal - Wire, 1× Metal - Plate] Deploy an automated turret that fires at the end of your turn. Turret deals 2 Damage and, has 3 Durability.",
     "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
 
@@ -1547,15 +1520,6 @@
     "Parameters": "",
     "Description": "Gain 2 Skill points.",
     "Scaling": ""
-  },
-  {
-    "Name": "Smokebomb",
-    "Action":"⬖",
-    "Cost": "2",
-    "Symbols": "🗲",
-    "Parameters": "",
-    "Description": "Using [1x Glass - Tube, 1x Stone - Dust] you can create Smokebombs:<br>Thrown projectile with a 6 tile Range; Everyone in a 3 tile radius suffers –2 Accuracy, lasts 4 scenes.",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 3]<br>3 [lvl 6]<br>4 [lvl 9]"
   },
   {
     "Name": "Mana Sap",
@@ -2401,15 +2365,6 @@
     "Parameters": "",
     "Description": "Return an object you threw within 6 tile to your hand.",
     "Scaling": ""
-  },
-  {
-    "Name": "Molly",
-    "Action":"⬖",
-    "Cost": "2",
-    "Symbols": "⧖",
-    "Parameters": "⫘",
-    "Description": "Using [1x Glass - Tube, 1x Liquid - Alchohol] you can create Mollies:<br>Thrown projectile with a 6 tile Range; Everyone in a 2x2 square take 2 Fire damage and gains the Burn Condition.",
-    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
   },
   {
     "Name": "Losers Fallacy",
