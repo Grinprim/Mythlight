@@ -1528,5 +1528,64 @@
         "Description": "You deploy a compact 1 unit workshop, it grants you the benefits of a simple workshop, an apprentice brewers kit, an anvil and a ritualist station.",
         "Upcast": "The benefits increase by 1 tier.",
         "Lore": "Always useful to have one of these around."
+    },
+
+
+
+    
+    {
+        "ID": "AR1-1",
+        "Category": "Artisan",
+        "Name": "Smokebomb",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "6 units, 3 unit radius",
+        "Description": "Using [1× Glass – Tube, 1× Stone – Dust], you create and throw a smokebomb. All creatures in the area suffer –2 Accuracy for 4 scenes.",
+        "Upcast": "",
+        "Lore": "A cloud thick enough to turn certainty into guesswork."
+    },
+    {
+        "ID": "AR1-2",
+        "Category": "Artisan",
+        "Name": "Flashbang",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "6 units, 3 unit radius",
+        "Description": "Using [1× Glass – Tube, 1× Stone – Dust], you create and throw a flashbang. All creatures in the area suffer –4 Accuracy until the end of their next turn.",
+        "Upcast": "",
+        "Lore": "Light, weaponized into a single disorienting instant."
+    },
+    {
+        "ID": "AR1-3",
+        "Category": "Artisan",
+        "Name": "Molly",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "6 units, 2×2 area",
+        "Description": "Using [1× Glass – Tube, 1× Liquid – Alcohol], you create and throw an incendiary flask. Creatures in the area take 2 Fire Damage and gain the Burn condition.",
+        "Upcast": "",
+        "Lore": "Some mixtures are meant to break, not last."
+    },
+    {
+        "ID": "AR1-4",
+        "Category": "Artisan",
+        "Name": "Inventor’s Focus",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "Touch",
+        "Description": "You modify a mechanical or electrical item, granting it either +4 Accuracy or +3 Damage for 1 scene.",
+        "Upcast": "",
+        "Lore": "A few precise adjustments can change everything."
+    },
+    {
+        "ID": "AR1-5",
+        "Category": "Artisan",
+        "Name": "Combat Engineer",
+        "Cost": "0",
+        "Type": "Action",
+        "Range": "4 units",
+        "Description": "Using [2× Metal – Wire, 1× Metal – Plate], you deploy an automated turret. The turret fires at the end of your turn, dealing 2 Damage and having 3 Durability.",
+        "Upcast": "",
+        "Lore": "Built for war, perfected by necessity."
     }
 ]
