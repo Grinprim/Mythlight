@@ -12,7 +12,7 @@
             <a href="paths.html" class="nav-link">Paths</a>
             <a href="traits.html" class="nav-link">Traits</a>
             <a href="spells.html" class="nav-link">Spells</a>
-            <a href="equipment.html" class="nav-link">Equipment</a>
+            <a href="inventory.html" class="nav-link">Inventory</a>
         </div>
 
         <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
@@ -30,7 +30,7 @@
             <a href="paths.html" class="mobile-link">Paths</a>
             <a href="traits.html" class="mobile-link">Traits</a>
             <a href="spells.html" class="mobile-link">Spells</a>
-            <a href="equipment.html" class="mobile-link">Equipment</a>
+            <a href="inventory.html" class="mobile-link">Inventory</a>
         </div>
     </div>
 </nav>
@@ -42,13 +42,15 @@
             const menu = document.getElementById('mobile-menu');
             const links = document.querySelectorAll('.nav-link, .mobile-link');
             
-            btn.onclick = (e) => {
-                e.stopPropagation();
-                menu.classList.toggle('hidden');
-            };
+            if(btn) {
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                };
+            }
 
             document.addEventListener('click', () => {
-                if (!menu.classList.contains('hidden')) menu.classList.add('hidden');
+                if (menu && !menu.classList.contains('hidden')) menu.classList.add('hidden');
             });
 
             const currentFile = window.location.pathname.split('/').pop() || 'index.html';
@@ -58,6 +60,7 @@
                 }
             });
         };
-        initNavbar();
+        // Small delay to ensure DOM insertion
+        setTimeout(initNavbar, 50);
     })();
 </script>

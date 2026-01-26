@@ -7,8 +7,14 @@
     <link rel="icon" type="image/svg+xml" href="../img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Modal for Random Trait */
+        #random-trait-modal { transition: opacity 0.3s ease; }
+        .modal-content { animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes modalPop { 0% { transform: scale(0.9); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    </style>
 </head>
-<body class="min-h-screen bg-custom-dark text-slate-300">
+<body class="min-h-screen bg-custom-dark text-slate-300 relative">
 
     <div id="navbar-placeholder"></div>
 
@@ -16,10 +22,16 @@
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
                 <h1 class="text-5xl font-bold text-white mb-4">Traits</h1>
-                <p class="text-slate-400 text-lg max-w-2xl">Traits are the core of your character’s growth and identity.</p>
+                <p class="text-slate-400 text-lg max-w-2xl flex items-center gap-3">
+                    Character identity and growth.
+                    <span id="trait-counter" class="text-xs bg-slate-800 text-indigo-300 px-3 py-1 rounded-full border border-slate-700 font-bold uppercase tracking-wider">Loading...</span>
+                </p>
             </div>
             <div class="flex flex-wrap gap-4 w-full md:w-auto items-end">
                  <div class="flex gap-2">
+                    <button onclick="pickRandomTrait()" class="px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 rounded-lg text-purple-300 text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2">
+                        <span>🎲</span> Random
+                    </button>
                     <button onclick="expandAllTraits(true)" class="px-4 py-2 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-lg text-indigo-300 text-xs font-bold uppercase tracking-wider transition-all">
                         Expand All
                     </button>
@@ -56,78 +68,21 @@
                     
                     <div class="space-y-5">
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Types</p>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⧖')">
-                            <div class="legend-symbol text-blue-400 clickable" data-symbol="⧖">⧖</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Passive</div>
-                                <div class="text-slate-500 text-[10px] italic">Always active.</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('☀')">
-                            <div class="legend-symbol text-amber-400 clickable" data-symbol="☀">☀</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Rest-Based</div>
-                                <div class="text-slate-500 text-[10px] italic">Useable during a rest.</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('🗲')">
-                            <div class="legend-symbol text-indigo-400 clickable" data-symbol="🗲">🗲</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Active</div>
-                                <div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div>
-                            </div>
-                        </div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⧖')"><div class="legend-symbol text-blue-400 clickable" data-symbol="⧖">⧖</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Passive</div><div class="text-slate-500 text-[10px] italic">Always active.</div></div></div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('☀')"><div class="legend-symbol text-amber-400 clickable" data-symbol="☀">☀</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Rest-Based</div><div class="text-slate-500 text-[10px] italic">Useable during a rest.</div></div></div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('🗲')"><div class="legend-symbol text-indigo-400 clickable" data-symbol="🗲">🗲</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Active</div><div class="text-slate-500 text-[10px] italic">Has limited uses per rest.</div></div></div>
                         
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Tags</p>
-                        <div class="flex items-center opacity-80">
-                            <div class="legend-symbol text-rose-400" data-symbol="★">★</div>
-                            <div>
-                                <div class="text-white font-bold text-sm">Unique</div>
-                                <div class="text-slate-500 text-[10px] italic">Cannot be alongside uniques of the same type.</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center opacity-80">
-                            <div class="legend-symbol text-emerald-400" data-symbol="⫘">⫘</div>
-                            <div>
-                                <div class="text-white font-bold text-sm">Linked</div>
-                                <div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div>
-                            </div>
-                        </div>
+                        <div class="flex items-center opacity-80"><div class="legend-symbol text-rose-400" data-symbol="★">★</div><div><div class="text-white font-bold text-sm">Unique</div><div class="text-slate-500 text-[10px] italic">Cannot be alongside uniques of the same type.</div></div></div>
+                        <div class="flex items-center opacity-80"><div class="legend-symbol text-emerald-400" data-symbol="⫘">⫘</div><div><div class="text-white font-bold text-sm">Linked</div><div class="text-slate-500 text-[10px] italic">Prerequisite trait required.</div></div></div>
 
                         <p class="text-[10px] text-slate-500 mt-1 uppercase font-bold">Action Types</p>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⭘')">
-                            <div class="legend-symbol text-white clickable" data-symbol="⭘">⭘</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Free Action</div>
-                                <div class="text-slate-500 text-[10px] italic">Does not impact action economy.</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◇')">
-                            <div class="legend-symbol text-white clickable" data-symbol="◇">◇</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div>
-                                <div class="text-slate-500 text-[10px] italic">1 per scene, condition-based.</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⬖')">
-                            <div class="legend-symbol text-white clickable" data-symbol="⬖">⬖</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div>
-                                <div class="text-slate-500 text-[10px] italic">Uses 1 of 2 actions per scene.</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')">
-                            <div class="legend-symbol text-white clickable" data-symbol="◆">◆</div>
-                            <div>
-                                <div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack Action</div>
-                                <div class="text-slate-500 text-[10px] italic">Once per turn limit.</div>
-                            </div>
-                        </div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⭘')"><div class="legend-symbol text-white clickable" data-symbol="⭘">⭘</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Free Action</div><div class="text-slate-500 text-[10px] italic">Does not impact action economy.</div></div></div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◇')"><div class="legend-symbol text-white clickable" data-symbol="◇">◇</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Reaction</div><div class="text-slate-500 text-[10px] italic">1 per scene, condition-based.</div></div></div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('⬖')"><div class="legend-symbol text-white clickable" data-symbol="⬖">⬖</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Action</div><div class="text-slate-500 text-[10px] italic">Uses 1 of 2 actions per scene.</div></div></div>
+                        <div class="flex items-center group cursor-pointer" onclick="setSymbolFilter('◆')"><div class="legend-symbol text-white clickable" data-symbol="◆">◆</div><div><div class="text-white font-bold text-sm group-hover:text-indigo-300">Attack Action</div><div class="text-slate-500 text-[10px] italic">Once per turn limit.</div></div></div>
                     </div>
-
-                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-full mt-8 py-3 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-xl text-indigo-400 text-[10px] font-bold uppercase tracking-widest transition-all">
-                        Back to Top
-                    </button>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-full mt-8 py-3 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 rounded-xl text-indigo-400 text-[10px] font-bold uppercase tracking-widest transition-all">Back to Top</button>
                 </section>
             </aside>
             
@@ -136,20 +91,11 @@
                     <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
                         Minor Traits 
                         <span class="text-xs uppercase bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30 whitespace-nowrap">1 Point</span>
-                        <button onclick="toggleTable('t1-wrapper')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors group">
-                            <span class="text-slate-400 group-hover:text-white text-xl">☰</span>
-                        </button>
                     </h2>
                     <div id="t1-wrapper" class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl transition-all duration-300">
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse min-w-[300px]">
-                                <thead>
-                                    <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                        <th class="px-6 py-4 font-bold w-1/2">Name</th>
-                                        <th class="px-6 py-4 font-bold w-1/4">Symbols</th>
-                                        <th class="px-6 py-4 font-bold text-right w-1/4">Expand</th>
-                                    </tr>
-                                </thead>
+                                <thead><tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800"><th class="px-6 py-4 font-bold w-1/2">Name</th><th class="px-6 py-4 font-bold w-1/4">Symbols</th><th class="px-6 py-4 font-bold text-right w-1/4">Expand</th></tr></thead>
                                 <tbody id="traits-1-point"></tbody>
                             </table>
                         </div>
@@ -160,20 +106,11 @@
                     <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-4">
                         Major Traits 
                         <span class="text-xs uppercase bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30 whitespace-nowrap">2 Points</span>
-                        <button onclick="toggleTable('t2-wrapper')" class="ml-auto p-2 hover:bg-slate-800 rounded-lg transition-colors group">
-                            <span class="text-slate-400 group-hover:text-white text-xl">☰</span>
-                        </button>
                     </h2>
                     <div id="t2-wrapper" class="bg-slate-900/40 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl transition-all duration-300">
                          <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse min-w-[300px]">
-                                <thead>
-                                    <tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800">
-                                        <th class="px-6 py-4 font-bold w-1/2">Name</th>
-                                        <th class="px-6 py-4 font-bold w-1/4">Symbols</th>
-                                        <th class="px-6 py-4 font-bold text-right w-1/4">Expand</th>
-                                    </tr>
-                                </thead>
+                                <thead><tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800"><th class="px-6 py-4 font-bold w-1/2">Name</th><th class="px-6 py-4 font-bold w-1/4">Symbols</th><th class="px-6 py-4 font-bold text-right w-1/4">Expand</th></tr></thead>
                                 <tbody id="traits-2-point"></tbody>
                             </table>
                         </div>
@@ -183,47 +120,58 @@
         </div>
     </main>
 
+    <div id="random-trait-modal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4" onclick="closeRandomModal(event)">
+        <div class="modal-content bg-slate-900 border border-slate-700 p-8 rounded-2xl max-w-lg w-full shadow-2xl relative" onclick="event.stopPropagation()">
+            <button onclick="closeRandomModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+            <div class="text-center mb-6">
+                <span class="text-xs text-indigo-400 font-bold uppercase tracking-widest">Random Discovery</span>
+                <h3 id="rand-name" class="text-3xl font-bold text-white mt-2">Trait Name</h3>
+                <div id="rand-meta" class="mt-2 flex justify-center gap-2"></div>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                <p id="rand-desc" class="text-slate-300 leading-relaxed text-sm"></p>
+            </div>
+            <button onclick="pickRandomTrait()" class="w-full mt-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-bold uppercase tracking-widest text-xs transition-colors">
+                Roll Again
+            </button>
+        </div>
+    </div>
+
     <div id="footer-placeholder"></div>
 
     <script>
-        // --- Navigation and Footer Fetch ---
-        fetch('../css/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-                const placeholder = document.getElementById('navbar-placeholder');
-                placeholder.innerHTML = data;
-                const scripts = placeholder.querySelectorAll('script');
-                scripts.forEach(oldScript => {
-                    const newScript = document.createElement('script');
-                    newScript.text = oldScript.text;
-                    document.body.appendChild(newScript);
-                });
-            });
-
-        fetch('../css/footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-
-        // --- Core Logic ---
         let rawTraits = [];
         let activeSymbolFilter = null;
 
-        function toggleTable(wrapperId){
-            document.getElementById(wrapperId).classList.toggle('hidden');
+        // --- Random Trait Logic ---
+        function pickRandomTrait() {
+            if(!rawTraits.length) return;
+            const trait = rawTraits[Math.floor(Math.random() * rawTraits.length)];
+            
+            document.getElementById('rand-name').textContent = trait.Name;
+            document.getElementById('rand-desc').textContent = trait.Description;
+            document.getElementById('rand-meta').innerHTML = `
+                <span class="px-2 py-1 rounded bg-slate-700 text-xs text-white">${trait.Cost} Point</span>
+                <span class="px-2 py-1 rounded bg-slate-700 text-xs text-indigo-300 font-mono">${trait.Symbols || trait.Action || '-'}</span>
+            `;
+            
+            document.getElementById('random-trait-modal').classList.remove('hidden');
         }
 
+        function closeRandomModal(e) {
+            document.getElementById('random-trait-modal').classList.add('hidden');
+        }
+
+        // --- Standard Logic ---
         function toggleDetails(rowId) {
             const row = document.getElementById(rowId);
             row.classList.toggle('hidden');
             const arrow = document.getElementById(`arrow-${rowId}`);
-            if(arrow) {
-                arrow.style.transform = row.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            }
+            if(arrow) arrow.style.transform = row.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
         }
 
         function expandAllTraits(shouldExpand) {
-            const allDetailRows = document.querySelectorAll('tr[id^="trait-"]');
-            allDetailRows.forEach(row => {
+            document.querySelectorAll('tr[id^="trait-"]').forEach(row => {
                 shouldExpand ? row.classList.remove('hidden') : row.classList.add('hidden');
                 const arrow = document.getElementById(`arrow-${row.id}`);
                 if(arrow) arrow.style.transform = shouldExpand ? 'rotate(180deg)' : 'rotate(0deg)';
@@ -231,15 +179,11 @@
         }
 
         function setSymbolFilter(symbol) {
-            if (symbol === '★' || symbol === '⫘') return; // Non-clickable tags
+            if (symbol === '★' || symbol === '⫘') return;
             activeSymbolFilter = symbol;
-            
             document.querySelectorAll('.legend-symbol').forEach(btn => {
-                if (btn.getAttribute('data-symbol') === symbol && symbol !== null) {
-                    btn.classList.add('active-filter');
-                } else {
-                    btn.classList.remove('active-filter');
-                }
+                if (btn.getAttribute('data-symbol') === symbol && symbol !== null) btn.classList.add('active-filter');
+                else btn.classList.remove('active-filter');
             });
             document.getElementById('clear-filter').classList.toggle('hidden', !symbol);
             renderTraits();
@@ -251,19 +195,16 @@
             const table1 = document.getElementById('traits-1-point');
             const table2 = document.getElementById('traits-2-point');
             
-            table1.innerHTML = '';
-            table2.innerHTML = '';
+            table1.innerHTML = ''; table2.innerHTML = '';
 
             let filtered = rawTraits.filter(trait => {
-                const matchesSearch = trait.Name.toLowerCase().includes(searchTerm) || 
-                                     trait.Description.toLowerCase().includes(searchTerm);
-                
-                const matchesSymbol = !activeSymbolFilter || 
-                                     (trait.Symbols && trait.Symbols.includes(activeSymbolFilter)) ||
-                                     (trait.Action && trait.Action.includes(activeSymbolFilter));
-
+                const matchesSearch = trait.Name.toLowerCase().includes(searchTerm) || trait.Description.toLowerCase().includes(searchTerm);
+                const matchesSymbol = !activeSymbolFilter || (trait.Symbols && trait.Symbols.includes(activeSymbolFilter)) || (trait.Action && trait.Action.includes(activeSymbolFilter));
                 return matchesSearch && matchesSymbol;
             });
+
+            // Update Counter
+            document.getElementById('trait-counter').textContent = `${filtered.length} / ${rawTraits.length} Traits`;
 
             filtered.sort((a, b) => {
                 if (sortBy === 'name') return a.Name.localeCompare(b.Name);
@@ -273,17 +214,12 @@
 
             filtered.forEach((trait, index) => {
                 const uniqueId = `trait-${trait.Cost}-${index}`;
-                const mainRow = `
+                const row = `
                     <tr onclick="toggleDetails('${uniqueId}')" class="expandable-row border-b border-slate-800/50 cursor-pointer">
                         <td class="px-6 py-4 font-bold text-white text-sm">${trait.Name}</td>
                         <td class="px-6 py-4 font-mono text-xs"><span class="symbol-tag text-indigo-400">${trait.Symbols || trait.Action || '-'}</span></td>
-                        <td class="px-6 py-4 text-right text-xs text-slate-500">
-                             <div id="arrow-${uniqueId}" class="transition-transform duration-200 inline-block">▼</div>
-                        </td>
+                        <td class="px-6 py-4 text-right text-xs text-slate-500"><div id="arrow-${uniqueId}" class="transition-transform duration-200 inline-block">▼</div></td>
                     </tr>
-                `;
-
-                const detailsRow = `
                     <tr id="${uniqueId}" class="hidden bg-slate-900/40">
                         <td colspan="3" class="px-6 py-6 border-b border-slate-800">
                              <div class="space-y-4">
@@ -295,30 +231,28 @@
                                 ${trait.Scaling ? `<div class="text-xs text-amber-500/80 font-mono mt-2 pt-2 border-t border-slate-800">${trait.Scaling}</div>` : ''}
                             </div>
                         </td>
-                    </tr>
-                `;
+                    </tr>`;
 
-                if (trait.Cost === "1") table1.innerHTML += (mainRow + detailsRow);
-                else if (trait.Cost === "2") table2.innerHTML += (mainRow + detailsRow);
+                if (trait.Cost === "1") table1.innerHTML += row;
+                else if (trait.Cost === "2") table2.innerHTML += row;
             });
 
             if (table1.innerHTML === '') table1.innerHTML = '<tr><td colspan="3" class="px-6 py-4 text-center text-slate-600 italic">No traits found.</td></tr>';
             if (table2.innerHTML === '') table2.innerHTML = '<tr><td colspan="3" class="px-6 py-4 text-center text-slate-600 italic">No traits found.</td></tr>';
         }
 
-        async function loadTraits() {
+        async function loadData() {
+            fetch('../css/navbar.html').then(res => res.text()).then(data => { document.getElementById('navbar-placeholder').innerHTML = data; const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script'); scripts.forEach(s => { const ns = document.createElement('script'); ns.text = s.text; document.body.appendChild(ns); }); });
+            fetch('../css/footer.html').then(res => res.text()).then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
             try {
-                const res = await fetch('../json/traits.json', { cache: 'no-store' });
-                if (!res.ok) throw new Error();
+                const res = await fetch('../json/traits.json');
                 const data = await res.json();
                 rawTraits = Array.isArray(data) ? data : (data.traits || []);
-            } catch (err) {
-                console.error("Failed to load traits.json", err);
-            }
+            } catch (err) {}
             renderTraits();
         }
-
-        window.addEventListener('DOMContentLoaded', loadTraits);
+        window.addEventListener('DOMContentLoaded', loadData);
     </script>
 </body>
 </html>
