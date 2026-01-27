@@ -224,7 +224,7 @@
         function createRows(item, index, type) {
             const rowId = `spell-${item.Cost}-${index}-${type}`; // Added type to unique ID
             const isCraft = item.Category === 'Artisan';
-            const displayCost = isCraft ? (item.Description.includes("Using [") ? "Mat" : "0 ✦") : (item.Cost + " ✦");
+            const displayCost = isCraft ? (item.Material : "Free") : (item.Cost + " ✦");
             
             return `
             <tr onclick="toggleDetails('${rowId}')" class="expandable-row border-b border-slate-800/50 cursor-pointer hover:bg-slate-800/30">
