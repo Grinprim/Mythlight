@@ -4,6 +4,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.2 Units<br>| Speed: 5 Tiles<br>| Lifespan: 80-100 Years<br>| Languages: Common, +1 Of your Choice",
       "Humans are the most adaptable and widespread of all peoples — medium height, broad variety of skin tones, hair, and eye colors. They lack the exotic features of other races, yet their sheer diversity and ingenuity define them.",
       "Human societies vary from nomadic tribes to skybound empires. What binds them is ambition — an endless drive to build, explore, and outlast. While some races see them as reckless, others admire their resilience; humanity’s strength lies in reinvention."
     ],
@@ -22,6 +23,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.2 Units<br>| Speed: 5 Tiles<br>| Lifespan: 600-700 Years<br>| Languages: Common, Elven",
       "Elves are tall and slender, their movements graceful and deliberate, as though every step is measured against centuries of practice. Sharp, refined features give them an otherworldly beauty, and their eyes often glimmer with hues reminiscent of distant starlight, moonlit leaves, or dawn skies. They mature slowly and live for centuries, sometimes longer, granting them an expansive sense of time that shapes every choice they make.",
       "Elven cultures prize artistry, precision, and restraint in all things. Craftsmanship is treated as a sacred discipline, whether in blade-forging, architecture grown from living trees, or music woven with subtle magic. Perfection is not pursued through speed or excess, but through repetition, balance, and quiet mastery."
     ],
@@ -40,6 +42,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 0.8 Units<br>| Speed: 5 Tiles<br>| Lifespan: 300-400 Years<br>| Languages: Common, Dwarven",
       "Dwarves are short and broad, with dense musculature and powerful frames shaped by generations spent beneath the earth. Their features are rugged and weathered, as though carved from stone, and their voices carry a deep resonance that commands attention. Even at rest, a dwarf’s presence feels solid and immovable, grounded with an unshakable sense of endurance.",
       "Dwarven societies value tradition, craftsmanship, and honor above all else. History is preserved through lineage and labor, with skills and oaths passed carefully from one generation to the next. To a dwarf, a well-made thing is a form of truth—proof of patience, integrity, and respect for the materials of the world."
     ],
@@ -58,6 +61,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.4 Units<br>| Speed: 5 Tiles<br>| Lifespan: 120-150 Years<br>| Languages: Common, Orkish",
       "Orcs are tall and broad-shouldered, their powerful builds marked by dense muscle and battle-hardened frames. Tusks or pronounced canines frame strong jaws, and their skin ranges from ash-gray to deep green, often bearing scars that tell stories of survival and conflict. Their movements are direct and purposeful, and their presence carries an undeniable physical intensity.",
       "Orc cultures are diverse, shaped by environment, clan, and history, but many emphasize strength, resilience, and emotional honesty. Orcs feel deeply and express those feelings without pretense—joy is loud, anger is fierce, and grief is worn openly. Their passions burn hot and fast, fueling decisive action and fierce loyalty to those they call their own."
     ],
@@ -76,6 +80,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.2 Units<br>| Speed: 5 Tiles<br>| Lifespan: 80-100 Years<br>| Languages: Common, Infernal",
       "Demonkin bear unmistakable signs of their otherworldly heritage—curving horns, barbed tails, slit or glowing eyes, or skin that smolders with faint embers beneath the surface. Their presence often feels charged, as though reality itself reacts subtly to them, and even those with gentle dispositions can appear unsettling to the unprepared.",
       "Feared or mistrusted by many societies, Demonkin learn early to survive scrutiny and suspicion. Some cultivate commanding confidence or fearsome reputations, while others master subtlety, charm, or misdirection. Whether by force of will or careful manipulation of perception, Demonkin quickly learn how to shape how the world sees them."
     ],
@@ -94,17 +99,12 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Small | Height: Avg. 0.6 Units<br>| Speed: 5 Tiles<br>| Lifespan: 200-300 Years<br>| Languages: Common, +1 Of your Choice",
       "Gnomes are small and sharp-featured, with expressive faces, bright inquisitive eyes, and hands that rarely stay still. Their thoughts race ahead of their words, resulting in rapid speech, half-finished sentences, and sudden leaps of insight. Even at rest, a gnome seems poised on the edge of the next idea.",
       "They are natural tinkerers, illusionists, and scholars, driven by curiosity rather than ambition or acclaim. Discovery itself is their reward, whether that means unraveling an arcane theory, building an improbable device, or poking at mysteries best left unexplored. To a gnome, the joy of learning far outweighs the risks of failure."
     ],
     "attributes": { "P": -1, "M": 2, "T": 1, "C": 0 },
     "trait": [
-      {
-        "name": "Small Stature",
-        "action": "⭘",
-        "type": "⧖",
-        "description": "You are Small instead of Medium."
-      },
       {
         "name": "Quick Thinker",
         "action": "◇",
@@ -118,16 +118,17 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Small | Height: Avg. 0.6 Units<br>| Speed: 5 Tiles<br>| Lifespan: 80-100 Years<br>| Languages: Common, Gobble",
       "Goblins are small and wiry, with sharp ears, narrow frames, and restless, darting movements. Their eyes are keen and alert, always scanning for opportunity or danger, and their reflexes are honed by lives spent reacting faster than those around them expect.",
       "Often underestimated or dismissed as weak, goblins thrive through cleverness, improvisation, and adaptability. They excel at turning scraps into tools, ambushes into victories, and disasters into narrow escapes. Survival is their greatest talent, and ingenuity is the weapon they wield best."
     ],
     "attributes": { "P": -1, "M": 0, "T": 2, "C": 1 },
     "trait": [
       {
-        "name": "Small Stature",
+        "name": "Low Blow",
         "action": "⭘",
         "type": "⧖",
-        "description": "You are Small instead of Medium."
+        "description": "When hitting creatures that are Large or bigger, deal +1 Damage."
       },
       {
         "name": "Scurry",
@@ -142,16 +143,17 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Small | Height: Avg. 0.3 Units<br>| Speed: 6 Tiles<br>| Lifespan: 60-80 Years<br>| Languages: Common, +1 Of your Choice",
       "Fae appear broadly humanoid, but always with a subtle sense of wrongness that unsettles careful observers. Their beauty may be unnaturally perfect, their eyes may glow or reflect light strangely, and their shadows sometimes move out of sync with their bodies. Even when still, a fae can feel like a creature only *pretending* to follow mortal rules.",
       "Their minds and bodies are deeply bound to magic, contracts, and rigid yet alien codes of conduct. Promises carry tangible weight, names hold power, and unspoken rules shape their behavior as surely as instinct. To a fae, these bindings are not limitations but the natural order of existence."
     ],
     "attributes": { "P": 0, "M": 2, "T": -1, "C": 1 },
     "trait": [
       {
-        "name": "Small Stature",
+        "name": "Twinkle",
         "action": "⭘",
         "type": "⧖",
-        "description": "You are Small instead of Medium."
+        "description": "Hitting a creature causes a burst of Sparkles, causing a -2 Accuracy penalty to the Struck Creature."
       },
       {
         "name": "Flight",
@@ -166,6 +168,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.4 Units<br>| Speed: 5 Tiles<br>| Lifespan: 30-50 Years<br>| Languages: Common",
       "Lizardfolk are reptilian humanoids, their bodies covered in tough, textured scales that range in color from earthy browns to vibrant greens. Their eyes are sharp with vertical slit pupils, attuned to detect movement and danger in even the dimmest light. Adapted to harsh and unforgiving environments, they move with deliberate caution and efficiency.",
       "Lizardfolk approach life with pragmatic realism, prioritizing survival and practical utility above abstract ideals or emotions. Their decisions are guided by instinct and experience, favoring what works over what is merely honorable or traditional. To them, strength and adaptability are the keys to enduring the challenges of their world."
     ],
@@ -184,6 +187,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.2 Units<br>| Speed: 5 Tiles<br>| Lifespan: 80-100 Years<br>| Languages: Common, Celestial",
       "Seraphkin often appear human at first glance but bear unmistakable signs of their divine heritage—glowing eyes that shimmer with inner light, radiant marks tracing sacred patterns across their skin, or an unshakable calm that seems to steady those around them. Their presence carries a subtle but profound sense of grace and authority.",
       "Though gifted, Seraphkin are frequently burdened by the high expectations placed upon them by others—be it to act as mediators, protectors, or symbols of hope. These responsibilities can weigh heavily, shaping their choices and often isolating them from those who cannot understand the weight of their divine calling."
     ],
@@ -202,6 +206,7 @@
     "source": "CORE",
     "source_color": "indigo",
     "description": [
+      "| Size: Medium | Height: Avg. 1.2 Units <br>| Speed: 5 Tiles<br>| Lifespan: Infinite<br>| Languages: Common, +1 Of your Choice",
       "Constructs are created rather than born, forged from metal, stone, wood, or other materials and brought to life through arcane enchantments or intricate mechanical designs. Their forms range from crude and utilitarian to exquisitely detailed, each movement powered by gears, magic, or a blend of both.",
       "Despite their artificial origins, constructs often wrestle with questions of self and purpose. Many seek to define an identity that transcends their original function, striving to understand what it means to be more than mere tools or machines in a world that may never fully accept them as alive."
     ],
@@ -211,7 +216,7 @@
         "name": "Artificial Body",
         "action": "⭘",
         "type": "☀",
-        "description": "During a rest you may modify your body configuration to one of the following:<br><br>Armored: +1 Armor<br>Agile: +1 Unit of Speed<br>Aggressor: +1 Melee Damage<br>Artillery: +1 Accuracy"
+        "description": "During a rest you may modify your body configuration to one of the following:<br><br>Armored: +1 Armor<br>Agile: +1 Tile of Speed<br>Aggressor: +1 Melee Damage<br>Artillery: +1 Accuracy"
       }
     ]
   },
@@ -220,16 +225,17 @@
     "source": "ZONE 3",
     "source_color": "orange",
     "description": [
+      "| Size: Small | Height: Avg. 0.6 Units<br>| Speed: 5 Tiles<br>| Lifespan: 100-120 Years<br>| Languages: Common",
       "Stocky, sharp-featured, and thick-skinned, the Dinqui resemble gargoyle-like goblinoids with small wings of stone and horn. Their eyes glimmer like polished gems, and their voices carry a gravelly timbre.",
       "Once guardians of ancient temples, the Dinqui now live among ruins and crag cities, carving art from mountain faces. They value endurance, tradition, and community over conquest, measuring worth by what one can craft or protect."
     ],
     "attributes": { "P": 2, "M": 1, "T": 0, "C": -1 },
     "trait": [
       {
-        "name": "Small Stature",
+        "name": "Hardening",
         "action": "⭘",
         "type": "⧖",
-        "description": "You are Small instead of Medium."
+        "description": "Whenever you reach half health, you gain Guard equal to your Fortitude. This effect refreshes upon reaching full health."
       },
       {
         "name": "Flight",
@@ -244,6 +250,7 @@
     "source": "ZONE 3",
     "source_color": "orange",
     "description": [
+      "| Size: Medium | Height: Avg. 1.3 Units<br>| Speed: 5 Tiles <br>| Lifespan: 80-100 Years<br>| Languages: Common, Ashani",
       "Ashten appear as tall, imposing humanoids with horns of varying shape, glowing eyes, and fissured skin that crackles with contained magical energy. Their tones range from obsidian to copper, often veined with light.",
       "Legends claim the Ashten were born when ancient mortals struck bargains with primal forces of fire and aether. Rather than succumbing, they became vessels of both creation and destruction. Today they form disciplined orders and city-fortresses, guided by philosophy rather than faith."
     ],
@@ -262,6 +269,7 @@
     "source": "ZONE 3",
     "source_color": "orange",
     "description": [
+      "| Size: Medium | Height: Avg. 1.4 Units<br>| Speed: 5 Tiles<br>| Lifespan: 100-120 Years<br>| Languages: Common, Khraa",
       "The Khraa are tall, agile humanoids with lithe, muscular builds and four arms — two dominant and two lighter, more dexterous limbs. Their faces resemble either feline or canine ancestry, with expressive ears, slit or bright eyes, and soft fur patterns across the shoulders and arms.",
       "Nomadic hunters and skyborn raiders, the Khraa value motion and freedom above all. Their cities are built high in cliffs or massive canopy networks, and each clan maintains a Path Code — a philosophy blending honor, challenge, and self-expression. They’re fiercely loyal to their kin and quick to laughter or rage."
     ],
@@ -280,6 +288,7 @@
     "source": "ZONE 3",
     "source_color": "orange",
     "description": [
+      "| Size: Medium | Height: Avg. 1.1 Units<br>| Speed: 5 Tiles<br>| Lifespan: Infinite<br>| Languages: Common, Eladren",
       "Eladri are tall and slender with luminescent, fully colored eyes that glow faintly in dim light. Their tails, long and prehensile, express subtle emotion. Their skin shimmers with faint undertones — often silvers, blues, or violets — and their hair tends toward iridescent hues.",
       "Born of stars and dreams, the Eladri believe themselves descended from the echoes of forgotten constellations. They dwell in crystalline cities suspended between dimensions, where light refracts into living color. Their scholars study not only arcane forces, but the geometry of existence itself. Outsiders see them as distant, but their curiosity for mortal emotion often draws them into the wider world."
     ],
