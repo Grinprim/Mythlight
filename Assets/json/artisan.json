@@ -1,4 +1,4 @@
-{
+[
 {
         "ID": "AR1-1",
         "Category": "Artisan",
@@ -54,4 +54,5 @@
         "Upcast": "",
         "Lore": "Built for war, perfected by necessity."
     }
-}
+]
+
