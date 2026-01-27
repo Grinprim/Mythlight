@@ -18,8 +18,8 @@
     <main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-                <h1 class="text-5xl font-bold text-white mb-4">Spell lists</h1>
-                <p class="text-slate-400 text-lg max-w-2xl">Browse the Spell schools spell lists, or the list of artisan crafts.</p>
+                <h1 class="text-5xl font-bold text-white mb-4">Spell Lists</h1>
+                <p class="text-slate-400 text-lg max-w-2xl">Browse the Spell schools, or the list of artisan crafts.</p>
             </div>
             
             <div id="standard-controls" class="flex flex-wrap gap-4 w-full md:w-auto items-end">
@@ -44,10 +44,10 @@
 
         <div class="flex justify-center gap-4 mb-12 border-b border-slate-800 pb-6">
             <button onclick="switchTab('view-grimoire')" class="tab-btn active px-8 py-3 border border-slate-700 rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
-                Spell lists
+                Spell Lists
             </button>
             <button onclick="switchTab('view-artisan')" class="tab-btn px-8 py-3 border border-slate-700 rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
-                Artisan list
+                Artisan List
             </button>
         </div>
 
@@ -120,37 +120,42 @@
             </div>
         </div>
 
-        <div id="view-artisan" class="view-section hidden w-full text-center py-20">
-                        <div class="flex items-center space-x-4 mb-6 justify-between">
-                        <div class="flex items-center gap-4">
-                            <h2 class="text-3xl font-bold text-white">Modifications</h2>
-                            <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">No Cost</span>
-                        </div>
-                    </div>
-                    <div id="spells-wrapper" class="bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl overflow-hidden">
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse min-w-[300px]">
-                                <thead><tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800"><th class="px-6 py-5 font-bold w-2/5">Name</th><th class="px-6 py-5 font-bold w-1/5">Cost</th><th class="px-6 py-5 font-bold w-1/5">Category</th><th class="px-6 py-5 font-bold w-1/5 text-right">Expand</th></tr></thead>
-                                <tbody id="spells-body"></tbody>
-                            </table>
-                        </div>
-
-
+        <div id="view-artisan" class="view-section hidden w-full space-y-24">
             
-                        <div class="flex items-center space-x-4 mb-6 justify-between">
-                        <div class="flex items-center gap-4">
-                            <h2 class="text-3xl font-bold text-white">Crafts</h2>
-                            <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">Materials</span>
-                        </div>
+            <section id="section-artisan-mods">
+                <div class="flex items-center space-x-4 mb-6 justify-between">
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-3xl font-bold text-white">Modifications</h2>
+                        <span class="px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase rounded-full">No Cost</span>
                     </div>
-                    <div id="spells-wrapper" class="bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl overflow-hidden">
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse min-w-[300px]">
-                                <thead><tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800"><th class="px-6 py-5 font-bold w-2/5">Name</th><th class="px-6 py-5 font-bold w-1/5">Cost</th><th class="px-6 py-5 font-bold w-1/5">Category</th><th class="px-6 py-5 font-bold w-1/5 text-right">Expand</th></tr></thead>
-                                <tbody id="spells-body"></tbody>
-                            </table>
-                        </div>
+                </div>
+                <div class="bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse min-w-[300px]">
+                            <thead><tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800"><th class="px-6 py-5 font-bold w-2/5">Name</th><th class="px-6 py-5 font-bold w-1/5">Cost</th><th class="px-6 py-5 font-bold w-1/5">Category</th><th class="px-6 py-5 font-bold w-1/5 text-right">Expand</th></tr></thead>
+                            <tbody id="artisan-mods-body"></tbody>
+                        </table>
                     </div>
+                </div>
+            </section>
+
+            <section id="section-artisan-crafts">
+                <div class="flex items-center space-x-4 mb-6 justify-between">
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-3xl font-bold text-white">Crafts</h2>
+                        <span class="px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase rounded-full">Materials</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900/30 rounded-3xl border border-slate-800 shadow-xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse min-w-[300px]">
+                            <thead><tr class="text-xs uppercase tracking-widest text-slate-500 border-b border-slate-800"><th class="px-6 py-5 font-bold w-2/5">Name</th><th class="px-6 py-5 font-bold w-1/5">Cost</th><th class="px-6 py-5 font-bold w-1/5">Category</th><th class="px-6 py-5 font-bold w-1/5 text-right">Expand</th></tr></thead>
+                            <tbody id="artisan-crafts-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
     </main>
@@ -159,6 +164,7 @@
     <script>
         let rawSpells = [];
         let rawCantrips = [];
+        let rawArtisan = [];
         let activeFilters = { category: null, cost: null };
 
         function switchTab(viewId) {
@@ -176,7 +182,6 @@
             else controls.classList.add('invisible', 'opacity-0');
         }
 
-        // --- Standard Logic (Copied from original) ---
         function toggleDetails(rowId) {
             const row = document.getElementById(rowId);
             row.classList.toggle('hidden');
@@ -216,47 +221,67 @@
             document.getElementById('clear-filter').classList.toggle('hidden', !(activeFilters.category || activeFilters.cost));
         }
 
+        function createRows(item, index, type) {
+            const rowId = `spell-${item.Cost}-${index}-${type}`; // Added type to unique ID
+            const isCraft = item.Category === 'Artisan';
+            const displayCost = isCraft ? (item.Description.includes("Using [") ? "Mat" : "0 ✦") : (item.Cost + " ✦");
+            
+            return `
+            <tr onclick="toggleDetails('${rowId}')" class="expandable-row border-b border-slate-800/50 cursor-pointer hover:bg-slate-800/30">
+                <td class="px-6 py-4 font-bold text-white text-base">${item.Name}</td>
+                <td class="px-6 py-4 text-indigo-300 font-mono text-xs font-bold">${displayCost}</td>
+                <td class="px-6 py-4"><span class="category-tag">${item.Category || 'Universal'}</span></td>
+                <td class="px-6 py-4 text-right text-xs text-slate-500"><div id="arrow-${rowId}" class="transition-transform duration-200 inline-block">▼</div></td>
+            </tr>
+            <tr id="${rowId}" class="hidden bg-slate-900/40"><td colspan="4" class="px-6 py-6 border-b border-slate-800"><div class="space-y-4">
+                    <div class="flex flex-wrap gap-4 text-xs uppercase tracking-widest"><span class="text-white font-bold bg-slate-700/50 px-2 py-1 rounded">Type: ${item.Type || '-'}</span><span class="text-slate-400 bg-slate-800 px-2 py-1 rounded">Range: ${item.Range || 'Self'}</span></div>
+                    <p class="text-slate-300 text-sm leading-relaxed">${item.Description}</p>
+                    ${item.Upcast ? `<div class="text-indigo-300 text-xs p-2 bg-indigo-900/20 rounded border border-indigo-500/20"><span class="font-bold">✚ Upcast:</span> ${item.Upcast}</div>` : ''}
+                    <div class="text-slate-500 italic text-[11px] border-l-2 border-slate-700 pl-3">${item.Lore || ''}</div>
+            </div></td></tr>`;
+        }
+
         function renderMagic() {
             const cantripTable = document.getElementById('cantrips-body');
             const spellTable = document.getElementById('spells-body');
+            const artisanModsTable = document.getElementById('artisan-mods-body');
+            const artisanCraftsTable = document.getElementById('artisan-crafts-body');
+
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
             const sortBy = document.getElementById('sort-selector').value;
 
-            const filterFn = (item) => {
-                const mSearch = (item.Name && item.Name.toLowerCase().includes(searchTerm)) || (item.Description && item.Description.toLowerCase().includes(searchTerm));
-                const mCat = !activeFilters.category || (item.Category === activeFilters.category);
-                const mCost = !activeFilters.cost || (String(item.Cost) === String(activeFilters.cost));
-                return mSearch && mCat && mCost;
+            // Helper to sort and filter
+            const processData = (dataList) => {
+                return dataList.filter(item => {
+                    const mSearch = (item.Name && item.Name.toLowerCase().includes(searchTerm)) || (item.Description && item.Description.toLowerCase().includes(searchTerm));
+                    const mCat = !activeFilters.category || (item.Category === activeFilters.category);
+                    const mCost = !activeFilters.cost || (String(item.Cost) === String(activeFilters.cost));
+                    
+                    // Artisan tab ignores category/cost filters from the sidebar to avoid confusion (since sidebar is for spells)
+                    if (item.Category === 'Artisan') return mSearch;
+                    
+                    return mSearch && mCat && mCost;
+                }).sort((a, b) => {
+                    if (sortBy === 'name') return (a.Name || '').localeCompare(b.Name || '');
+                    if (sortBy === 'cost') return parseInt(a.Cost || 0) - parseInt(b.Cost || 0);
+                    if (sortBy === 'category') return (a.Category || '').localeCompare(b.Category || '');
+                    return 0;
+                });
             };
 
-            const sortFn = (a, b) => {
-                if (sortBy === 'name') return (a.Name || '').localeCompare(b.Name || '');
-                if (sortBy === 'cost') return parseInt(a.Cost || 0) - parseInt(b.Cost || 0);
-                if (sortBy === 'category') return (a.Category || '').localeCompare(b.Category || '');
-                return 0;
-            };
+            const sCantrips = processData(rawCantrips);
+            const sSpells = processData(rawSpells);
+            
+            // For Artisan, split into Crafts and Mods based on "Using [" in description
+            const sArtisan = processData(rawArtisan);
+            const sArtisanCrafts = sArtisan.filter(i => i.Description.includes("Using ["));
+            const sArtisanMods = sArtisan.filter(i => !i.Description.includes("Using ["));
 
-            const createRows = (item, index) => {
-                const rowId = `spell-${item.Cost}-${index}`;
-                return `
-                <tr onclick="toggleDetails('${rowId}')" class="expandable-row border-b border-slate-800/50 cursor-pointer hover:bg-slate-800/30">
-                    <td class="px-6 py-4 font-bold text-white text-base">${item.Name}</td>
-                    <td class="px-6 py-4 text-indigo-300 font-mono text-xs font-bold">${item.Cost} ✦</td>
-                    <td class="px-6 py-4"><span class="category-tag">${item.Category || 'Universal'}</span></td>
-                    <td class="px-6 py-4 text-right text-xs text-slate-500"><div id="arrow-${rowId}" class="transition-transform duration-200 inline-block">▼</div></td>
-                </tr>
-                <tr id="${rowId}" class="hidden bg-slate-900/40"><td colspan="4" class="px-6 py-6 border-b border-slate-800"><div class="space-y-4">
-                     <div class="flex flex-wrap gap-4 text-xs uppercase tracking-widest"><span class="text-white font-bold bg-slate-700/50 px-2 py-1 rounded">Type: ${item.Type || '-'}</span><span class="text-slate-400 bg-slate-800 px-2 py-1 rounded">Range: ${item.Range || 'Self'}</span></div>
-                     <p class="text-slate-300 text-sm leading-relaxed">${item.Description}</p>
-                     ${item.Upcast ? `<div class="text-indigo-300 text-xs p-2 bg-indigo-900/20 rounded border border-indigo-500/20"><span class="font-bold">✚ Upcast:</span> ${item.Upcast}</div>` : ''}
-                     <div class="text-slate-500 italic text-[11px] border-l-2 border-slate-700 pl-3">${item.Lore || ''}</div>
-                </div></td></tr>`;
-            };
-
-            const sCantrips = rawCantrips.filter(filterFn).sort(sortFn);
-            const sSpells = rawSpells.filter(filterFn).sort(sortFn);
-            cantripTable.innerHTML = sCantrips.length ? sCantrips.map(createRows).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching cantrips.</td></tr>';
-            spellTable.innerHTML = sSpells.length ? sSpells.map(createRows).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching spells.</td></tr>';
+            cantripTable.innerHTML = sCantrips.length ? sCantrips.map((item, i) => createRows(item, i, 'cantrip')).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching cantrips.</td></tr>';
+            spellTable.innerHTML = sSpells.length ? sSpells.map((item, i) => createRows(item, i, 'spell')).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching spells.</td></tr>';
+            
+            artisanModsTable.innerHTML = sArtisanMods.length ? sArtisanMods.map((item, i) => createRows(item, i, 'art-mod')).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching modifications.</td></tr>';
+            artisanCraftsTable.innerHTML = sArtisanCrafts.length ? sArtisanCrafts.map((item, i) => createRows(item, i, 'art-craft')).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No matching crafts.</td></tr>';
         }
 
         async function loadData() {
@@ -266,9 +291,18 @@
             try {
                 const res = await fetch('../json/spells_cantrips.json');
                 const allMagic = await res.json();
-                rawCantrips = []; rawSpells = [];
-                allMagic.forEach(item => { (String(item.Cost) === "0") ? rawCantrips.push(item) : rawSpells.push(item); });
-            } catch (e) { }
+                rawCantrips = []; rawSpells = []; rawArtisan = [];
+                
+                allMagic.forEach(item => {
+                    if (item.Category === 'Artisan') {
+                        rawArtisan.push(item);
+                    } else if (String(item.Cost) === "0") {
+                        rawCantrips.push(item);
+                    } else {
+                        rawSpells.push(item);
+                    }
+                });
+            } catch (e) { console.error(e); }
             renderMagic();
         }
         document.addEventListener('DOMContentLoaded', loadData);
