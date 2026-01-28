@@ -220,17 +220,17 @@
     {
       "name": "Water",
       "category": "Liquid",
-      "notes": "Small measured volume"
+      "notes": "The most common fluid"
     },
     {
       "name": "Alcohol",
       "category": "Liquid",
-      "notes": "Sealed portable container"
+      "notes": "Burnable, very useful"
     },
     {
       "name": "Oil",
       "category": "Liquid",
-      "notes": "Large bulk storage"
+      "notes": "Also burnable, but can lubricate"
     },
 
     {
@@ -301,19 +301,19 @@
     {
       "name": "Explosive",
       "category": "Powder",
-      "notes": "Volatile energy fragment"
+      "notes": "Powder that explodes when provoked"
     }
     ,
     {
       "name": "Blinding",
       "category": "Powder",
-      "notes": "Volatile energy fragment"
+      "notes": "Iritates the eyes of creatures"
     }
     ,
     {
       "name": "Conductive",
       "category": "Powder",
-      "notes": "Volatile energy fragment"
+      "notes": "Bursting with static power"
     }
   ]
 }
