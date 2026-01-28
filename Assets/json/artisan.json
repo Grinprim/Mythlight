@@ -1,7 +1,7 @@
 [
   {
         "ID": "AR1-1",
-        "Category": "Artisan",
+        "Category": "Simple",
         "Name": "Smokebomb",
         "Material":"| 1× Glass – Tube<br>| 1× Stone – Dust",
         "Cost": "1",
@@ -13,7 +13,7 @@
     },
     {
         "ID": "AR1-2",
-        "Category": "Artisan",
+        "Category": "Simple",
         "Name": "Flashbang",
         "Material":"| 1× Glass – Tube<br>| 1× Stone – Dust",
         "Cost": "1",
@@ -25,7 +25,7 @@
     },
     {
         "ID": "AR1-3",
-        "Category": "Artisan",
+        "Category": "Trivial",
         "Name": "Molly",
         "Material":"| 1× Glass – Tube<br>| 1× Liquid – Alcohol",
         "Cost": "1",
@@ -37,7 +37,7 @@
     },
     {
         "ID": "AR1-5",
-        "Category": "Artisan",
+        "Category": "Standard",
         "Name": "Combat Engineer",
         "Material":"| 2× Metal – Wire<br>| 1× Metal – Plate",
         "Cost": "1",
@@ -48,6 +48,7 @@
         "Lore": "Built for war, perfected by necessity."
     }
 ]
+
 
 
 
