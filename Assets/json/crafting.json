@@ -295,6 +295,25 @@
       "name": "Spark",
       "category": "Arcane",
       "notes": "Volatile energy fragment"
+    },
+
+    
+    {
+      "name": "Explosive",
+      "category": "Powder",
+      "notes": "Volatile energy fragment"
+    }
+    ,
+    {
+      "name": "Blinding",
+      "category": "Powder",
+      "notes": "Volatile energy fragment"
+    }
+    ,
+    {
+      "name": "Conductive",
+      "category": "Powder",
+      "notes": "Volatile energy fragment"
     }
   ]
 }
