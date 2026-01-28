@@ -118,9 +118,8 @@
             <details open class="rule-card">
                 <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
                     <span>Combat Crafts</span>
-                    Combat crafts are quickly deployable craftables, these can be made in the middle of combat using 1 Action.
                 </summary>
-                
+                Combat crafts are quickly deployable craftables, these can be made in the middle of combat using 1 Action.
                 <div class="space-y-8 mt-6">
                     <div>
                         <h3 class="text-lg text-orange-400 font-bold mb-4 uppercase tracking-widest border-b border-slate-800 pb-2">Crafts</h3>
@@ -318,9 +317,7 @@
                 const data = await res.json();
                 const rawArtisan = data.filter(item => item.Category === 'Artisan');
                 const sArtisanCrafts = rawArtisan.filter(i => i.Cost != 0);
-                const sArtisanMods = rawArtisan.filter(i => i.Cost == 0);
 
-                document.getElementById('artisan-mods-body').innerHTML = sArtisanMods.length ? sArtisanMods.map((item, i) => createArtisanRow(item, i, 'mod')).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No modifications found.</td></tr>';
                 document.getElementById('artisan-crafts-body').innerHTML = sArtisanCrafts.length ? sArtisanCrafts.map((item, i) => createArtisanRow(item, i, 'craft')).join('') : '<tr><td colspan="4" class="p-6 text-center text-slate-600 italic">No crafts found.</td></tr>';
 
             } catch(e) { console.error("Error loading artisan items", e); }
