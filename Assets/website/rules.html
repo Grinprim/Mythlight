@@ -22,6 +22,31 @@
         
         /* Tab Active State */
         .tab-btn.active { background-color: rgba(99, 102, 241, 0.2); border-color: #6366f1; color: white; }
+
+        /* Sidebar Fixes */
+        .rules-layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative; /* Ensure context */
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 6rem; /* Distance from top of viewport */
+            height: calc(100vh - 6rem);
+            overflow-y: auto;
+            padding-right: 1rem;
+            align-self: start; /* CRITICAL FIX: Prevents grid item from stretching, allowing sticky to work */
+        }
+
+        /* Mobile Adjustments */
+        @media(max-width: 1024px) {
+            .rules-layout { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+        }
     </style>
 </head>
 
@@ -34,23 +59,20 @@
         <header class="text-center mb-8 max-w-4xl mx-auto">
             <h1 class="text-5xl font-bold text-white mb-4">Game Rules</h1>
             <p class="text-lg text-indigo-300">
-                The complete reference for Mythlight mechanics, campaign running, and alternate game modes.
+                The complete reference for Mythlight mechanics and alternate game modes.
             </p>
         </header>
 
         <div class="flex flex-wrap justify-center gap-4 border-b border-slate-800 pb-8 mb-8 sticky top-20 z-30 bg-custom-dark/95 backdrop-blur-sm py-4">
-            <button onclick="switchView('view-core')" class="tab-btn active px-6 py-2 border border-slate-700 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
-                Campaign
+            <button onclick="switchView('view-campaign')" class="tab-btn active px-6 py-2 border border-slate-700 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
+                Campaign Rules
             </button>
             <button onclick="switchView('view-oneshots')" class="tab-btn px-6 py-2 border border-slate-700 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
                 One Shots
             </button>
-            <button onclick="switchView('view-mythblitz')" class="tab-btn px-6 py-2 border border-slate-700 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-slate-800 transition-all">
-                Mythblitz
-            </button>
         </div>
 
-        <div id="view-core" class="view-section rules-layout">
+        <div id="view-campaign" class="view-section rules-layout">
             <aside class="sidebar hidden lg:block">
                 <div class="mb-8">
                     <p class="text-xs text-slate-500 mb-2">JUMP TO SECTION</p>
@@ -1365,16 +1387,6 @@
             </div>
         </div>
 
-        <div id="view-mythblitz" class="view-section hidden w-full text-center py-20">
-            <div class="bg-slate-900/40 border border-slate-700 p-12 rounded-3xl max-w-3xl mx-auto backdrop-blur-md">
-                <div class="text-6xl mb-6">⚡</div>
-                <h2 class="text-3xl font-bold text-white mb-4">Mythblitz</h2>
-                <p class="text-lg text-slate-400 leading-relaxed mb-8">
-                    Card game based upon the Mythlight system.<br>
-                </p>
-            </div>
-        </div>
-
     </main>
 
     <div id="footer-placeholder"></div>
@@ -1388,12 +1400,15 @@
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             
             // Show target
-            document.getElementById(viewId).classList.remove('hidden');
-            
-            // Set active button
-            const index = ['view-core', 'view-campaign', 'view-oneshots', 'view-mythblitz'].indexOf(viewId);
-            if (index >= 0) {
-                document.querySelectorAll('.tab-btn')[index].classList.add('active');
+            const target = document.getElementById(viewId);
+            if(target) {
+                target.classList.remove('hidden');
+                
+                // Set active button
+                const index = ['view-campaign', 'view-oneshots'].indexOf(viewId);
+                if (index >= 0) {
+                    document.querySelectorAll('.tab-btn')[index].classList.add('active');
+                }
             }
         }
 
@@ -1446,22 +1461,20 @@
                 document.getElementById('footer-placeholder').innerHTML = footerData;
 
                 // *** MOBILE FIX ***
-                // We use a slight delay or check to ensure elements are in the DOM before attaching listeners
                 setTimeout(() => {
                     const mobileBtn = document.getElementById('mobile-menu-btn');
                     const mobileMenu = document.getElementById('mobile-menu');
 
                     if (mobileBtn && mobileMenu) {
-                        // Remove any existing listeners to prevent duplicates (if re-run)
+                        // Remove any existing listeners to prevent duplicates
                         const newBtn = mobileBtn.cloneNode(true);
                         mobileBtn.parentNode.replaceChild(newBtn, mobileBtn);
 
                         newBtn.addEventListener('click', (e) => {
-                            e.stopPropagation(); // Stop click from bubbling
+                            e.stopPropagation(); 
                             mobileMenu.classList.toggle('hidden');
                         });
 
-                        // Close menu when clicking outside
                         document.addEventListener('click', (e) => {
                             if (!newBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
                                 mobileMenu.classList.add('hidden');
