@@ -282,18 +282,18 @@
     },
 
     {
-      "name": "Core",
-      "category": "Arcane",
+      "name": "Heart",
+      "category": "Biological",
       "notes": "Condensed elemental energy"
     },
     {
-      "name": "Residue",
-      "category": "Arcane",
+      "name": "Plasma",
+      "category": "Biological",
       "notes": "Lingering magical trace"
     },
     {
-      "name": "Spark",
-      "category": "Arcane",
+      "name": "Thinker",
+      "category": "Biological",
       "notes": "Volatile energy fragment"
     },
 
