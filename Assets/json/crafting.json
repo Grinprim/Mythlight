@@ -914,4 +914,85 @@
       "effect": "Fast spectral construct; terror effect."
     }
   ]
+  "components": [
+    {
+      "name": "Rod",
+      "category": "Wood",
+      "notes": "Straight, carved lengths"
+    },
+    {
+      "name": "Plank",
+      "category": "Wood",
+      "notes": "Flat boards"
+    },
+    {
+      "name": "Core",
+      "category": "Wood",
+      "notes": "Dense heartwood sections"
+    },
+
+    {
+      "name": "Pane",
+      "category": "Glass",
+      "notes": "Flat sheets"
+    },
+    {
+      "name": "Tube",
+      "category": "Glass",
+      "notes": "Hollow cylinders"
+    },
+    {
+      "name": "Shards",
+      "category": "Glass",
+      "notes": "Sharp fractured edges"
+    },
+
+    {
+      "name": "Block",
+      "category": "Stone",
+      "notes": "Solid construction pieces"
+    },
+    {
+      "name": "Dust",
+      "category": "Stone",
+      "notes": "Powdered mineral"
+    },
+    {
+      "name": "Cut",
+      "category": "Stone",
+      "notes": "Shaped, precise slabs"
+    },
+
+    {
+      "name": "Plate",
+      "category": "Metal",
+      "notes": "Flat forged plates"
+    },
+    {
+      "name": "Rod",
+      "category": "Metal",
+      "notes": "Short or long rods"
+    },
+    {
+      "name": "Wire",
+      "category": "Metal",
+      "notes": "Thin, flexible strands"
+    },
+
+    {
+      "name": "Cord",
+      "category": "Rope",
+      "notes": "Thin, tight weave"
+    },
+    {
+      "name": "Line",
+      "category": "Rope",
+      "notes": "Medium tensile"
+    },
+    {
+      "name": "Cable",
+      "category": "Rope",
+      "notes": "Heavy support rope"
+    }
+  ]
 }
