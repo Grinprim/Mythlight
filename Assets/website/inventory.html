@@ -114,7 +114,127 @@
                 <h2 class="text-3xl text-white font-bold">Artisan Crafting</h2>
                 <p class="text-slate-400">Forge items of power using components found in your travels.</p>
             </div>
-            
+            <section class="rule-card space-y-6" id="crafting-checks">
+    <h2 class="text-2xl text-white font-bold">Crafting Difficulty & Precision</h2>
+
+    <!-- CORE CHECKS -->
+    <div class="space-y-3 text-sm text-slate-300">
+        <p>
+            Crafting requires a <strong class="text-white">Crafting Skill Check</strong>
+            (usually <strong>Tinkering</strong> or an equivalent skill).
+        </p>
+
+        <table class="w-full border border-slate-700 rounded-lg overflow-hidden">
+            <thead class="bg-slate-800">
+                <tr>
+                    <th class="p-2 text-left">Complexity</th>
+                    <th class="p-2 text-left">Craft Check</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Trivial</td>
+                    <td class="p-2">No check required</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Simple</td>
+                    <td class="p-2">Tinkering 8</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Standard</td>
+                    <td class="p-2">Tinkering 12</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Difficult</td>
+                    <td class="p-2">Tinkering 16</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Complex</td>
+                    <td class="p-2">Tinkering 20</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="text-xs text-red-400">
+            <strong>Failure by 5 or more:</strong> One random component is destroyed.
+        </p>
+    </div>
+
+    <!-- PRECISION -->
+    <div class="space-y-3">
+        <h3 class="text-lg text-white font-bold">Precision Component Bonuses</h3>
+
+        <p class="text-sm text-slate-400">
+            Selecting the correct sub-components grants flat bonuses to the Craft Check.
+        </p>
+
+        <table class="w-full text-sm border border-slate-700 rounded-lg overflow-hidden">
+            <thead class="bg-slate-800">
+                <tr>
+                    <th class="p-2 text-left">Precision</th>
+                    <th class="p-2 text-left">Bonus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Correct Family Only</td>
+                    <td class="p-2">No bonus</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Correct Sub-Component ×1</td>
+                    <td class="p-2">+1 Craft Bonus</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">All Components Correct</td>
+                    <td class="p-2">+2 to final roll (global, not per item)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TIERS -->
+    <div class="space-y-3">
+        <h3 class="text-lg text-white font-bold">Craft Tiers</h3>
+
+        <table class="w-full text-sm border border-slate-700 rounded-lg overflow-hidden">
+            <thead class="bg-slate-800">
+                <tr>
+                    <th class="p-2 text-left">Tier</th>
+                    <th class="p-2 text-left">Difficulty</th>
+                    <th class="p-2 text-left">Requirements</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Trivial</td>
+                    <td class="p-2">Very Easy</td>
+                    <td class="p-2">Hands, basic tools</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Simple</td>
+                    <td class="p-2">Easy</td>
+                    <td class="p-2">Tools</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Standard</td>
+                    <td class="p-2">Moderate</td>
+                    <td class="p-2">Tools, workbench</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Difficult</td>
+                    <td class="p-2">Hard</td>
+                    <td class="p-2">Specialized tools, workshop</td>
+                </tr>
+                <tr class="border-t border-slate-700">
+                    <td class="p-2">Complex</td>
+                    <td class="p-2">Very Hard</td>
+                    <td class="p-2">Full workshop</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
             <details open class="rule-card">
                 <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
                     <span>Combat Crafts</span>
@@ -134,7 +254,7 @@
                     </div>
                 </div>
             </details>
-
+            
             <details class="rule-card">
                 <summary class="text-2xl text-white font-bold cursor-pointer hover:text-indigo-300 flex items-center justify-between group">
                     <span>Recipes</span>
