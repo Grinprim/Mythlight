@@ -3,7 +3,7 @@
         "ID": "AR1-1",
         "Category": "Artisan",
         "Name": "Smokebomb",
-        "Material":"[1× Glass – Tube, 1× Stone – Dust]",
+        "Material":"| 1× Glass – Tube<br>| 1× Stone – Dust",
         "Cost": "1",
         "Type": "Action",
         "Range": "6 units, 3 unit radius",
@@ -15,7 +15,7 @@
         "ID": "AR1-2",
         "Category": "Artisan",
         "Name": "Flashbang",
-        "Material":"[1× Glass – Tube, 1× Stone – Dust]",
+        "Material":"| 1× Glass – Tube<br>| 1× Stone – Dust",
         "Cost": "1",
         "Type": "Action",
         "Range": "6 units, 3 unit radius",
@@ -27,7 +27,7 @@
         "ID": "AR1-3",
         "Category": "Artisan",
         "Name": "Molly",
-        "Material":"[1× Glass – Tube, 1× Liquid – Alcohol]",
+        "Material":"| 1× Glass – Tube<br>| 1× Liquid – Alcohol",
         "Cost": "1",
         "Type": "Action",
         "Range": "6 units, 2×2 area",
@@ -36,22 +36,10 @@
         "Lore": "Some mixtures are meant to break, not last."
     },
     {
-        "ID": "AR1-4",
-        "Category": "Artisan",
-        "Name": "Inventor’s Focus",
-        "Material":"",
-        "Cost": "0",
-        "Type": "Action",
-        "Range": "Touch",
-        "Description": "You modify a mechanical or electrical item, granting it either +4 Accuracy or +3 Damage for 1 scene.",
-        "Upcast": "",
-        "Lore": "A few precise adjustments can change everything."
-    },
-    {
         "ID": "AR1-5",
         "Category": "Artisan",
         "Name": "Combat Engineer",
-        "Material":"[2× Metal – Wire, 1× Metal – Plate]",
+        "Material":"| 2× Metal – Wire<br>| 1× Metal – Plate",
         "Cost": "1",
         "Type": "Action",
         "Range": "4 units",
@@ -60,6 +48,7 @@
         "Lore": "Built for war, perfected by necessity."
     }
 ]
+
 
 
 
