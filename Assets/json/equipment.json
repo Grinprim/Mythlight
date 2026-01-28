@@ -240,51 +240,6 @@
     ],
     "r1": [
       {
-        "Name": "Pocket Pistol",
-        "Damage": 1,
-        "DamageType": "Puncture",
-        "Range": 4,
-        "Ammo": 6,
-        "Tags": [],
-        "Description": "Small, concealable sidearm with limited range and power."
-      },
-      {
-        "Name": "Service Pistol",
-        "Damage": 2,
-        "DamageType": "Puncture",
-        "Range": 6,
-        "Ammo": 8,
-        "Tags": [],
-        "Description": "Reliable standard-issue firearm; well-balanced in speed and precision."
-      },
-      {
-        "Name": "Revolver",
-        "Damage": 2,
-        "DamageType": "Puncture",
-        "Range": 5,
-        "Ammo": 6,
-        "Tags": [],
-        "Description": "Durable and steady; fires slower but rarely jams."
-      },
-      {
-        "Name": "Automatic Pistol",
-        "Damage": 2,
-        "DamageType": "Puncture",
-        "Range": 6,
-        "Ammo": 10,
-        "Tags": [],
-        "Description": "Capable of controlled bursts; may fire twice per turn (each for –1 damage)."
-      },
-      {
-        "Name": "Sawed-Off Shotgun",
-        "Damage": 2,
-        "DamageType": "Slash",
-        "Range": 3,
-        "Ammo": 2,
-        "Tags": [],
-        "Description": "Wide scatter at close range; enemies within 1 tile take +1 damage."
-      },
-      {
         "Name": "Light Bow",
         "Damage": 1,
         "DamageType": "Puncture",
@@ -331,6 +286,91 @@
       }
     ],
     "r2": [
+      {
+        "Name": "Hunting Bow (Heavy)",
+        "Damage": 2,
+        "DamageType": "Puncture",
+        "Range": 8,
+        "Ammo": null,
+        "Tags": [],
+        "Description": "Long draw and excellent reach; delay attack for +1 Accuracy."
+      },
+      {
+        "Name": "Medium Crossbow (Heavy)",
+        "Damage": 2,
+        "DamageType": "Puncture",
+        "Range": 7,
+        "Ammo": null,
+        "Tags": [],
+        "Description": "Punches through armor; ignores 1 Armor, reloads every turn."
+      },
+      {
+        "Name": "Heavy Crossbow",
+        "Damage": 3,
+        "DamageType": "Puncture",
+        "Range": 8,
+        "Ammo": null,
+        "Tags": [],
+        "Description": "Massive bolt impact; ignores 2 Armor and can pin small targets."
+      },
+      {
+        "Name": "Grenade",
+        "Damage": 2,
+        "DamageType": "Slash (Blast)",
+        "Range": 4,
+        "Ammo": null,
+        "Tags": [],
+        "Description": "Explodes in a 1-tile radius; deals full damage to all within."
+      }
+    ],
+    "f1": [
+      {
+        "Name": "Pocket Pistol",
+        "Damage": 1,
+        "DamageType": "Puncture",
+        "Range": 4,
+        "Ammo": 6,
+        "Tags": [],
+        "Description": "Small, concealable sidearm with limited range and power."
+      },
+      {
+        "Name": "Service Pistol",
+        "Damage": 2,
+        "DamageType": "Puncture",
+        "Range": 6,
+        "Ammo": 8,
+        "Tags": [],
+        "Description": "Reliable standard-issue firearm; well-balanced in speed and precision."
+      },
+      {
+        "Name": "Revolver",
+        "Damage": 2,
+        "DamageType": "Puncture",
+        "Range": 5,
+        "Ammo": 6,
+        "Tags": [],
+        "Description": "Durable and steady; fires slower but rarely jams."
+      },
+      {
+        "Name": "Automatic Pistol",
+        "Damage": 2,
+        "DamageType": "Puncture",
+        "Range": 6,
+        "Ammo": 10,
+        "Tags": [],
+        "Description": "Capable of controlled bursts; may fire twice per turn (each for –1 damage)."
+      },
+      {
+        "Name": "Sawed-Off Shotgun",
+        "Damage": 2,
+        "DamageType": "Slash",
+        "Range": 3,
+        "Ammo": 2,
+        "Tags": [],
+        "Description": "Wide scatter at close range; enemies within 1 tile take +1 damage."
+      }
+    ],
+    "f2": [
       {
         "Name": "Carbine Rifle",
         "Damage": 2,
@@ -386,42 +426,6 @@
         "Description": "Wide spread; may target up to 2 adjacent enemies (each for –1 damage)."
       },
       {
-        "Name": "Hunting Bow (Heavy)",
-        "Damage": 2,
-        "DamageType": "Puncture",
-        "Range": 8,
-        "Ammo": null,
-        "Tags": [],
-        "Description": "Long draw and excellent reach; delay attack for +1 Accuracy."
-      },
-      {
-        "Name": "Medium Crossbow (Heavy)",
-        "Damage": 2,
-        "DamageType": "Puncture",
-        "Range": 7,
-        "Ammo": null,
-        "Tags": [],
-        "Description": "Punches through armor; ignores 1 Armor, reloads every turn."
-      },
-      {
-        "Name": "Heavy Crossbow",
-        "Damage": 3,
-        "DamageType": "Puncture",
-        "Range": 8,
-        "Ammo": null,
-        "Tags": [],
-        "Description": "Massive bolt impact; ignores 2 Armor and can pin small targets."
-      },
-      {
-        "Name": "Grenade",
-        "Damage": 2,
-        "DamageType": "Slash (Blast)",
-        "Range": 4,
-        "Ammo": null,
-        "Tags": [],
-        "Description": "Explodes in a 1-tile radius; deals full damage to all within."
-      },
-      {
         "Name": "Rocket Tube (Prototype)",
         "Damage": 4,
         "DamageType": "Slash (Blast)",
@@ -430,9 +434,7 @@
         "Tags": [],
         "Description": "Experimental launcher; 2-tile radius, dangerous to user if fired in close range."
       }
-    ],
-    "f1": [],
-    "f2": []
+    ]
   },
   "armor": {
     "a1": [
