@@ -207,51 +207,14 @@
     "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 3]<br>+3 [lvl 6]<br>+4 [lvl 9]"
   },
   {
-    "Name": "Novice Brewer",
+    "Name": "Brewer",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "☀",
     "Parameters": "",
-    "Description": "During a rest, create a potion per ally from your known potion list. Learn 2 potion recipes; recipes can also be found or granted.",
-    "Scaling": ""
+    "Description": "During a rest, create a potion per ally from your known potions list. Learn a number of Potion Recipes equal to [Half Your Level], gain +X to Brewing Related Checks.",
+    "Scaling": "Bonus X:<br>+0 [lvl 1]<br>+1 [lvl 3]<br>+2 [lvl 6]<br>+3 [lvl 9]<br>+4 [lvl 12]"
   },
-{
-    "Name": "Apprentice Brewer",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "☀",
-    "Parameters": "⫘ Novice Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Adept Brewer",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "☀",
-    "Parameters": "⫘ Apprentice Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Expert Brewer",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "☀",
-    "Parameters": "⫘ Adept Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Master Brewer",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "☀",
-    "Parameters": "⫘ Expert Brewer",
-    "Description": "Gain +1 To all brewing checks. Learn 2 Additional potion recipes.",
-    "Scaling": ""
-  },
-
   {
     "Name": "Fisher",
     "Action":"⭘",
@@ -559,48 +522,12 @@
     "Scaling": ""
   },
   {
-    "Name": "Novice Craftsman",
+    "Name": "Craftsman",
     "Action":"⭘",
     "Cost": "1",
     "Symbols": "⧖",
     "Parameters": "",
-    "Description": "You gain the ability to craft Trivial crafts; Learn 2 Trivial recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Apprentice Craftsman",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "⧖",
-    "Parameters": "⫘ Novice Craftsman",
-    "Description": "You gain the ability to craft Simple crafts; Learn 2 Simple (or lower) recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Adept Craftsman",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "⧖",
-    "Parameters": "⫘ Apprentice Craftsman",
-    "Description": "You gain the ability to craft Standard crafts; Learn 2 Standard (or lower) recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Expert Craftsman",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "⧖",
-    "Parameters": "⫘ Adept Craftsman",
-    "Description": "You gain the ability to craft Difficult crafts; Learn 2 Difficult (or lower) recipes.",
-    "Scaling": ""
-  },
-{
-    "Name": "Master Craftsman",
-    "Action":"⭘",
-    "Cost": "1",
-    "Symbols": "⧖",
-    "Parameters": "⫘ Expert Craftsman",
-    "Description": "You gain the ability to craft Complex crafts; Learn 2 Complex (or lower) recipes.",
+    "Description": "You gain the ability to Craft; You start with Trivial Recipes, at Levels 3, 6, 9 and 12 you unlock the next tier. Learn a number of Recipes equal to [Half your Level]",
     "Scaling": ""
   },
   {
@@ -2769,6 +2696,15 @@
     "Symbols": "⧖",
     "Parameters": "None",
     "Description": "Cover grants one higher tier of protection. While in cover, gain +2 Accuracy. You may move between covers (min. 3 units apart) as a Free Action.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Combat Artisan",
+    "Action":"⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "⫘ Craftsman",
+    "Description": "You gain Access to Combat Crafts; You know a number of Combat Crafts equal to [Half Your Level], the maximum tier of craft depends on the tier unlocked by Craftsman.",
     "Scaling": "-"
   }
   
