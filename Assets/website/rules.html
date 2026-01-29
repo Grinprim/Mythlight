@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mythlight RPG | Rules</title>
+    <title>Mythlight RPG | Rules & Gamemodes</title>
     <link rel="icon" type="image/svg+xml" href="../img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/styles.css" />
@@ -14,7 +14,12 @@
         .map-tile.center { background: #6366f1; }
         .map-tile.range { background: rgba(99, 102, 241, 0.3); }
         .map-tile.radius { background: rgba(239, 68, 68, 0.3); }
+        
+        /* Reusable Card Components */
         .condition-card { background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; padding: 12px; border-radius: 10px; }
+        .rule-card { background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; padding: 1.5rem; border-radius: 0.75rem; }
+        
+        /* Text Highlighting */
         .correct { color: rgb(204, 255, 110); }
         .wrong { color: rgb(255, 110, 110); }
         .notice { color: rgb(255, 216, 110); }
@@ -23,7 +28,7 @@
         /* Tab Active State */
         .tab-btn.active { background-color: rgba(99, 102, 241, 0.2); border-color: #6366f1; color: white; }
 
-        /* Sidebar Fixes */
+        /* Sidebar Layout */
         .rules-layout {
             display: grid;
             grid-template-columns: 260px 1fr;
@@ -41,6 +46,13 @@
             padding-right: 1rem;
             align-self: start;
         }
+
+        /* SCROLL OFFSET FIX 
+           Sets margin to 35% of viewport height. 
+           This pushes the scroll snap point down, so content appears 
+           towards the middle of the screen, not the very top.
+        */
+        .scroll-offset-center { scroll-margin-top: 35vh; }
 
         /* Mobile Adjustments */
         @media(max-width: 1024px) {
@@ -73,6 +85,7 @@
         </div>
 
         <div id="view-campaign" class="view-section rules-layout">
+            
             <aside class="sidebar hidden lg:block">
                 <div class="mb-8">
                     <p class="text-xs text-slate-500 mb-2">JUMP TO SECTION</p>
@@ -82,6 +95,7 @@
                 <div class="nav-group-title">Core Rules</div>
                 <a href="#intro" class="sidebar-link">Introduction</a>
                 <a href="#resolution" class="sidebar-link">Resolution System (2d6)</a>
+                
                 <div class="nav-group-title">Character Creation</div>
                 <a href="#creation" class="sidebar-link">Attributes</a>
                 <a href="#origin" class="sidebar-link">Species & Path</a>
@@ -90,6 +104,7 @@
                 <a href="#progression" class="sidebar-link">Traits & Level ups</a>
                 <a href="#spellcasting" class="sidebar-link">Spellcasting</a>
                 <a href="#equipment" class="sidebar-link">Equipment</a>
+                
                 <div class="nav-group-title">Combat Rules</div>
                 <a href="#movement" class="sidebar-link">Movement</a>
                 <a href="#size" class="sidebar-link">Map Sizes & Effects</a>
@@ -107,7 +122,7 @@
                         <p class="text-lg text-indigo-300">The fundamental mechanics that govern the Mythlight system.</p>
                     </div>
 
-                    <section id="intro" class="scroll-mt-32">
+                    <section id="intro" class="scroll-offset-center">
                         <div class="rule-card">
                             <h2 class="text-2xl text-white font-bold mb-4">Introduction</h2>
                             <p class="mb-4">Mythlight is designed to be a simple narrative-focused roleplaying game, with
@@ -122,7 +137,7 @@
                         </div>
                     </section>
 
-                    <section id="resolution" class="scroll-mt-32">
+                    <section id="resolution" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">01</span>
                             Resolution System
@@ -203,7 +218,7 @@
                         character functions.</p>
                     <div class="mb-12 pt-12 border-t border-slate-800"></div>
 
-                    <section id="creation" class="scroll-mt-32">
+                    <section id="creation" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">03</span>
                             Core Attributes
@@ -259,7 +274,7 @@
                         </div>
                     </section>
 
-                    <section id="skills" class="scroll-mt-32">
+                    <section id="skills" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">05</span>
                             Skills
@@ -331,7 +346,7 @@
                             <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
                                 <strong class="text-white block mb-1">Guard</strong>
                                 <p>Temporary Health. Always lost <strong>before Health</strong>. Guard cannot be healed once
-                                    lost; it must be regained by traits or external effects. Guard is lost when you sleep.</p>
+                                    lost; it must be regained by traits or external effects.</p>
                             </div>
 
                             <div class="bg-slate-900/50 border border-slate-700 rounded-lg p-4">
@@ -364,7 +379,7 @@
                         </div>
                     </section>
 
-                    <section id="progression" class="scroll-mt-32">
+                    <section id="progression" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">07</span>
                             Traits & Leveling up
@@ -465,7 +480,7 @@
                         </div>
                     </section>
 
-                    <section id="spellcasting" class="scroll-mt-32">
+                    <section id="spellcasting" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">08</span>
                             Spellcasting
@@ -597,7 +612,7 @@
                         </div>
                     </section>
 
-                    <section id="equipment" class="scroll-mt-32">
+                    <section id="equipment" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">09</span>
                             Equipment & Encumbrance
@@ -670,7 +685,7 @@
                         <span class="section-number">10</span>
                         Movement
                     </div>
-                    <section id="movement" class="rule-card space-y-6 scroll-mt-32">
+                    <section id="movement" class="rule-card space-y-6 scroll-offset-center">
 
                         <div class="grid md:grid-cols-2 gap-6 text-sm">
                             <div>
@@ -728,7 +743,7 @@
                         <span class="section-number">11</span>
                         Map Sizes and Effects
                     </div>
-                    <section id="size" class="rule-card space-y-6 scroll-mt-32">
+                    <section id="size" class="rule-card space-y-6 scroll-offset-center">
 
                         <div class="grid md:grid-cols-2 gap-6 text-sm">
                             <div>
@@ -805,7 +820,7 @@
                         <span class="section-number">12</span>
                         Ranged Combat
                     </div>
-                    <section id="range" class="rule-card space-y-6 scroll-mt-32">
+                    <section id="range" class="rule-card space-y-6 scroll-offset-center">
 
                         <div class="grid md:grid-cols-2 gap-6 text-sm">
                             <div>
@@ -873,7 +888,7 @@
                         </div>
                     </section>
 
-                    <section id="combat" class="scroll-mt-32">
+                    <section id="combat" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">13</span>
                             Turn Structure & Action Economy
@@ -938,7 +953,7 @@
                     </div>
 
 
-                    <section id="companion" class="rule-card space-y-8 scroll-mt-32">
+                    <section id="companion" class="rule-card space-y-8 scroll-offset-center">
                         <h2 class="text-3xl text-white font-bold">Companion Rules</h2>
 
                         <p class="text-sm text-slate-400">
@@ -1067,7 +1082,7 @@
 
 
 
-                    <section id="conditions" class="scroll-mt-32">
+                    <section id="conditions" class="scroll-offset-center">
                         <div class="section-header">
                             <span class="section-number">12</span>
                             Conditions
@@ -1208,7 +1223,7 @@
                         <span class="section-number">13</span>
                         Mounts & Vehicle Combat
                     </div>
-                    <section class="rule-card space-y-8 scroll-mt-32" id="mount">
+                    <section class="rule-card space-y-8 scroll-offset-center" id="mount">
                         <h2 class="text-3xl text-white font-bold">Mounted Combat</h2>
 
                         <p class="text-sm text-slate-400 max-w-3xl">
@@ -1401,39 +1416,38 @@
 
             <div class="content space-y-24">
                 
-                <section id="os-creation" class="rule-card space-y-8 scroll-mt-32">
-                    <h3 class="text-3xl text-white font-bold">One Shot Character Creation</h3>
-                    <p class="text-sm text-slate-300">
+                <section id="os-creation" class="scroll-offset-center">
+                    <h3 class="text-3xl text-white font-bold mb-8">One Shot Character Creation</h3>
+                    <p class="text-sm text-slate-300 mb-8 max-w-3xl">
                         One Shot characters are quick to build and quick to play.  
                         Focus on flavor, not optimization.
                     </p>
 
-                    <div class="space-y-6">
-                        <div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="rule-card h-full">
                             <h4 class="text-lg text-white font-bold mb-2">1. Choose a Species</h4>
                             <p class="text-sm text-slate-400">
-                                Pick a single species.  
-                                Species provide your core stats, movement, and innate traits.
+                                Pick a single species. Species provide your core stats, movement, and innate traits.
                             </p>
                         </div>
 
-                        <div>
+                        <div class="rule-card h-full">
                             <h4 class="text-lg text-white font-bold mb-2">2. Assign Traits</h4>
-                            <p class="text-sm text-slate-400">
+                            <p class="text-sm text-slate-400 mb-4">
                                 Characters start with a small number of traits.
                             </p>
-                            <div class="bg-slate-900/60 border border-slate-700 rounded p-3 text-sm">
+                            <div class="bg-slate-900/60 border border-slate-700 rounded p-3 text-sm mb-4">
                                 <strong class="text-white">Trait Points:</strong><br>
                                 • <strong>2</strong> starting Trait Points<br>
                                 • <strong>+1</strong> Trait Point per character level
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">
+                            <p class="text-xs text-slate-500">
                                 For fast play, it is strongly recommended to use the
                                 <strong>Random Trait Generator</strong>.
                             </p>
                         </div>
 
-                        <div>
+                        <div class="rule-card h-full">
                             <h4 class="text-lg text-white font-bold mb-2">3. Stats & Skills</h4>
                             <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
                                 <li>No Skills are used in One Shots</li>
@@ -1442,245 +1456,324 @@
                             </ul>
                         </div>
 
-                        <div>
+                        <div class="rule-card h-full">
                             <h4 class="text-lg text-white font-bold mb-2">4. Equipment</h4>
-                            <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
+                            <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400 mb-4">
                                 <li>Choose one weapon appropriate to your concept</li>
                                 <li>Choose one armor type (or none)</li>
                                 <li>Minor gear is narrative unless stated otherwise</li>
                             </ul>
-                            <div class="bg-slate-900/60 border border-slate-700 rounded p-3 text-sm mt-3">
+                            <div class="bg-slate-900/60 border border-slate-700 rounded p-3 text-sm">
                                 <strong class="text-white">Armor Calculation:</strong><br>
                                 Armor = <strong>6 + Armor Bonus</strong><br>
                                 Some traits or species may modify this.
                             </div>
                         </div>
 
-                        <div>
+                        <div class="rule-card md:col-span-2">
                             <h4 class="text-lg text-white font-bold mb-2">5. Mana (If Applicable)</h4>
-                            <p class="text-sm text-slate-400 mb-2">
+                            <p class="text-sm text-slate-400 mb-4">
                                 Only spellcasters track Mana in One Shots.
                             </p>
-                            <table class="w-full text-sm border-collapse">
-                                <thead>
-                                    <tr class="border-b border-slate-700 text-slate-300">
-                                        <th class="text-left py-2">Character Level</th>
-                                        <th class="text-left py-2">Mana Pool</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-slate-400">
-                                    <tr class="border-b border-slate-800">
-                                        <td class="py-2">1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-800">
-                                        <td class="py-2">2</td>
-                                        <td>2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2">3+</td>
-                                        <td>1 per level</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="text-xs text-slate-500 mt-2">
+                            <div class="overflow-x-auto rounded-lg border border-slate-700">
+                                <table class="w-full text-sm border-collapse bg-slate-800/50">
+                                    <thead class="bg-slate-900/80">
+                                        <tr class="text-slate-300">
+                                            <th class="text-left py-3 px-4">Character Level</th>
+                                            <th class="text-left py-3 px-4">Mana Pool</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-slate-400">
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">1</td>
+                                            <td class="px-4">1</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">2</td>
+                                            <td class="px-4">2</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">3+</td>
+                                            <td class="px-4">1 per level</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2 px-2">
                                 Mana fully restores on Sleep.
                             </p>
                         </div>
                     </div>
                     
-                    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-4 text-sm">
+                    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-4 text-sm mt-6">
                         <strong class="text-indigo-400">Narrator Tip</strong><br>
                         If character creation takes longer than 10 minutes, simplify.
                         The goal is momentum, not completeness.
                     </div>
                 </section>
                 
-                <div id="oneshot-rules-wrapper" class="space-y-20">
+                <div id="oneshot-rules-wrapper" class="space-y-24">
 
-                    <section id="os-core" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Core Mechanics</h3>
+                    <section id="os-core" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-6">Core Mechanics</h3>
 
-                        <div class="bg-slate-900/60 p-4 rounded border border-slate-700 text-sm">
-                            <strong class="text-white">Resolution:</strong><br>
-                            Roll <strong>2d6 + Stat (+ Skill)</strong> vs <strong>CS</strong>
-                        </div>
-
-                        <table class="w-full text-sm border-collapse">
-                            <thead>
-                                <tr class="border-b border-slate-700 text-slate-300">
-                                    <th class="text-left py-2">Result</th>
-                                    <th class="text-left py-2">Outcome</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-slate-400">
-                                <tr class="border-b border-slate-800">
-                                    <td class="py-2">≥ CS</td>
-                                    <td>Success</td>
-                                </tr>
-                                <tr class="border-b border-slate-800">
-                                    <td class="py-2">CS − 1</td>
-                                    <td>Partial success / cost</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">&lt; CS − 1</td>
-                                    <td>Failure</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="grid md:grid-cols-2 gap-4 text-sm">
-                            <div class="bg-indigo-900/20 border border-indigo-500/30 rounded p-3">
-                                <strong class="text-indigo-400">Midnight</strong><br>
-                                Two natural 6s → automatic success, double damage
+                            <div class="bg-slate-900/60 p-4 rounded border border-slate-700 text-sm mb-6 flex items-center gap-4">
+                                <div class="bg-indigo-600/20 p-3 rounded-full">
+                                    <div class="w-6 h-6 border-2 border-indigo-400 rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <strong class="text-white block">Resolution</strong>
+                                    Roll <strong>2d6 + Stat (+ Skill)</strong> vs <strong>CS</strong>
+                                </div>
                             </div>
-                            <div class="bg-red-900/20 border border-red-500/30 rounded p-3">
-                                <strong class="text-red-400">Snake Eyes</strong><br>
-                                Two natural 1s → automatic failure, complication
+
+                            <div class="overflow-x-auto rounded-lg border border-slate-700 mb-6">
+                                <table class="w-full text-sm border-collapse bg-slate-800/50">
+                                    <thead class="bg-slate-900/80">
+                                        <tr class="text-slate-300">
+                                            <th class="text-left py-3 px-4">Result</th>
+                                            <th class="text-left py-3 px-4">Outcome</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-slate-400">
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">≥ CS</td>
+                                            <td class="px-4">Success</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">CS − 1</td>
+                                            <td class="px-4">Partial success / cost</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">&lt; CS − 1</td>
+                                            <td class="px-4">Failure</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div class="bg-indigo-900/20 border border-indigo-500/30 rounded p-4">
+                                    <strong class="text-indigo-400 block mb-1">Midnight</strong>
+                                    Two natural 6s → automatic success, double damage
+                                </div>
+                                <div class="bg-red-900/20 border border-red-500/30 rounded p-4">
+                                    <strong class="text-red-400 block mb-1">Snake Eyes</strong>
+                                    Two natural 1s → automatic failure, complication
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    <section id="os-turns" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Turns & Actions</h3>
+                    <section id="os-turns" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-6">Turns & Actions</h3>
 
-                        <table class="w-full text-sm border-collapse">
-                            <thead>
-                                <tr class="border-b border-slate-700 text-slate-300">
-                                    <th class="text-left py-2">Resource</th>
-                                    <th class="text-left py-2">Limit</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-slate-400">
-                                <tr class="border-b border-slate-800">
-                                    <td class="py-2">Actions</td>
-                                    <td>2 per Turn</td>
-                                </tr>
-                                <tr class="border-b border-slate-800">
-                                    <td class="py-2">Attacks</td>
-                                    <td>1 per Turn</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">Reactions</td>
-                                    <td>1 per Scene</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            <div class="overflow-x-auto rounded-lg border border-slate-700 mb-6">
+                                <table class="w-full text-sm border-collapse bg-slate-800/50">
+                                    <thead class="bg-slate-900/80">
+                                        <tr class="text-slate-300">
+                                            <th class="text-left py-3 px-4">Resource</th>
+                                            <th class="text-left py-3 px-4">Limit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-slate-400">
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">Actions</td>
+                                            <td class="px-4">2 per Turn</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">Attacks</td>
+                                            <td class="px-4">1 per Turn</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">Reactions</td>
+                                            <td class="px-4">1 per Scene</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <p class="text-sm text-slate-400">
-                            Common Actions: Move, Attack, Cast, Interact, Defend, Command
-                        </p>
-                    </section>
-
-                    <section id="os-movement" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Movement & Range</h3>
-
-                        <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
-                            <li>Combat uses a square grid</li>
-                            <li>1 tile = 1 Unit</li>
-                            <li>Diagonal movement costs 1 Unit</li>
-                            <li>Leaving melee range triggers Opportunity Attacks</li>
-                        </ul>
-
-                        <p class="text-xs text-slate-500">
-                            Opportunity Attacks consume the attacker’s Reaction.
-                        </p>
-                    </section>
-
-                    <section id="os-ranged" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Ranged Combat</h3>
-
-                        <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
-                            <li>Targets beyond max range cannot be hit</li>
-                            <li>Ranged attacks in melee suffer Disadvantage</li>
-                            <li>Partial Cover: +1 Defense</li>
-                            <li>Full Cover: Cannot be targeted</li>
-                        </ul>
-
-                        <p class="text-xs text-slate-500">
-                            Line of sight is determined from tile center to tile center.
-                        </p>
-                    </section>
-
-                    <section id="os-health" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Health & Defeat</h3>
-
-                        <table class="w-full text-sm border-collapse">
-                            <thead>
-                                <tr class="border-b border-slate-700 text-slate-300">
-                                    <th class="text-left py-2">State</th>
-                                    <th class="text-left py-2">Effect</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-slate-400">
-                                <tr class="border-b border-slate-800">
-                                    <td class="py-2">Health &gt; 0</td>
-                                    <td>Fully active</td>
-                                </tr>
-                                <tr class="border-b border-slate-800">
-                                    <td class="py-2">Health = 0</td>
-                                    <td>Unconscious</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">Final Blow (x4)</td>
-                                    <td>Death</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <ul class="list-disc ml-5 text-sm space-y-1 text-slate-400">
-                            <li>Guard acts as temporary Health</li>
-                            <li>Short Rest: Heal = Level</li>
-                            <li>Sleep: Full recovery</li>
-                        </ul>
-                    </section>
-
-                    <section id="os-conditions" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Conditions</h3>
-
-                        <p class="text-sm text-slate-400">
-                            Conditions represent ongoing effects. Most stack unless stated otherwise.
-                        </p>
-
-                        <div class="grid md:grid-cols-3 gap-2 text-sm text-slate-400">
-                            <div>Poison</div>
-                            <div>Bleed</div>
-                            <div>Slow</div>
-                            <div>Prone</div>
-                            <div>Stunned</div>
-                            <div>Restrained</div>
+                            <div class="bg-slate-900/60 p-4 rounded border border-slate-700 text-sm">
+                                <strong class="text-white">Common Actions:</strong>
+                                <p class="text-slate-400 mt-1">Move, Attack, Cast, Interact, Defend, Command</p>
+                            </div>
                         </div>
                     </section>
 
-                    <section id="os-companions" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Companions</h3>
+                    <section id="os-movement" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-4">Movement & Range</h3>
 
-                        <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
-                            <li>Act immediately after their controller</li>
-                            <li>2 Actions, 1 Attack</li>
-                            <li>No Skills, Mana, or Grace</li>
-                            <li>Only one combat companion per player</li>
-                        </ul>
+                            <ul class="grid md:grid-cols-2 gap-4">
+                                <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
+                                    Combat uses a square grid
+                                </li>
+                                <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
+                                    1 tile = 1 Unit
+                                </li>
+                                <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
+                                    Diagonal movement costs 1 Unit
+                                </li>
+                                <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
+                                    Leaving melee range triggers Opportunity Attacks
+                                </li>
+                            </ul>
+
+                            <p class="text-xs text-slate-500 mt-4 px-2">
+                                Opportunity Attacks consume the attacker’s Reaction.
+                            </p>
+                        </div>
                     </section>
 
-                    <section id="os-magic" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Spellcasting</h3>
+                    <section id="os-ranged" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-4">Ranged Combat</h3>
 
-                        <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
-                            <li>Mana restores on Sleep</li>
-                            <li>Cantrips cost no Mana</li>
-                            <li>Upcasting costs +1 Mana per tier</li>
-                        </ul>
+                            <div class="space-y-3">
+                                <div class="condition-card text-sm">
+                                    Targets beyond max range cannot be hit
+                                </div>
+                                <div class="condition-card text-sm">
+                                    Ranged attacks in melee suffer Disadvantage
+                                </div>
+                                <div class="condition-card text-sm">
+                                    <strong>Partial Cover:</strong> +1 Defense
+                                </div>
+                                <div class="condition-card text-sm">
+                                    <strong>Full Cover:</strong> Cannot be targeted
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-slate-500 mt-4 px-2">
+                                Line of sight is determined from tile center to tile center.
+                            </p>
+                        </div>
                     </section>
 
-                    <section id="os-narrator" class="rule-card space-y-6 scroll-mt-32">
-                        <h3 class="text-2xl text-white font-bold">Narrator Guidance</h3>
+                    <section id="os-health" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-6">Health & Defeat</h3>
 
-                        <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400">
-                            <li>Default CS: 8 easy, 12 standard, 16 hard</li>
-                            <li>Favor dramatic outcomes over strict balance</li>
-                            <li>End scenes aggressively to maintain pace</li>
-                        </ul>
+                            <div class="overflow-x-auto rounded-lg border border-slate-700 mb-6">
+                                <table class="w-full text-sm border-collapse bg-slate-800/50">
+                                    <thead class="bg-slate-900/80">
+                                        <tr class="text-slate-300">
+                                            <th class="text-left py-3 px-4">State</th>
+                                            <th class="text-left py-3 px-4">Effect</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-slate-400">
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">Health &gt; 0</td>
+                                            <td class="px-4">Fully active</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">Health = 0</td>
+                                            <td class="px-4">Unconscious</td>
+                                        </tr>
+                                        <tr class="border-t border-slate-700/50">
+                                            <td class="py-2 px-4">Final Blow (x4)</td>
+                                            <td class="px-4">Death</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid md:grid-cols-3 gap-4 text-sm text-slate-400 text-center">
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700">
+                                    Guard acts as temporary Health
+                                </div>
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700">
+                                    Short Rest: Heal = Level
+                                </div>
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700">
+                                    Sleep: Full recovery
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="os-conditions" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-4">Conditions</h3>
+
+                            <p class="text-sm text-slate-400 mb-6">
+                                Conditions represent ongoing effects. Most stack unless stated otherwise.
+                            </p>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-center">
+                                <div class="condition-card text-red-400 font-bold">Poison</div>
+                                <div class="condition-card text-red-400 font-bold">Bleed</div>
+                                <div class="condition-card text-red-400 font-bold">Slow</div>
+                                <div class="condition-card text-red-400 font-bold">Prone</div>
+                                <div class="condition-card text-red-400 font-bold">Stunned</div>
+                                <div class="condition-card text-red-400 font-bold">Restrained</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="os-companions" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-4">Companions</h3>
+                            <div class="space-y-2">
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300 flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                    Act immediately after their controller
+                                </div>
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300 flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                    2 Actions, 1 Attack
+                                </div>
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300 flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                    No Skills, Mana, or Grace
+                                </div>
+                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300 flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                                    Only one combat companion per player
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="os-magic" class="scroll-offset-center">
+                        <div class="rule-card">
+                            <h3 class="text-2xl text-white font-bold mb-4">Spellcasting</h3>
+                            <div class="grid md:grid-cols-3 gap-4 text-sm text-center">
+                                <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                                    <strong class="block text-indigo-400 mb-1">Mana</strong>
+                                    Restores on Sleep
+                                </div>
+                                <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                                    <strong class="block text-indigo-400 mb-1">Cantrips</strong>
+                                    Cost no Mana
+                                </div>
+                                <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                                    <strong class="block text-indigo-400 mb-1">Upcasting</strong>
+                                    +1 Mana per tier
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="os-narrator" class="scroll-offset-center">
+                        <div class="rule-card border-l-4 border-l-indigo-500">
+                            <h3 class="text-2xl text-white font-bold mb-4">Narrator Guidance</h3>
+
+                            <ul class="space-y-3">
+                                <li class="text-sm text-slate-300">
+                                    <strong class="text-indigo-400">Default CS:</strong> 8 easy, 12 standard, 16 hard
+                                </li>
+                                <li class="text-sm text-slate-300">
+                                    <strong class="text-indigo-400">Pacing:</strong> Favor dramatic outcomes over strict balance
+                                </li>
+                                <li class="text-sm text-slate-300">
+                                    <strong class="text-indigo-400">Scenes:</strong> End scenes aggressively to maintain pace
+                                </li>
+                            </ul>
+                        </div>
                     </section>
 
                 </div>
@@ -1728,7 +1821,9 @@
         // the element hits the top part of the viewport, not just when it enters the screen.
         const observerOptions = {
             root: null,
-            rootMargin: '-100px 0px -70% 0px', // Active region is top 30% of screen
+            // '-20% 0px -60% 0px' creates a narrow 'active' band near the top of the screen.
+            // Elements only trigger when they are in this band.
+            rootMargin: '-20% 0px -60% 0px', 
             threshold: 0
         };
 
