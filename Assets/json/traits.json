@@ -2760,6 +2760,24 @@
     "Parameters": "",
     "Description": "Gain +3 Scholarship. You permanently gain Madness Conditions.",
     "Scaling": ""
+  },
+  {
+    "Name": "Soul Slash",
+    "Action": "◆",
+    "Cost": "2",
+    "Symbols": "⧖",
+    "Parameters": "★ Impact ⫘ Pathmaker",
+    "Description": "Dash up to 3 tiles. Enemies you pass through take 2 Damage. You heal for the total Damage dealt; excess healing is converted into Guard.",
+    "Scaling": "-"
+  },
+  {
+    "Name": "Unstoppable Force",
+    "Action": "⭘",
+    "Cost": "2",
+    "Symbols": "🗲",
+    "Parameters": "★ Rage",
+    "Description": "Cleanse all negative effects and Conditions. Until the end of any turn in which you did not perform a melee attack, you cannot gain negative effects or Conditions.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]"
   }
   
 ]
