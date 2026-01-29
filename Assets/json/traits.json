@@ -2706,6 +2706,60 @@
     "Parameters": "⫘ Craftsman",
     "Description": "You gain Access to Combat Crafts; You know a number of Combat Crafts equal to [Half Your Level], the maximum tier of craft depends on the tier unlocked by Craftsman.",
     "Scaling": "-"
+  },
+  {
+    "Name": "Master Thrower",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "",
+    "Description": "Any throwable item you use deals +X Damage.",
+    "Scaling": "Damage X:<br>+1 [lvl 1]<br>+2 [lvl 6]<br>+3 [lvl 12]"
+  },
+  {
+    "Name": "Mind",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "★ Grace",
+    "Description": "You may spend X Grace to recharge X Mana.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Range",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "★ Grace",
+    "Description": "You may spend X Grace to increase the Range of ranged attacks or spells by X.",
+    "Scaling": ""
+  },
+  {
+    "Name": "Dexterity",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "★ Grace",
+    "Description": "You may spend X Grace to gain X Speed Stacks.",
+    "Scaling": ""
+  },
+  {
+    "Name": "Haste",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "🗲",
+    "Parameters": "★ Grace",
+    "Description": "Spend 6 Grace to gain 1 Haste Stack.",
+    "Scaling": "Uses 🗲:<br>1 [lvl 1]<br>2 [lvl 6]<br>3 [lvl 12]"
+  },
+  {
+    "Name": "Scroll of a Madman",
+    "Action": "⭘",
+    "Cost": "1",
+    "Symbols": "⧖",
+    "Parameters": "",
+    "Description": "Gain +3 Scholarship. You permanently gain Madness Conditions.",
+    "Scaling": ""
   }
   
 ]
