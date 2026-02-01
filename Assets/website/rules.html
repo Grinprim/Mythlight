@@ -1427,56 +1427,74 @@
                             <ul class="list-disc ml-5 text-sm space-y-2 text-slate-400 mb-4">
                                 <li>Choose one weapon appropriate to your concept</li>
                                 <li>Choose one armor type (or none)</li>
-                                <li>Minor gear is narrative unless stated otherwise</li>
+                                <li>Other gear is optional.</li>
                             </ul>
                             <div class="bg-slate-900/60 border border-slate-700 rounded p-3 text-sm">
-                                <strong class="text-white">Armor Calculation:</strong><br>
-                                Armor = <strong>6 + Armor Bonus</strong><br>
+                                <strong class="text-white">Unarmored Calculation:</strong><br>
+                                Armor = <strong>6 + Physique</strong><br>
                                 Some traits or species may modify this.
                             </div>
                         </div>
 
                         <div class="rule-card md:col-span-2">
-                            <h4 class="text-lg text-white font-bold mb-2">5. Mana (If Applicable)</h4>
+                            <h4 class="text-lg text-white font-bold mb-2">5. Spellcsting</h4>
                             <p class="text-sm text-slate-400 mb-4">
-                                Only spellcasters track Mana in One Shots.
+                                Only spellcasters track Mana.
                             </p>
-                            <div class="overflow-x-auto rounded-lg border border-slate-700">
-                                <table class="w-full text-sm border-collapse bg-slate-800/50">
-                                    <thead class="bg-slate-900/80">
-                                        <tr class="text-slate-300">
-                                            <th class="text-left py-3 px-4">Character Level</th>
-                                            <th class="text-left py-3 px-4">Mana Pool</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-slate-400">
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">1</td>
-                                            <td class="px-4">1</td>
-                                        </tr>
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">2</td>
-                                            <td class="px-4">2</td>
-                                        </tr>
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">3+</td>
-                                            <td class="px-4">1 per level</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            Your gain 1 Mana per level.<br>
+                            Cantrips are spells that cost no mana<br>
+                            You can increase the power of spells by paying mana to cast them at a higher level, it equals 1 mana per level.
                             <p class="text-xs text-slate-500 mt-2 px-2">
-                                Mana fully restores on Sleep.
+                                Half of your mana restores on Rests, while all of your mana restores when you Sleep.
                             </p>
                         </div>
                     </div>
-                    
-                    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-4 text-sm mt-6">
-                        <strong class="text-indigo-400">Narrator Tip</strong><br>
-                        If character creation takes longer than 10 minutes, simplify.
-                        The goal is momentum, not completeness.
-                    </div>
                 </section>
+                
+                <section id="os-health" class="scroll-offset-center">
+    <div class="rule-card space-y-6">
+        <h3 class="text-2xl text-white font-bold">Health, Guard & Defeat</h3>
+
+        <!-- STATES -->
+        <div class="grid md:grid-cols-4 gap-4 text-sm">
+            <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                <strong class="text-white block mb-1">Health</strong>
+                You have Health equal to [Your Level + (Your Physique * Your Level)]
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                <strong class="text-white block mb-1">Guard</strong>
+                Temporary Health.<br>
+                Always lost first.<br>
+                Cannot be healed.
+            </div>
+
+            <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                <strong class="text-white block mb-1">Unconcious</strong>
+                When your health reaches 0, you become unconcious; while in this state you cannot act.
+            </div>
+
+            <div class="bg-red-900/20 p-4 rounded border border-red-500/30">
+                <strong class="text-red-400 block mb-1">Final Blows (×4)</strong>
+                While unconcious you may resist 4 Final blows per rest. If you have no resistances left you die.
+            </div>
+        </div>
+
+        <!-- CORE RULES -->
+            <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                <strong class="text-white block mb-1">Rest</strong>
+                Heal Health equal to your Level, per Hour rested.
+            </div>
+
+            <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
+                <strong class="text-white block mb-1">Sleep</strong>
+                Full Health and Mana restored.
+            </div>
+        </div>
+    </div>
+</section>
+
                 
                 <div id="oneshot-rules-wrapper" class="space-y-24">
 
@@ -1508,11 +1526,7 @@
                                             <td class="px-4">Success</td>
                                         </tr>
                                         <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">CS − 1</td>
-                                            <td class="px-4">Partial success / cost</td>
-                                        </tr>
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">&lt; CS − 1</td>
+                                            <td class="py-2 px-4">&lt; CS</td>
                                             <td class="px-4">Failure</td>
                                         </tr>
                                     </tbody>
@@ -1536,6 +1550,17 @@
                         <div class="rule-card">
                             <h3 class="text-2xl text-white font-bold mb-6">Turns & Actions</h3>
 
+                            <div class="bg-slate-900/40 p-4 rounded border border-slate-700 text-sm space-y-2">
+            <strong class="text-white block">Initiative</strong>
+
+            <ul class="list-disc ml-5 space-y-1 text-slate-400">
+                <li>Determine initiative by word of mouth.</li>
+                <li>Non-players have turn delay to determine their turn order.</li>
+                <li>Becoming unconcious moves you to the bottom of initiative.</li>
+                <li>Mounts and companions share their turn with their owner.</li>
+            </ul>
+        </div>
+                            
                             <div class="overflow-x-auto rounded-lg border border-slate-700 mb-6">
                                 <table class="w-full text-sm border-collapse bg-slate-800/50">
                                     <thead class="bg-slate-900/80">
@@ -1563,11 +1588,11 @@
 
                             <div class="bg-slate-900/60 p-4 rounded border border-slate-700 text-sm">
                                 <strong class="text-white">Common Actions:</strong>
-                                <p class="text-slate-400 mt-1">Move, Attack, Cast, Interact, Defend, Command</p>
+                                <p class="text-slate-400 mt-1">Move, Attack, Cast, Interact, Command</p>
                             </div>
                         </div>
                     </section>
-
+                    
                     <section id="os-movement" class="scroll-offset-center">
                         <div class="rule-card">
                             <h3 class="text-2xl text-white font-bold mb-4">Movement & Range</h3>
@@ -1577,10 +1602,10 @@
                                     Combat uses a square grid
                                 </li>
                                 <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
-                                    1 tile = 1 Unit
+                                    You move tile by tile, all characters can move up to a max of 5 tiles per action.
                                 </li>
                                 <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
-                                    Diagonal movement costs 1 Unit
+                                    You can only move to units that are touching.
                                 </li>
                                 <li class="bg-slate-900/40 p-3 rounded border border-slate-700 text-sm text-slate-300">
                                     Leaving melee range triggers Opportunity Attacks
@@ -1602,10 +1627,10 @@
                                     Targets beyond max range cannot be hit
                                 </div>
                                 <div class="condition-card text-sm">
-                                    Ranged attacks in melee suffer Disadvantage
+                                    Ranged attacks, while an enemy is in melee range, suffer Disadvantage
                                 </div>
                                 <div class="condition-card text-sm">
-                                    <strong>Partial Cover:</strong> +1 Defense
+                                    <strong>Partial Cover:</strong> -2 Accuracy
                                 </div>
                                 <div class="condition-card text-sm">
                                     <strong>Full Cover:</strong> Cannot be targeted
@@ -1615,68 +1640,6 @@
                             <p class="text-xs text-slate-500 mt-4 px-2">
                                 Line of sight is determined from tile center to tile center.
                             </p>
-                        </div>
-                    </section>
-
-                    <section id="os-health" class="scroll-offset-center">
-                        <div class="rule-card">
-                            <h3 class="text-2xl text-white font-bold mb-6">Health & Defeat</h3>
-
-                            <div class="overflow-x-auto rounded-lg border border-slate-700 mb-6">
-                                <table class="w-full text-sm border-collapse bg-slate-800/50">
-                                    <thead class="bg-slate-900/80">
-                                        <tr class="text-slate-300">
-                                            <th class="text-left py-3 px-4">State</th>
-                                            <th class="text-left py-3 px-4">Effect</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-slate-400">
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">Health &gt; 0</td>
-                                            <td class="px-4">Fully active</td>
-                                        </tr>
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">Health = 0</td>
-                                            <td class="px-4">Unconscious</td>
-                                        </tr>
-                                        <tr class="border-t border-slate-700/50">
-                                            <td class="py-2 px-4">Final Blow (x4)</td>
-                                            <td class="px-4">Death</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="grid md:grid-cols-3 gap-4 text-sm text-slate-400 text-center">
-                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700">
-                                    Guard acts as temporary Health
-                                </div>
-                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700">
-                                    Short Rest: Heal = Level
-                                </div>
-                                <div class="bg-slate-900/40 p-3 rounded border border-slate-700">
-                                    Sleep: Full recovery
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="os-conditions" class="scroll-offset-center">
-                        <div class="rule-card">
-                            <h3 class="text-2xl text-white font-bold mb-4">Conditions</h3>
-
-                            <p class="text-sm text-slate-400 mb-6">
-                                Conditions represent ongoing effects. Most stack unless stated otherwise.
-                            </p>
-
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-center">
-                                <div class="condition-card text-red-400 font-bold">Poison</div>
-                                <div class="condition-card text-red-400 font-bold">Bleed</div>
-                                <div class="condition-card text-red-400 font-bold">Slow</div>
-                                <div class="condition-card text-red-400 font-bold">Prone</div>
-                                <div class="condition-card text-red-400 font-bold">Stunned</div>
-                                <div class="condition-card text-red-400 font-bold">Restrained</div>
-                            </div>
                         </div>
                     </section>
 
@@ -1704,39 +1667,22 @@
                         </div>
                     </section>
 
-                    <section id="os-magic" class="scroll-offset-center">
-                        <div class="rule-card">
-                            <h3 class="text-2xl text-white font-bold mb-4">Spellcasting</h3>
-                            <div class="grid md:grid-cols-3 gap-4 text-sm text-center">
-                                <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
-                                    <strong class="block text-indigo-400 mb-1">Mana</strong>
-                                    Restores on Sleep
-                                </div>
-                                <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
-                                    <strong class="block text-indigo-400 mb-1">Cantrips</strong>
-                                    Cost no Mana
-                                </div>
-                                <div class="bg-slate-900/40 p-4 rounded border border-slate-700">
-                                    <strong class="block text-indigo-400 mb-1">Upcasting</strong>
-                                    +1 Mana per tier
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
                     <section id="os-narrator" class="scroll-offset-center">
                         <div class="rule-card border-l-4 border-l-indigo-500">
                             <h3 class="text-2xl text-white font-bold mb-4">Narrator Guidance</h3>
 
                             <ul class="space-y-3">
                                 <li class="text-sm text-slate-300">
-                                    <strong class="text-indigo-400">Default CS:</strong> 8 easy, 12 standard, 16 hard
+                                    <strong class="text-indigo-400">Suggested Length:</strong> Aim for oneshots to last about 3 - 4 hours
                                 </li>
                                 <li class="text-sm text-slate-300">
-                                    <strong class="text-indigo-400">Pacing:</strong> Favor dramatic outcomes over strict balance
+                                    <strong class="text-indigo-400">Default CS:</strong> 6 easy, 8 standard, 12 hard, 16 "impossible"
                                 </li>
                                 <li class="text-sm text-slate-300">
-                                    <strong class="text-indigo-400">Scenes:</strong> End scenes aggressively to maintain pace
+                                    <strong class="text-indigo-400">NPC health:</strong> 0,5 x Party Health total = Easy, 1 x Party Health total = Standard, 2 x Party Health total = Hard. Encounters with multiple NPCs should divide this number amongst each NPC present.
+                                </li>
+                                <li class="text-sm text-slate-300">
+                                    <strong class="text-indigo-400">NPC Traits:</strong> NPCs should have between 1 - 4 traits, depending on how difficult they should be to defeat.
                                 </li>
                             </ul>
                         </div>
